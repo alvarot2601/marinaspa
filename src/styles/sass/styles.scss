@@ -1,0 +1,27 @@
+@import "navbar";
+@import "header";
+@import "main";
+
+a{
+    text-decoration: none;
+}
+*{
+    box-sizing: border-box;
+}
+.button{
+    padding: 20px 60px;
+    outline: none;
+    border:none;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    
+    &--white{
+        background-color: white;
+        border-bottom: 3px solid black;
+    }
+    &--grey{
+        background-color: $grey;
+        border-bottom: 3px solid black;
+    }
+}
