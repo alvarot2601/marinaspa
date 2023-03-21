@@ -51,6 +51,9 @@ const Main = ()=> {
                     Con la ayuda de nuestro equipo de profesionales y de nuestros tratamientos Corporales y Faciales conseguirás frenar y hasta revertir el envejecimiento de la piel o el deterioro y desgaste que sufrimos cada año, para que así puedas lucir siempre la mejor versión de ti a pesar del paso del tiempo.
                     Ven a tu Centro de Estética en Sóller
                 </p>
+                <button className='button'>
+                    NUESTROS SERVICIOS
+                </button>
                 <div className='services__container'>
                     <div className='services__item'>
                         <img src={Facial} alt="" />

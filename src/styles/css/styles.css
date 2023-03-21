@@ -161,7 +161,10 @@
 .services__general-info {
   max-width: 70vw;
   margin: auto;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
+}
+.services button {
+  margin-bottom: 60px;
 }
 
 a {
@@ -187,6 +190,21 @@ a {
 .button--grey {
   background-color: #e6e4df;
   border-bottom: 3px solid black;
+}
+
+.whatsapp-icon {
+  border: none;
+  background-color: green;
+  color: white;
+  font-size: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 100%;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
 }
 
 /*# sourceMappingURL=styles.css.map */
