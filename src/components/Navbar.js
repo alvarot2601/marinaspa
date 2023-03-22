@@ -7,8 +7,8 @@ const NavBar = ()=> {
                 MARINASPÁ
             </div>
             <div className="nav__links">
-                <a href="d">HOME</a>
-                <a href="dd">HOME</a>
+                <Link to="/">HOME</Link>
+                <Link to="/tratamientos">Tratamientos</Link>
                 <a href="d">HOME</a>
                 <a href="dd">HOME</a>
                 <a href="d">HOME</a>

@@ -129,42 +129,121 @@
 .main__myName {
   font-size: 3rem;
 }
+.main h2, .main h3 {
+  padding: 20px;
+  margin: auto;
+  max-width: 40vw;
+  border-top: 3px solid black;
+}
 
-.services__info {
+.servicios__row {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  max-width: 80vw;
+  margin: auto;
+}
+.servicios__item {
+  flex-grow: 1;
+  text-align: center;
+  width: 100%;
+}
+.servicios span:nth-of-type(1) {
+  margin-bottom: 40px;
+}
+
+.tratamientos__info {
   visibility: hidden;
 }
-.services__container {
+.tratamientos__container {
   display: flex;
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
   gap: 1vw;
 }
-.services__item {
+.tratamientos__item {
   background-color: blue;
   width: 24vw;
   height: 20vw;
   border: 1px solid black;
 }
-.services img {
+.tratamientos img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.services h2 {
-  padding: 20px;
-  margin: auto;
-  margin-bottom: 0px;
-  max-width: 40vw;
-  border-top: 3px solid black;
-}
-.services__general-info {
+.tratamientos__general-info {
   max-width: 70vw;
   margin: auto;
   margin-bottom: 30px;
 }
-.services button {
+.tratamientos button {
   margin-bottom: 60px;
+}
+
+.diagnostico {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80vw;
+  margin: auto;
+  gap: 50px;
+}
+.diagnostico__title {
+  font-size: 2rem;
+  margin: 0;
+}
+.diagnostico__title--2 {
+  font-size: 3rem;
+}
+.diagnostico div, .diagnostico img {
+  width: 50%;
+  flex-grow: 1;
+}
+.diagnostico p {
+  max-width: 30vw;
+  margin: 30px auto;
+}
+
+.testimonios {
+  padding: 50px;
+  background-color: #2a2a2a;
+  color: #fff;
+  font-size: 1.5rem;
+}
+.testimonios__content {
+  max-width: 50%;
+  margin: auto;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10vw;
+  padding: 30px;
+  background-color: #222;
+}
+.footer * {
+  color: #fff;
+}
+.footer svg {
+  font-size: 2rem;
+}
+.footer__col {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.footer__col--2 {
+  display: flex;
+  flex-direction: row;
+}
+.footer__copyright {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 a {

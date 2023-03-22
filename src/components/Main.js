@@ -1,9 +1,10 @@
 import React from 'react';
 import FotoMari from "../assets/images/header-background.JPG";
 import FotoTargeta from "../assets/images/cara.jpg";
+import Diagnostico from "../assets/images/diagnostico.JPG";
+
 import Facial from "../assets/images/facial.jpg";
 import {FaFacebook, FaInstagram} from 'react-icons/fa';
-import {AiFillInstagram} from 'react-icons/ai';
 
 const Main = ()=> {
     return (
@@ -44,9 +45,10 @@ const Main = ()=> {
                     <button className='button button--grey'>BOOK A FREE CONSULTATION</button>
                 </div>
             </section>
-            <section className="services">
+            
+            <section className="tratamientos">
                 <h2>NUESTROS TRATAMIENTOS</h2>
-                <p className='services__general-info'>
+                <p className='tratamientos__general-info'>
                     Tu belleza es el reflejo de tu mejor imagen que proyecta tu cuerpo cuando está en pleno equilibrio, nosotros trabajamos para que ese reflejo y equilibrio se perpetúen y se mantengan inalterables a pesar de los años y puedas lucir tu mejor yo durante toda la vida.
                     Con la ayuda de nuestro equipo de profesionales y de nuestros tratamientos Corporales y Faciales conseguirás frenar y hasta revertir el envejecimiento de la piel o el deterioro y desgaste que sufrimos cada año, para que así puedas lucir siempre la mejor versión de ti a pesar del paso del tiempo.
                     Ven a tu Centro de Estética en Sóller
@@ -54,10 +56,10 @@ const Main = ()=> {
                 <button className='button'>
                     NUESTROS SERVICIOS
                 </button>
-                <div className='services__container'>
-                    <div className='services__item'>
+                <div className='tratamientos__container'>
+                    <div className='tratamientos__item'>
                         <img src={Facial} alt="" />
-                        <div className='services__info'>
+                        <div className='tratamientos__info'>
                             <span>FACIAL</span>
                             <p>
                                 Dime como sientes tu piel y te diré cómo cuidarla <br />
@@ -68,9 +70,9 @@ const Main = ()=> {
                             </button>
                         </div> 
                     </div>
-                    <div className='services__item'>
+                    <div className='tratamientos__item'>
                         <img src={Facial} alt="" />
-                        <div className='services__info'>
+                        <div className='tratamientos__info'>
                             <span>FACIAL</span>
                             <p>
                                 Dime como sientes tu piel y te diré cómo cuidarla <br />
@@ -81,9 +83,9 @@ const Main = ()=> {
                             </button>
                         </div> 
                     </div>
-                    <div className='services__item'>
+                    <div className='tratamientos__item'>
                         <img src={Facial} alt="" />
-                        <div className='services__info'>
+                        <div className='tratamientos__info'>
                             <span>FACIAL</span>
                             <p>
                                 Dime como sientes tu piel y te diré cómo cuidarla <br />
@@ -94,9 +96,9 @@ const Main = ()=> {
                             </button>
                         </div> 
                     </div>
-                    <div className='services__item'>
+                    <div className='tratamientos__item'>
                         <img src={Facial} alt="" />
-                        <div className='services__info'>
+                        <div className='tratamientos__info'>
                             <span>FACIAL</span>
                             <p>
                                 Dime como sientes tu piel y te diré cómo cuidarla <br />
@@ -108,6 +110,47 @@ const Main = ()=> {
                         </div> 
                     </div>
                 </div>
+            </section>
+            <section className="servicios">
+              <h3>Nuestros servicios</h3>
+              <span>Qué ofrecemos?</span>
+              <div className='servicios__row'>
+                <div className='servicios__item'>
+                    <span>Servicios personalizados</span>
+                    <p>
+                        En MarinaSpá ofrecemos tratamientos (faciales, corporales, relajantes...) con la tecnología más avanzada del mercado.
+                    </p>
+                </div>
+                <div className='servicios__item'>
+                    <span>Programas de fidelización y ofertas</span>
+                    <p>
+                        Ofrecemos ofertas exclusivas y promociones especiales en distintos servicios Y tratamientos a nuestros clientes más fieles y recurrentes.
+                    </p>
+                </div>
+                <div className='servicios__item'>
+                    <span>Programas de fidelización y ofertas</span>
+                    <p>
+                        Ofrecemos ofertas exclusivas y promociones especiales en distintos servicios a nuestros clientes más fieles y recurrentes.
+                    </p>
+                </div>
+                <div className='servicios__item'>
+                    <span>Solo las mejores marcas</span>
+                    <p>
+                        En MarinaSpá únicamente trabajamos con las mejores marcas, sí o sí notarás la diferencia.
+                    </p>
+                </div>
+              </div>
+            </section>
+            <section className="diagnostico">
+                <div>
+                    <h4 className='diagnostico__title'>Diagnóstico <br/><span className='diagnostico__title--2'>MARINASPÁ</span></h4>
+                    <p>
+                        La clave del éxito en cualquier tipo de tratamiento de belleza reside en un previo diagnostico exhaustivo y personalizado para cada cliente, sin duda ese es el pilar donde se construyen los cimientos del éxito.
+                        por eso antes de pasar al tratamiento nos gustaría conocer un poco mas de ti y que es lo que te hace única.
+                    </p>
+                    <button className='button'>Solicitar Diagnóstico</button>
+                </div>
+                <img src={Diagnostico} alt="" />
             </section>
         </main>
     );
