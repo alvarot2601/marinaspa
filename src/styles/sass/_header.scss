@@ -1,0 +1,50 @@
+@import "variables";
+.header{
+    position: relative;
+    background-color: $beis;
+    min-height: 92vh;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 1.5rem;
+    z-index: -2;
+    &__text-container{
+        margin-left: 10vw;
+        max-width: 50%;
+        z-index: 1;
+    }
+    p{
+        margin: 0;
+        margin-bottom: 40px;
+        font-size: 7rem;
+    }
+    &__image{
+        
+
+    }
+    &__image{
+        position: absolute;
+        width: 100%;
+        max-width: 200px;
+    }
+    &__image--0{
+        bottom: 0;
+        left: 50%;
+        width: 100%;
+        max-width: 750px;
+        object-fit: contain;
+    }
+    &__image--1{
+        right:40px;
+        bottom: 0px;
+    }
+    &__image--2{
+        max-width: 350px;
+        left:-65px;
+        top: -65px;
+    }
+    &__image--3{
+        left:50%;
+        bottom: 50%;
+    }
+}
