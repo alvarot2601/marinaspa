@@ -217,6 +217,20 @@
   margin: auto;
 }
 
+.tratamientos {
+  text-align: center;
+}
+.tratamientos__subtitle {
+  padding: 20px;
+  background-image: url("../../assets/images/cuadrado.png");
+  display: inline-block;
+}
+.tratamientos__tratamiento {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .footer {
   display: flex;
   justify-content: center;

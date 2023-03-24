@@ -1,0 +1,13 @@
+.tratamientos{
+    text-align: center;
+    &__subtitle{
+        padding: 20px;
+        background-image: url('../../assets/images/cuadrado.png');
+        display: inline-block;
+    }
+    &__tratamiento{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
