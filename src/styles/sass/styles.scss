@@ -1,0 +1,43 @@
+@import "navbar";
+@import "header";
+@import "main";
+@import "testimonios";
+@import "footer";
+
+a{
+    text-decoration: none;
+}
+*{
+    box-sizing: border-box;
+}
+.button{
+    padding: 20px 60px;
+    outline: none;
+    border:none;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    
+    &--white{
+        background-color: white;
+        border-bottom: 3px solid black;
+    }
+    &--grey{
+        background-color: $grey;
+        border-bottom: 3px solid black;
+    }
+}
+.whatsapp-icon{
+    border: none;
+    background-color: green;
+    color: white;
+    font-size: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 100%;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}
