@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Pdf from "../assets/alvaro.pdf";
 import Facial from "../assets/images/facial.jpg";
 import {AiFillCloseCircle} from 'react-icons/ai';
@@ -122,9 +122,11 @@ const Tratamientos = () => {
                 ["Programa facial personalizado (6 Sesiones)", "", 3],
                 ["MANTENIMIENTO FACIAL", "", "100"]
             ]
-        ],
+        ]
     ];
-    console.log(treatmentsArr);
+    const handleClick = (index)=> {
+        document.getElementById(`tratamientos__hidden-info--${index}`).style.display = "block";
+    }
     return (
         <section className="tratamientos">
             <h1>Tratamientos</h1>
@@ -151,9 +153,16 @@ const Tratamientos = () => {
                                         return (
                                             <ul>
                                                 {
-                                                    subtreatment.map((treatmentType) => {
+                                                    subtreatment.map((treatmentType, index3) => {
                                                         return (
-                                                            <li><span>{treatmentType[0] + ` (${treatmentType[2]} €)`}</span> <AiFillCloseCircle/></li>
+                                                            <li onClick={()=>handleClick(index3)}>
+                                                                <div className="tratamientos__row">
+                                                                    <span>{treatmentType[0] + ` (${treatmentType[2]} €)`}</span> <AiFillCloseCircle/>
+                                                                </div>
+                                                                <p className="tratamientos__hidden-info" id={`tratamientos__hidden-info--${index3}`}>
+                                                                {treatmentType[1]}
+                                                                </p>
+                                                            </li>
                                                         );
                                                     })
                                                 }
