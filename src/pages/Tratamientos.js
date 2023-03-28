@@ -1,6 +1,8 @@
 import React from "react";
 import Pdf from "../assets/alvaro.pdf";
 import Facial from "../assets/images/facial.jpg";
+import {AiFillCloseCircle} from 'react-icons/ai';
+
 const Tratamientos = () => {
     const treatmetnsObject = {
         category: "BELLEZA - RITUALES Y PROGRAMAS FACIALES",
@@ -126,7 +128,7 @@ const Tratamientos = () => {
     return (
         <section className="tratamientos">
             <h1>Tratamientos</h1>
-            <div className="tratamientos__subtitle">
+            <div className="tratamientos__text">
                 <p>
                     Todos nuestros tratamientos se llevan a cabo con los mejores productos
                     del mercado y la última tecnología
@@ -134,27 +136,25 @@ const Tratamientos = () => {
             </div>
             <div className="tratamientos__wrapper">
                 <div className="tratamientos__tratamiento">
-                    <div>
-                        <div className="tratamientos__">
-                            <span>YOUR CLOSET</span>
-                            <p>Belleza - Rituales y Programas Faciales</p>
-                        </div>
+                    <div className="tratamientos__col">
                         {treatmentsArr.map((treatment, index) => {
                             if (typeof treatment === "string") {
-                                return <p>{treatment}</p>;
+                                return <div className="tratamientos__title"><p>{treatment}</p></div>;
                             } else if (
                                 typeof treatment === "object" &&
                                 Array.isArray(treatment)
                             ) {
                                 return treatment.map((subtreatment) => {
                                     if (typeof subtreatment === "string") {
-                                        return <span>{subtreatment}</span>;
+                                        return <div className="tratamientos__subtitle"><span>{subtreatment}</span></div>;
                                     } else {
                                         return (
                                             <ul>
                                                 {
                                                     subtreatment.map((treatmentType) => {
-                                                        return <li><span>{treatmentType}</span></li>;
+                                                        return (
+                                                            <li><span>{treatmentType[0] + ` (${treatmentType[2]} €)`}</span> <AiFillCloseCircle/></li>
+                                                        );
                                                     })
                                                 }
                                             </ul>
@@ -164,7 +164,7 @@ const Tratamientos = () => {
                             }
                         })}
                     </div>
-                    <div>
+                    <div className="tratamientos__col">
                         <img src={Facial} alt="" />
                     </div>
                 </div>

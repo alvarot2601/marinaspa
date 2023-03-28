@@ -218,17 +218,51 @@
 }
 
 .tratamientos {
-  text-align: center;
-}
-.tratamientos__subtitle {
-  padding: 20px;
-  background-image: url("../../assets/images/cuadrado.png");
-  display: inline-block;
+  text-align: left;
 }
 .tratamientos__tratamiento {
   display: flex;
   align-items: center;
   justify-content: center;
+  max-width: 80vw;
+  margin: auto;
+}
+.tratamientos__col {
+  width: 50%;
+}
+.tratamientos__wrapper {
+  margin-top: 50px;
+}
+.tratamientos__title, .tratamientos__subtitle {
+  padding: 30px 0px;
+  background-image: url("../../assets/images/cuadrado.png");
+}
+.tratamientos__title {
+  font-size: 2rem;
+  border-top: 3px solid black;
+}
+.tratamientos__subtitle {
+  font-size: 1.5rem;
+}
+.tratamientos h1, .tratamientos__text {
+  text-align: center;
+}
+.tratamientos ul {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.tratamientos ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tratamientos p {
+  margin: 0;
+}
+.tratamientos svg {
+  font-size: 1.5rem;
 }
 
 .footer {
@@ -266,6 +300,10 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
 }
 
 .button {
