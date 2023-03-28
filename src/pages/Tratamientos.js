@@ -1,52 +1,35 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import Pdf from "../assets/alvaro.pdf";
 import Facial from "../assets/images/facial.jpg";
-import {AiFillCloseCircle} from 'react-icons/ai';
+import { AiFillCloseCircle } from 'react-icons/ai';
 
 const Tratamientos = () => {
-    const treatmetnsObject = {
-        category: "BELLEZA - RITUALES Y PROGRAMAS FACIALES",
-        subcategory: "HIGIENE FACIAL OXIGENANTE",
-        treatments: [
-            ["Limpieza en profundidad de la piel con cosmética profesional", "", 36],
-            [
-                "Higiene facial profunda con microdermoabrasión con punta de Diamante",
-                "tratamiento indoloro que elimina las células muertas de la piel a la vez que reafirma y las líneas de expresión se vuelven menos visibles",
-                3,
-            ],
-            ["Limpieza en profundidad de la piel con cosmética profesional", "", 33],
-            ["Hidravacuum – Detox – Limpieza – Exfoliación – Nutrición", "", 3],
-            ["Ritual de regeneración y Luminosidad", "", 3],
-            [
-                "Ritual equilibrio y purificador",
-                " Restablece el equilibrio de las pieles mixtas y grasas, eliminando las imperfecciones y brillos de la piel",
-                3,
-            ],
+    const t1 = useRef(null);
+    const t2 = useRef(null);
+    const t3 = useRef(null);
+    const t4 = useRef(null);
+    const t5 = useRef(null);
+    const t6 = useRef(null);
+    const higieneFacialArr = [
+        [
+            "Limpieza en profundidad de la piel con cosmética profesional",
+            "",
+            "36",
         ],
-        category: "BELLEZA - RITUALES Y PROGRAMAS FACIALES",
-        subcategory: "HIGIENE FACIAL OXIGENANTE",
-        treatments: [
-            [
-                "Limpieza en profundidad de la piel con cosmética profesional",
-                "",
-                "36",
-            ],
-            [
-                "Higiene facial profunda con microdermoabrasión con punta de Diamante",
-                "tratamiento indoloro que elimina las células muertas de la piel a la vez que reafirma y las líneas de expresión se vuelven menos visibles",
-                3,
-            ],
-            ["Limpieza en profundidad de la piel con cosmética profesional", "", 3],
-            ["Hidravacuum – Detox – Limpieza – Exfoliación – Nutrición", "", "50"],
-            ["Ritual de regeneración y Luminosidad", "", 3],
-            [
-                "Ritual equilibrio y purificador",
-                " Restablece el equilibrio de las pieles mixtas y grasas, eliminando las imperfecciones y brillos de la piel",
-                3,
-            ],
+        [
+            "Higiene facial profunda con microdermoabrasión con punta de Diamante",
+            "tratamiento indoloro que elimina las células muertas de la piel a la vez que reafirma y las líneas de expresión se vuelven menos visibles",
+            3,
         ],
-    };
-
+        ["Limpieza en profundidad de la piel con cosmética profesional", "", 3],
+        ["Hidravacuum – Detox – Limpieza – Exfoliación – Nutrición", "", "50"],
+        ["Ritual de regeneración y Luminosidad", "", 3],
+        [
+            "Ritual equilibrio y purificador",
+            " Restablece el equilibrio de las pieles mixtas y grasas, eliminando las imperfecciones y brillos de la piel",
+            3,
+        ]
+    ];
     const treatmentsArr = [
         "BELLEZA - RITUALES Y PROGRAMAS FACIALES",
         [
@@ -124,7 +107,7 @@ const Tratamientos = () => {
             ]
         ]
     ];
-    const handleClick = (index)=> {
+    const handleClick = (index) => {
         document.getElementById(`tratamientos__hidden-info--${index}`).style.display = "block";
     }
     return (
@@ -137,43 +120,49 @@ const Tratamientos = () => {
                 </p>
             </div>
             <div className="tratamientos__wrapper">
-                <div className="tratamientos__tratamiento">
-                    <div className="tratamientos__col">
-                        {treatmentsArr.map((treatment, index) => {
-                            if (typeof treatment === "string") {
-                                return <div className="tratamientos__title"><p>{treatment}</p></div>;
-                            } else if (
-                                typeof treatment === "object" &&
-                                Array.isArray(treatment)
-                            ) {
-                                return treatment.map((subtreatment) => {
-                                    if (typeof subtreatment === "string") {
-                                        return <div className="tratamientos__subtitle"><span>{subtreatment}</span></div>;
-                                    } else {
-                                        return (
-                                            <ul>
-                                                {
-                                                    subtreatment.map((treatmentType, index3) => {
-                                                        return (
-                                                            <li onClick={()=>handleClick(index3)}>
-                                                                <div className="tratamientos__row">
-                                                                    <span>{treatmentType[0] + ` (${treatmentType[2]} €)`}</span> <AiFillCloseCircle/>
-                                                                </div>
-                                                                <p className="tratamientos__hidden-info" id={`tratamientos__hidden-info--${index3}`}>
-                                                                {treatmentType[1]}
-                                                                </p>
-                                                            </li>
-                                                        );
-                                                    })
-                                                }
-                                            </ul>
-                                        )
-                                    }
-                                });
+                <div className="tratamientos__subwrapper">
+                    <div className="tratamientos__row">
+                        <span>BELLEZA - RITUALES Y PROGRAMAS FACIALES</span>
+                        <span>HIGIENE FACIAL OXIGENANTE</span>
+                        <ul>
+                            {
+                                higieneFacialArr.map(treatment => {
+                                    return (
+                                        <li>
+                                            <span>
+                                                {treatment[0]}
+                                            </span>
+                                            <AiFillCloseCircle />
+                                        </li>
+                                    );
+                                })
                             }
-                        })}
+                        </ul>
                     </div>
-                    <div className="tratamientos__col">
+                    <div className="tratamientos__row">
+                        <img src={Facial} alt="" />
+                    </div>
+                </div>
+                <div className="tratamientos__subwrapper ">
+                    <div className="tratamientos__row tratamientos__row--revert">
+                        <span>BELLEZA - RITUALES Y PROGRAMAS FACIALES</span>
+                        <span>HIGIENE FACIAL OXIGENANTE</span>
+                        <ul>
+                            {
+                                higieneFacialArr.map(treatment => {
+                                    return (
+                                        <li>
+                                            <span>
+                                                {treatment[0]}
+                                            </span>
+                                            <AiFillCloseCircle />
+                                        </li>
+                                    );
+                                })
+                            }
+                        </ul>
+                    </div>
+                    <div className="tratamientos__row">
                         <img src={Facial} alt="" />
                     </div>
                 </div>
@@ -217,3 +206,44 @@ else{
                                 <span>Higiene facial profunda con microdermoabrasión con punta de Diamante</span> <span>45€</span>
                             </li>
                         </ul>*/
+
+
+/*
+ 
+{treatmentsArr.map((treatment, index) => {
+    return (
+        <div className="tratamientos__categoria">
+            {
+                (typeof treatment === "string") ? <div className="tratamientos__title"><p>{treatment}</p></div>
+                    : (typeof treatment === "object" && Array.isArray(treatment)) ? (
+                        treatment.map((subtreatment) => {
+                            if (typeof subtreatment === "string") {
+                                return <div className="tratamientos__subtitle"><span>{subtreatment}</span></div>;
+                            } else {
+                                return (
+                                    <ul>
+                                        {
+                                            subtreatment.map((treatmentType, index3) => {
+                                                return (
+                                                    <li onClick={() => handleClick(index3)}>
+                                                        <div className="tratamientos__row">
+                                                            <span>{treatmentType[0] + ` (${treatmentType[2]} €)`}</span> <AiFillCloseCircle />
+                                                        </div>
+                                                        <p className="tratamientos__hidden-info" id={`tratamientos__hidden-info--${index3}`}>
+                                                            {treatmentType[1]}
+                                                        </p>
+                                                    </li>
+                                                );
+                                            })
+                                        }
+                                    </ul>
+                                )
+                            }
+                        })
+                    )
+                        : null
+            }
+        </div>
+    );
+
+})}*/

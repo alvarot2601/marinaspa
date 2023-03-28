@@ -1,15 +1,28 @@
 .tratamientos{
     text-align: left;
     
-    &__tratamiento{
+    &__subwrapper{
         display: flex;
         align-items: center;
         justify-content: center;
         max-width: 80vw;
         margin: auto;
+        gap: 20px;
+    }
+    &__surwrapper--reverse{
+    }
+    &__categoria{
+        margin-top: 20px;    
     }
     &__col{
         width: 50%;
+        flex-grow: 1;
+    }
+    &__row{
+        order: 1;
+    }
+    &__row--revert{
+        order:2!important;
     }
     &__wrapper{
         margin-top: 50px;
@@ -31,8 +44,9 @@
     &__row{
         width: 100%;
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
-        align-items: center;
+        align-items: left;
     }
     h1, &__text{
         text-align: center;
@@ -44,8 +58,9 @@
         gap: 20px;
         li{
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             align-items: center;
+            justify-content: space-between;
             gap: 20px;
         }
     }
@@ -55,5 +70,7 @@
     svg{
         font-size: 1.5rem;
     }
-
+    svg:hover{
+        cursor: pointer;
+    }
 }

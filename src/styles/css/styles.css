@@ -220,15 +220,26 @@
 .tratamientos {
   text-align: left;
 }
-.tratamientos__tratamiento {
+.tratamientos__subwrapper {
   display: flex;
   align-items: center;
   justify-content: center;
   max-width: 80vw;
   margin: auto;
+  gap: 20px;
+}
+.tratamientos__categoria {
+  margin-top: 20px;
 }
 .tratamientos__col {
   width: 50%;
+  flex-grow: 1;
+}
+.tratamientos__row {
+  order: 1;
+}
+.tratamientos__row--revert {
+  order: 2 !important;
 }
 .tratamientos__wrapper {
   margin-top: 50px;
@@ -250,8 +261,9 @@
 .tratamientos__row {
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: left;
 }
 .tratamientos h1, .tratamientos__text {
   text-align: center;
@@ -264,8 +276,9 @@
 }
 .tratamientos ul li {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-between;
   gap: 20px;
 }
 .tratamientos p {
@@ -273,6 +286,9 @@
 }
 .tratamientos svg {
   font-size: 1.5rem;
+}
+.tratamientos svg:hover {
+  cursor: pointer;
 }
 
 .footer {
