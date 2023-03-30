@@ -211,9 +211,9 @@ const Tratamientos = () => {
                 'close'
             ],
             ["MADEROTERAPIA", "Programa 8 Sesiones: 300€", 45 + '/sesión', 'close'],
-            ["PRESOTERAPIA", "Programa 10 Sesiones: 90€", 12 + '/sesión', 'close'],CRIOLIPÓLISIS + Presoterapia
+            ["PRESOTERAPIA", "Programa 10 Sesiones: 90€", 12 + '/sesión', 'close'],
             ["CRIOLIPÓLISIS + presoterapia", "", 45, 'close'],
-            
+
         ]
     };
     
