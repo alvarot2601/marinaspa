@@ -7,9 +7,6 @@ import { CiMenuKebab } from 'react-icons/ci';
 
 const Tratamientos = () => {
 
-    //estado para que renderice cada vez que cambia un icono de abrir/cerrar
-    const [iconChanged, setiConChanged] = useState(false);
-
     ///referencias higiene facial
     const hf0 = useRef(null);
     const hf1 = useRef(null);
@@ -17,6 +14,34 @@ const Tratamientos = () => {
     const hf3 = useRef(null);
     const hf4 = useRef(null);
     const hf5 = useRef(null);
+
+    ///referencias Anti Aging
+    const aa0 = useRef(null);
+    const aa1 = useRef(null);
+    const aa2 = useRef(null);
+    const aa3 = useRef(null);
+    const aa4 = useRef(null);
+    const aa5 = useRef(null);
+    const aa6 = useRef(null);
+    const aa7 = useRef(null);
+    const aa8 = useRef(null);
+    const aa9 = useRef(null);
+    const aa10 = useRef(null);
+    const aa11 = useRef(null);
+    const aa12 = useRef(null);
+    const aa13 = useRef(null);
+
+      ///referencias estetica general manicura y pedicura
+      const eg0 = useRef(null);
+      const eg1 = useRef(null);
+      const eg2 = useRef(null);
+      const eg3 = useRef(null);
+      const eg4 = useRef(null);
+
+      ///referencias estetica general manicura y pedicura
+      const maq0 = useRef(null);
+      const maq1 = useRef(null);
+      const maq2 = useRef(null);
 
 
     let higieneFacialObj = {
@@ -26,7 +51,7 @@ const Tratamientos = () => {
             [
                 "Limpieza en profundidad de la piel con cosmética profesional",
                 "",
-                "36",
+                36,
                 'close'
             ],
             [
@@ -36,7 +61,7 @@ const Tratamientos = () => {
                 'close'
             ],
             ["Limpieza en profundidad de la piel con cosmética profesional", "", 3, 'close'],
-            ["Hidravacuum – Detox – Limpieza – Exfoliación – Nutrición", "", "50", 'close'],
+            ["Hidravacuum – Detox – Limpieza – Exfoliación – Nutrición", "", 50, 'close'],
             ["Ritual de regeneración y Luminosidad", "", 3, 'close'],
 
             [
@@ -48,9 +73,6 @@ const Tratamientos = () => {
 
         ]
     };
-
-    const [higieneFacialObjState, setHigieneFacialObjState] = useState(higieneFacialObj);
-
     const antiAgingObj = {
         title: 'BELLEZA - RITUALES Y PROGRAMAS FACIALES',
         category: 'ANTI-AGING',
@@ -126,22 +148,108 @@ const Tratamientos = () => {
             ]
         ]
     };
+    const esteticaGeneralObj = {
+        title: 'ESTÉTICA GENERAL',
+        category: 'MANICURA | PEDICURA',
+        treatments: [
+            [
+                "Manicura normal",
+                "",
+                12,
+                'close'
+            ],
+            [
+                "Manicura con esmaltado semipermanente",
+                "",
+                18,
+                'close'
+            ],
+            ["Manicura Spa-Tratamiento completo de belleza en tus manos", "", 25, 'close'],
+            ["Pedicura con esmaltado semipermanente", "", 18, 'close'],
+            ["Pedicura Spa-Tratamiento completo de belleza en tus pies", "", 25, 'close'],
+        ]
+    };
+    const maquillajeObj = {
+        title: 'ESTÉTICA GENERAL',
+        category: 'MAQUILLAJE',
+        treatments: [
+            [
+                "Maquillaje social (día, tarde o noche)",
+                "",
+                30,
+                'close'
+            ],
+            [
+                "Maquillaje de novia (Incluye fijación flash de larga duración y prueba de maquillaje)",
+                "(no incluye desplazamiento)",
+                90,
+                'close'
+            ],
+            ["Lifting de pestañas + Tinte", "", 30, 'close']
+        ]
+    };
+
+    
+    const siluetaCorporalObj = {
+        title: 'SILUETA CORPORAL',
+        category: 'categoria',
+        treatments: [
+            [
+                "Envoltura de Algas “CURA DETOX”",
+                "Sumérjase en una experiencia relajante, donde la riqueza mineral, el alto poder de penetración de las algas le permitirán drenar y desintoxicar el organismo, dejándolo libre de deshechos + Bañera Hidromasaje",
+                45,
+                'close'
+            ],
+            [
+                "Tratamiento BODY-SCULPT",
+                [
+                    "(favorece la pérdida de grasa, remodela y tonifica: su diferencia la tecnología Body Pall (sin aparatología)",
+                    "Programa 6 Curas: 150€",
+                    "Programa 12 Curas: 290€"
+                ],
+                false,
+                'close'
+            ],
+            ["MADEROTERAPIA", "Programa 8 Sesiones: 300€", 45 + '/sesión', 'close'],
+            ["PRESOTERAPIA", "Programa 10 Sesiones: 90€", 12 + '/sesión', 'close'],CRIOLIPÓLISIS + Presoterapia
+            ["CRIOLIPÓLISIS + presoterapia", "", 45, 'close'],
+            
+        ]
+    };
+    
+    /////////////ESTADOS
+    const [higieneFacialState, setHigieneFacialState] = useState(higieneFacialObj);
+    const [antiAgingState, setAntiAgingState] = useState(antiAgingObj);
+    const [esteticaGeneralState, setEsteticaGeneralState] = useState(esteticaGeneralObj);
+    const [maquillajeState, setMaquillajeState] = useState(maquillajeObj);
 
 
-    const handleClick = (ref, index, obj) => {
-        const iChanged = (iconChanged === true) ? false : true;
-        setiConChanged(iChanged);
+
+    const handleClick = (ref, index, obj, objectType) => {
         //higieneFacialObj.treatments[index][3] = 3;
         //(higieneFacialObj.treatments[index][3] == <AiFillCloseCircle/>) ? higieneFacialObj.treatments[index][3] = <CiMenuKebab/> : higieneFacialObj.treatments[index][3] = <AiFillCloseCircle/>;
         let object = {
-            ...higieneFacialObjState
+            ...obj
         };
         if (object.treatments[index][3] == 'close') {
             object.treatments[index][3] = 'open';
         } else if (object.treatments[index][3] == 'open') {
             object.treatments[index][3] = 'close';
         }
-
+        switch (objectType) {
+            case 'aa':
+                setAntiAgingState(object);
+                break;
+            case 'hf':
+                setHigieneFacialState(object);
+                break;
+            case 'eg':
+                setEsteticaGeneralState(object);
+                break;
+            case 'maq':
+                setMaquillajeState(object);
+                break;
+        }
 
         (ref.current.classList.contains('tratamientos__info--hidden')) ? ref.current.classList.toggle('tratamientos__info--hidden')
             : ref.current.classList.toggle('tratamientos__info--hidden');
@@ -151,11 +259,7 @@ const Tratamientos = () => {
 
     useEffect(() => {
 
-        //setHigieneFacialObjState(higieneFacialObj);
-
-        console.log(higieneFacialObjState)
-        //console.log(higieneFacialObjState);
-    }, [higieneFacialObjState]);
+    }, [higieneFacialState, antiAgingState, esteticaGeneralState, maquillajeState]);
 
     return (
         <section className="tratamientos">
@@ -167,13 +271,13 @@ const Tratamientos = () => {
                 </p>
             </div>
             <div className="tratamientos__wrapper">
-                <h1>{higieneFacialObj.title}</h1>
+                <h2>{higieneFacialObj.title}</h2>
                 <div className="tratamientos__subwrapper">
                     <div className="tratamientos__row">
-                        <span>{higieneFacialObjState.category}</span>
+                        <span>{higieneFacialState.category}</span>
                         <ul>
                             {
-                                higieneFacialObjState.treatments.map((treatment, index) => {
+                                higieneFacialState.treatments.map((treatment, index) => {
                                     let ref = null;
                                     switch (index) {
                                         case 0:
@@ -196,7 +300,7 @@ const Tratamientos = () => {
                                             break;
                                     }
                                     return (
-                                        <li onClick={() => handleClick(ref, index, higieneFacialObj)} key={`li_${higieneFacialObj.category}_${index}`} >
+                                        <li onClick={() => handleClick(ref, index, higieneFacialState, 'hf')} key={`li_${higieneFacialState.category}_${index}`} >
                                             <div>
                                                 <span>{treatment[0]}</span>
                                                 {
@@ -225,36 +329,117 @@ const Tratamientos = () => {
                 </div>
                 <div className="tratamientos__subwrapper ">
                     <div className="tratamientos__row tratamientos__row--revert">
-                        <span>{antiAgingObj.category}</span>
+                        <span>{antiAgingState.category}</span>
                         <ul>
-                        {
-                                higieneFacialObjState.treatments.map((treatment, index) => {
+                            {
+                                antiAgingState.treatments.map((treatment, index) => {
                                     let ref = null;
                                     switch (index) {
                                         case 0:
-                                            ref = hf0;
+                                            ref = aa0;
                                             break;
                                         case 1:
-                                            ref = hf1;
+                                            ref = aa1;
                                             break;
                                         case 2:
-                                            ref = hf2;
+                                            ref = aa2;
                                             break;
                                         case 3:
-                                            ref = hf3;
+                                            ref = aa3;
                                             break;
                                         case 4:
-                                            ref = hf4;
+                                            ref = aa4;
                                             break;
                                         case 5:
-                                            ref = hf5;
+                                            ref = aa5;
+                                            break;
+                                        case 6:
+                                            ref = aa6;
+                                            break;
+                                        case 7:
+                                            ref = aa7;
+                                            break;
+                                        case 8:
+                                            ref = aa8;
+                                            break;
+                                        case 9:
+                                            ref = aa9;
+                                            break;
+                                        case 10:
+                                            ref = aa10;
+                                            break;
+                                        case 11:
+                                            ref = aa11;
+                                            break;
+                                        case 12:
+                                            ref = aa12;
+                                            break;
+                                        case 13:
+                                            ref = aa13;
                                             break;
                                     }
                                     return (
-                                        <li onClick={() => handleClick(ref, index, higieneFacialObj)} key={`li_${higieneFacialObj.category}_${index}`} >
+                                        <li onClick={() => handleClick(ref, index, antiAgingState, 'aa')} key={`li_${antiAgingState.category}_${index}`} >
                                             <div>
                                                 <span>{treatment[0]}</span>
+
                                                 {
+
+                                                    (treatment[3] == 'close') ? <AiFillCloseCircle /> : <CiMenuKebab /> //ref.current.classList.contains('tratamientos__info--hidden') ? <CiMenuKebab /> : <AiFillCloseCircle/>
+                                                }
+
+                                            </div>
+                                            <div className="tratamientos__info tratamientos__info--hidden" ref={ref}>
+                                                {
+                                                    treatment[1] !== ''
+                                                        ? <p>{treatment[1]}</p>
+                                                        : null
+                                                }
+                                                <span>Precio: {treatment[2]} €</span>
+
+                                            </div>
+                                        </li>
+                                    );
+                                })
+                            }
+                        </ul>
+                    </div>
+                    <div className="tratamientos__row">
+                        <img src={Facial} alt="" />
+                    </div>
+                </div>
+                <h3>{maquillajeState.title}</h3>
+                <div className="tratamientos__subwrapper">
+                    <div className="tratamientos__row ">
+                        <span>{esteticaGeneralState.category}</span>
+                        <ul>
+                            {
+                                esteticaGeneralState.treatments.map((treatment, index) => {
+                                    let ref = null;
+                                    switch (index) {
+                                        case 0:
+                                            ref = eg0;
+                                            break;
+                                        case 1:
+                                            ref = eg1;
+                                            break;
+                                        case 2:
+                                            ref = eg2;
+                                            break;
+                                        case 3:
+                                            ref = eg3;
+                                            break;
+                                        case 4:
+                                            ref = eg4;
+                                            break;
+                                    }
+                                    return (
+                                        <li onClick={() => handleClick(ref, index, esteticaGeneralState, 'eg')} key={`li_${esteticaGeneralState.category}_${index}`} >
+                                            <div>
+                                                <span>{treatment[0]}</span>
+
+                                                {
+
                                                     (treatment[3] == 'close') ? <AiFillCloseCircle /> : <CiMenuKebab /> //ref.current.classList.contains('tratamientos__info--hidden') ? <CiMenuKebab /> : <AiFillCloseCircle/>
                                                 }
 
@@ -279,6 +464,53 @@ const Tratamientos = () => {
                     </div>
                 </div>
             </div>
+            
+            <div className="tratamientos__subwrapper">
+                    <div className="tratamientos__row tratamientos__row--revert">
+                        <span>{maquillajeState.category}</span>
+                        <ul>
+                            {
+                                maquillajeState.treatments.map((treatment, index) => {
+                                    let ref = null;
+                                    switch (index) {
+                                        case 0:
+                                            ref = maq0;
+                                            break;
+                                        case 1:
+                                            ref = maq1;
+                                            break;
+                                        case 2:
+                                            ref = maq2;
+                                            break;
+                                    }
+                                    return (
+                                        <li onClick={() => handleClick(ref, index, maquillajeState, 'maq')} key={`li_${maquillajeState.category}_${index}`} >
+                                            <div>
+                                                <span>{treatment[0]}</span>
+                                                {
+
+                                                    (treatment[3] == 'close') ? <AiFillCloseCircle /> : <CiMenuKebab /> //ref.current.classList.contains('tratamientos__info--hidden') ? <CiMenuKebab /> : <AiFillCloseCircle/>
+                                                }
+                                            </div>
+                                            <div className="tratamientos__info tratamientos__info--hidden" ref={ref}>
+                                                {
+                                                    treatment[1] !== ''
+                                                        ? <p>{treatment[1]}</p>
+                                                        : null
+                                                }
+                                                <span>Precio: {treatment[2]} €</span>
+
+                                            </div>
+                                        </li>
+                                    );
+                                })
+                            }
+                        </ul>
+                    </div>
+                    <div className="tratamientos__row">
+                        <img src={Facial} alt="" />
+                    </div>
+                </div>
         </section>
     );
 };
