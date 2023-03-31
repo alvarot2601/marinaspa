@@ -188,13 +188,13 @@ const Tratamientos = () => {
             [
                 "Maquillaje social (día, tarde o noche)",
                 "",
-                30,
+                '30€',
                 'close'
             ],
             [
                 "Maquillaje de novia (Incluye fijación flash de larga duración y prueba de maquillaje)",
                 "(no incluye desplazamiento)",
-                90,
+                '90€',
                 'close'
             ],
             ["Lifting de pestañas + Tinte", "", 30, 'close']
@@ -209,7 +209,7 @@ const Tratamientos = () => {
             [
                 "Envoltura de Algas “CURA DETOX”",
                 "Sumérjase en una experiencia relajante, donde la riqueza mineral, el alto poder de penetración de las algas le permitirán drenar y desintoxicar el organismo, dejándolo libre de deshechos + Bañera Hidromasaje",
-                45,
+                '45€',
                 'close'
             ],
             [
@@ -224,8 +224,8 @@ const Tratamientos = () => {
             ],
             ["MADEROTERAPIA", "Programa 8 Sesiones: 300€", '45€/sesión', 'close'],
             ["PRESOTERAPIA", "Programa 10 Sesiones: 90€", '12€/sesión', 'close'],
-            ["CRIOLIPÓLISIS + presoterapia", "", 45, 'close'],
-            ["Remodelante corporal V-SHAPE + Presoterapia", "", 45, 'close'],
+            ["CRIOLIPÓLISIS + presoterapia", "", '45€', 'close'],
+            ["Remodelante corporal V-SHAPE + Presoterapia", "", '45€', 'close'],
             ["Programa IWRAP. Sistema Integral de adelgazamiento (Criofrecuencia)",{
                 'Programa 10 Sesiones: ': '400€' 
             }, '50€/sesión', 'close'],

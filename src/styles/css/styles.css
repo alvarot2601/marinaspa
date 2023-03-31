@@ -256,6 +256,7 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  font-size: 1.1rem;
 }
 .tratamientos__info--hidden {
   display: none;
@@ -272,7 +273,7 @@
   font-weight: 600;
 }
 .tratamientos__precio {
-  font-size: 2rem;
+  font-size: 1.3rem;
 }
 .tratamientos h1, .tratamientos__text {
   text-align: center;
