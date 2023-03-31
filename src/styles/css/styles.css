@@ -267,6 +267,13 @@
   justify-content: space-between;
   align-items: left;
 }
+.tratamientos__category {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.tratamientos__precio {
+  font-size: 2rem;
+}
 .tratamientos h1, .tratamientos__text {
   text-align: center;
 }
@@ -287,11 +294,15 @@
   align-items: center;
   justify-content: space-between;
 }
+.tratamientos li span {
+  flex-basis: 90%;
+}
 .tratamientos p {
   margin: 0;
 }
 .tratamientos svg {
   font-size: 1.5rem;
+  flex-basis: 10%;
 }
 .tratamientos svg:hover {
   cursor: pointer;

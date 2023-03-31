@@ -32,17 +32,29 @@ const Tratamientos = () => {
     const aa13 = useRef(null);
 
       ///referencias estetica general manicura y pedicura
-      const eg0 = useRef(null);
-      const eg1 = useRef(null);
-      const eg2 = useRef(null);
-      const eg3 = useRef(null);
-      const eg4 = useRef(null);
+    const eg0 = useRef(null);
+    const eg1 = useRef(null);
+    const eg2 = useRef(null);
+    const eg3 = useRef(null);
+    const eg4 = useRef(null);
 
       ///referencias estetica general manicura y pedicura
-      const maq0 = useRef(null);
-      const maq1 = useRef(null);
-      const maq2 = useRef(null);
-
+    const maq0 = useRef(null);
+    const maq1 = useRef(null);
+    const maq2 = useRef(null);
+    ///referencias silueta corporal y programas
+    const sc0 = useRef(null);
+    const sc1 = useRef(null);
+    const sc2 = useRef(null);
+    const sc3 = useRef(null);
+    const sc4 = useRef(null);
+    const sc5 = useRef(null);
+    const sc6 = useRef(null);
+    const sc7 = useRef(null);
+    const sc8 = useRef(null);
+    const sc9 = useRef(null);
+    const sc10 = useRef(null);
+    const sc11 = useRef(null);
 
     let higieneFacialObj = {
         title: 'BELLEZA - RITUALES Y PROGRAMAS FACIALES',
@@ -202,18 +214,26 @@ const Tratamientos = () => {
             ],
             [
                 "Tratamiento BODY-SCULPT",
-                [
-                    "(favorece la pérdida de grasa, remodela y tonifica: su diferencia la tecnología Body Pall (sin aparatología)",
-                    "Programa 6 Curas: 150€",
-                    "Programa 12 Curas: 290€"
-                ],
-                false,
+                {
+                    info:  "(favorece la pérdida de grasa, remodela y tonifica: su diferencia la tecnología Body Pall (sin aparatología)",
+                    "Programa 6 Curas: ": "150€",
+                    "Programa 12 Curas: ": ' 290€'
+                },
+                '',
                 'close'
             ],
-            ["MADEROTERAPIA", "Programa 8 Sesiones: 300€", 45 + '/sesión', 'close'],
-            ["PRESOTERAPIA", "Programa 10 Sesiones: 90€", 12 + '/sesión', 'close'],
+            ["MADEROTERAPIA", "Programa 8 Sesiones: 300€", '45€/sesión', 'close'],
+            ["PRESOTERAPIA", "Programa 10 Sesiones: 90€", '12€/sesión', 'close'],
             ["CRIOLIPÓLISIS + presoterapia", "", 45, 'close'],
-
+            ["Remodelante corporal V-SHAPE + Presoterapia", "", 45, 'close'],
+            ["Programa IWRAP. Sistema Integral de adelgazamiento (Criofrecuencia)",{
+                'Programa 10 Sesiones: ': '400€' 
+            }, '50€/sesión', 'close'],
+            ["INDIBA CORPORAL + Presoterapia", "", 50, 'close'],
+            ["WONDER", {'Programa 8 Sesiones:': '400 €', 'Programa 4 Sesiones': '236 €'}, "69€/sesión", 'close'],
+            ["LIPOSONIX (revolucionario tratamiento contra la grasa localizada a base de ultrasonidos", {'Abdomen': '90€', 'Abdomen y Flancos': '150€', 'Cartucheras': '150€', 'Brazos': '150€'}, '', 'close'],
+            ['PROGRAMA INTEGRAL, personalizado de 10 sesiones de acción global sobre grasas profundas y superficiales, remodela la silueta y reduce la celulitis', {'Programa 1 zona: ': '380€', 'Programa 2 zonas: ': '580€'}, '', 'close'],
+            ['MATENIMIENTO CORPORAL','', '45€', 'close']
         ]
     };
     
@@ -222,6 +242,7 @@ const Tratamientos = () => {
     const [antiAgingState, setAntiAgingState] = useState(antiAgingObj);
     const [esteticaGeneralState, setEsteticaGeneralState] = useState(esteticaGeneralObj);
     const [maquillajeState, setMaquillajeState] = useState(maquillajeObj);
+    const [siluetaCorporalState, setSiluetaCorporalState] = useState(siluetaCorporalObj);
 
 
 
@@ -248,6 +269,9 @@ const Tratamientos = () => {
                 break;
             case 'maq':
                 setMaquillajeState(object);
+                break;
+            case 'sc':
+                setSiluetaCorporalState(object);
                 break;
         }
 
@@ -392,11 +416,10 @@ const Tratamientos = () => {
                                             <div className="tratamientos__info tratamientos__info--hidden" ref={ref}>
                                                 {
                                                     treatment[1] !== ''
-                                                        ? <p>{treatment[1]}</p>
-                                                        : null
+                                                    ? <p>{treatment[1]}</p>
+                                                    : null
                                                 }
                                                 <span>Precio: {treatment[2]} €</span>
-
                                             </div>
                                         </li>
                                     );
@@ -500,6 +523,92 @@ const Tratamientos = () => {
                                                 }
                                                 <span>Precio: {treatment[2]} €</span>
 
+                                            </div>
+                                        </li>
+                                    );
+                                })
+                            }
+                        </ul>
+                    </div>
+                    <div className="tratamientos__row">
+                        <img src={Facial} alt="" />
+                    </div>
+                </div>
+                <div className="tratamientos__subwrapper">
+                    <div className="tratamientos__row ">
+                        <span>{siluetaCorporalState.category}</span>
+                        <ul>
+                            {
+                                siluetaCorporalState.treatments.map((treatment, index) => {
+                                    let ref = null;
+                                    switch (index) {
+                                        case 0:
+                                            ref = sc0;
+                                            break;
+                                        case 1:
+                                            ref = sc1;
+                                            break;
+                                        case 2:
+                                            ref = sc2;
+                                            break;
+                                        case 3:
+                                            ref = sc3;
+                                            break;
+                                        case 4:
+                                            ref = sc4;
+                                            break;
+                                        case 5:
+                                            ref = sc5;
+                                            break;
+                                        case 6:
+                                            ref = sc6;
+                                            break;
+                                        case 7:
+                                            ref = sc7;
+                                            break;
+                                        case 8:
+                                            ref = sc8;
+                                            break;
+                                        case 9:
+                                            ref = sc9;
+                                            break;
+                                        case 10:
+                                            ref = sc10;
+                                            break;
+                                        case 11:
+                                            ref = sc11;
+                                            break;
+                                    }
+                                    return (
+                                        <li onClick={() => handleClick(ref, index, siluetaCorporalState, 'sc')} key={`li_${siluetaCorporalState.category}_${index}`} >
+                                            <div>
+                                                <span className="tratamientos__category">{treatment[0]}</span>
+                                                {
+                                                    (treatment[3] == 'close') ? <AiFillCloseCircle /> : <CiMenuKebab /> //ref.current.classList.contains('tratamientos__info--hidden') ? <CiMenuKebab /> : <AiFillCloseCircle/>
+                                                }
+                                            </div>
+                                            <div className="tratamientos__info tratamientos__info--hidden" ref={ref}>
+                                                {
+                                                    typeof treatment[1] === 'object'
+                                                        ? (
+                                                            Object.keys(treatment[1]).map(property=>{
+                                                                return (
+                                                                    <p>
+                                                                        <span>{property}</span> <span>{treatment[1][property]}</span>
+                                                                    </p>
+                                                                )
+                                                             })
+                                                        )
+                                                        : (treatment[1] !== '')
+                                                            ? <p>{treatment[1]}</p>
+                                                            : null
+                                                    
+                                                }
+                                                {
+                                                    treatment[2] !== ''
+                                                    ? <span className="tratamientos__precio">{treatment[2]}</span>
+                                                    : null
+                                                }
                                             </div>
                                         </li>
                                     );

@@ -54,6 +54,13 @@
         justify-content: space-between;
         align-items: left;
     }
+    &__category{
+        font-size: 1.3rem;
+        font-weight: 600;
+    }
+    &__precio{
+        font-size: 2rem;
+    }
     h1, &__text{
         text-align: center;
     }
@@ -74,12 +81,16 @@
             align-items: center;
             justify-content: space-between;
         }
+        span{
+            flex-basis: 90%;
+        }
     }
     p{
         margin: 0;
     }
     svg{
         font-size: 1.5rem;
+        flex-basis: 10%;
     }
     svg:hover{
         cursor: pointer;
