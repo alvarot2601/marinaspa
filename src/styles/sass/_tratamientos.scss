@@ -61,6 +61,7 @@
     &__precio{
         font-size: 1.3rem;
     }
+    
     h1, h2, h3, h4 &__text,  &__description{
         text-align: center;
     }
@@ -98,4 +99,7 @@
     svg:hover{
         cursor: pointer;
     }
+}
+.li__border-bottom{
+    border-bottom: 1px solid black;
 }

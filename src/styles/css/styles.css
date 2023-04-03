@@ -312,6 +312,10 @@
   cursor: pointer;
 }
 
+.li__border-bottom {
+  border-bottom: 1px solid black;
+}
+
 .footer {
   display: flex;
   justify-content: center;

@@ -280,10 +280,10 @@ const Tratamientos = () => {
             ],
             [
                 [
-                    'Masajes piernas cansadas+ Presoterapia (50 min.)', '', '45 €', 'close'
+                    'Masajes piernas cansadas + Presoterapia (50 min.)', '', '45 €', 'close'
                 ],
                 [
-                    'Masaje antiestrés- (30 min.)', '', '25 €', 'close'
+                    'Masaje antiestrés - (30 min.)', '', '25 €', 'close'
                 ],
                 [
                     'Peeling Hidratante', 'Piel más suave y supe hidratada (35 min.)', '45 €', 'close'
@@ -783,7 +783,10 @@ const Tratamientos = () => {
                                         <ul>
                                             {
                                                 bienestarRelajacionState.treatments[index].map((treatment, index2) => {
+                                                    console.log(treatment.length)
                                                     let ref = null;
+                                                    let borderClass = '';
+                                                    borderClass = (index2 === bienestarRelajacionState.treatments[index].length - 1) ?  'li__border-bottom' : '';
                                                     switch (index) {
                                                         case 0:
                                                             if(index2 === 0) ref = br0;
@@ -810,11 +813,8 @@ const Tratamientos = () => {
                                                             else if(index2 === 6) ref = br15;
                                                             break;
                                                     }
-                                                    {
-                                                        console.log(treatment[2])
-                                                    }
                                                     return (
-                                                        <li onClick={() => handleClick(ref, index, index2, bienestarRelajacionState, 'br')} key={`li_${bienestarRelajacionState.category[index]}_${index}`} >
+                                                        <li className={borderClass} onClick={() => handleClick(ref, index, index2, bienestarRelajacionState, 'br')} key={`li_${bienestarRelajacionState.category[index]}_${index}`} >
                                                             <div>
                                                                 <span className="tratamientos__tratamiento">{treatment[0]}</span>
                                                                 {
