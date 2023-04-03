@@ -9,10 +9,10 @@ const Footer = () => {
                     <FaCopyright/> Copyright 2023
                 </span>
                 <span>
-                    Calle Bauça, 10 07100 Sóller
+                    Zafra – Calle Reyes Huertas Nº 8
                 </span>
                 <span>
-                    666666666
+                    644 799 000
                 </span>
             </div>
             <div className="footer__col">
