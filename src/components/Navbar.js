@@ -15,13 +15,13 @@ const NavBar = ()=> {
                             <Link to="/programas-faciales">Programas Faciales</Link>
                         </li>
                         <li>
-                            <Link to="/estetica_general">Estética General</Link>
+                            <Link to="/estetica-general">Estética General</Link>
                         </li>
                         <li>
-                            <Link to="/silueta_corporal">Silueta Corporal</Link>
+                            <Link to="/silueta-corporal">Silueta Corporal</Link>
                         </li>
                         <li>
-                            <Link to="/bienestar_relajacion">Bienestar y Relajación</Link>
+                            <Link to="/bienestar-relajacion">Bienestar y Relajación</Link>
                         </li>
                         <li>
                             <Link to="/depilacion">Depilación</Link>
