@@ -1,11 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
-import Pdf from "../assets/alvaro.pdf";
 import Facial from "../assets/images/facial.jpg";
 import { AiFillCloseCircle } from 'react-icons/ai';
 
 import { CiMenuKebab } from 'react-icons/ci';
 import Footer from "../components/Footer";
-import NavBar from "../components/Navbar";
+import NavBar from "../components/NavBar";
 const Tratamientos = () => {
 
     ///referencias higiene facial
@@ -74,7 +73,7 @@ const Tratamientos = () => {
     const br13 = useRef(null);
     const br14 = useRef(null);
     const br15 = useRef(null);
-    let higieneFacialObj = {
+    const higieneFacialObj = {
         title: 'BELLEZA - RITUALES Y PROGRAMAS FACIALES',
         category: 'HIGIENE FACIAL OXIGENANTE',
         treatments: [

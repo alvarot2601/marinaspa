@@ -99,6 +99,24 @@
     svg:hover{
         cursor: pointer;
     }
+
+
+
+
+
+
+
+
+
+    header{
+        min-height: 500px;
+        background-image: url('../../assets/images/facial-2.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 .li__border-bottom{
     border-bottom: 1px solid black;

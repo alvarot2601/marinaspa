@@ -13,6 +13,30 @@
   align-items: center;
   gap: 20px;
 }
+.nav__dropdown-wrapper {
+  position: relative;
+}
+.nav__dropdown {
+  position: absolute;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+.nav__dropdown-wrapper:hover .nav__dropdown {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-width: 160px;
+}
+.nav__dropdown {
+  display: none;
+}
+.nav__dropdown li {
+  border-bottom: 1px solid black;
+  padding: 15px 0 15px 7px;
+}
+.nav__dropdown li:last-child {
+  border: none;
+}
 
 .header {
   position: relative;
@@ -310,6 +334,15 @@
 }
 .tratamientos svg:hover {
   cursor: pointer;
+}
+.tratamientos header {
+  min-height: 500px;
+  background-image: url("../../assets/images/facial-2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .li__border-bottom {
