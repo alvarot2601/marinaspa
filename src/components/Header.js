@@ -15,7 +15,12 @@ const Header = ()=> {
                 </button>
             </div>
             <img className='header__image header__image--0' src={FotoMari} alt="" />
-            <svg className='header__image header__image--1' viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            
+        </header>
+    );
+}
+export default Header;
+/*<svg className='header__image header__image--1' viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                 <path fill="#000000" d="M64.2,-38C76.9,-15.1,76.6,14.5,63.7,38.5C50.8,62.5,25.4,81,-1.7,82C-28.8,83,-57.5,66.4,-71.7,41.6C-85.9,16.8,-85.6,-16.2,-71.2,-40.1C-56.8,-64,-28.4,-78.7,-1.3,-77.9C25.8,-77.2,51.5,-60.9,64.2,-38Z" transform="translate(100 100)" />
             </svg>
             <svg className='header__image header__image--2' viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
@@ -23,9 +28,4 @@ const Header = ()=> {
             </svg>
             <svg className='header__image header__image--3' viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                 <path fill="#FFFFFF" d="M64.2,-38C76.9,-15.1,76.6,14.5,63.7,38.5C50.8,62.5,25.4,81,-1.7,82C-28.8,83,-57.5,66.4,-71.7,41.6C-85.9,16.8,-85.6,-16.2,-71.2,-40.1C-56.8,-64,-28.4,-78.7,-1.3,-77.9C25.8,-77.2,51.5,-60.9,64.2,-38Z" transform="translate(100 100)" />
-            </svg>
-            
-        </header>
-    );
-}
-export default Header;
+            </svg> */

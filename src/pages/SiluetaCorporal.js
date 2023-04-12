@@ -3,7 +3,7 @@ import Layout from '../components/Layout';
 
 import List2 from '../components/List2';
 
-const SiluetaCorporal = () => {
+const SiluetaCorporalPage = () => {
     ///referencias silueta corporal y programas
     const sc0 = useRef(null);
     const sc1 = useRef(null);
@@ -46,7 +46,7 @@ const SiluetaCorporal = () => {
                 'Programa 10 Sesiones: ': '400€'
             }, '50€/sesión', 'close'],
             ["INDIBA CORPORAL + Presoterapia", "", 50, 'close'],
-            ["WONDER", { 'Programa 8 Sesiones:': '400 €', 'Programa 4 Sesiones': '236 €' }, "69€/sesión", 'close'],
+            ["WONDER", { 'Programa 8 Sesiones:': '400€', 'Programa 4 Sesiones': '236€' }, "69€/sesión", 'close'],
             ["LIPOSONIX (revolucionario tratamiento contra la grasa localizada a base de ultrasonidos", { 'Abdomen': '90€', 'Abdomen y Flancos': '150€', 'Cartucheras': '150€', 'Brazos': '150€' }, '', 'close'],
             ['PROGRAMA INTEGRAL, personalizado de 10 sesiones de acción global sobre grasas profundas y superficiales, remodela la silueta y reduce la celulitis', { 'Programa 1 zona: ': '380€', 'Programa 2 zonas: ': '580€' }, '', 'close'],
             ['MATENIMIENTO CORPORAL', '', '45€', 'close']
@@ -64,7 +64,7 @@ const SiluetaCorporal = () => {
                         <h1>{siluetaCorporal.title}</h1>
                     </header>
                     <main>
-                        <List2 states={[[siluetaCorporal, setSiluetaCorporal]]} obj={[siluetaCorporal]} reference={[[sc0, sc1, sc2, sc3, sc4, sc5, sc6, sc7, sc8, sc9, sc10, sc11]]} />
+                        <List2 states={[[siluetaCorporal, setSiluetaCorporal]]} obj={[siluetaCorporal]} reference={[sc0, sc1, sc2, sc3, sc4, sc5, sc6, sc7, sc8, sc9, sc10, sc11]} />
                     </main>
                 </div>
             </Layout>
@@ -72,4 +72,4 @@ const SiluetaCorporal = () => {
     );
 }
 
-export default SiluetaCorporal;
+export default SiluetaCorporalPage;

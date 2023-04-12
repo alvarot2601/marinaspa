@@ -2,8 +2,9 @@ import React, { useState, useRef } from 'react';
 import Layout from '../components/Layout';
 
 import List2 from '../components/List2';
+import List3 from '../components/List3';
 
-const BienestarRelajacion = () => {
+const BienestarRelajacionPage = () => {
     //referencias bienestar y relajación
     const br0 = useRef(null);
     const br1 = useRef(null);
@@ -83,17 +84,17 @@ const BienestarRelajacion = () => {
     };
 
     /////////////ESTADOS
-    const [bienestarRelajacion, setBienestarRelajacion] = useState(bienestarRelajacionObj);
+    const [bienestarRelajacionState, setBienestarRelajacionState] = useState(bienestarRelajacionObj);
 
     return (
         <>
             <Layout>
                 <div className='tratamientos'>
                     <header>
-                        <h1>{bienestarRelajacion.title}</h1>
+                        <h1>{bienestarRelajacionState.title}</h1>
                     </header>
                     <main>
-                        <List2 states={[[bienestarRelajacion, setBienestarRelajacion]]} obj={[bienestarRelajacion]} reference={[[br0, br1, br2, br3, br4, br5, br6, br7, br8, br9, br10, br11, br12, br13, br14, br15]]} />
+                        <List3 states={[bienestarRelajacionState, setBienestarRelajacionState]} obj={bienestarRelajacionState} reference={[br0, br1, br2, br3, br4, br5, br6, br7, br8, br9, br10, br11, br12, br13, br14, br15]} />
                     </main>
                 </div>
             </Layout>
@@ -101,4 +102,4 @@ const BienestarRelajacion = () => {
     );
 }
 
-export default BienestarRelajacion;
+export default BienestarRelajacionPage;

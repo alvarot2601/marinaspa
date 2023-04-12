@@ -3,7 +3,7 @@ import Layout from '../components/Layout';
 
 import List from '../components/List';
 
-const ProgramasFaciales = ({title}) => {
+const ProgramasFacialesPage = ({title}) => {
 
     const antiAgingObj = {
         title: 'BELLEZA - RITUALES Y PROGRAMAS FACIALES',
@@ -152,11 +152,11 @@ const ProgramasFaciales = ({title}) => {
                         <h1>{title}</h1>
                     </header>
                     <main>
-                        <List states = {[[higieneFacialState, setHigieneFacialState], [antiAgingState, setAntiAgingState]]} obj={[higieneFacialState, antiAgingState]} reference={[[hf0, hf1, hf2, hf3, hf4, hf5], [aa0, aa1, aa2, aa3, aa4, aa5, aa6, aa7, aa8, aa9, aa10, aa11, aa12, aa13]]} />
+                        <List states = {[[higieneFacialState, setHigieneFacialState], [antiAgingState, setAntiAgingState]]} obj={[higieneFacialState, antiAgingState]} reference={[hf0, hf1, hf2, hf3, hf4, hf5,aa0, aa1, aa2, aa3, aa4, aa5, aa6, aa7, aa8, aa9, aa10, aa11, aa12, aa13]} />
                     </main>
                 </div>
             </Layout>
         </>
     );
 }
-export default ProgramasFaciales;
+export default ProgramasFacialesPage;

@@ -4,7 +4,7 @@ import Facial from "../assets/images/facial.jpg";
 
 import { CiMenuKebab } from 'react-icons/ci';
 const List2 = ({states, obj, reference}) => {
-    
+    let refCounter = 0;
     const handleClick = (ref, index, index2 = null, obj, i) => {
         //higieneFacialObj.treatments[index][3] = 3;
         //(higieneFacialObj.treatments[index][3] == <AiFillCloseCircle/>) ? higieneFacialObj.treatments[index][3] = <CiMenuKebab/> : higieneFacialObj.treatments[index][3] = <AiFillCloseCircle/>;
@@ -36,44 +36,8 @@ const List2 = ({states, obj, reference}) => {
                             {
                                 singleObj.treatments.map((treatment, index) => {
                                     let ref = null;
-                                    switch (index) {
-                                        case 0:
-                                            ref = reference[0][0];
-                                            break;
-                                        case 1:
-                                            ref = reference[0][1];
-                                            break;
-                                        case 2:
-                                            ref = reference[0][2];
-                                            break;
-                                        case 3:
-                                            ref = reference[0][3];
-                                            break;
-                                        case 4:
-                                            ref = reference[0][4];
-                                            break;
-                                        case 5:
-                                            ref = reference[0][5];
-                                            break;
-                                        case 6:
-                                            ref = reference[0][6];
-                                            break;
-                                        case 7:
-                                            ref = reference[0][7];
-                                            break;
-                                        case 8:
-                                            ref = reference[0][8];
-                                            break;
-                                        case 9:
-                                            ref = reference[0][9];
-                                            break;
-                                        case 10:
-                                            ref = reference[0][10];
-                                            break;
-                                        case 11:
-                                            ref = reference[0][11];
-                                            break;
-                                    }
+                                    ref = reference[refCounter];
+                                    refCounter++;
                                     return (
                                         <li onClick={() => handleClick(ref, index, null, singleObj, i)} key={`li_${singleObj.category}_${index}`} >
                                             <div>

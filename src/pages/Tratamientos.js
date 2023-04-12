@@ -380,7 +380,7 @@ const Tratamientos = () => {
     const [maquillajeState, setMaquillajeState] = useState(maquillajeObj);
     const [siluetaCorporalState, setSiluetaCorporalState] = useState(siluetaCorporalObj);
     const [bienestarRelajacionState, setBienestarRelajacionState] = useState(bienestarRelajacionObj);
-
+    const [depilacionState, setDepilacionState] = useState(fotodepilacionObj);
 
     const handleClick = (ref, index, index2 = null, obj, objectType) => {
         //higieneFacialObj.treatments[index][3] = 3;

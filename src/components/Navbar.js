@@ -21,10 +21,10 @@ const NavBar = ()=> {
                             <Link to="/silueta-corporal">Silueta Corporal</Link>
                         </li>
                         <li>
-                            <Link to="/bienestar-relajacion">Bienestar y Relajación</Link>
+                            <Link to="/bienestar-y-relajacion">Bienestar y Relajación</Link>
                         </li>
                         <li>
-                            <Link to="/depilacion">Depilación</Link>
+                            <Link to="/depilacion-y-fotodepilacion">Depilación</Link>
                         </li>
                     </ul>
                 </div>

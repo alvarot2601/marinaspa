@@ -42,13 +42,17 @@
 
 .header {
   position: relative;
-  background-color: #f7f4ed;
   min-height: 92vh;
   display: flex;
   align-items: center;
   padding: 20px;
   font-size: 1.5rem;
   z-index: -2;
+  background-image: url("../../assets/images/rainbow-vortex.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .header__text-container {
   margin-left: 10vw;
@@ -68,7 +72,7 @@
 .header__image--0 {
   bottom: 0;
   left: 50%;
-  width: 100%;
+  width: 50%;
   max-width: 750px;
   object-fit: contain;
 }
@@ -94,7 +98,7 @@
 }
 .main__first-section {
   position: relative;
-  max-width: 70vw;
+  max-width: 90vw;
   background-color: #fff;
   padding: 100px;
   margin: auto;
@@ -103,15 +107,21 @@
 }
 .main__first-section img {
   width: 50%;
+  object-fit: cover;
 }
 .main__background-rectangle {
   width: 40%;
   height: 35vw;
   position: absolute;
-  top: -20%;
-  right: -10%;
-  background-color: black;
+  top: -15%;
+  right: 0%;
+  background-color: #f7f4ed;
   z-index: -1;
+}
+.main__background-rectangle--2 {
+  top: 60%;
+  right: unset;
+  left: -10%;
 }
 .main__target {
   -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
@@ -119,11 +129,12 @@
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
   padding: 40px 30px;
   margin: auto;
-  max-width: 30vw;
+  max-width: 40vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 30px;
+  background-color: white;
 }
 .main__target img {
   max-width: 100px;
@@ -162,6 +173,9 @@
   border-top: 3px solid black;
 }
 
+.servicios {
+  text-align: center;
+}
 .servicios__row {
   display: flex;
   gap: 20px;
@@ -178,40 +192,14 @@
   margin-bottom: 40px;
 }
 
-.tratamientos__container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1vw;
-}
-.tratamientos__item {
-  background-color: blue;
-  width: 24vw;
-  height: 20vw;
-  border: 1px solid black;
-}
-.tratamientos img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.tratamientos__general-info {
-  max-width: 70vw;
-  margin: auto;
-  margin-bottom: 30px;
-}
-.tratamientos button {
-  margin-bottom: 60px;
-}
-
 .diagnostico {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 80vw;
   margin: auto;
-  gap: 50px;
+  text-align: left;
+  margin-bottom: 50px;
 }
 .diagnostico__title {
   font-size: 2rem;
@@ -221,14 +209,76 @@
   font-size: 3rem;
 }
 .diagnostico div, .diagnostico img {
-  width: 50%;
+  width: 40%;
   flex-grow: 1;
+}
+.diagnostico img {
+  border-radius: 50px;
+  object-fit: cover;
 }
 .diagnostico p {
   max-width: 30vw;
-  margin: 30px auto;
+  margin: 30px 0;
+}
+.diagnostico button {
+  margin: 0;
 }
 
+.title {
+  font-size: max(2vw, 24px);
+  line-height: 1.1;
+  padding-bottom: 0.4em;
+  color: rgb(255, 255, 255);
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.text {
+  font-size: max(1vw, 15px);
+  line-height: 1.4;
+  overflow: hidden;
+  padding-bottom: 20px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.accordions {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20vh;
+  gap: 2vh;
+}
+
+.accordion {
+  background: linear-gradient(200deg, rgb(29, 145, 252) 13.57%, rgb(90, 54, 192) 98.38%);
+  width: 80vw;
+  padding: 25px 30px 10px;
+  border-radius: 15px;
+  margin-bottom: 40px;
+  box-shadow: 0 30px 30px -10px rgba(0, 0, 0, 0.3);
+}
+.accordion:nth-child(2) {
+  background: linear-gradient(200deg, rgb(242, 136, 133) 13.57%, rgb(233, 79, 102) 98.38%);
+}
+.accordion:nth-child(3) {
+  background: linear-gradient(200deg, rgb(101, 187, 118) 13.57%, rgb(70, 111, 171) 98.38%);
+}
+.accordion:nth-child(4) {
+  background: linear-gradient(200deg, #c215d1 13.57%, #9813a1 98.38%);
+}
+
+.spacer {
+  height: 0vh;
+}
+
+@media (max-width: 480px) {
+  .accordion {
+    padding: 15px 20px 8px;
+  }
+  .title {
+    font-size: 20px;
+  }
+}
 .testimonios {
   padding: 50px;
   background-color: #2a2a2a;
@@ -250,6 +300,11 @@
   max-width: 80vw;
   margin: auto;
   gap: 20px;
+}
+.tratamientos__general-info {
+  text-align: center;
+  max-width: 80vw;
+  margin: 30px auto;
 }
 .tratamientos__categoria {
   margin-top: 20px;
@@ -301,6 +356,31 @@
 .tratamientos__precio {
   font-size: 1.3rem;
 }
+.tratamientos__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1vw;
+}
+.tratamientos__item {
+  text-align: center;
+  border: 1px solid black;
+}
+.tratamientos__item img {
+  width: 100%;
+  height: 20vw;
+  object-fit: cover;
+}
+.tratamientos__item button {
+  margin: none;
+}
+.tratamientos__swiper-wrapper {
+  width: 90%;
+}
+.tratamientos__swiper-wrapper .swiper-button-prev {
+  left: -10px;
+}
 .tratamientos h1, .tratamientos h2, .tratamientos h3, h4 .tratamientos__text, .tratamientos__description {
   text-align: center;
 }
@@ -327,15 +407,15 @@
 .tratamientos li span {
   flex-basis: 90%;
 }
-.tratamientos p {
-  margin: 0;
-}
 .tratamientos svg {
   font-size: 1.5rem;
   flex-basis: 10%;
 }
 .tratamientos svg:hover {
   cursor: pointer;
+}
+.tratamientos button {
+  margin-bottom: 60px;
 }
 .tratamientos header {
   min-height: 500px;
@@ -399,6 +479,9 @@ ul {
   border-radius: 10px;
   font-size: 1.3rem;
   font-weight: 700;
+  margin: auto;
+  display: block;
+  cursor: pointer;
 }
 .button--white {
   background-color: white;
@@ -422,6 +505,7 @@ ul {
   position: fixed;
   right: 20px;
   bottom: 20px;
+  z-index: 999;
 }
 
 /*# sourceMappingURL=styles.css.map */

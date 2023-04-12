@@ -3,7 +3,7 @@ import Layout from '../components/Layout';
 
 import List from '../components/List';
 
-const EsteticaGeneral = ({title}) => {
+const EsteticaGeneralPage = ({title}) => {
     ///referencias estetica general manicura y pedicura
     const eg0 = useRef(null);
     const eg1 = useRef(null);
@@ -75,4 +75,4 @@ const EsteticaGeneral = ({title}) => {
     );
 }
 
-export default EsteticaGeneral;
+export default EsteticaGeneralPage;
