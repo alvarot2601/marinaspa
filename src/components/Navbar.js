@@ -7,7 +7,7 @@ const NavBar = ()=> {
                 MARINASPÁ
             </div>
             <div className="nav__links">
-                <Link to="/">HOME</Link>
+                <Link to="/" className="nav__link-active">HOME</Link>
                 <div className="nav__dropdown-wrapper">
                     <Link to="/tratamientos">TRATAMIENTOS</Link>
                     <ul className="nav__dropdown">

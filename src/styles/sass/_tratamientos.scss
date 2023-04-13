@@ -41,12 +41,28 @@
     &__subtitle{
         font-size: 1.5rem; 
     }
-    
+    button{
+        margin-bottom: 60px;
+    }
     &__info{
+        color: #fff;
+        font-weight: 600;
         display: flex;
         flex-direction: column;
-        gap: 10px;
-        font-size: 1.1rem;
+        gap: 20px;
+        padding: 20px;
+        span{
+            letter-spacing: 0.3rem;
+            font-weight: 700;
+            font-size: 1.5rem;
+            text-decoration: underline;
+        }
+        p{
+            margin: 0;
+        }
+        button{
+            margin-bottom: 0px;
+        }
     }
     &__info--hidden{
         display: none;
@@ -72,16 +88,38 @@
         flex-wrap: wrap;
         gap: 1vw;
     }
+    &__slider{
+        padding: 10px!important;
+    }
     &__item{
+        background-color: $violet;
         text-align: center;
-        border: 1px solid black;
+        border-radius: 10px;
+        box-shadow: 0 30px 30px -10px rgba(0, 0, 0, 0.3);
         img{
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
             width: 100%;
             height: 20vw;
             object-fit: cover;
         }
         button{
             margin: none;
+        }
+        &--1{
+            //background-color: $apricot;
+        }
+        &--2{
+      ///      background-color: $light_brown;
+        }
+        &--3{
+         //   background-color: $beige;
+        }
+        &--4{
+           // background-color: $light_grey;
+        }
+        &--5{
+           /// background-color: $light_green;
         }
     }
     &__swiper-wrapper{
@@ -90,18 +128,16 @@
             left: -10px;
         }
     }
+    
     h1, h2, h3, h4 &__text,  &__description{
         text-align: center;
     }
-    h1,h2,h3{
-        font-size: 2rem;
-    }
+    
     ul{
         padding: 0;
         display: flex;
         flex-direction: column;
         gap: 20px;
-        
     }
     li{
         display: flex;
@@ -129,9 +165,7 @@
 
 
 
-    button{
-        margin-bottom: 60px;
-    }
+   
 
     header{
         min-height: 500px;

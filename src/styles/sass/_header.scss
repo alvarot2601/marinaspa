@@ -1,31 +1,29 @@
 @import "variables";
 .header{
+    
     position: relative;
     min-height: 92vh;
     display: flex;
     align-items: center;
-    padding: 20px;
+    justify-content: center;
+    padding: 0 50px;
     font-size: 1.5rem;
-    z-index: -2;
-    background-image: url('../../assets/images/rainbow-vortex.png');
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    z-index: 0;
+    //background-color: $beige;
+   *{
+    font-family: 'Caveat', cursive;
+    font-weight: 700;
+   }
     &__text-container{
-        margin-left: 10vw;
-        max-width: 50%;
-        z-index: 1;
+        width: 70%;
+        height: 100%;
     }
     p{
         margin: 0;
         margin-bottom: 40px;
         font-size: 7rem;
     }
-    &__image{
-        
 
-    }
     &__image{
         position: absolute;
         width: 100%;

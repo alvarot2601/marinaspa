@@ -117,7 +117,7 @@ const Main = () => {
                     modules={[Pagination, Navigation]}
                 >
                     <SwiperSlide>
-                        <div className='tratamientos__item'>
+                        <div className='tratamientos__item tratamientos__item--1'>
                             <img src={Facial} alt="" />
                             <div className='tratamientos__info'>
                                 <span>FACIAL</span>
@@ -132,7 +132,7 @@ const Main = () => {
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className='tratamientos__item'>
+                        <div className='tratamientos__item tratamientos__item--2'>
                             <img src={Facial} alt="" />
                             <div className='tratamientos__info'>
                                 <span>FACIAL</span>
@@ -147,7 +147,22 @@ const Main = () => {
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className='tratamientos__item'>
+                        <div className='tratamientos__item tratamientos__item--3'>
+                            <img src={Facial} alt="" />
+                            <div className='tratamientos__info'>
+                                <span>FACIAL</span>
+                                <p>
+                                    Dime como sientes tu piel y te diré cómo cuidarla <br />
+                                    ¿Qué aspectos o partes de tu piel o tu cuerpo te gustaría mejorar, cuidar y mimar más?
+                                </p>
+                                <button className='button button--malva'>
+                                    SABER MÁS
+                                </button>
+                            </div>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className='tratamientos__item tratamientos__item--4'>
                             <img src={Facial} alt="" />
                             <div className='tratamientos__info'>
                                 <span>FACIAL</span>
@@ -162,22 +177,7 @@ const Main = () => {
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className='tratamientos__item'>
-                            <img src={Facial} alt="" />
-                            <div className='tratamientos__info'>
-                                <span>FACIAL</span>
-                                <p>
-                                    Dime como sientes tu piel y te diré cómo cuidarla <br />
-                                    ¿Qué aspectos o partes de tu piel o tu cuerpo te gustaría mejorar, cuidar y mimar más?
-                                </p>
-                                <button className='button'>
-                                    SABER MÁS
-                                </button>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className='tratamientos__item'>
+                        <div className='tratamientos__item tratamientos__item--5'>
                             <img src={Facial} alt="" />
                             <div className='tratamientos__info'>
                                 <span>FACIAL</span>
@@ -192,39 +192,11 @@ const Main = () => {
                         </div>
                     </SwiperSlide>
                 </Swiper>
-
-
-
             </section>
             <section className="servicios">
                 <h3>Nuestros servicios</h3>
                 <span>Qué ofrecemos?</span>
-                <div className='servicios__row'>
-                    <div className='servicios__item'>
-                        <span>Servicios personalizados</span>
-                        <p>
-                            En MarinaSpá ofrecemos tratamientos (faciales, corporales, relajantes...) con la tecnología más avanzada del mercado.
-                        </p>
-                    </div>
-                    <div className='servicios__item'>
-                        <span>Programas de fidelización y ofertas</span>
-                        <p>
-                            Ofrecemos ofertas exclusivas y promociones especiales en distintos servicios Y tratamientos a nuestros clientes más fieles y recurrentes.
-                        </p>
-                    </div>
-                    <div className='servicios__item'>
-                        <span>Programas de fidelización y ofertas</span>
-                        <p>
-                            Ofrecemos ofertas exclusivas y promociones especiales en distintos servicios a nuestros clientes más fieles y recurrentes.
-                        </p>
-                    </div>
-                    <div className='servicios__item'>
-                        <span>Solo las mejores marcas</span>
-                        <p>
-                            En MarinaSpá únicamente trabajamos con las mejores marcas, sí o sí notarás la diferencia.
-                        </p>
-                    </div>
-                </div>
+                
                 <div id="wrapper">
                     <div id="content">
                         <div className="spacer"></div>

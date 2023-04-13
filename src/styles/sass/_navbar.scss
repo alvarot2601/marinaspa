@@ -1,10 +1,10 @@
+@import "variables";
 .nav{
     height: 8vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 30px 50px;
-    background-color: #fff;
+    padding: 50px 50px;
     position: relative;
     z-index: 999;
     &__links{
@@ -12,17 +12,22 @@
         align-items: center;
         gap: 20px;
     }
+    a{
+        color: #fff;
+        padding: 10px 15px;
+    }
+    &__link-active{
+        border: 3px solid #fff;
+    }
     &__dropdown-wrapper{
         position: relative;
         background-color: #fff;
-        
     }
     &__dropdown{
         position: absolute;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     }
     &__dropdown-wrapper:hover{
-        
         .nav__dropdown{
             margin: 0 ;
             padding: 0;

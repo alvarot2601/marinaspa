@@ -421,11 +421,9 @@ const Tratamientos = () => {
 
 
     useEffect(() => {
-
+        
     }, [higieneFacialState, antiAgingState, esteticaGeneralState, maquillajeState, bienestarRelajacionState]);
-
     return (
-
         <>
             <NavBar />
             <section className="tratamientos">
