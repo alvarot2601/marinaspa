@@ -17,7 +17,7 @@ const Header = ()=> {
                     <span>Centro de estética </span> <br /><span>MarinaSpá</span>
                 </p>
             </div>
-            <button className='button button--white'>
+            <button className='button button--transparent'>
                 Trabaja conmigo <BsArrowDownCircle/>
             </button>
             {

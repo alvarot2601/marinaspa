@@ -22,33 +22,41 @@ const Testimonials = () => {
                 <SwiperSlide>
                     <div className="testimonios__content">
                         <p>
-                            "Hoy he disfrutado del beauty menú diciembre, q me regalaron por reyes. Totalmente recomendable. La hidratación corporal es muy agradable, así como el tratamiento facial 360. También me gustó el maquillaje. Muy profesionales y un ambiente muy relajante. Mi enhorabuena."
+                            <i>
+                                "Hoy he disfrutado del beauty menú diciembre, q me regalaron por reyes. Totalmente recomendable. La hidratación corporal es muy agradable, así como el tratamiento facial 360. También me gustó el maquillaje. Muy profesionales y un ambiente muy relajante. Mi enhorabuena."
+                            </i>
                         </p>
-                        <span>Zaida González</span>
+                        <i>Zaida González</i>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="testimonios__content">
                         <p>
-                            "Hoy he disfrutado del beauty menú diciembre, q me regalaron por reyes. Totalmente recomendable. La hidratación corporal es muy agradable, así como el tratamiento facial 360. También me gustó el maquillaje. Muy profesionales y un ambiente muy relajante. Mi enhorabuena."
+                            <i>
+                                "Hoy he disfrutado del beauty menú diciembre, q me regalaron por reyes. Totalmente recomendable. La hidratación corporal es muy agradable, así como el tratamiento facial 360. También me gustó el maquillaje. Muy profesionales y un ambiente muy relajante. Mi enhorabuena."
+                            </i>
                         </p>
-                        <span>Zaida González</span>
+                        <i>Zaida González</i>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="testimonios__content">
                         <p>
-                            "Hoy he disfrutado del beauty menú diciembre, q me regalaron por reyes. Totalmente recomendable. La hidratación corporal es muy agradable, así como el tratamiento facial 360. También me gustó el maquillaje. Muy profesionales y un ambiente muy relajante. Mi enhorabuena."
+                            <i>
+                                "Hoy he disfrutado del beauty menú diciembre, q me regalaron por reyes. Totalmente recomendable. La hidratación corporal es muy agradable, así como el tratamiento facial 360. También me gustó el maquillaje. Muy profesionales y un ambiente muy relajante. Mi enhorabuena."
+                            </i>
                         </p>
-                        <span>Zaida González</span>
+                        <i>Zaida González</i>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="testimonios__content">
                         <p>
-                            "Hoy he disfrutado del beauty menú diciembre, q me regalaron por reyes. Totalmente recomendable. La hidratación corporal es muy agradable, así como el tratamiento facial 360. También me gustó el maquillaje. Muy profesionales y un ambiente muy relajante. Mi enhorabuena."
+                            <i>
+                                "Hoy he disfrutado del beauty menú diciembre, q me regalaron por reyes. Totalmente recomendable. La hidratación corporal es muy agradable, así como el tratamiento facial 360. También me gustó el maquillaje. Muy profesionales y un ambiente muy relajante. Mi enhorabuena."
+                            </i>
                         </p>
-                        <span>Zaida González</span>
+                        <i>Zaida González</i>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>Slide 7</SwiperSlide>

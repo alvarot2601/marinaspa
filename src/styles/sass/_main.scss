@@ -110,24 +110,32 @@
 }
 
 .tratamientos{
-    
+    .swiper-pagination-bullet{
+        background-color: $malva;
+    }
+    .swiper-button-prev, .swiper-button-next{
+        color: $malva;
+    }
     &__info{
         //visibility: hidden;
     }
-   
-    
-    
-   
-    
 }
 .diagnostico{
+    padding: 50px;
+    width: 100%;
+    background-color: $apricot;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 80vw;
     margin: auto;
     text-align: left;
     margin-bottom: 50px;
+   &__wrapper{
+    
+    width: 80vw;
+    
+    
+   }
     &__title{
         font-size: 3rem;
         margin: 0;
@@ -186,7 +194,7 @@
   }
   
   .accordion {
-    background: $malva;//linear-gradient(200deg, $light_brown 13.57%, $light_green 98.38%);
+    background: $violet;//linear-gradient(200deg, $light_brown 13.57%, $light_green 98.38%);
     width: 80vw;
     padding: 25px 30px 10px;
     border-radius: 15px;

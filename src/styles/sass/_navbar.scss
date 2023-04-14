@@ -21,7 +21,6 @@
     }
     &__dropdown-wrapper{
         position: relative;
-        background-color: #fff;
     }
     &__dropdown{
         position: absolute;
@@ -38,10 +37,9 @@
     }
     &__dropdown{
         display: none;
-        background-color: #fff;
+        //background-color: #fff;
         li{
-            
-            border-bottom: 1px solid black;
+            border-bottom: 1px solid #fff;
             padding: 15px 0 15px 7px;
         }
         li:last-child{

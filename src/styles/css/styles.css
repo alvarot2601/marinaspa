@@ -22,7 +22,6 @@
 }
 .nav__dropdown-wrapper {
   position: relative;
-  background-color: #fff;
 }
 .nav__dropdown {
   position: absolute;
@@ -37,10 +36,9 @@
 }
 .nav__dropdown {
   display: none;
-  background-color: #fff;
 }
 .nav__dropdown li {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #fff;
   padding: 15px 0 15px 7px;
 }
 .nav__dropdown li:last-child {
@@ -203,14 +201,25 @@
   margin-bottom: 40px;
 }
 
+.tratamientos .swiper-pagination-bullet {
+  background-color: rgb(163, 99, 167);
+}
+.tratamientos .swiper-button-prev, .tratamientos .swiper-button-next {
+  color: rgb(163, 99, 167);
+}
 .diagnostico {
+  padding: 50px;
+  width: 100%;
+  background-color: #FFE4C4;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 80vw;
   margin: auto;
   text-align: left;
   margin-bottom: 50px;
+}
+.diagnostico__wrapper {
+  width: 80vw;
 }
 .diagnostico__title {
   font-size: 3rem;
@@ -261,7 +270,7 @@
 }
 
 .accordion {
-  background: rgb(163, 99, 167);
+  background: rgb(203, 171, 209);
   width: 80vw;
   padding: 25px 30px 10px;
   border-radius: 15px;
@@ -361,7 +370,7 @@
   padding: 20px;
 }
 .tratamientos__info span {
-  letter-spacing: 0.3rem;
+  letter-spacing: 0.2rem;
   font-weight: 700;
   font-size: 1.5rem;
   text-decoration: underline;
