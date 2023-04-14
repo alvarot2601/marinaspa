@@ -1,10 +1,25 @@
 .testimonios{
+    text-align: center;
     padding: 50px;
-    background-color: #2a2a2a;
+    background-color: $light_brown;
     color:#fff;
     font-size: 1.5rem;
     &__content{
         max-width: 50%;
         margin: auto;
+    }
+    span{
+        font-size: 2rem;
+        text-decoration: underline;
+    }
+    .swiper-pagination-bullet{
+        background-color: $light_grey;
+    }
+    .swiper-button-next, .swiper-button-prev{
+        color: $light_grey;
+
+    }
+    .swiper-wrapper{
+        padding-bottom: 15px;
     }
 }

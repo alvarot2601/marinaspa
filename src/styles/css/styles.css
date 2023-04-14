@@ -100,7 +100,6 @@
   margin-top: 50px;
   display: flex;
   flex-direction: column;
-  gap: 50px;
 }
 .main__first-section {
   position: relative;
@@ -184,7 +183,9 @@
 }
 
 .servicios {
+  background-color: #FFF8DC;
   text-align: center;
+  padding: 40px 20px;
 }
 .servicios__row {
   display: flex;
@@ -212,7 +213,7 @@
   margin-bottom: 50px;
 }
 .diagnostico__title {
-  font-size: 2rem;
+  font-size: 3rem;
   margin: 0;
 }
 .diagnostico__title--2 {
@@ -260,23 +261,13 @@
 }
 
 .accordion {
-  background: #D2B48C;
+  background: rgb(163, 99, 167);
   width: 80vw;
   padding: 25px 30px 10px;
   border-radius: 15px;
   margin-bottom: 40px;
   box-shadow: 0 30px 30px -10px rgba(0, 0, 0, 0.3);
 }
-.accordion:nth-child(2) {
-  background: #BDB76B;
-}
-.accordion:nth-child(3) {
-  background: #D2B48C;
-}
-.accordion:nth-child(4) {
-  background: #BDB76B;
-}
-
 .spacer {
   height: 0vh;
 }
@@ -290,8 +281,9 @@
   }
 }
 .testimonios {
+  text-align: center;
   padding: 50px;
-  background-color: #2a2a2a;
+  background-color: #D2B48C;
   color: #fff;
   font-size: 1.5rem;
 }
@@ -299,9 +291,23 @@
   max-width: 50%;
   margin: auto;
 }
+.testimonios span {
+  font-size: 2rem;
+  text-decoration: underline;
+}
+.testimonios .swiper-pagination-bullet {
+  background-color: #FFF8DC;
+}
+.testimonios .swiper-button-next, .testimonios .swiper-button-prev {
+  color: #FFF8DC;
+}
+.testimonios .swiper-wrapper {
+  padding-bottom: 15px;
+}
 
 .tratamientos {
   text-align: left;
+  background-color: #FFF8DC;
 }
 .tratamientos__subwrapper {
   display: flex;
@@ -508,6 +514,22 @@ h1 {
 
 h2 {
   font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2.3rem;
+}
+
+h4 {
+  font-size: 2.1rem;
+}
+
+h5 {
+  font-size: 1.9rem;
+}
+
+h6 {
+  font-size: 1.7rem;
 }
 
 a {

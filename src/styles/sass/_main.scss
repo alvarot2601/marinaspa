@@ -2,7 +2,6 @@
     margin-top: 50px;
     display: flex;
     flex-direction: column;
-    gap: 50px;
     &__first-section{
         position: relative;
         max-width: 90vw;
@@ -86,7 +85,9 @@
 }
 
 .servicios{
+    background-color: $light_grey;
     text-align: center;
+    padding: 40px 20px;
     &__row{
         display: flex;
         gap: 20px;
@@ -128,9 +129,8 @@
     text-align: left;
     margin-bottom: 50px;
     &__title{
-        font-size: 2rem;
+        font-size: 3rem;
         margin: 0;
-       
     }
     &__title--2{
         font-size: 3rem;
@@ -150,6 +150,7 @@
     button{
         margin: 0;
     }
+   
 }
 
 
@@ -185,22 +186,22 @@
   }
   
   .accordion {
-    background: $light_brown;//linear-gradient(200deg, $light_brown 13.57%, $light_green 98.38%);
+    background: $malva;//linear-gradient(200deg, $light_brown 13.57%, $light_green 98.38%);
     width: 80vw;
     padding: 25px 30px 10px;
     border-radius: 15px;
     margin-bottom: 40px;
     box-shadow: 0 30px 30px -10px rgba(0, 0, 0, .3);
     &:nth-child(2) {
-      background: $light_green;//linear-gradient(200deg, $light_green 13.57%, $light_brown 98.38%);
+     // background: $light_green;//linear-gradient(200deg, $light_green 13.57%, $light_brown 98.38%);
     }
     
     &:nth-child(3) {
-      background: $light_brown;
+      //background: $light_brown;
     }
     
     &:nth-child(4) {
-        background: $light_green;
+        //background: $light_green;
     }
   }
   

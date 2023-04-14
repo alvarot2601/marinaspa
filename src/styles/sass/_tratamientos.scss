@@ -1,6 +1,7 @@
+@import "variables";
 .tratamientos{
     text-align: left;
-    
+    background-color: $light_grey;
     &__subwrapper{
         display: flex;
         align-items: center;

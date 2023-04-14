@@ -125,7 +125,7 @@ const Main = () => {
                                     Dime como sientes tu piel y te diré cómo cuidarla <br />
                                     ¿Qué aspectos o partes de tu piel o tu cuerpo te gustaría mejorar, cuidar y mimar más?
                                 </p>
-                                <button className='button'>
+                                <button className='button button--malva'>
                                     SABER MÁS
                                 </button>
                             </div>
@@ -140,7 +140,7 @@ const Main = () => {
                                     Dime como sientes tu piel y te diré cómo cuidarla <br />
                                     ¿Qué aspectos o partes de tu piel o tu cuerpo te gustaría mejorar, cuidar y mimar más?
                                 </p>
-                                <button className='button'>
+                                <button className='button button--malva'>
                                     SABER MÁS
                                 </button>
                             </div>
@@ -170,7 +170,7 @@ const Main = () => {
                                     Dime como sientes tu piel y te diré cómo cuidarla <br />
                                     ¿Qué aspectos o partes de tu piel o tu cuerpo te gustaría mejorar, cuidar y mimar más?
                                 </p>
-                                <button className='button'>
+                                <button className='button button--malva'>
                                     SABER MÁS
                                 </button>
                             </div>
@@ -185,7 +185,7 @@ const Main = () => {
                                     Dime como sientes tu piel y te diré cómo cuidarla <br />
                                     ¿Qué aspectos o partes de tu piel o tu cuerpo te gustaría mejorar, cuidar y mimar más?
                                 </p>
-                                <button className='button'>
+                                <button className='button button--malva'>
                                     SABER MÁS
                                 </button>
                             </div>

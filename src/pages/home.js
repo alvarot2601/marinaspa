@@ -4,6 +4,7 @@ import Main from '../components/Main';
 import Testimonials from '../components/Testimonials';
 import Layout from "../components/Layout";
 import NavBar from "../components/NavBar";
+import Footer from "../components/Footer";
 
 const Home = () => {
     return (
@@ -13,7 +14,8 @@ const Home = () => {
                     <Header/>
                 </div>
                 <Main/>
-                <Testimonials/>               
+                <Testimonials/>
+                <Footer/>         
             
         </>
     );
