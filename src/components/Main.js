@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useLayoutEffect } from 'react';
 import FotoMari from "../assets/images/header-background.JPG";
 import FotoTargeta from "../assets/images/cara.jpg";
 import Diagnostico from "../assets/images/diagnostico.JPG";
-
+import {AiOutlineArrowDown} from "react-icons/ai";
 import Facial from "../assets/images/facial.jpg";
 import { FaFacebook, FaInstagram } from 'react-icons/fa';
 
@@ -17,11 +17,17 @@ import "swiper/css/pagination";
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 gsap.registerPlugin(ScrollTrigger);
 
 const Main = () => {
 
     const comp = useRef();
+
+    useEffect( () => {
+        // ====================
+       
+    });
 
     useLayoutEffect(() => {
   
@@ -58,20 +64,32 @@ const Main = () => {
 
     return (
         <main className='main' ref={comp} >
-            <section className='main__first-section'>
-                <div className='main__background-rectangle'></div>
-                <div className='main__background-rectangle main__background-rectangle--2'></div>
-                <img src={FotoMari} />
-                <div className='main__first-text'>
-                    <h1>
-                        1 on 1 Personal Styling & Coaching
-                    </h1>
-                    <p>
-                        Nulla porttitor accumsan tincidunt. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
-                    </p>
-                    <p>
-                        Cras ultricies ligula sed magna dictum porta. Curabitur aliquet quam id dui posuere blandit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Curabitur arcu erat, id imperdiet et, porttitor at sem. Nulla porttitor accumsan tincidunt. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur non nulla sit amet nisl convallis quis ac lectus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, sit amet ligula. Mauris blandit aliquet elit
-                    </p>
+            <section className='first-section'>
+            <div className='main__background-rectangle main__background-rectangle--1'></div>
+            <div className='main__background-rectangle main__background-rectangle--2'></div>
+            <div className='main__background-rectangle main__background-rectangle--3'></div>
+            <div className='main__background-rectangle main__background-rectangle--4'></div>
+            <div className='main__background-rectangle main__background-rectangle--5'></div>
+            <div className='main__background-rectangle main__background-rectangle--down main__background-rectangle--down--1'></div>
+            <div className='main__background-rectangle main__background-rectangle--down main__background-rectangle--down--2'></div>
+            <div className='main__background-rectangle main__background-rectangle--down main__background-rectangle--down--3'></div>
+            <div className='main__background-rectangle main__background-rectangle--down main__background-rectangle--down--4'></div>
+            <div className='main__background-rectangle main__background-rectangle--down main__background-rectangle--down--5'></div>
+                    
+                <div className='main__first-section'>
+                    
+                    <div className='main__image'></div>
+                    <div className='main__first-text'>
+                        <h1>
+                            1 on 1 Personal Styling & Coaching
+                        </h1>
+                        <p>
+                            Nulla porttitor accumsan tincidunt. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
+                        </p>
+                        <p>
+                            Cras ultricies ligula sed magna dictum porta. Curabitur aliquet quam id dui posuere blandit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Curabitur arcu erat, id imperdiet et, porttitor at sem. Nulla porttitor accumsan tincidunt. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur non nulla sit amet nisl convallis quis ac lectus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, sit amet ligula. Mauris blandit aliquet elit
+                        </p>
+                    </div>
                 </div>
             </section>
             <section className='main__target-section'>
@@ -103,8 +121,8 @@ const Main = () => {
                     Con la ayuda de nuestro equipo de profesionales y de nuestros tratamientos Corporales y Faciales conseguirás frenar y hasta revertir el envejecimiento de la piel o el deterioro y desgaste que sufrimos cada año, para que así puedas lucir siempre la mejor versión de ti a pesar del paso del tiempo.
                     Ven a tu Centro de Estética en Sóller
                 </p>
-                <button className='button'>
-                    NUESTROS SERVICIOS
+                <button className='button button--transparent'>
+                    NUESTROS SERVICIOS <AiOutlineArrowDown/>
                 </button>
                 <Swiper
                     className='tratamientos__slider'
@@ -125,8 +143,8 @@ const Main = () => {
                                     Dime como sientes tu piel y te diré cómo cuidarla <br />
                                     ¿Qué aspectos o partes de tu piel o tu cuerpo te gustaría mejorar, cuidar y mimar más?
                                 </p>
-                                <button className='button button--malva'>
-                                    SABER MÁS
+                                <button className='button button--transparent'>
+                                    SABER MÁS <AiOutlineArrowDown/>
                                 </button>
                             </div>
                         </div>
@@ -140,8 +158,8 @@ const Main = () => {
                                     Dime como sientes tu piel y te diré cómo cuidarla <br />
                                     ¿Qué aspectos o partes de tu piel o tu cuerpo te gustaría mejorar, cuidar y mimar más?
                                 </p>
-                                <button className='button button--malva'>
-                                    SABER MÁS
+                                <button className='button button--transparent'>
+                                    SABER MÁS <AiOutlineArrowDown/>
                                 </button>
                             </div>
                         </div>
@@ -155,8 +173,8 @@ const Main = () => {
                                     Dime como sientes tu piel y te diré cómo cuidarla <br />
                                     ¿Qué aspectos o partes de tu piel o tu cuerpo te gustaría mejorar, cuidar y mimar más?
                                 </p>
-                                <button className='button button--malva'>
-                                    SABER MÁS
+                                <button className='button button--transparent'>
+                                    SABER MÁS <AiOutlineArrowDown/>
                                 </button>
                             </div>
                         </div>
@@ -170,8 +188,8 @@ const Main = () => {
                                     Dime como sientes tu piel y te diré cómo cuidarla <br />
                                     ¿Qué aspectos o partes de tu piel o tu cuerpo te gustaría mejorar, cuidar y mimar más?
                                 </p>
-                                <button className='button button--malva'>
-                                    SABER MÁS
+                                <button className='button button--transparent'>
+                                    SABER MÁS <AiOutlineArrowDown/>
                                 </button>
                             </div>
                         </div>
@@ -185,8 +203,8 @@ const Main = () => {
                                     Dime como sientes tu piel y te diré cómo cuidarla <br />
                                     ¿Qué aspectos o partes de tu piel o tu cuerpo te gustaría mejorar, cuidar y mimar más?
                                 </p>
-                                <button className='button button--malva'>
-                                    SABER MÁS
+                                <button className='button button--transparent'>
+                                    SABER MÁS <AiOutlineArrowDown/>
                                 </button>
                             </div>
                         </div>
@@ -226,7 +244,6 @@ const Main = () => {
                                 <div className="text">En MarinaSpá únicamente trabajamos con las mejores marcas, sí o sí notarás la diferencia.</div>
                             </div>
                         </div>
-                        <div className="spacer"></div>
                     </div>
                 </div>
             </section>

@@ -95,40 +95,93 @@
 }
 
 .main {
-  margin-top: 50px;
   display: flex;
   flex-direction: column;
+  z-index: 1;
+  position: relative;
+}
+.main .first-section {
+  background-color: #302B3C;
+  color: #fff;
+  z-index: 1;
+  padding: 0px 50px;
 }
 .main__first-section {
   position: relative;
   max-width: 90vw;
-  background-color: #fff;
-  padding: 0px 50px;
+  padding: 50px;
   margin: auto;
   display: flex;
+  align-items: center;
   gap: 50px;
-  z-index: -2;
 }
 .main__first-section img {
   width: 50%;
   object-fit: cover;
+  border-radius: 100%;
+}
+.main__image {
+  background-image: url("../../assets/images/header-background.JPG");
+  border-radius: 100%;
+  /* Full height */
+  height: 40vw;
+  width: 40vw;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: 0;
+  background-repeat: no-repeat;
+  background-size: 50%;
 }
 .main__first-text {
-  background-color: #fff;
+  width: 50%;
 }
 .main__background-rectangle {
+  border-radius: 100%;
   width: 40%;
   height: 35vw;
   position: absolute;
-  top: -15%;
-  right: -3%;
-  background-color: #f7f4ed;
+  top: -1%;
+  background-color: #302B3C;
   z-index: -1;
 }
+.main__background-rectangle--1 {
+  right: 0%;
+}
 .main__background-rectangle--2 {
-  top: 40%;
+  right: 15%;
+}
+.main__background-rectangle--3 {
+  right: 30%;
+}
+.main__background-rectangle--4 {
+  right: 45%;
+}
+.main__background-rectangle--5 {
+  right: 60%;
+}
+.main__background-rectangle--down {
+  top: 5.5%;
   right: unset;
-  left: -3%;
+}
+.main__background-rectangle--down--1 {
+  left: 0%;
+}
+.main__background-rectangle--down--2 {
+  left: 15%;
+}
+.main__background-rectangle--down--3 {
+  left: 30%;
+}
+.main__background-rectangle--down--4 {
+  left: 45%;
+}
+.main__background-rectangle--down--5 {
+  left: 60%;
+}
+.main__target-section {
+  display: none;
+  padding: 50px 0px;
+  background-color: #263832;
 }
 .main__target {
   -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
@@ -177,13 +230,14 @@
   padding: 20px;
   margin: auto;
   max-width: 40vw;
-  border-top: 3px solid black;
+  border-bottom: 3px solid #fff;
 }
 
 .servicios {
-  background-color: #FFF8DC;
+  background-color: #382C32;
+  color: #fff;
   text-align: center;
-  padding: 40px 20px;
+  padding: 0px 20px;
 }
 .servicios__row {
   display: flex;
@@ -261,16 +315,16 @@
 }
 
 .accordions {
+  height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 20vh;
   gap: 2vh;
 }
 
 .accordion {
-  background: rgb(203, 171, 209);
+  background: #302B3C;
   width: 80vw;
   padding: 25px 30px 10px;
   border-radius: 15px;
@@ -315,8 +369,10 @@
 }
 
 .tratamientos {
+  padding-top: 50px;
   text-align: left;
-  background-color: #FFF8DC;
+  background-color: #CDB79E;
+  color: #fff;
 }
 .tratamientos__subwrapper {
   display: flex;
@@ -409,7 +465,8 @@
   padding: 10px !important;
 }
 .tratamientos__item {
-  background-color: rgb(203, 171, 209);
+  background-color: #F5CBA7;
+  color: #000;
   text-align: center;
   border-radius: 10px;
   box-shadow: 0 30px 30px -10px rgba(0, 0, 0, 0.3);
