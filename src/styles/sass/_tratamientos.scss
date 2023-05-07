@@ -1,9 +1,11 @@
 @import "variables";
 .tratamientos{
+    background-color: $grey2;
+
     padding-top:50px;
     text-align: left;
-    background-color: $beige;
     color: #fff;
+    padding-bottom: 40px;
     &__subwrapper{
         display: flex;
         align-items: center;
@@ -95,7 +97,7 @@
         padding: 10px!important;
     }
     &__item{
-        background-color: $peach;
+        background-color: $light_brown;
         color: #000;
         text-align: center;
         border-radius: 10px;

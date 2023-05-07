@@ -115,6 +115,7 @@ const Main = () => {
             </section>
 
             <section className="tratamientos">
+                
                 <h2>NUESTROS TRATAMIENTOS</h2>
                 <p className='tratamientos__general-info'>
                     Tu belleza es el reflejo de tu mejor imagen que proyecta tu cuerpo cuando está en pleno equilibrio, nosotros trabajamos para que ese reflejo y equilibrio se perpetúen y se mantengan inalterables a pesar de los años y puedas lucir tu mejor yo durante toda la vida.
@@ -212,6 +213,7 @@ const Main = () => {
                 </Swiper>
             </section>
             <section className="servicios">
+                <div className='separator'></div>
                 <h3>Nuestros servicios</h3>
                 <span>Qué ofrecemos?</span>
                 
@@ -246,7 +248,9 @@ const Main = () => {
                         </div>
                     </div>
                 </div>
+
             </section>
+            
             <section className="diagnostico">
                 <div className='diagnostico__wrapper'>
                     <h4 className='diagnostico__title'>Diagnóstico <br /><span className='diagnostico__title--2'>MARINASPÁ</span></h4>

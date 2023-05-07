@@ -142,10 +142,13 @@
 }
 
 .servicios{
-    background-color: $black2;
+    position: relative;
+    background-color: $darker_purple;
+    //background: rgb(38,50,56);
+    //background: linear-gradient(0deg, rgba(38,50,56,1) 0%, rgba(50,38,56,1) 20%, rgba(50,38,56,1) 80%, rgba(38,50,56,1) 100%);
     color: #fff;
     text-align: center;
-    padding: 0px 20px;
+    padding: 40px 20px;
     &__row{
         display: flex;
         gap: 20px;
@@ -179,15 +182,18 @@
     }
 }
 .diagnostico{
+    position: relative;
+    color: #fff;
     padding: 50px;
     width: 100%;
-    background-color: $apricot;
+    background: $darker_purple;
+    background: linear-gradient(0deg, $darker_purple 0%, $grey2 35%);
+    background-color: $grey2;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: auto;
     text-align: left;
-    margin-bottom: 50px;
    &__wrapper{
     
     width: 80vw;
@@ -253,7 +259,7 @@
   }
   
   .accordion {
-    background: $darker_purple;//linear-gradient(200deg, $light_brown 13.57%, $light_green 98.38%);
+    background: $light_brown;//linear-gradient(200deg, $light_brown 13.57%, $light_green 98.38%);
     width: 80vw;
     padding: 25px 30px 10px;
     border-radius: 15px;

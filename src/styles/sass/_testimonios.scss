@@ -1,9 +1,12 @@
 .testimonios{
+    position: relative;
     text-align: center;
     padding: 50px;
-    background-color: $light_brown;
+    padding-top: 70px;
+    background: $darker_purple;
     color:#fff;
     font-size: 1.5rem;
+    
     &__content{
         max-width: 50%;
         margin: auto;
