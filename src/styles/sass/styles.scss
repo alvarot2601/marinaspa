@@ -1,148 +1,148 @@
-    @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Saira:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-    @import "navbar";
-    @import "header";
-    @import "main";
-    @import "testimonios";
-    @import "tratamientos";
-    @import "footer";
-    @import "programas-faciales";
-    @import "contacto";
-    .navHeaderWrapper{
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Saira:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import "navbar";
+@import "header";
+@import "main";
+@import "testimonios";
+@import "tratamientos";
+@import "footer";
+@import "programas-faciales";
+@import "contacto";
+.navHeaderWrapper{
+    color: #fff;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1366%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='url(%23SvgjsLinearGradient1367)'%3e%3c/rect%3e%3cpath d='M0 0L342.15 0L0 262.58z' fill='rgba(255%2c 255%2c 255%2c .1)'%3e%3c/path%3e%3cpath d='M0 262.58L342.15 0L736.72 0L0 385.2z' fill='rgba(255%2c 255%2c 255%2c .075)'%3e%3c/path%3e%3cpath d='M0 385.2L736.72 0L925.4200000000001 0L0 468.03999999999996z' fill='rgba(255%2c 255%2c 255%2c .05)'%3e%3c/path%3e%3cpath d='M0 468.03999999999996L925.4200000000001 0L1023.2600000000001 0L0 522.89z' fill='rgba(255%2c 255%2c 255%2c .025)'%3e%3c/path%3e%3cpath d='M1440 560L874.4 560L1440 420.97z' fill='rgba(0%2c 0%2c 0%2c .1)'%3e%3c/path%3e%3cpath d='M1440 420.97L874.4 560L544.71 560L1440 281.24z' fill='rgba(0%2c 0%2c 0%2c .075)'%3e%3c/path%3e%3cpath d='M1440 281.24L544.71 560L518.89 560L1440 276.66z' fill='rgba(0%2c 0%2c 0%2c .05)'%3e%3c/path%3e%3cpath d='M1440 276.66L518.89 560L254.14999999999998 560L1440 240.97000000000003z' fill='rgba(0%2c 0%2c 0%2c .025)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1366'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='15.28%25' y1='-39.29%25' x2='84.72%25' y2='139.29%25' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient1367'%3e%3cstop stop-color='rgba(14%2c 42%2c 71%2c 1)' offset='0'%3e%3c/stop%3e%3cstop stop-color='rgba(163%2c 99%2c 167%2c 1)' offset='1'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");    //background-image: url('../../assets/images/rainbow-vortex.png');
+}
+
+
+.t-center{
+    text-align: center;
+}
+.caveat{
+    font-family: 'Caveat', cursive;
+}
+h1,h2,h3,h4,h5,h6{
+    //font-family: 'Caveat', cursive;
+    //font-weight: 700;
+}
+h1{
+    font-size: 2.7rem;
+}
+h2{
+    font-size: 2.5rem;
+}
+h3{
+    font-size: 2.3rem;
+}
+h4{
+    font-size: 2.1rem;
+}
+h5{
+    font-size: 1.9rem;
+}
+h6{
+    font-size: 1.7rem;
+}
+a {
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Saira', sans-serif;
+
+}
+
+ul {
+    list-style-type: none;
+}
+
+.button {
+    padding: 20px 60px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: auto;
+    display: block;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.4rem;
+    font-family: 'Caveat', cursive;
+    &--white {
+        background-color: white;
         color: #fff;
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1366%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='url(%23SvgjsLinearGradient1367)'%3e%3c/rect%3e%3cpath d='M0 0L342.15 0L0 262.58z' fill='rgba(255%2c 255%2c 255%2c .1)'%3e%3c/path%3e%3cpath d='M0 262.58L342.15 0L736.72 0L0 385.2z' fill='rgba(255%2c 255%2c 255%2c .075)'%3e%3c/path%3e%3cpath d='M0 385.2L736.72 0L925.4200000000001 0L0 468.03999999999996z' fill='rgba(255%2c 255%2c 255%2c .05)'%3e%3c/path%3e%3cpath d='M0 468.03999999999996L925.4200000000001 0L1023.2600000000001 0L0 522.89z' fill='rgba(255%2c 255%2c 255%2c .025)'%3e%3c/path%3e%3cpath d='M1440 560L874.4 560L1440 420.97z' fill='rgba(0%2c 0%2c 0%2c .1)'%3e%3c/path%3e%3cpath d='M1440 420.97L874.4 560L544.71 560L1440 281.24z' fill='rgba(0%2c 0%2c 0%2c .075)'%3e%3c/path%3e%3cpath d='M1440 281.24L544.71 560L518.89 560L1440 276.66z' fill='rgba(0%2c 0%2c 0%2c .05)'%3e%3c/path%3e%3cpath d='M1440 276.66L518.89 560L254.14999999999998 560L1440 240.97000000000003z' fill='rgba(0%2c 0%2c 0%2c .025)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1366'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='15.28%25' y1='-39.29%25' x2='84.72%25' y2='139.29%25' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient1367'%3e%3cstop stop-color='rgba(14%2c 42%2c 71%2c 1)' offset='0'%3e%3c/stop%3e%3cstop stop-color='rgba(163%2c 99%2c 167%2c 1)' offset='1'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");    //background-image: url('../../assets/images/rainbow-vortex.png');
+        border: 2px solid #fff;
+        border-bottom: 4px solid #fff;
     }
+    &--transparent {
+        background-color: transparent;
+        color: #fff;
+        border: 2px solid #fff;
+        border-bottom: 4px solid #fff;
+    }
+    &--black {
+        background-color: transparent;
+        color: #000;
+        border: 2px solid #000;
+        border-bottom: 4px solid #000;
+    }
+    &--malva {
+        background-color: $malva;
+        color: #fff;
+    }
+    &--shadow{
+        filter: drop-shadow(2px 4px 6px black);
+    }
+    &--grey {
+        background-color: $grey;
+        border-bottom: 3px solid black;
+    }
+}
 
-    h1,h2,h3,h4,h5,h6{
-    .t-center{
-        text-align: center;
+.separator{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    height: 50px;
+    border-top-right-radius: 100%;
+    border-bottom-left-radius: 100%;
+    &--bottom{
+        top: 100%;
     }
-    .caveat{
-        font-family: 'Caveat', cursive;
-    }
-    h1,h2,h3,h4,h5,h6{
-        //font-family: 'Caveat', cursive;
-        //font-weight: 700;
-    }
-    h1{
-        font-size: 2.7rem;
-    }
-    h2{
-        font-size: 2.5rem;
-    }
-    h3{
-        font-size: 2.3rem;
-    }
-    h4{
-        font-size: 2.1rem;
-    }
-    h5{
-        font-size: 1.9rem;
-    }
-    h6{
-        font-size: 1.7rem;
-    }
-    a {
-        text-decoration: none;
-    }
+}
 
-    * {
-        box-sizing: border-box;
-        font-family: 'Saira', sans-serif;
-
-    }
-
-    ul {
-        list-style-type: none;
-    }
-
-    .button {
-        padding: 20px 60px;
-        outline: none;
-        border: none;
-        border-radius: 10px;
-        font-size: 1.3rem;
-        font-weight: 700;
-        margin: auto;
-        display: block;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        font-size: 1.4rem;
-        font-family: 'Caveat', cursive;
-        &--white {
-            background-color: white;
-            color: #fff;
-            border: 2px solid #fff;
-            border-bottom: 4px solid #fff;
-        }
-        &--transparent {
-            background-color: transparent;
-            color: #fff;
-            border: 2px solid #fff;
-            border-bottom: 4px solid #fff;
-        }
-        &--black {
-            background-color: transparent;
-            color: #000;
-            border: 2px solid #000;
-            border-bottom: 4px solid #000;
-        }
-        &--malva {
-            background-color: $malva;
-            color: #fff;
-        }
-        &--shadow{
-            filter: drop-shadow(2px 4px 6px black);
-        }
-        &--grey {
-            background-color: $grey;
-            border-bottom: 3px solid black;
-        }
-    }
-
-    .separator{
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-color: #fff;
-        width: 100%;
-        height: 50px;
-        border-top-right-radius: 100%;
-        border-bottom-left-radius: 100%;
-        &--bottom{
-            top: 100%;
-        }
-    }
-
-    .whatsapp-icon {
-        border: none;
-        background-color: green;
-        color: white;
-        font-size: 4rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 10px;
-        border-radius: 100%;
-        position: fixed;
-        right: 20px;
-        bottom: 20px;
-        z-index: 999;
-    }
+.whatsapp-icon {
+    border: none;
+    background-color: green;
+    color: white;
+    font-size: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 100%;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 999;
+}
 
 
-    //clases split text
-    .wrap{
-        //width:100%; height:auto;
-    }
+//clases split text
+.wrap{
+    //width:100%; height:auto;
+}
 
-    .quote {margin-top:0px; line-height:76px; text-align:center; overflow:hidden; height:100vh; }
+.quote {margin-top:0px; line-height:76px; text-align:center; overflow:hidden; height:100vh; }
 
-    .split-line {
-        overflow: hidden;
-    }
+.split-line {
+  overflow: hidden;
+}
