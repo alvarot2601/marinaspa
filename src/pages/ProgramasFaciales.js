@@ -8,6 +8,7 @@ const ProgramasFacialesPage = ({title}) => {
     const antiAgingObj = {
         title: 'BELLEZA - RITUALES Y PROGRAMAS FACIALES',
         category: 'ANTI-AGING',
+        category_text:'Los tratamientos anti-aging se enfocan en la prevención y corrección de los signos del envejecimiento, incluyendo arrugas, manchas, flacidez y otros signos de daño en la piel. Estos tratamientos están diseñados para retrasar el proceso de envejecimiento y promover la regeneración celular. ',
         treatments: [
             [
                 "Ritual Biocelular",
@@ -83,6 +84,7 @@ const ProgramasFacialesPage = ({title}) => {
     const higieneFacialObj = {
         title: 'BELLEZA - RITUALES Y PROGRAMAS FACIALES',
         category: 'HIGIENE FACIAL OXIGENANTE',
+        category_text:'La higiene facial oxigenante combina la limpieza profunda de la piel con la entrega de oxígeno a las células de la piel para mejorar su apariencia y salud. Además, la higiene facial oxigenante es una técnica no invasiva que puede realizarse en cualquier tipo de piel, desde la piel seca hasta la piel grasa.',
         treatments: [
             [
                 "Limpieza en profundidad de la piel con cosmética profesional",
@@ -147,11 +149,13 @@ const ProgramasFacialesPage = ({title}) => {
     return (
         <>
             <Layout>
-                <div className='tratamientos'>
+                <div className='tratamientos programas-faciales'>
                     <header>
                         <h1>{title}</h1>
                     </header>
                     <main>
+                        <h2>Te ayudamos a encontrar el tratamiento facial ideal para tus necesidades.</h2>
+                        <p className='t-center caveat'>Acude a nuestro centro de estética y descubre la última tecnología en programas faciales. <br></br>Revitaliza tu piel con nuestros programas faciales de vanguardia</p>
                         <List states = {[[higieneFacialState, setHigieneFacialState], [antiAgingState, setAntiAgingState]]} obj={[higieneFacialState, antiAgingState]} reference={[hf0, hf1, hf2, hf3, hf4, hf5,aa0, aa1, aa2, aa3, aa4, aa5, aa6, aa7, aa8, aa9, aa10, aa11, aa12, aa13]} />
                     </main>
                 </div>

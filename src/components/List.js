@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { AiFillCloseCircle } from 'react-icons/ai';
-import Facial from "../assets/images/facial.jpg";
+import Facial from "../assets/images/programas-faciales-background.jpg";
 
 import { CiMenuKebab } from 'react-icons/ci';
 const List = ({states, obj, reference}) => {
@@ -28,8 +28,9 @@ const List = ({states, obj, reference}) => {
                 const reverseRowClass = (i % 2 === 0) ? '' : 'tratamientos__row--revert';
                 return (
                     <div className="tratamientos__subwrapper">
-                        <div className={`tratamientos__row ${reverseRowClass}`}>
-                            <span>{singleObj.category}</span>
+                        <div className={`tratamientos__row tratamientos__row--1 ${reverseRowClass}`}>
+                            <span className='tratamientos__category '>{singleObj.category}</span>
+                            <p>{singleObj.category_text}</p>
                             <ul>
                                 {
                                     singleObj.treatments.map((treatment, index) => {
@@ -39,7 +40,7 @@ const List = ({states, obj, reference}) => {
                                         return (
                                             <li onClick={() => handleClick(ref, index, null, singleObj, i)} key={`li_${singleObj.category}_${index}`} >
                                                 <div>
-                                                    <span>{treatment[0]}</span>
+                                                    <span className='tratamientos__treatment caveat'>{treatment[0]}</span>
                                                     {
                                                         (treatment[3] == 'close') ? <AiFillCloseCircle /> : <CiMenuKebab /> //ref.current.classList.contains('tratamientos__info--hidden') ? <CiMenuKebab /> : <AiFillCloseCircle/>
                                                     }
@@ -48,11 +49,10 @@ const List = ({states, obj, reference}) => {
                                                 <div className="tratamientos__info tratamientos__info--hidden" ref={ref}>
                                                     {
                                                         treatment[1] !== ''
-                                                            ? <p>{treatment[1]}</p>
-                                                            : null
+                                                            ? <p className='caveat'>{treatment[1]}</p>
+                                                            : <span>&nbsp;</span>
                                                     }
-                                                    <span>Precio: {treatment[2]} €</span>
-
+                                                    <span className='tratamientos__price caveat'>{treatment[2]} €</span>
                                                 </div>
                                             </li>
                                         );

@@ -17,8 +17,15 @@
 }
 
 h1,h2,h3,h4,h5,h6{
+.t-center{
+    text-align: center;
+}
+.caveat{
     font-family: 'Caveat', cursive;
-    font-weight: 700;
+}
+h1,h2,h3,h4,h5,h6{
+    //font-family: 'Caveat', cursive;
+    //font-weight: 700;
 }
 h1{
     font-size: 2.7rem;
