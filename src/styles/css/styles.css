@@ -268,7 +268,7 @@
   padding: 50px;
   width: 100%;
   background: #302B3C;
-  background: linear-gradient(0deg, #302B3C 0%, #263238 35%);
+  background: linear-gradient(0deg, #302B3C 0%, #263238 10%);
   background-color: #263238;
   display: flex;
   align-items: center;
@@ -353,6 +353,7 @@
   padding: 50px;
   padding-top: 70px;
   background: #302B3C;
+  background: linear-gradient(180deg, #302B3C 100%);
   color: #fff;
   font-size: 1.5rem;
 }
@@ -375,11 +376,8 @@
 }
 
 .tratamientos {
-<<<<<<< HEAD
   background-color: #263238;
   padding-top: 50px;
-=======
->>>>>>> d3364d8cf1161dae3f11fa9feedc7a52b3f9afae
   text-align: left;
   color: #fff;
   padding-bottom: 40px;
@@ -433,7 +431,7 @@
   color: #fff;
   font-weight: 400;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
   max-width: 90%;
@@ -596,7 +594,19 @@
   gap: 10px;
 }
 
-<<<<<<< HEAD
+.programas-faciales header {
+  min-height: 500px;
+  background-image: url("../../assets/images/programas-faciales-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.programas-faciales header h1 {
+  font-size: 5rem;
+}
+
 .contacto {
   text-align: center;
   font-size: 1.4rem;
@@ -640,19 +650,6 @@
 }
 .contacto svg {
   font-size: 2rem;
-=======
-.programas-faciales header {
-  min-height: 500px;
-  background-image: url("../../assets/images/programas-faciales-background.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.programas-faciales header h1 {
-  font-size: 5rem;
->>>>>>> d3364d8cf1161dae3f11fa9feedc7a52b3f9afae
 }
 
 .navHeaderWrapper {
