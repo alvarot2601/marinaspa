@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { AiFillCloseCircle } from 'react-icons/ai';
-import Facial from "../assets/images/programas-faciales-background.jpg";
+import FacialPicture from "../assets/images/programas-faciales-background.jpg";
+import AntiAgingPicture from "../assets/images/anti-aging.jpg";
 
 import { CiMenuKebab } from 'react-icons/ci';
 const List = ({states, obj, reference}) => {
@@ -35,22 +36,23 @@ const List = ({states, obj, reference}) => {
                                 {
                                     singleObj.treatments.map((treatment, index) => {
                                         let ref = null;
+                                        let right_align_class = '';
                                         ref = reference[refCounter];
                                         refCounter++;
+                                        treatment[1] == '' ? right_align_class = 'tratamientos__info--right' : right_align_class = ''
                                         return (
                                             <li onClick={() => handleClick(ref, index, null, singleObj, i)} key={`li_${singleObj.category}_${index}`} >
                                                 <div>
-                                                    <span className='tratamientos__treatment caveat'>{treatment[0]}</span>
+                                                    <span className='tratamientos__treatment'>{treatment[0]}</span>
                                                     {
                                                         (treatment[3] == 'close') ? <AiFillCloseCircle /> : <CiMenuKebab /> //ref.current.classList.contains('tratamientos__info--hidden') ? <CiMenuKebab /> : <AiFillCloseCircle/>
                                                     }
-
                                                 </div>
-                                                <div className="tratamientos__info tratamientos__info--hidden" ref={ref}>
+                                                <div className={`tratamientos__info tratamientos__info--hidden ${right_align_class} `} ref={ref}>
                                                     {
                                                         treatment[1] !== ''
-                                                            ? <p className='caveat'>{treatment[1]}</p>
-                                                            : <span>&nbsp;</span>
+                                                            ? <p>{treatment[1]}</p>
+                                                            : ''//<span>&nbsp;</span>
                                                     }
                                                     <span className='tratamientos__price caveat'>{treatment[2]} €</span>
                                                 </div>
@@ -61,12 +63,11 @@ const List = ({states, obj, reference}) => {
                             </ul>
                         </div>
                         <div className="tratamientos__row">
-                            <img src={Facial} alt="" />
+                            <img src={i==0 ? FacialPicture : AntiAgingPicture } alt="" />
                         </div>
                     </div>
                 );
             })
-        
     );
 }
 

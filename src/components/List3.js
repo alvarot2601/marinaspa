@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { AiFillCloseCircle } from 'react-icons/ai';
 import Facial from "../assets/images/facial.jpg";
+
 import { CiMenuKebab } from 'react-icons/ci';
 
 const List3 = ({ states, obj, reference }) => {
@@ -29,73 +30,74 @@ const List3 = ({ states, obj, reference }) => {
         console.log(refCounter)
     }, [refCounter]);
     return (
-        <div className="tratamientos__subwrapper">
-            <div className="tratamientos__row ">
-                {
+            obj.category.map((category, index) => {
+                const reverseRowClass = (index % 2 === 0) ? '' : 'tratamientos__row--revert';
+                return (
+                    <div className="tratamientos__subwrapper">
+                    <div className={`${reverseRowClass} tratamientos__row`}>
                     
-                    obj.category.map((category, index) => {
-                        return (
-                            <>
-                                {
-                                    category !== '' ? <span className="tratamientos__category">{category}</span> : ''  
-                                }
-                                <ul>
-                                    {
-                                        
-                                        obj.treatments[index].map((treatment, index2) => {
-                                            let ref = null;
-                                            let borderClass = '';
-                                            borderClass = (index2 === obj.treatments[index].length - 1) ? 'li__border-bottom' : '';
-                                            ref = reference[refCounter];
-                                            refCounter++;
-                                            return (
-                                                <li className={borderClass} onClick={() => handleClick(ref, index, index2, obj, 'br')} key={`li_${obj.category[index]}_${index}`} >
-                                                    <div>
-                                                        <span className="tratamientos__tratamiento">{treatment[0]}</span>
-                                                        {
-                                                            (treatment[3] == 'close') ? <AiFillCloseCircle /> : <CiMenuKebab /> //ref.current.classList.contains('tratamientos__info--hidden') ? <CiMenuKebab /> : <AiFillCloseCircle/>
-                                                        }
-                                                    </div>
-                                                    <div className="tratamientos__info tratamientos__info--hidden" ref={ref}>
-                                                        {
-                                                            treatment[2] !== ''
-                                                                ? <span className="tratamientos__precio">{treatment[2]}</span>
-                                                                : null
-                                                        }
-                                                        {
-                                                            typeof treatment[1] === 'object'
-                                                                ? (
-                                                                    Object.keys(treatment[1]).map(property => {
-                                                                        return (
-                                                                            <p>
-                                                                                <span>{property}</span> <span>{treatment[1][property]}</span>
-                                                                            </p>
-                                                                        )
-                                                                    })
+                        {
+                            category !== '' ? <span className="tratamientos__category">{category}</span> : ''  
+                        }
+                        <p>
+                            {
+                                Array.isArray(obj.category_text) ? obj.category_text[index] : obj.category_text
+                            }
+                        </p>
+                        <ul className='ul__border-bottom'>
+                            {  
+                                obj.treatments[index].map((treatment, index2) => {
+                                    let ref = null;
+                                    //let clase = (typeof treatment[1] === 'object' || treatment[1] !== '') ? '' : 'tratamientos_info--right'
+                                    //let borderClass = '';
+                                    //borderClass = (index2 === obj.treatments[index].length - 1) ? 'li__border-bottom' : '';
+                                    ref = reference[refCounter];
+                                    refCounter++;
+                                    return (
+                                        <li onClick={() => handleClick(ref, index, index2, obj, 'br')} key={`li_${obj.category[index]}_${index}`} >
+                                            <div>
+                                                <span className="tratamientos__treatment">{treatment[0]}</span>
+                                                {
+                                                    (treatment[3] == 'close') ? <AiFillCloseCircle /> : <CiMenuKebab /> //ref.current.classList.contains('tratamientos__info--hidden') ? <CiMenuKebab /> : <AiFillCloseCircle/>
+                                                }
+                                            </div>
+                                            <div className={`tratamientos__info tratamientos__info--hidden`} ref={ref}> 
+                                                {
+                                                    typeof treatment[1] === 'object'
+                                                        ? (
+                                                            Object.keys(treatment[1]).map(property => {
+                                                                return (
+                                                                    <p>
+                                                                        <span>{property}</span> <span>{treatment[1][property]}</span>
+                                                                    </p>
                                                                 )
-                                                                : (treatment[1] !== '')
-                                                                    ? <p>{treatment[1]}</p>
-                                                                    : null
-                                                        }
-                                                    </div>
-                                                </li>
-                                            )
-                                            
-                                        })
-                                    }
-                                </ul>
-                            </>
-                        );
-                    })
-                }
-                {
-                    //bienestarRelajacionObj.category !== '' ? <span className="tratamientos__category">{bienestarRelajacionObj.category}</span> : ''
-                }
-            </div>
-            <div className="tratamientos__row">
-                <img src={Facial} alt="" />
-            </div>
-        </div>
+                                                            })
+                                                        )
+                                                        : (treatment[1] !== '')
+                                                            ? <p>{treatment[1]}</p>
+                                                            : null
+                                                }
+                                                {
+                                                    treatment[2] !== ''
+                                                        ? <span className="tratamientos__precio">{treatment[2]}</span>
+                                                        : null
+                                                }
+                                            </div>
+                                        </li>
+                                    )
+                                    
+                                })
+                            }
+                        </ul>
+                    </div>
+                    <div className="tratamientos__row">
+                        {
+                            Array.isArray(obj.images) ? <img src={obj.images[index]} alt="" /> : ''
+                        }
+                    </div>
+                    </div>
+                );
+            })
     );
 }
 

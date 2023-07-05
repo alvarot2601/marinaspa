@@ -138,7 +138,7 @@ const Main = () => {
                     <SwiperSlide>
                         <div className='tratamientos__item tratamientos__item--1'>
                             <img src={Facial} alt="" />
-                            <div className='tratamientos__info'>
+                            <div className='tratamientos__text'>
                                 <span>FACIAL</span>
                                 <p>
                                     Dime como sientes tu piel y te diré cómo cuidarla <br />
@@ -153,7 +153,7 @@ const Main = () => {
                     <SwiperSlide>
                         <div className='tratamientos__item tratamientos__item--2'>
                             <img src={Facial} alt="" />
-                            <div className='tratamientos__info'>
+                            <div className='tratamientos__text'>
                                 <span>FACIAL</span>
                                 <p>
                                     Dime como sientes tu piel y te diré cómo cuidarla <br />
@@ -168,7 +168,7 @@ const Main = () => {
                     <SwiperSlide>
                         <div className='tratamientos__item tratamientos__item--3'>
                             <img src={Facial} alt="" />
-                            <div className='tratamientos__info'>
+                            <div className='tratamientos__text'>
                                 <span>FACIAL</span>
                                 <p>
                                     Dime como sientes tu piel y te diré cómo cuidarla <br />
@@ -183,7 +183,7 @@ const Main = () => {
                     <SwiperSlide>
                         <div className='tratamientos__item tratamientos__item--4'>
                             <img src={Facial} alt="" />
-                            <div className='tratamientos__info'>
+                            <div className='tratamientos__text'>
                                 <span>FACIAL</span>
                                 <p>
                                     Dime como sientes tu piel y te diré cómo cuidarla <br />
@@ -198,7 +198,7 @@ const Main = () => {
                     <SwiperSlide>
                         <div className='tratamientos__item tratamientos__item--5'>
                             <img src={Facial} alt="" />
-                            <div className='tratamientos__info'>
+                            <div className='tratamientos__text'>
                                 <span>FACIAL</span>
                                 <p>
                                     Dime como sientes tu piel y te diré cómo cuidarla <br />

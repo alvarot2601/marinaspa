@@ -26,6 +26,7 @@ const BienestarRelajacionPage = () => {
     const bienestarRelajacionObj = {
         title: 'BIENESTAR Y RELAJACIÓN',
         category: ['BAÑERAS DE HIDROMASAJE', 'PEELINGS CORPORALES', 'MASAJES', ''],
+        category_text:['Sumérgete en un oasis de tranquilidad y deja que el poder curativo del agua y los beneficios terapéuticos de las burbujas mejoren tu bienestar físico y emocional. Ya sea que desees disfrutar de un momento de relajación solo, en pareja o con amigos, nuestras bañeras de hidromasajes son perfectas para cualquier ocasión.', 'Descubre la renovación total de tu piel con nuestros peelings corporales. Nuestros tratamientos de exfoliación profunda eliminan las células muertas y revelan una piel suave y radiante. Utilizamos productos de alta calidad y técnicas especializadas para brindarte resultados excepcionales.Además de mejorar la apariencia de la piel, los peelings corporales también pueden ayudar a reducir la apariencia de cicatrices, estrías y manchas. Permítenos cuidar de tu piel y rejuvenecer todo tu cuerpo.'],
         treatments: [
             [
                 [

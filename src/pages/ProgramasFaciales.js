@@ -139,11 +139,6 @@ const ProgramasFacialesPage = ({title}) => {
     const aa12 = useRef(null);
     const aa13 = useRef(null);
 
-    
-
-
-
-
    
 
     return (

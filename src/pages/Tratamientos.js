@@ -782,8 +782,8 @@ const Tratamientos = () => {
                                                 bienestarRelajacionState.treatments[index].map((treatment, index2) => {
                                                     console.log(treatment.length)
                                                     let ref = null;
-                                                    let borderClass = '';
-                                                    borderClass = (index2 === bienestarRelajacionState.treatments[index].length - 1) ?  'li__border-bottom' : '';
+                                                    //let borderClass = '';
+                                                    //borderClass = (index2 === bienestarRelajacionState.treatments[index].length - 1) ?  'li__border-bottom' : '';
                                                     switch (index) {
                                                         case 0:
                                                             if(index2 === 0) ref = br0;
@@ -811,7 +811,7 @@ const Tratamientos = () => {
                                                             break;
                                                     }
                                                     return (
-                                                        <li className={borderClass} onClick={() => handleClick(ref, index, index2, bienestarRelajacionState, 'br')} key={`li_${bienestarRelajacionState.category[index]}_${index}`} >
+                                                        <li onClick={() => handleClick(ref, index, index2, bienestarRelajacionState, 'br')} key={`li_${bienestarRelajacionState.category[index]}_${index}`} >
                                                             <div>
                                                                 <span className="tratamientos__tratamiento">{treatment[0]}</span>
                                                                 {

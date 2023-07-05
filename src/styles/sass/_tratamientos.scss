@@ -12,6 +12,7 @@
         max-width: 80vw;
         margin: auto;
         gap: 20px;
+        padding-top: 50px;
     }
     &__general-info{
         text-align: center;
@@ -22,8 +23,9 @@
         margin-top: 20px;    
     }
     &__treatment{
-        font-size: 2rem;
-        font-weight: 700;
+        font-size: 1.5rem;
+        font-weight: 600;
+        max-width: 90%;
     }
     &__col{
         width: 50%;
@@ -56,12 +58,19 @@
         color: #fff;
         font-weight: 400;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
-        justify-content: space-between;
+        justify-content: right;
         max-width: 90%;
         font-size: 1.7rem;
-        padding-left: 20px; 
+        //padding-left: 20px;
+        &--column{
+            flex-direction: column;
+            align-items: unset;
+            justify-content: left;
+        }
+        
+        
         span{
             //letter-spacing: 0.2rem;
             //font-weight: 500;
@@ -70,10 +79,17 @@
         p{
             margin: 0;
             width: 90%;
+            font-size: 1.2rem;
         }
         button{
             margin-bottom: 0px;
         }
+    }
+    &__tratamiento{
+        max-width: 90%;
+    }
+    &__description{
+
     }
     &__info--hidden{
         display: none;
@@ -112,6 +128,15 @@
     }
     &__slider{
         padding: 10px!important;
+    }
+    &__text{
+        padding: 15px;
+        font-size: 1.2rem;
+        color: #fff;
+        span{
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
     }
     &__item{
         background-color: $light_brown;
@@ -170,7 +195,7 @@
         margin-bottom: 40px;
         border-top: 3px solid #fff;
         border-bottom: 3px solid #fff;
-        border-radius: 50%;
+        border-radius: 10%;
         padding: 25px;
     }
     ul{
@@ -178,6 +203,7 @@
         display: flex;
         flex-direction: column;
         gap: 20px;
+        padding-bottom: 20px;
     }
     li{
         display: flex;
@@ -212,6 +238,6 @@
         align-items: center;
     }
 }
-.li__border-bottom{
-    border-bottom: 1px solid black;
+.ul__border-bottom{
+    border-bottom: 1px solid #fff;
 }

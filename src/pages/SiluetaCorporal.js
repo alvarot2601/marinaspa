@@ -31,21 +31,23 @@ const SiluetaCorporalPage = () => {
             [
                 "Tratamiento BODY-SCULPT",
                 {
-                    info: "(favorece la pérdida de grasa, remodela y tonifica: su diferencia la tecnología Body Pall (sin aparatología)",
+                    '': "Favorece la pérdida de grasa, remodela y tonifica: su diferencia la tecnología Body Pall (sin aparatología)",
                     "Programa 6 Curas: ": "150€",
                     "Programa 12 Curas: ": ' 290€'
                 },
                 '',
                 'close'
             ],
-            ["MADEROTERAPIA", "Programa 8 Sesiones: 300€", '45€/sesión', 'close'],
+            ["MADEROTERAPIA", {
+            "Programa 8 Sesiones:" : ' 300€'
+            }, '45€/sesión', 'close'],
             ["PRESOTERAPIA", "Programa 10 Sesiones: 90€", '12€/sesión', 'close'],
             ["CRIOLIPÓLISIS + presoterapia", "", '45€', 'close'],
             ["Remodelante corporal V-SHAPE + Presoterapia", "", '45€', 'close'],
             ["Programa IWRAP. Sistema Integral de adelgazamiento (Criofrecuencia)", {
                 'Programa 10 Sesiones: ': '400€'
             }, '50€/sesión', 'close'],
-            ["INDIBA CORPORAL + Presoterapia", "", 50, 'close'],
+            ["INDIBA CORPORAL + Presoterapia", "", '50€', 'close'],
             ["WONDER", { 'Programa 8 Sesiones:': '400€', 'Programa 4 Sesiones': '236€' }, "69€/sesión", 'close'],
             ["LIPOSONIX (revolucionario tratamiento contra la grasa localizada a base de ultrasonidos", { 'Abdomen': '90€', 'Abdomen y Flancos': '150€', 'Cartucheras': '150€', 'Brazos': '150€' }, '', 'close'],
             ['PROGRAMA INTEGRAL, personalizado de 10 sesiones de acción global sobre grasas profundas y superficiales, remodela la silueta y reduce la celulitis', { 'Programa 1 zona: ': '380€', 'Programa 2 zonas: ': '580€' }, '', 'close'],

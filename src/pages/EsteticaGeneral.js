@@ -19,6 +19,7 @@ const EsteticaGeneralPage = ({title}) => {
     const esteticaGeneralObj = {
         title: 'ESTÉTICA GENERAL',
         category: 'MANICURA | PEDICURA',
+        category_text: 'Tus uñas merecen la mejor atención y cuidado, y en nuestra web encontrarás todo lo que necesitas para lucir unas manos y pies impecables. Nuestro equipo de expertos en belleza y estilistas profesionales se dedica a ofrecerte los tratamientos más innovadores y las últimas tendencias en el mundo de la manicura y pedicura.',
         treatments: [
             [
                 "Manicura normal",
@@ -40,6 +41,7 @@ const EsteticaGeneralPage = ({title}) => {
     const maquillajeObj = {
         title: 'ESTÉTICA GENERAL',
         category: 'MAQUILLAJE',
+        category_text: 'Si buscas resaltar tu belleza natural y expresar tu estilo único, estás en el lugar correcto. Nuestro equipo de expertos en belleza está aquí para ofrecerte los mejores consejos, tutoriales y productos de maquillaje que te ayudarán a lucir radiante en cualquier ocasión.',
         treatments: [
             [
                 "Maquillaje social (día, tarde o noche)",

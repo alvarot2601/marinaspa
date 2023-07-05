@@ -1,9 +1,8 @@
 import React, { useState, useRef } from 'react';
 import Layout from '../components/Layout';
-
-import List2 from '../components/List2';
 import List3 from '../components/List3';
-
+import cera from "../assets/images/depilacion-cera.jpg";
+import fotodepilacion from "../assets/images/fotodepilacion.jpg";
 const DepilacionPage = () => {
     //referencias depilacion 
     const dep0 = useRef(null);
@@ -36,6 +35,8 @@ const DepilacionPage = () => {
     const fotodepilacionObj = {
         title: 'DEPILACIÓN Y FOTODEPILACIÓN',
         category: ['CERA', 'FOTODEPILACIÓN', 'BONOS (5 SESIONES)'],
+        images:[cera, fotodepilacion, ''],
+        category_text: ['En nuestro centro de belleza, ofrecemos servicios profesionales de depilación con cera que te brindarán resultados suaves y duraderos. Sabemos que eliminar el vello no deseado es una parte importante de tu rutina de cuidado personal, y nos comprometemos a hacerlo de la manera más efectiva y cómoda posible.', 'Nuestro personal especializado evaluará tu tipo de piel y vello para determinar el programa de tratamiento adecuado para ti. La fotodepilación requiere varias sesiones para lograr resultados óptimos, ya que solo afecta a los folículos en la fase de crecimiento activo. Trabajaremos contigo para diseñar un plan personalizado que se adapte a tus necesidades y objetivos específicos.', 'Sabemos que la consistencia y la continuidad son clave cuando se trata de obtener los resultados deseados en cualquier tratamiento. Con nuestros bonos de 5 sesiones, te brindamos la oportunidad de comprometerte con tu cuidado personal y ahorrar al mismo tiempo.'],
         treatments: [
             [
                 [
