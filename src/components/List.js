@@ -54,7 +54,7 @@ const List = ({states, obj, reference}) => {
                                                             ? <p>{treatment[1]}</p>
                                                             : ''//<span>&nbsp;</span>
                                                     }
-                                                    <span className='tratamientos__price caveat'>{treatment[2]} €</span>
+                                                    <span className='tratamientos__price'>{treatment[2]} €</span>
                                                 </div>
                                             </li>
                                         );

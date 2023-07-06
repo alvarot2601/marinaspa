@@ -1,11 +1,10 @@
 @import "variables";
 .tratamientos{
     background-color: $grey2;
-
-    padding-top:50px;
     text-align: left;
     color: #fff;
     padding-bottom: 40px;
+    padding-top:8vh;
     &__subwrapper{
         display: flex;
         //align-items: center;
@@ -96,7 +95,8 @@
     }
     &__price{
         font-weight: 700;
-        font-size: 2.5rem;
+        font-size: 1.4rem;
+        border-bottom:1px solid white;
     }
     &__row{
         width: 100%;
@@ -105,6 +105,9 @@
         justify-content: space-between;
         &--1{
             padding: 50px 0;
+        }
+        &--full{
+            width:55%;
         }
         img{
             width: 100%;
@@ -176,7 +179,10 @@
             left: -10px;
         }
     }
-    
+    h1,h2,h3,h4,h5,h6{
+        font-family: caveat;
+        font-size: 4rem;
+    }
     h1, h2, h3, h4 &__text,  &__description{
         text-align: center;
     }
@@ -230,7 +236,7 @@
 
     header{
         min-height: 500px;
-        background-image: url('../../assets/images/facial-2.jpg');
+        background-image: url('../../assets/images/thalgo.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         display: flex;

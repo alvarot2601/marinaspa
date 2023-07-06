@@ -44,7 +44,7 @@ const List3 = ({ states, obj, reference }) => {
                                 Array.isArray(obj.category_text) ? obj.category_text[index] : obj.category_text
                             }
                         </p>
-                        <ul className='ul__border-bottom'>
+                        <ul>
                             {  
                                 obj.treatments[index].map((treatment, index2) => {
                                     let ref = null;
@@ -90,11 +90,13 @@ const List3 = ({ states, obj, reference }) => {
                             }
                         </ul>
                     </div>
-                    <div className="tratamientos__row">
                         {
-                            Array.isArray(obj.images) ? <img src={obj.images[index]} alt="" /> : ''
+                            (Array.isArray(obj.images))
+                            ? (obj.images[index] !== '') 
+                            ? <div className="tratamientos__row"><img src={obj.images[index]} alt="" /></div>
+                            : ''
+                            : ''
                         }
-                    </div>
                     </div>
                 );
             })

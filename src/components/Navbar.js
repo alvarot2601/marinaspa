@@ -1,8 +1,26 @@
-import React from "react";
+import {React, useState, useEffect} from "react";
 import { Link } from "react-router-dom";
-const NavBar = ()=> {
+const NavBar = (props)=> {
+
+    const [isNavbarBig, setIsNavbarBig] = useState(false);
+    let lastCoord = 0;
+    const thresold = 100;
+    useEffect(()=>{
+        const handleScroll = (e)=>{
+            if(window.scrollY > lastCoord){
+                setIsNavbarBig(true);
+                lastCoord = window.scrollY;
+            }
+            else {
+                setIsNavbarBig(false);
+                lastCoord = window.scrollY;
+            }
+        }
+        window.addEventListener('scroll', handleScroll);
+        return ()=> window.removeEventListener('scroll', handleScroll);
+    }, []);
     return (
-        <nav className="nav">
+        <nav className={`nav ${isNavbarBig ? 'nav--big' : ''} `}>
             <div className="nav__logo">
                 MARINASPÁ
             </div>
@@ -28,11 +46,7 @@ const NavBar = ()=> {
                         </li>
                     </ul>
                 </div>
-                <Link to="d">HOME</Link>
-                <Link to="d">HOME</Link>
-                <Link to="d">HOME</Link>
-                <Link to="d">HOME</Link>
-                <Link to="/contacto">Contacto</Link>
+                <Link to="/contacto">CONTACTO</Link>
             </div>
         </nav>
     );
