@@ -20,7 +20,7 @@ const NavBar = (props)=> {
         return ()=> window.removeEventListener('scroll', handleScroll);
     }, []);
     return (
-        <nav className={`nav ${isNavbarBig ? 'nav--big' : ''} `}>
+        <nav className={`nav ${isNavbarBig ? 'nav--big' : ''} ${props.transparent ? 'nav--transparent' : ''}`}>
             <div className="nav__logo">
                 MARINASPÁ
             </div>

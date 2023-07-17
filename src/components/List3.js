@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { AiFillCloseCircle } from 'react-icons/ai';
-import Facial from "../assets/images/facial.jpg";
-
 import { CiMenuKebab } from 'react-icons/ci';
 
 const List3 = ({ states, obj, reference }) => {

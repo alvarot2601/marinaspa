@@ -56,7 +56,7 @@ const List2 = ({states, obj, reference}) => {
                                                         ? (
                                                             Object.keys(treatment[1]).map(property => {
                                                                 return (
-                                                                    property != '' ? <p><span>{property}</span> <span>{treatment[1][property]}</span></p>
+                                                                    property != '' ? <div><span>{property}</span> <span>{treatment[1][property]}</span></div>
                                                                     : <p>{treatment[1][property]}</p>
                                                                 )
                                                             })

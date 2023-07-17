@@ -146,11 +146,10 @@ const ProgramasFacialesPage = ({title}) => {
             <Layout>
                 <div className='tratamientos programas-faciales'>
                     <header>
-                        <h1>{title}</h1>
+                        <h1>Te ayudamos a encontrar el tratamiento facial ideal para tus necesidades.</h1>
+                        <p className='t-center caveat'>Acude a nuestro centro de estética y descubre la última tecnología en programas faciales. <br></br>Revitaliza tu piel con nuestros programas faciales de vanguardia</p>
                     </header>
                     <main>
-                        <h2>Te ayudamos a encontrar el tratamiento facial ideal para tus necesidades.</h2>
-                        <p className='t-center caveat'>Acude a nuestro centro de estética y descubre la última tecnología en programas faciales. <br></br>Revitaliza tu piel con nuestros programas faciales de vanguardia</p>
                         <List states = {[[higieneFacialState, setHigieneFacialState], [antiAgingState, setAntiAgingState]]} obj={[higieneFacialState, antiAgingState]} reference={[hf0, hf1, hf2, hf3, hf4, hf5,aa0, aa1, aa2, aa3, aa4, aa5, aa6, aa7, aa8, aa9, aa10, aa11, aa12, aa13]} />
                     </main>
                 </div>

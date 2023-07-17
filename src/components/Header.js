@@ -13,9 +13,9 @@ const Header = ()=> {
             <div className='header__text-container wrap'>   
                 <span className='header__name quote'>MARI AGUZA - </span><span className='header__job'>ESTILISTA PERSONAL</span>
                 <br></br>
-                <p>
+                <h1>
                     <span>Centro de estética </span> <br /><span>MarinaSpá</span>
-                </p>
+                </h1>
             </div>
             <button className='button button--transparent'>
                 Trabaja conmigo <BsArrowDownCircle/>

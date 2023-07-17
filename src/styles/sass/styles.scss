@@ -5,7 +5,6 @@
 @import "testimonios";
 @import "tratamientos";
 @import "footer";
-@import "programas-faciales";
 @import "contacto";
 .navHeaderWrapper{
     color: #fff;
@@ -59,6 +58,9 @@ a {
 
 ul {
     list-style-type: none;
+}
+.big_text{
+    font-size: 3rem;
 }
 
 .button {

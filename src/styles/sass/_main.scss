@@ -5,7 +5,8 @@
     z-index: 1;
     position: relative;
     .first-section{
-        background-color: $darker_purple;
+        //background-color: $darker_purple;
+        background-color: bisque;
         color: #fff;
         z-index: 1;
         padding: 0px 50px;
@@ -19,7 +20,7 @@
         display: flex;
         align-items: center;
         gap: 50px;
-        
+        color: $black2;
         img{
             width: 50%;
             object-fit: cover;
@@ -48,41 +49,54 @@
         height: 35vw;
         position: absolute;
         top: -1%;
-        background-color: $darker_purple;
+        //background-color:$old_white;
+        //background-color: $darker_purple;
         z-index: -1;
+        
         &--1{
             right: 0%;
+            border-top: 1px solid bisque;
         }
         &--2{
             right: 15%;
+            border-top: 1px solid bisque;
         }
         &--3{
             right: 30%;
+            border-top: 1px solid bisque;
         }
         &--4{
             right: 45%;
+            border-top: 1px solid bisque;
         }
         &--5{
             right: 60%;
+            border-top: 1px solid bisque;
         }
         &--down{
-            top: 5.5%;
-            right: unset; 
+            top: 6%;
+            right: unset;
+            border-bottom: 1px solid bisque; 
         }
         &--down--1{
             left: 0%;
+            border-bottom: 1px solid bisque; 
         }
         &--down--2{
             left: 15%;
+            border-bottom: 1px solid bisque; 
         }
         &--down--3{
             left: 30%;
+            border-bottom: 1px solid bisque; 
         }
         &--down--4{
             left: 45%;
+            border-bottom: 1px solid bisque; 
         }
         &--down--5{
             left: 60%;
+            border-bottom: 1px solid bisque; 
         }
     }
     &__target-section{
@@ -137,7 +151,7 @@
         padding: 20px;
         margin: auto;
         max-width: 40vw;
-        border-bottom: 3px solid #fff;
+        border-bottom: 3px solid $black2;
     }
 }
 

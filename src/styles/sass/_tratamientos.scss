@@ -1,11 +1,13 @@
 @import "variables";
 .tratamientos{
-    background-color: $grey2;
+    
+    background-color: $peach;
     text-align: left;
-    color: #fff;
+    color: $black2;
     padding-bottom: 40px;
     padding-top:8vh;
     &__subwrapper{
+        color:#f7ce6d;
         display: flex;
         //align-items: center;
         max-width: 80vw;
@@ -61,12 +63,16 @@
         align-items: center;
         justify-content: right;
         max-width: 90%;
-        font-size: 1.7rem;
+        font-size: 1.3rem;
         //padding-left: 20px;
         &--column{
             flex-direction: column;
             align-items: unset;
-            justify-content: left;
+            justify-content: right;
+            div{
+                display: flex;
+                justify-content: space-between;
+            }
         }
         
         
@@ -121,6 +127,7 @@
     }
     &__precio{
         font-size: 1.3rem;
+        text-align: right;
     }
     &__container{
         display: flex;
@@ -135,14 +142,23 @@
     &__text{
         padding: 15px;
         font-size: 1.2rem;
-        color: #fff;
+        color: $black2;
+
         span{
             font-weight: 700;
             letter-spacing: 2px;
         }
+        p{
+            
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3; /* Establece el número máximo de líneas a mostrar */
+            -webkit-box-orient: vertical;
+        }
     }
     &__item{
-        background-color: $light_brown;
+        background-color: bisque;
         color: #000;
         text-align: center;
         border-radius: 10px;
@@ -240,6 +256,7 @@
         background-repeat: no-repeat;
         background-size: cover;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
     }

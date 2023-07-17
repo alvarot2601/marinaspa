@@ -4,12 +4,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 50px 50px;
+    padding: 50px;
     z-index: 999;
     background-color: $grey2;
     position: fixed;
     width: 100%;
     transition: 1s;
+    
     &--transparent{
         background-color: transparent;    
     }
@@ -17,8 +18,21 @@
         padding: 0;
         border-bottom-right-radius: 40%;
         border-bottom-left-radius: 40%;
-        //background-color: transparent;
+        height: 2vh;
         transition: 1s;
+        *{
+            visibility: hidden;
+        }
+        &:hover{
+            height: 8vh;
+            padding: 50px;
+            border-bottom-right-radius: unset;
+            border-bottom-left-radius: unset;
+            transition: 1s;
+            *{
+                visibility: visible;
+            }
+        }
     }
     &__logo{
         color: white;
