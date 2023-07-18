@@ -3,16 +3,23 @@
     text-align: center;
     padding: 50px;
     padding-top: 70px;
-    background: $darker_purple;
+    background: $peach;
     background: linear-gradient(180deg, $darker_purple 100%);   
-    color:#fff;
+    color:$black2;
     font-size: 1.5rem;
+    *{
+        font-family: "Caveat", cursive;
+    }
+    span:first-child{
+        font-size:3rem;
+    }
+    
     &__content{
         max-width: 50%;
         margin: auto;
-        *{
-            font-family: "Caveat", cursive;
-        }
+    }
+    span:first-child, &__content{
+        font-weight:900;
     }
     
     span{

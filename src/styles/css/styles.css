@@ -277,8 +277,8 @@
 
 .servicios {
   position: relative;
-  background-color: #302B3C;
-  color: #fff;
+  background-color: #CDB79E;
+  color: #382C32;
   text-align: center;
   padding: 40px 20px;
 }
@@ -318,12 +318,10 @@
 }
 .diagnostico {
   position: relative;
-  color: #fff;
+  color: #382C32;
   padding: 50px;
   width: 100%;
-  background: #302B3C;
-  background: linear-gradient(0deg, #302B3C 0%, #263238 10%);
-  background-color: #263238;
+  background-color: #EEF3DC;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -352,16 +350,20 @@
   max-width: 30vw;
   margin: 30px 0;
 }
-.diagnostico button {
+.diagnostico .button {
   margin: 0;
+}
+
+.title, .text {
+  color: #382C32;
 }
 
 .title {
   font-size: max(2vw, 24px);
   line-height: 1.1;
   padding-bottom: 0.4em;
-  color: rgb(255, 255, 255);
   text-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  font-family: "caveat", italic;
 }
 
 .text {
@@ -369,7 +371,6 @@
   line-height: 1.4;
   overflow: hidden;
   padding-bottom: 20px;
-  color: rgba(255, 255, 255, 0.7);
 }
 
 .accordions {
@@ -380,9 +381,12 @@
   align-items: center;
   gap: 2vh;
 }
+.accordions p {
+  margin: 0;
+}
 
 .accordion {
-  background: #D2B48C;
+  background: #F5CBA7;
   width: 80vw;
   padding: 25px 30px 10px;
   border-radius: 15px;
@@ -406,17 +410,23 @@
   text-align: center;
   padding: 50px;
   padding-top: 70px;
-  background: #302B3C;
+  background: #F5CBA7;
   background: linear-gradient(180deg, #302B3C 100%);
-  color: #fff;
+  color: #382C32;
   font-size: 1.5rem;
+}
+.testimonios * {
+  font-family: "Caveat", cursive;
+}
+.testimonios span:first-child {
+  font-size: 3rem;
 }
 .testimonios__content {
   max-width: 50%;
   margin: auto;
 }
-.testimonios__content * {
-  font-family: "Caveat", cursive;
+.testimonios span:first-child, .testimonios__content {
+  font-weight: 900;
 }
 .testimonios span {
   font-size: 2rem;
@@ -811,6 +821,9 @@ ul {
   gap: 10px;
   font-size: 1.4rem;
   font-family: "Caveat", cursive;
+  max-width: 300px;
+  background: #CDB79E;
+  color: #382C32;
 }
 .button--white {
   background-color: white;
@@ -843,17 +856,22 @@ ul {
 }
 
 .separator {
+  z-index: 999;
   position: absolute;
   top: 0;
   left: 0;
   background-color: #fff;
   width: 100%;
-  height: 50px;
+  height: 40px;
   border-top-right-radius: 100%;
   border-bottom-left-radius: 100%;
 }
 .separator--bottom {
   top: 100%;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 100%;
+  border-bottom-right-radius: 100%;
 }
 
 .whatsapp-icon {

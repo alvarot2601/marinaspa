@@ -25,8 +25,6 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
-
-
 const Main = () => {
   const comp = useRef();
   /*
@@ -90,27 +88,29 @@ const Main = () => {
           <div className="main__image"></div>
           <div className="main__first-text">
             <p>
-              En <span className="big_text">MarinaSpá</span>, nos enorgullece ofrecer una amplia gama de
-              tratamientos y servicios de belleza diseñados para realzar tu
-              apariencia y aumentar tu confianza. Nuestro equipo de expertos
-              esteticistas altamente capacitados y apasionados se dedica a
-              brindar experiencias únicas y resultados excepcionales.
+              En <span className="big_text">MarinaSpá</span>, nos enorgullece
+              ofrecer una amplia gama de tratamientos y servicios de belleza
+              diseñados para realzar tu apariencia y aumentar tu confianza.
+              Nuestro equipo de expertos esteticistas altamente capacitados y
+              apasionados se dedica a brindar experiencias únicas y resultados
+              excepcionales.
             </p>
             <p>
-              Nuestras modernas instalaciones en nuestro centro de estética te brindarán un
-              ambiente relajante y acogedor, donde podrás desconectar del
-              ajetreo diario y disfrutar de una experiencia de bienestar total.
-              Ya sea que desees un facial revitalizante, un masaje relajante, un
-              tratamiento de depilación láser de última generación o cualquier
-              otro servicio de estética, estamos aquí para atender todas tus
-              necesidades.
+              Nuestras modernas instalaciones en nuestro centro de estética te
+              brindarán un ambiente relajante y acogedor, donde podrás
+              desconectar del ajetreo diario y disfrutar de una experiencia de
+              bienestar total. Ya sea que desees un facial revitalizante, un
+              masaje relajante, un tratamiento de depilación láser de última
+              generación o cualquier otro servicio de estética, estamos aquí
+              para atender todas tus necesidades.
             </p>
             <p>
-              En <span className="big_text">MarinaSpá</span>, utilizamos solo los productos y tecnologías más
-              avanzados para asegurarnos de que cada visita sea una experiencia
-              de lujo. Nos enorgullece ofrecer un enfoque personalizado para
-              cada cliente, comprendiendo tus objetivos y necesidades
-              individuales para brindarte los mejores resultados posibles.
+              En <span className="big_text">MarinaSpá</span>, utilizamos solo
+              los productos y tecnologías más avanzados para asegurarnos de que
+              cada visita sea una experiencia de lujo. Nos enorgullece ofrecer
+              un enfoque personalizado para cada cliente, comprendiendo tus
+              objetivos y necesidades individuales para brindarte los mejores
+              resultados posibles.
             </p>
             <p>
               No esperes más para consentirte y cuidar de ti mismo/a en
@@ -184,16 +184,17 @@ const Main = () => {
               <div className="tratamientos__text">
                 <span>TRATAMIENTOS FACIALES</span>
                 <p>
-                  Nuestros tratamientos faciales están diseñados
-                  para revitalizar tu piel y brindarte un cutis radiante. Desde
+                  Nuestros tratamientos faciales están diseñados para
+                  revitalizar tu piel y brindarte un cutis radiante. Desde
                   limpiezas faciales profundas hasta peelings químicos y
-                  terapias de rejuvenecimiento, siempre utilizaremos técnicas avanzadas y productos de calidad para
-                  satisfacer tus necesidades. Experimenta una piel más suave,
-                  luminosa y juvenil.
+                  terapias de rejuvenecimiento, siempre utilizaremos técnicas
+                  avanzadas y productos de calidad para satisfacer tus
+                  necesidades. Experimenta una piel más suave, luminosa y
+                  juvenil.
                 </p>
-                <button className="button button--transparent">
+                <a href="tratamientos-faciales" className="button">
                   SABER MÁS <AiOutlineArrowDown />
-                </button>
+                </a>
               </div>
             </div>
           </SwiperSlide>
@@ -209,9 +210,9 @@ const Main = () => {
                   una amplia gama de tratamientos faciales, cuidado de la piel,
                   maquillaje y más.
                 </p>
-                <button className="button button--transparent">
+                <a href="/estetica-general" className="button button--transparent">
                   SABER MÁS <AiOutlineArrowDown />
-                </button>
+                </a>
               </div>
             </div>
           </SwiperSlide>
@@ -229,9 +230,9 @@ const Main = () => {
                   visibles. ¡Reserva tu consulta hoy mismo y comienza a
                   transformar tu figura!
                 </p>
-                <button className="button button--transparent">
+                <a href="silueta-corporal" className="button button--transparent">
                   SABER MÁS <AiOutlineArrowDown />
-                </button>
+                </a>
               </div>
             </div>
           </SwiperSlide>
@@ -250,9 +251,9 @@ const Main = () => {
                   renueva tu cuerpo y mente en MarinaSpá. ¡Reserva tu momento de
                   relajación hoy mismo!
                 </p>
-                <button className="button button--transparent">
+                <a href="bienestar-y-relajacion" className="button button--transparent">
                   SABER MÁS <AiOutlineArrowDown />
-                </button>
+                </a>
               </div>
             </div>
           </SwiperSlide>
@@ -268,9 +269,9 @@ const Main = () => {
                   cómoda y efectiva. ¡Agenda tu cita y disfruta de una piel
                   suave y sin vello!
                 </p>
-                <button className="button button--transparent">
+                <a href="depilacion" className="button button--transparent">
                   SABER MÁS <AiOutlineArrowDown />
-                </button>
+                </a>
               </div>
             </div>
           </SwiperSlide>
@@ -279,47 +280,70 @@ const Main = () => {
       <section className="servicios">
         <div className="separator"></div>
         <h3>Nuestros servicios</h3>
-        <span>Qué ofrecemos?</span>
+        <span>¿Qué nos diferencia del resto?</span>
 
         <div id="wrapper">
           <div id="content">
             <div className="spacer"></div>
             <div className="accordions">
               <div className="accordion">
-                <div className="title">Servicios personalizados.</div>
-                <div className="text">
-                  En MarinaSpá ofrecemos tratamientos (faciales, corporales,
-                  relajantes...) con la tecnología más avanzada del mercado.
-                </div>
+                <p className="title">Terapias de bienestar holísticas</p>
+                <p className="text">
+                  Te invitamos a experimentar nuestras terapias de bienestar
+                  holísticas para alcanzar una armonía total de cuerpo y mente.
+                  Nos enfocamos en equilibrar tus energías y mejorar tu
+                  bienestar general. Sumérgete en un ambiente tranquilo y
+                  renueva tu ser con nuestras terapias holísticas. ¡Reserva tu
+                  cita ahora y descubre una sensación de paz y vitalidad en
+                  MarinaSpá!
+                </p>
+              </div>
+             
+              <div className="accordion">
+                <p className="title">Programas de fidelización y ofertas.</p>
+                <p className="text">
+                  ¡En MarinaSpá, valoramos a nuestros clientes y queremos
+                  recompensar su lealtad! Nuestros exclusivos Programas de
+                  Fidelización están diseñados para brindarte ventajas
+                  especiales y descuentos en cada visita. Acumula puntos por
+                  cada servicio que disfrutes y canjéalos por tratamientos
+                  gratuitos y productos de primera calidad. Además de nuestros
+                  programas de fidelización, ofrecemos irresistibles ofertas en
+                  una amplia gama de servicios estéticos. Desde descuentos en
+                  tratamientos faciales hasta promociones en masajes y
+                  depilación, siempre encontrarás oportunidades para cuidar de
+                  ti a precios increíbles.
+                </p>
               </div>
               <div className="accordion">
-                <div className="title"> Servicios personalizados.</div>
-                <div className="text">
-                  Ofrecemos ofertas exclusivas y promociones especiales en
-                  distintos servicios Y tratamientos a nuestros clientes más
-                  fieles y recurrentes.
-                </div>
+                <p className="title">Solo las mejores marcas.</p>
+                <p className="text">
+                  Nuestro compromiso con la calidad nos lleva a utilizar
+                  exclusivamente las mejores marcas en todos nuestros
+                  tratamientos y servicios para garantizar
+                  resultados excepcionales y satisfacción total para nuestros
+                  clientes. Desde tratamientos faciales hasta masajes y cuidado
+                  de la piel, puedes confiar en que nuestras marcas premium te
+                  brindarán resultados efectivos y duraderos. Ven y asegúrate de
+                  recibir los beneficios y la excelencia de las mejores marcas,
+                  que respaldan nuestra misión de realzar tu belleza y
+                  bienestar.
+                </p>
               </div>
               <div className="accordion">
-                <div className="title">
-                  Programas de fidelización y ofertas.
-                </div>
+                <p className="title"> Servicios personalizados.</p>
                 <div className="text">
-                  Ofrecemos ofertas exclusivas y promociones especiales en
-                  distintos servicios a nuestros clientes más fieles y
-                  recurrentes.
-                </div>
-              </div>
-              <div className="accordion">
-                <div className="title">Solo las mejores marcas.</div>
-                <div className="text">
-                  En MarinaSpá únicamente trabajamos con las mejores marcas, sí
-                  o sí notarás la diferencia.
+                  <p>
+                    Ofrecemos ofertas exclusivas y promociones especiales en
+                    distintos servicios Y tratamientos a nuestros clientes más
+                    fieles y recurrentes.
+                  </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <div className="separator separator--bottom"></div>
       </section>
 
       <section className="diagnostico">
@@ -335,7 +359,7 @@ const Main = () => {
             del éxito. por eso antes de pasar al tratamiento nos gustaría
             conocer un poco mas de ti y que es lo que te hace única.
           </p>
-          <button className="button">Solicitar Diagnóstico</button>
+          <a href="/contacto" className="button">Solicitar Diagnóstico</a>
         </div>
         <img src={Diagnostico} alt="" />
       </section>
