@@ -1,10 +1,13 @@
 import {React, useState, useEffect} from "react";
 import { Link } from "react-router-dom";
 const NavBar = (props)=> {
-
+    const [activeLink, setActiveLink] = useState('');
     const [isNavbarBig, setIsNavbarBig] = useState(false);
     let lastCoord = 0;
     const thresold = 100;
+    const activarLink = (id)=>{
+        //setActiveLink(id);
+    }
     useEffect(()=>{
         const handleScroll = (e)=>{
             if(window.scrollY > lastCoord){
@@ -19,18 +22,20 @@ const NavBar = (props)=> {
         window.addEventListener('scroll', handleScroll);
         return ()=> window.removeEventListener('scroll', handleScroll);
     }, []);
+
+    
     return (
-        <nav className={`nav ${isNavbarBig ? 'nav--big' : ''} ${props.transparent ? 'nav--transparent' : ''}`}>
+        <nav className={`nav ${isNavbarBig ? 'nav--big' : ''} }`}>
             <div className="nav__logo">
                 MARINASPÁ
             </div>
             <div className="nav__links">
-                <Link to="/" className="nav__link-active">HOME</Link>
+                <Link to="/" className="nav__link-active {activeLink ==='home' ? 'active_link' : ''}" onClick={activarLink('home')}>HOME</Link>
                 <div className="nav__dropdown-wrapper">
                     <Link to="/tratamientos">TRATAMIENTOS</Link>
                     <ul className="nav__dropdown">
                         <li>
-                            <Link to="/programas-faciales">Programas Faciales</Link>
+                            <Link to="/programas-faciales" >Programas Faciales</Link>
                         </li>
                         <li>
                             <Link to="/estetica-general">Estética General</Link>

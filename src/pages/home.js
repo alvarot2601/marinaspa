@@ -4,6 +4,8 @@ import Main from '../components/Main';
 import Testimonials from '../components/Testimonials';
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
+import Diagnostico from "../components/Diagnostico";
+import Tratamientos_c from "../components/Tratamientos_c";
 
 const Home = () => {
     return (
@@ -14,6 +16,8 @@ const Home = () => {
                 </div>
                 <Main/>
                 <Testimonials/>
+                <Diagnostico/>
+                <Tratamientos_c/>
                 <Footer/>         
             
         </>

@@ -1,12 +1,20 @@
 import React, { useLayoutEffect, useEffect } from 'react';
 import FotoMari from "../assets/images/header-background-removebg.png";
+import background from "../assets/images/background.jpg";
 import Video from "../assets/video/corporal.mp4";
 import NavBar from './NavBar';
+import ScrollReveal from 'scrollreveal';
+
 import {BsArrowDownCircle} from "react-icons/bs";
 const Header = ()=> {
+    const options = {
+        delay:10,
+        distance: '50px',
+        interval:100
+    };
     useEffect(()=>{
-        
-    }, []);
+        ScrollReveal().reveal('span,p,h1,h2,h3', options);     
+    });
 
     return (
         <header className='header'>
@@ -14,12 +22,12 @@ const Header = ()=> {
                 <span className='header__name quote'>MARI AGUZA - </span><span className='header__job'>ESTILISTA PERSONAL</span>
                 <br></br>
                 <h1>
-                    <span>Centro de estética </span> <br /><span>MarinaSpá</span>
+                    <span className='reveal'>Centro de estética </span> <br /><span>MarinaSpá</span>
                 </h1>
             </div>
-            <button className='button button--transparent'>
+            <a className='button button--transparent'>
                 Trabaja conmigo <BsArrowDownCircle/>
-            </button>
+            </a>
             {
             //<img className='header__image header__image--0' src={FotoMari} alt="" />
             }
