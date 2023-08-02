@@ -12,6 +12,25 @@ const Header = ()=> {
         distance: '50px',
         interval:100
     };
+    const showVideo = () => {
+        if (document.querySelector('video').style.display == 'block')
+        {
+            document.querySelector('video').style.display = 'none';
+        }   
+        else
+        {
+            
+            document.querySelector('.header__text-container').classList.add('slide-out-blurred-top');
+            setTimeout(()=>{
+                document.querySelector('.header__text-container').style.display = 'none';
+                document.querySelector('video').style.display = 'block';
+            }, 500);
+            //
+        }
+            
+
+    }
+
     useEffect(()=>{
         ScrollReveal().reveal('span,p,h1,h2,h3', options);     
     });
@@ -19,18 +38,31 @@ const Header = ()=> {
     return (
         <header className='header'>
             <div className='header__text-container wrap'>   
-                <span className='header__name quote'>MARI AGUZA - </span><span className='header__job'>ESTILISTA PERSONAL</span>
-                <br></br>
-                <h1>
-                    <span className='reveal'>Centro de estética </span> <br /><span>MarinaSpá</span>
-                </h1>
+                <div className='header__col'>
+                    <p>
+                        <span className='header__name quote'>MARI AGUZA - </span><span className='header__job'>ESTILISTA PERSONAL</span>
+                    </p>
+                    
+                    <h1>
+                        <span className='reveal'>Centro de estética </span> <br /><span>MarinaSpá</span>
+                    </h1>
+                </div>
+                <button className='button2 material-bubble material-bubble--2' onClick={showVideo}>Conócenos</button>
             </div>
-            <a className='button button--transparent'>
-                Trabaja conmigo <BsArrowDownCircle/>
-            </a>
+            {
+                /*<a href='/contacto' className='button button--transparent'>
+                Trabaja conmigo
+                </a> */
+            }
+
+            <BsArrowDownCircle className='arrow-down-animation'/>
             {
             //<img className='header__image header__image--0' src={FotoMari} alt="" />
             }
+
+            <video  controls autoplay className='slide-in-elliptic-left-bck'>
+                <source src={Video} type='video/mp4'/>
+            </video>
         </header>
     );
 }

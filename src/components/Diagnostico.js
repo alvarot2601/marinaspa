@@ -15,7 +15,7 @@ const Diagnostico = () => {
             del éxito. por eso antes de pasar al tratamiento nos gustaría
             conocer un poco mas de ti y que es lo que te hace única.
           </p>
-          <a href="/contacto" className="button">Solicitar Diagnóstico</a>
+          <a href="/contacto" className="button2 material-bubble">Solicitar Diagnóstico</a>
         </div>
         <img src={DiagnosticoImage} alt="" />
       </section>

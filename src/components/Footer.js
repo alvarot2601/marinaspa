@@ -14,9 +14,16 @@ const Footer = () => {
                 <span>
                     644 799 000
                 </span>
+                <div>
+                    <a href=""><FaFacebook/></a>
+                    <a href=""><FaInstagram/></a>
+                </div>
             </div>
+            
             <div className="footer__col">
-                
+                <a href="/contacto">
+                    Contacto
+                </a>
                 <a href="">
                     Aviso Legal
                 </a>
@@ -27,9 +34,22 @@ const Footer = () => {
                     Política de cookies
                 </a>
             </div>
-            <div className="footer__col footer__col--2">
-                <a href=""><FaFacebook/></a>
-                <a href=""><FaInstagram/></a>
+            <div className="footer__col">
+                <a href="/programas-faciales">
+                    Programas Faciales
+                </a>
+                <a href="/estetica-general">
+                    Estética General
+                </a>
+                <a href="/silueta-corporal">
+                    Silueta Corporal
+                </a>
+                <a href="/bienestar-y-relajacion">
+                    Bienestar y relajación
+                </a>
+                <a href="/depilacion-y-fotodepilacion">
+                    Depilación
+                </a>
             </div>
         </footer>
     );

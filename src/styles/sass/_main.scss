@@ -195,11 +195,12 @@
 }
 
 .tratamientos{
+    
     .swiper-pagination-bullet{
-        background-color: $malva;
+        background-color: $grey2;
     }
     .swiper-button-prev, .swiper-button-next{
-        color: $malva;
+        color: $grey2;
     }
     &__info{
         //visibility: hidden;
@@ -218,10 +219,7 @@
     margin: auto;
     text-align: left;
    &__wrapper{
-    
     width: 80vw;
-    
-    
    }
     &__title{
         font-size: 3rem;
@@ -242,7 +240,7 @@
         max-width: 30vw;
         margin: 30px 0;   
     }
-    .button{
+    .button, .button2{
         margin: 0;
     }
    
@@ -283,6 +281,20 @@
     gap: 2vh;
     p{
         margin:0;
+    }
+    .logos-marcas{
+        margin-bottom:30px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        .utsukusy{
+            width:100%;
+            max-width: 250px;
+        }
+        .massada{
+            width:100%;
+            max-width: 250px;
+        }
     }
   }
   

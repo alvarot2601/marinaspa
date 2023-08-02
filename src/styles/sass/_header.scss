@@ -1,27 +1,59 @@
 @import "variables";
+@import "animations";
 .header{
-    
     position: relative;
     min-height: 92vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     padding: 0 50px;
     font-size: 1.5rem;
     z-index: 0;
-    //background-color: $beige;
-   *{
-    font-family: 'Caveat', cursive;
-    font-weight: 700;
-   }
-    &__text-container{
+    padding-top: 9vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    video{
         width: 70%;
+        margin: 40px 0;
+        display: none;
+        border-radius: 10px;
+        z-index: 999;
+        transition: width 2s display 2s;
+    }
+    h1, p{
+        margin: 0;
+    }
+    &__text-container{
+        display: flex;
+        flex-direction: row;
+        gap:80px;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
         height: 100%;
     }
+    
+    &__col{
+        display: flex;
+        flex-direction: column;
+        width: 1800px;
+    }
+    .arrow-down-animation{
+        font-size: 2rem;
+        position: absolute;
+        bottom:50px;
+        animation: arrow_moving 2s ease 2s infinite alternate;
+    }  
+   *
+    {
+        font-family: 'Caveat', cursive;
+        font-weight: 700;
+    }
+    
     h1{
         margin: 0;
         margin-bottom: 40px;
         font-size: 7rem;
+        
     }
 
     &__image{
@@ -48,5 +80,20 @@
     &__image--3{
         left:50%;
         bottom: 50%;
+        
     }
+}
+
+@keyframes myAnim {
+	0% {
+		opacity: 0;
+		transform: rotateX(70deg);
+		transform-origin: top;
+	}
+
+	100% {
+		opacity: 1;
+		transform: rotateX(0deg);
+		transform-origin: top;
+	}
 }

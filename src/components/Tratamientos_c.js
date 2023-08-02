@@ -24,7 +24,7 @@ const Tratamientos_c = ()=>{
           año, para que así puedas lucir siempre la mejor versión de ti a pesar
           del paso del tiempo. Ven a tu Centro de Estética en Sóller
         </p>
-        <a className="button button--transparent">
+        <a className="button2 shrink-border">
           NUESTROS SERVICIOS <AiOutlineArrowDown />
         </a>
         <Swiper
@@ -51,7 +51,7 @@ const Tratamientos_c = ()=>{
                   necesidades. Experimenta una piel más suave, luminosa y
                   juvenil.
                 </p>
-                <a href="tratamientos-faciales" className="button">
+                <a href="tratamientos-faciales" className="button2 material-bubble">
                   SABER MÁS <AiOutlineArrowDown />
                 </a>
               </div>
@@ -69,9 +69,9 @@ const Tratamientos_c = ()=>{
                   una amplia gama de tratamientos faciales, cuidado de la piel,
                   maquillaje y más.
                 </p>
-                <a href="/estetica-general" className="button button--transparent">
+                  <a href="/estetica-general" className="button2 material-bubble">
                   SABER MÁS <AiOutlineArrowDown />
-                </a>
+                  </a>
               </div>
             </div>
           </SwiperSlide>
@@ -89,7 +89,7 @@ const Tratamientos_c = ()=>{
                   visibles. ¡Reserva tu consulta hoy mismo y comienza a
                   transformar tu figura!
                 </p>
-                <a href="silueta-corporal" className="button button--transparent">
+                <a href="silueta-corporal" className="button2 material-bubble">
                   SABER MÁS <AiOutlineArrowDown />
                 </a>
               </div>
@@ -110,7 +110,7 @@ const Tratamientos_c = ()=>{
                   renueva tu cuerpo y mente en MarinaSpá. ¡Reserva tu momento de
                   relajación hoy mismo!
                 </p>
-                <a href="bienestar-y-relajacion" className="button button--transparent">
+                <a href="bienestar-y-relajacion" className="button2 material-bubble">
                   SABER MÁS <AiOutlineArrowDown />
                 </a>
               </div>
@@ -128,7 +128,7 @@ const Tratamientos_c = ()=>{
                   cómoda y efectiva. ¡Agenda tu cita y disfruta de una piel
                   suave y sin vello!
                 </p>
-                <a href="depilacion" className="button button--transparent">
+                <a href="depilacion" className="button2 material-bubble">
                   SABER MÁS <AiOutlineArrowDown />
                 </a>
               </div>
