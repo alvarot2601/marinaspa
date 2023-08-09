@@ -1,7 +1,9 @@
 import React, { useState, useRef } from 'react';
 import Layout from '../components/Layout';
+import Facial from "../assets/images/tratamiento-facial.JPG";
+import HigieneFacial from "../assets/images/higiene-facial.JPG";
 
-import List from '../components/List';
+import Lista from '../components/Lista';
 
 const ProgramasFacialesPage = ({title}) => {
 
@@ -9,6 +11,7 @@ const ProgramasFacialesPage = ({title}) => {
         title: 'BELLEZA - RITUALES Y PROGRAMAS FACIALES',
         category: 'ANTI-AGING',
         category_text:'Los tratamientos anti-aging se enfocan en la prevención y corrección de los signos del envejecimiento, incluyendo arrugas, manchas, flacidez y otros signos de daño en la piel. Estos tratamientos están diseñados para retrasar el proceso de envejecimiento y promover la regeneración celular. ',
+        images : [HigieneFacial],
         treatments: [
             [
                 "Ritual Biocelular",
@@ -85,6 +88,7 @@ const ProgramasFacialesPage = ({title}) => {
         title: 'BELLEZA - RITUALES Y PROGRAMAS FACIALES',
         category: 'HIGIENE FACIAL OXIGENANTE',
         category_text:'La higiene facial oxigenante combina la limpieza profunda de la piel con la entrega de oxígeno a las células de la piel para mejorar su apariencia y salud. Además, la higiene facial oxigenante es una técnica no invasiva que puede realizarse en cualquier tipo de piel, desde la piel seca hasta la piel grasa.',
+        images : [Facial],
         treatments: [
             [
                 "Limpieza en profundidad de la piel con cosmética profesional",
@@ -150,7 +154,7 @@ const ProgramasFacialesPage = ({title}) => {
                         <p className='t-center caveat'>Acude a nuestro centro de estética y descubre la última tecnología en programas faciales. <br></br>Revitaliza tu piel con nuestros programas faciales de vanguardia</p>
                     </header>
                     <main>
-                        <List states = {[[higieneFacialState, setHigieneFacialState], [antiAgingState, setAntiAgingState]]} obj={[higieneFacialState, antiAgingState]} reference={[hf0, hf1, hf2, hf3, hf4, hf5,aa0, aa1, aa2, aa3, aa4, aa5, aa6, aa7, aa8, aa9, aa10, aa11, aa12, aa13]} />
+                        <Lista obj={[higieneFacialState, antiAgingState]}/>
                     </main>
                 </div>
             </Layout>

@@ -4,20 +4,24 @@ import NavBar from './NavBar';
 import {FaWhatsapp, FaArrowCircleUp} from 'react-icons/fa';
 
 const Layout = ({ children }) => {
+    const showScrollToTop = () => {
+        if(window.pageYOffset > 500)
+        {
+            document.querySelector('.scrollToTop').style.display = "flex";
+        }
+        else   
+            document.querySelector('.scrollToTop').style.display = "none";
+    }
     useEffect(()=>{
-        window.addEventListener('scroll', () => {
-            if(window.pageYOffset > 500)
-            {
-                document.querySelector('.scrollToTop').style.display = "flex";
-            }
-            else   
-                document.querySelector('.scrollToTop').style.display = "none";
-        });
+        window.addEventListener('scroll', showScrollToTop);
+
+        return ()=> {
+           window.removeEventListener('scroll', showScrollToTop); 
+        }
     });
 
     const scrollToTop = () => {
-        window.scrollTo(0, - window.pageYOffset);
-       
+        window.scrollTo({top: - window.pageYOffset, behaviour: 'smooth'});
     }
     return (
         <>

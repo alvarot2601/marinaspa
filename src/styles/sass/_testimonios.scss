@@ -27,10 +27,13 @@
         font-style: italic;
     }
     .swiper-pagination-bullet{
-        background-color: $light_grey;
+        background-color: $grey2;
+    }
+    .swiper-pagination-bullet-active{
+        background:red!important;
     }
     .swiper-button-next, .swiper-button-prev{
-        color: $light_grey;
+        color: $grey2;
 
     }
     .swiper-wrapper{

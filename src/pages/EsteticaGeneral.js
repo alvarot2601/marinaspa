@@ -1,8 +1,10 @@
 import React, { useState, useRef } from 'react';
 import Layout from '../components/Layout';
 
-import List from '../components/List';
-
+import Lista from '../components/Lista';
+//images
+import Maquillaje from '../assets/images/maquillaje.jpg';
+import Manicura from '../assets/images/manicura.jpg';
 const EsteticaGeneralPage = ({title}) => {
     ///referencias estetica general manicura y pedicura
     const eg0 = useRef(null);
@@ -20,6 +22,7 @@ const EsteticaGeneralPage = ({title}) => {
         title: 'ESTÉTICA GENERAL',
         category: 'MANICURA | PEDICURA',
         category_text: 'Tus uñas merecen la mejor atención y cuidado, y en nuestra web encontrarás todo lo que necesitas para lucir unas manos y pies impecables. Nuestro equipo de expertos en belleza y estilistas profesionales se dedica a ofrecerte los tratamientos más innovadores y las últimas tendencias en el mundo de la manicura y pedicura.',
+        images : [Manicura],
         treatments: [
             [
                 "Manicura normal",
@@ -42,6 +45,7 @@ const EsteticaGeneralPage = ({title}) => {
         title: 'ESTÉTICA GENERAL',
         category: 'MAQUILLAJE',
         category_text: 'Si buscas resaltar tu belleza natural y expresar tu estilo único, estás en el lugar correcto. Nuestro equipo de expertos en belleza está aquí para ofrecerte los mejores consejos, tutoriales y productos de maquillaje que te ayudarán a lucir radiante en cualquier ocasión.',
+        images : [Maquillaje],
         treatments: [
             [
                 "Maquillaje social (día, tarde o noche)",
@@ -58,22 +62,21 @@ const EsteticaGeneralPage = ({title}) => {
             ["Lifting de pestañas + Tinte", "", 30, 'close']
         ]
     };
+
     /////////////ESTADOS
     const [esteticaGeneralState, setEsteticaGeneral] = useState(esteticaGeneralObj);
     const [maquillajeState, setMaquillajeState] = useState(maquillajeObj);
     return (
-        <>
             <Layout>
                 <div className='tratamientos'>
                     <header>
                         <h1>{title}</h1>
                     </header>
                     <main>
-                        <List states={[[esteticaGeneralState, setEsteticaGeneral], [maquillajeState, setMaquillajeState]]} obj={[esteticaGeneralState, maquillajeState]} reference={[[eg0, eg1, eg2, eg3, eg4], [maq0, maq1, maq2]]} />
+                        <Lista obj={[esteticaGeneralObj, maquillajeObj]}/>
                     </main>
                 </div>
             </Layout>
-        </>
     );
 }
 

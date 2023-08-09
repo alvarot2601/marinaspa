@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import Layout from '../components/Layout';
-
-import List3 from '../components/List3';
+import Lista3 from '../components/Lista3';
+//import List3 from '../components/List3';
 import hidromasaje from "../assets/images/hidromasaje.jpg";
 import peeling from "../assets/images/peeling.jpg";
 import masaje from "../assets/images/masaje.jpg";
@@ -96,10 +96,13 @@ const BienestarRelajacionPage = () => {
             <Layout>
                 <div className='tratamientos'>
                     <header>
-                        <h1>{bienestarRelajacionState.title}</h1>
+                        <h1>{bienestarRelajacionObj.title}</h1>
                     </header>
                     <main>
-                        <List3 states={[bienestarRelajacionState, setBienestarRelajacionState]} obj={bienestarRelajacionState} reference={[br0, br1, br2, br3, br4, br5, br6, br7, br8, br9, br10, br11, br12, br13, br14, br15]} />
+                        <Lista3 obj={bienestarRelajacionObj}/>
+                        {
+                            //<List3 states={[bienestarRelajacionState, setBienestarRelajacionState]} obj={bienestarRelajacionState} reference={[br0, br1, br2, br3, br4, br5, br6, br7, br8, br9, br10, br11, br12, br13, br14, br15]} />
+                        }
                     </main>
                 </div>
             </Layout>

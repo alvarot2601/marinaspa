@@ -11,14 +11,26 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    video{
-        width: 70%;
-        margin: 40px 0;
+    overflow: hidden;
+    .video-container{
+        width: 100%;
         display: none;
-        border-radius: 10px;
+        margin: 40px 0;
         z-index: 999;
-        transition: width 2s display 2s;
+        position: relative;
+        video{
+            width: 60%;
+            border-radius: 10px;
+            margin: auto;
+        }
+        .hide-video{
+            position: absolute;
+            top: 50%;
+            right: 50px;
+            font-size: 2rem;
+        }
     }
+    
     h1, p{
         margin: 0;
     }

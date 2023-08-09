@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import Layout from '../components/Layout';
-import List3 from '../components/List3';
+import Lista3 from '../components/Lista3';
 import cera from "../assets/images/depilacion-cera.jpg";
 import fotodepilacion from "../assets/images/fotodepilacion.jpg";
 const DepilacionPage = () => {
@@ -133,7 +133,7 @@ const DepilacionPage = () => {
                         <h1>{depilacionState.title}</h1>
                     </header>
                     <main>
-                        <List3 states={[depilacionState, setDepilacionState]} obj={depilacionState} reference={[dep0, dep1, dep2, dep3, dep4, dep5, dep6, dep7, dep8, dep9, dep10, dep11, dep12, dep13, dep14, dep15, dep16, dep17, dep18, dep19, dep20, dep21, dep22, dep23, dep24, dep25]} />
+                        <Lista3 obj={depilacionState}/>
                     </main>
                 </div>
             </Layout>

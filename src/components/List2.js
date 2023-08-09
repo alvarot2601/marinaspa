@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import { AiFillCloseCircle } from 'react-icons/ai';
+import { FaArrowDown, FaArrowUp } from 'react-icons/fa';
 import Facial from "../assets/images/facial.jpg";
 
 import { CiMenuKebab } from 'react-icons/ci';
@@ -28,7 +29,7 @@ const List2 = ({states, obj, reference}) => {
                 const reverseRowClass = (i % 2 === 0) ? '' : 'tratamientos__row--revert';
                 return (
                     <div className="tratamientos__subwrapper">
-                    <div className="tratamientos__row ">
+                    <div className="tratamientos__row tratamientos__row--text">
                         {
                             singleObj.category !== '' ? <span className="tratamientos__category">{singleObj.category}</span> : ''
                         }
@@ -47,7 +48,7 @@ const List2 = ({states, obj, reference}) => {
                                             <div>
                                                 <span className="tratamientos__treatment">{treatment[0]}</span>
                                                 {
-                                                    (treatment[3] == 'close') ? <AiFillCloseCircle /> : <CiMenuKebab /> //ref.current.classList.contains('tratamientos__info--hidden') ? <CiMenuKebab /> : <AiFillCloseCircle/>
+                                                    (treatment[3] == 'close') ? <FaArrowDown /> : <FaArrowUp /> //ref.current.classList.contains('tratamientos__info--hidden') ? <CiMenuKebab /> : <AiFillCloseCircle/>
                                                 }
                                             </div>
                                             <div className={`tratamientos__info ${infoClass} tratamientos__info--hidden`} ref={ref}>

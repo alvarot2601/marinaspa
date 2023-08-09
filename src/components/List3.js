@@ -32,7 +32,7 @@ const List3 = ({ states, obj, reference }) => {
                 const reverseRowClass = (index % 2 === 0) ? '' : 'tratamientos__row--revert';
                 return (
                     <div className="tratamientos__subwrapper">
-                    <div className={`${reverseRowClass} tratamientos__row`}>
+                    <div className={`${reverseRowClass} tratamientos__row tratamientos__row--text`}>
                     
                         {
                             category !== '' ? <span className="tratamientos__category">{category}</span> : ''  

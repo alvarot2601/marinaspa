@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import Layout from '../components/Layout';
 
-import List2 from '../components/List2';
+import Lista from '../components/Lista';
 
 const SiluetaCorporalPage = () => {
     ///referencias silueta corporal y programas
@@ -20,7 +20,7 @@ const SiluetaCorporalPage = () => {
 
     const siluetaCorporalObj = {
         title: 'SILUETA CORPORAL',
-        category: '',
+        category: 'SILUETA CORPORAL',
         treatments: [
             [
                 "Envoltura de Algas “CURA DETOX”",
@@ -52,7 +52,9 @@ const SiluetaCorporalPage = () => {
             ["LIPOSONIX (revolucionario tratamiento contra la grasa localizada a base de ultrasonidos", { 'Abdomen': '90€', 'Abdomen y Flancos': '150€', 'Cartucheras': '150€', 'Brazos': '150€' }, '', 'close'],
             ['PROGRAMA INTEGRAL, personalizado de 10 sesiones de acción global sobre grasas profundas y superficiales, remodela la silueta y reduce la celulitis', { 'Programa 1 zona: ': '380€', 'Programa 2 zonas: ': '580€' }, '', 'close'],
             ['MATENIMIENTO CORPORAL', '', '45€', 'close']
-        ]
+            
+        ],
+        images : ['']
     };
 
     /////////////ESTADOS
@@ -66,7 +68,7 @@ const SiluetaCorporalPage = () => {
                         <h1>{siluetaCorporal.title}</h1>
                     </header>
                     <main>
-                        <List2 states={[[siluetaCorporal, setSiluetaCorporal]]} obj={[siluetaCorporal]} reference={[sc0, sc1, sc2, sc3, sc4, sc5, sc6, sc7, sc8, sc9, sc10, sc11]} />
+                        <Lista obj={[siluetaCorporal]} reference={[sc0, sc1, sc2, sc3, sc4, sc5, sc6, sc7, sc8, sc9, sc10, sc11]} />
                     </main>
                 </div>
             </Layout>

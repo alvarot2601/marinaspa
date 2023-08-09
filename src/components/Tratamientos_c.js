@@ -120,7 +120,7 @@ const Tratamientos_c = ()=>{
             <div className="tratamientos__item tratamientos__item--5">
               <img src={fotodepilacionPicture} alt="" />
               <div className="tratamientos__text">
-                <span className="caveat">DEPILACIÓN</span>
+                <span>DEPILACIÓN</span>
                 <p>
                   Experimenta la suavidad duradera con nuestra depilación
                   profesional en MarinaSpá. Ya sea que elijas la depilación

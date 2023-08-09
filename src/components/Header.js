@@ -4,33 +4,43 @@ import background from "../assets/images/background.jpg";
 import Video from "../assets/video/corporal.mp4";
 import NavBar from './NavBar';
 import ScrollReveal from 'scrollreveal';
-
+//fontawesome
+import {FaVideo, FaVideoSlash} from "react-icons/fa";
 import {BsArrowDownCircle} from "react-icons/bs";
 const Header = ()=> {
+    
+    const closeVideo = () => {
+        
+        document.querySelector('.header__text-container').classList.remove('slide-out-blurred-top');
+        document.querySelector('.video-container').classList.remove('slide-in-elliptic-left-bck');
+        document.querySelector('.video-container').classList.add('slide-out-blurred-top');
+        setTimeout(()=>{
+            document.querySelector('.arrow-down-animation').style.display = 'flex';
+            document.querySelector('.video-container').style.display = 'none';
+            document.querySelector('.header__text-container').style.display = 'flex';
+            document.querySelector('.header__text-container').classList.add('slide-in-elliptic-left-bck');
+        }, 1000); 
+    }
+    
+    const showVideo = () => {
+        
+        document.querySelector('.video-container').classList.remove('slide-out-blurred-top');
+        document.querySelector('.header__text-container').classList.remove('slide-in-elliptic-left-bck');
+        document.querySelector('.header__text-container').classList.add('slide-out-blurred-top');
+        
+        setTimeout(()=>{
+            document.querySelector('.arrow-down-animation').style.display = 'none';
+            document.querySelector('.header__text-container').style.display = 'none';
+            document.querySelector('.video-container').style.display = 'flex';
+            document.querySelector('.video-container').classList.add('slide-in-elliptic-left-bck');
+        }, 1000);
+        
+    }
     const options = {
         delay:10,
         distance: '50px',
         interval:100
     };
-    const showVideo = () => {
-        if (document.querySelector('video').style.display == 'block')
-        {
-            document.querySelector('video').style.display = 'none';
-        }   
-        else
-        {
-            
-            document.querySelector('.header__text-container').classList.add('slide-out-blurred-top');
-            setTimeout(()=>{
-                document.querySelector('.header__text-container').style.display = 'none';
-                document.querySelector('video').style.display = 'block';
-            }, 500);
-            //
-        }
-            
-
-    }
-
     useEffect(()=>{
         ScrollReveal().reveal('span,p,h1,h2,h3', options);     
     });
@@ -47,7 +57,7 @@ const Header = ()=> {
                         <span className='reveal'>Centro de estética </span> <br /><span>MarinaSpá</span>
                     </h1>
                 </div>
-                <button className='button2 material-bubble material-bubble--2' onClick={showVideo}>Conócenos</button>
+                <button className='button2 material-bubble material-bubble--2' onClick={showVideo}>Conócenos <FaVideo/></button>
             </div>
             {
                 /*<a href='/contacto' className='button button--transparent'>
@@ -59,10 +69,14 @@ const Header = ()=> {
             {
             //<img className='header__image header__image--0' src={FotoMari} alt="" />
             }
-
-            <video  controls autoplay className='slide-in-elliptic-left-bck'>
-                <source src={Video} type='video/mp4'/>
-            </video>
+            <div className='video-container'>
+                <video  controls autoplay className=''>
+                    <source src={Video} type='video/mp4'/>
+                </video>
+                <button className='button button--round hide-video' onClick={closeVideo} id="hide-video-btn">
+                    <FaVideoSlash/>
+                </button>
+            </div>
         </header>
     );
 }
