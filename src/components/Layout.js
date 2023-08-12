@@ -1,6 +1,6 @@
 import {React, useEffect} from 'react';
 import Footer from './Footer';
-import NavBar from './NavBar';
+import Navbar2 from './Navbar2';
 import {FaWhatsapp, FaArrowCircleUp} from 'react-icons/fa';
 
 const Layout = ({ children }) => {
@@ -25,7 +25,7 @@ const Layout = ({ children }) => {
     }
     return (
         <>
-            <NavBar/>
+            <Navbar2/>
             { children }
             <Footer/>
             <button className='scrollToTop' onClick={scrollToTop}>

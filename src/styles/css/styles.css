@@ -1054,6 +1054,29 @@
   color: #382C32;
   padding-bottom: 40px;
   padding-top: 10vh;
+  /*
+  button{
+      margin-bottom: 60px;
+  }
+  */
+  /*h1,h2,h3,h4,h5,h6{
+      font-family: caveat;
+      //font-size: 4rem;
+  }
+  h1, h2, h3, h4 &__text,  &__description{
+      text-align: center;
+  }
+  h2, p.t-center{
+      max-width: 90%;
+      margin: auto;
+  }
+  h2{
+      //margin-top: 20px;
+      //margin-bottom: 20px;
+      //font-size: 3.5rem;
+      //font-weight: 600;
+      //font-family: "Saira", sans-serif;;
+  }*/
 }
 .tratamientos__btn-container {
   display: flex;
@@ -1106,9 +1129,6 @@
 }
 .tratamientos__subtitle {
   font-size: 1.5rem;
-}
-.tratamientos button {
-  margin-bottom: 60px;
 }
 .tratamientos__info {
   color: #fff;
@@ -1220,24 +1240,6 @@
 }
 .tratamientos__swiper-wrapper .swiper-button-prev {
   left: -10px;
-}
-.tratamientos h1, .tratamientos h2, .tratamientos h3, .tratamientos h4, .tratamientos h5, .tratamientos h6 {
-  font-family: caveat;
-  font-size: 4rem;
-}
-.tratamientos h1, .tratamientos h2, .tratamientos h3, h4 .tratamientos__text, .tratamientos__description {
-  text-align: center;
-}
-.tratamientos h2, .tratamientos p.t-center {
-  max-width: 90%;
-  margin: auto;
-}
-.tratamientos h2 {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  font-size: 3.5rem;
-  font-weight: 600;
-  font-family: "Saira", sans-serif;
 }
 .tratamientos p.t-center {
   font-size: 3rem;
@@ -1367,6 +1369,10 @@ object, iframe {
   font-size: 2rem;
 }
 
+.active {
+  color: blue;
+}
+
 a, span, h1, h2, h3, h4, h5, h6, p {
   color: #263238;
 }
@@ -1394,10 +1400,6 @@ a, button {
 
 h1 {
   font-size: 2.7rem;
-}
-
-h2 {
-  font-size: 2.5rem;
 }
 
 h3 {
@@ -1553,8 +1555,3 @@ ul {
 }
 
 /*# sourceMappingURL=styles.css.map */
-
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;

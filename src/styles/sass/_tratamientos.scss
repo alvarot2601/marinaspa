@@ -6,6 +6,7 @@
     color: $black2;
     padding-bottom: 40px;
     padding-top:10vh;
+    
     &__btn-container{
         display: flex;
         margin: 50px auto 50px auto;
@@ -60,9 +61,11 @@
     &__subtitle{
         font-size: 1.5rem; 
     }
+    /*
     button{
         margin-bottom: 60px;
     }
+    */
     &__info{
         color: #fff;
         font-weight: 400;
@@ -202,9 +205,9 @@
             left: -10px;
         }
     }
-    h1,h2,h3,h4,h5,h6{
+    /*h1,h2,h3,h4,h5,h6{
         font-family: caveat;
-        font-size: 4rem;
+        //font-size: 4rem;
     }
     h1, h2, h3, h4 &__text,  &__description{
         text-align: center;
@@ -214,12 +217,12 @@
         margin: auto;
     }
     h2{
-        margin-top: 20px;
-        margin-bottom: 20px;
-        font-size: 3.5rem;
-        font-weight: 600;
-        font-family: "Saira", sans-serif;;
-    }
+        //margin-top: 20px;
+        //margin-bottom: 20px;
+        //font-size: 3.5rem;
+        //font-weight: 600;
+        //font-family: "Saira", sans-serif;;
+    }*/
     p.t-center{
         font-size: 3rem;
         margin-bottom: 40px;

@@ -157,6 +157,7 @@ const ProgramasFacialesPage = ({title}) => {
                         <a href={CartaPrecios} className='button2 shrink-border' download={CartaPrecios}>Descargar Carta de precios <FaDownload/></a>
                     </div>
                     <main>
+                        
                         <Lista obj={[higieneFacialState, antiAgingState]}/>
                     </main>
                 </div>
