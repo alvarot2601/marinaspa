@@ -2,8 +2,11 @@ import React, { useState, useRef } from 'react';
 import Layout from '../components/Layout';
 import Facial from "../assets/images/tratamiento-facial.JPG";
 import HigieneFacial from "../assets/images/higiene-facial.JPG";
-
+import CartaPrecios from '../assets/pdf/carta_precios_2022.pdf';
 import Lista from '../components/Lista';
+
+//fontawesome
+import {FaDownload, FaEye} from "react-icons/fa";
 
 const ProgramasFacialesPage = ({title}) => {
 
@@ -149,10 +152,10 @@ const ProgramasFacialesPage = ({title}) => {
         <>
             <Layout>
                 <div className='tratamientos programas-faciales'>
-                    <header>
-                        <h1>Te ayudamos a encontrar el tratamiento facial ideal para tus necesidades.</h1>
-                        <p className='t-center caveat'>Acude a nuestro centro de estética y descubre la última tecnología en programas faciales. <br></br>Revitaliza tu piel con nuestros programas faciales de vanguardia</p>
-                    </header>
+                    <div className='tratamientos__btn-container'>
+                        <a href={CartaPrecios} target='_blank' className='button2 material-bubble' >Ver Carta de precios <FaEye/></a>
+                        <a href={CartaPrecios} className='button2 shrink-border' download={CartaPrecios}>Descargar Carta de precios <FaDownload/></a>
+                    </div>
                     <main>
                         <Lista obj={[higieneFacialState, antiAgingState]}/>
                     </main>
@@ -161,4 +164,11 @@ const ProgramasFacialesPage = ({title}) => {
         </>
     );
 }
+/*
+<header>
+                        <h1>Te ayudamos a encontrar el tratamiento facial ideal para tus necesidades.</h1>
+                        <p className='t-center caveat'>Acude a nuestro centro de estética y descubre la última tecnología en programas faciales. <br></br>Revitaliza tu piel con nuestros programas faciales de vanguardia</p>
+                        <button>Ver precios</button>
+                    </header>
+ */
 export default ProgramasFacialesPage;

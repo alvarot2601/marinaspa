@@ -119,17 +119,17 @@
 	margin:auto;
 	position: relative;
 	border: none;
-	font-size: 18px;
+	
 	transition: color 0.5s, transform 0.2s, background-color 0.2s;
 	outline: none;
 	border-radius: 3px;
-	padding: 20px 60px;
+	padding: 20px 50px;
 	border: 3px solid transparent;
 	display: flex;
 	width: 100%;
 	max-width: 350px;
 	justify-content: center;
-	gap:20px;
+	gap:10px;
 	align-items: center;
 	svg{
 		font-size: 2rem;

@@ -427,9 +427,13 @@ const Tratamientos = () => {
     }, [higieneFacialState, antiAgingState, esteticaGeneralState, maquillajeState, bienestarRelajacionState]);
     return (
         <Layout>
+            <iframe src={Carta}>
+
+            </iframe>
             <object data={Carta} type="application/pdf">
                 <div>No online PDF viewer installed</div>
             </object>
+
         </Layout>
     );
 };

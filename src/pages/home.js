@@ -14,10 +14,12 @@ const Home = () => {
       <div className="navHeaderWrapper">
         <Header />
       </div>
+      
       <Main />
+      <Tratamientos_c />
       <Testimonials />
       <Diagnostico />
-      <Tratamientos_c />
+      
     </Layout>
   );
 };
