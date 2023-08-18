@@ -7,7 +7,7 @@ import ScrollReveal from 'scrollreveal';
 //fontawesome
 import {FaVideo, FaVideoSlash} from "react-icons/fa";
 import {BsArrowDownCircle} from "react-icons/bs";
-const Header = ()=> {
+const Header = (props) => {
     
     const closeVideo = () => {
         
@@ -42,17 +42,17 @@ const Header = ()=> {
         interval:100
     };
     useEffect(()=>{
-        ScrollReveal().reveal('.header__job', options); 
-        ScrollReveal().reveal('h1', options); 
+        //ScrollReveal().reveal('.header__job', options); 
+        //ScrollReveal().reveal('h1', options); 
         ScrollReveal().reveal('.main__first-text p', options); 
         ScrollReveal().reveal('.accordion p.text', options);    
         ScrollReveal().reveal('.diagnostico p', options);
         ScrollReveal().reveal('.tratamientos__general-info', options);
         ScrollReveal().reveal('.swiper-slide:nth-of-type(1), .swiper-slide:nth-of-type(2), .swiper-slide:nth-of-type(3)', options); 
     });
-
+    
     return (
-        <header className='header'>
+        <header className={`header ${props.classProp}`}>
             <div className='header__text-container wrap'>   
                 <div className='header__col'>
                     <p>

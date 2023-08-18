@@ -9,23 +9,16 @@
         background-color: bisque;
         color: #fff;
         z-index: 1;
-        padding: 0px 50px;
+        
     }
     &__first-section{
-        position: relative;
-        max-width: 90vw;
-        padding: 50px;
         
         margin: auto;
         display: flex;
-        align-items: center;
-        gap: 50px;
+        
+        
         color: $black2;
-        img{
-            width: 50%;
-            object-fit: cover;
-            border-radius: 100%;
-        }
+        
     }
     &__image{
         background-image: url("../../assets/images/header-background.JPG");

@@ -8,12 +8,28 @@
 @import "programas-faciales";
 @import "footer";
 @import "contacto";
-
+.parallax {
+    /* The image used */
+    background-image: url("../../assets/images/esteticista_profesional.jpg");
+  
+    /* Set a specific height */
+    min-height: 500px;
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: 0% 20%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 .active{
-    color:blue;
+    color:#4338ca!important;//indigo700;
+    text-decoration: underline;
+    text-underline-offset: 25px;
+    text-decoration-color: #4338ca;
+    font-weight: 600;
 }
 a, span, h1,h2,h3,h4,h5,h6, p{
-    color:$grey2
+    //color:$grey2
 }
 a, button{
     cursor: pointer;
