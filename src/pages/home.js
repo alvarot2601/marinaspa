@@ -86,7 +86,7 @@ const Home = () => {
           
           // Calculate the new scroll position
          
-          prevSection.current.scrollIntoView({behavior:"smooth"});
+          //prevSection.current.scrollIntoView({behavior:"smooth"});
           setActiveSection(prevSection);
           //activeSection.current.classList.remove('active-section');
           
@@ -105,7 +105,7 @@ const Home = () => {
         
         if ((window.innerHeight / 2) > nextSection.current.getBoundingClientRect().y){
           
-          nextSection.current.scrollIntoView({behavior:"smooth"});
+          //nextSection.current.scrollIntoView({behavior:"smooth"});
           setActiveSection(nextSection);
           //activeSection.current.classList.remove('active-section');
           
@@ -165,7 +165,7 @@ const Home = () => {
       <section ref={section_2} className="section-2">
         <Main classProp = 'section-2' />
       </section>
-      <section ref={section_3} className="section-3">
+      <section ref={section_3} className="servicios section-3 py-10">
         <Servicios classProp = 'section-3' />
       </section>
       

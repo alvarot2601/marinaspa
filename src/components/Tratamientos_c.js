@@ -9,10 +9,12 @@ import AntiAgingPicture from "../assets/images/anti-aging.jpg";
 import FacialPicture from "../assets/images/programas-faciales-background.jpg";
 import hidromasajePicture from "../assets/images/hidromasaje.jpg";
 import fotodepilacionPicture from "../assets/images/fotodepilacion.jpg";
+import {Button, Link} from "@nextui-org/react";
+
 const Tratamientos_c = ()=>{
     return (
         <section className="tratamientos">
-        <h2>NUESTROS TRATAMIENTOS</h2>
+        <h2 className="text-5xl text-center">NUESTROS TRATAMIENTOS</h2>
         <p className="tratamientos__general-info">
           Tu belleza es el reflejo de tu mejor imagen que proyecta tu cuerpo
           cuando está en pleno equilibrio, nosotros trabajamos para que ese
@@ -24,7 +26,7 @@ const Tratamientos_c = ()=>{
           año, para que así puedas lucir siempre la mejor versión de ti a pesar
           del paso del tiempo. Ven a tu Centro de Estética en Sóller
         </p>
-        <a className="button2 shrink-border">
+        <a className="button2 shrink-border my-3 mx-auto">
           NUESTROS SERVICIOS <AiOutlineArrowDown />
         </a>
         <Swiper
@@ -40,9 +42,9 @@ const Tratamientos_c = ()=>{
           <SwiperSlide>
             <div className="tratamientos__item tratamientos__item--1">
               <img src={AntiAgingPicture} alt="" />
-              <div className="tratamientos__text">
-                <span>TRATAMIENTOS FACIALES</span>
-                <p>
+              <div className="flex flex-col p-5 tratamientos__text">
+                <span className="text-xl font-semibold">TRATAMIENTOS FACIALES</span>
+                <p className="mb-3 mt-2">
                   Nuestros tratamientos faciales están diseñados para
                   revitalizar tu piel y brindarte un cutis radiante. Desde
                   limpiezas faciales profundas hasta peelings químicos y
@@ -51,36 +53,32 @@ const Tratamientos_c = ()=>{
                   necesidades. Experimenta una piel más suave, luminosa y
                   juvenil.
                 </p>
-                <a href="tratamientos-faciales" className="button2 material-bubble">
-                  SABER MÁS <AiOutlineArrowDown />
-                </a>
+                <Button as={Link} href="/tratamientos-faciales" target='_blank' className='material-bubble max-w-sm text-md px-20 py-8 outline-0 rounded border-2 border-transparent relative mx-auto btn-transitions' >Saber más <AiOutlineArrowDown/> </Button>
               </div>
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="tratamientos__item tratamientos__item--2">
               <img src={FacialPicture} alt="" />
-              <div className="tratamientos__text">
-                <span>ESTÉTICA GENERAL</span>
-                <p>
+              <div className="flex flex-col p-5 tratamientos__text">
+                <span className="text-xl font-semibold text-slate-800">ESTÉTICA GENERAL</span>
+                <p className="mb-3 mt-2">
                   En MarinaSpá, nos dedicamos a realzar tu belleza y brindarte
                   una experiencia estética excepcional. Nuestros servicios van
                   más allá de la depilación y la silueta corporal. Te ofrecemos
                   una amplia gama de tratamientos faciales, cuidado de la piel,
                   maquillaje y más.
                 </p>
-                  <a href="/estetica-general" className="button2 material-bubble">
-                  SABER MÁS <AiOutlineArrowDown />
-                  </a>
+                <Button as={Link} href="/estetica-general" target='_blank' className='material-bubble max-w-sm text-md px-20 py-8 outline-0 rounded border-2 border-transparent relative mx-auto btn-transitions' >Saber más <AiOutlineArrowDown/> </Button>
               </div>
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="tratamientos__item tratamientos__item--3">
               <img src={FacialPicture} alt="" />
-              <div className="tratamientos__text">
-                <span>SILUETA CORPORAL</span>
-                <p>
+              <div className="flex flex-col p-5 tratamientos__text">
+                <span className="text-xl font-semibold">SILUETA CORPORAL</span>
+                <p className="mb-3 mt-2">
                   En MarinaSpá, te ayudamos a alcanzar la silueta corporal de
                   tus sueños. Nuestros tratamientos avanzados, como la
                   criolipólisis y la radiofrecuencia, te permiten esculpir tu
@@ -89,18 +87,16 @@ const Tratamientos_c = ()=>{
                   visibles. ¡Reserva tu consulta hoy mismo y comienza a
                   transformar tu figura!
                 </p>
-                <a href="silueta-corporal" className="button2 material-bubble">
-                  SABER MÁS <AiOutlineArrowDown />
-                </a>
+                <Button as={Link} href="/silueta-corporal" target='_blank' className='material-bubble max-w-sm text-md px-20 py-8 outline-0 rounded border-2 border-transparent relative mx-auto btn-transitions' >Saber más <AiOutlineArrowDown/> </Button>
               </div>
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="tratamientos__item tratamientos__item--4">
               <img src={hidromasajePicture} alt="" />
-              <div className="tratamientos__text">
-                <span>BIENESTAR Y RELAJACIÓN</span>
-                <p>
+              <div className="flex flex-col p-5 tratamientos__text">
+                <span className="text-xl font-semibold">BIENESTAR Y RELAJACIÓN</span>
+                <p className="mb-3 mt-2">
                   En MarinaSpá, te ofrecemos una experiencia de bienestar y
                   relajación incomparable. Nuestros masajes terapéuticos y
                   hidromasajes revitalizantes te transportarán a un estado de
@@ -110,27 +106,23 @@ const Tratamientos_c = ()=>{
                   renueva tu cuerpo y mente en MarinaSpá. ¡Reserva tu momento de
                   relajación hoy mismo!
                 </p>
-                <a href="bienestar-y-relajacion" className="button2 material-bubble">
-                  SABER MÁS <AiOutlineArrowDown />
-                </a>
+                <Button as={Link} href="/bienestar-y-relajacion" target='_blank' className='material-bubble max-w-sm text-md px-20 py-8 outline-0 rounded border-2 border-transparent relative mx-auto btn-transitions' >Saber más <AiOutlineArrowDown/> </Button>
               </div>
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="tratamientos__item tratamientos__item--5">
               <img src={fotodepilacionPicture} alt="" />
-              <div className="tratamientos__text">
-                <span>DEPILACIÓN</span>
-                <p>
+              <div className="flex flex-col p-5 tratamientos__text">
+                <span className="text-xl font-semibold">DEPILACIÓN</span>
+                <p className="mb-3 mt-2">
                   Experimenta la suavidad duradera con nuestra depilación
                   profesional en MarinaSpá. Ya sea que elijas la depilación
                   láser o la cera tradicional, garantizamos una experiencia
                   cómoda y efectiva. ¡Agenda tu cita y disfruta de una piel
                   suave y sin vello!
                 </p>
-                <a href="depilacion" className="button2 material-bubble">
-                  SABER MÁS <AiOutlineArrowDown />
-                </a>
+                <Button as={Link} href="/depilacion-y-fotodepilacion" target='_blank' className='material-bubble max-w-sm text-md px-20 py-8 outline-0 rounded border-2 border-transparent relative mx-auto btn-transitions' >Saber más <AiOutlineArrowDown/> </Button>
               </div>
             </div>
           </SwiperSlide>

@@ -34,6 +34,11 @@ a, span, h1,h2,h3,h4,h5,h6, p{
 a, button{
     cursor: pointer;
 }
+a, button{
+    svg{
+        font-size: 1.4rem;
+    }
+}
 .navHeaderWrapper{
     color: $grey2;
     background-attachment: fixed;

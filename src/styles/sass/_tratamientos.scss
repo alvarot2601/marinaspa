@@ -150,10 +150,7 @@
         padding: 10px!important;
     }
     &__text{
-        padding: 15px;
-        font-size: 1.2rem;
-        color: $black2;
-
+       
         span{
             font-weight: 700;
             letter-spacing: 2px;
@@ -253,10 +250,7 @@
         }
     }
     
-    svg{
-        font-size: 1.5rem;
-        flex-basis: 10%;
-    }
+    
     svg:hover{
         cursor: pointer;
     }

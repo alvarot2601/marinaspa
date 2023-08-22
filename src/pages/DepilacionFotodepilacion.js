@@ -3,6 +3,10 @@ import Layout from '../components/Layout';
 import Lista3 from '../components/Lista3';
 import cera from "../assets/images/depilacion-cera.jpg";
 import fotodepilacion from "../assets/images/fotodepilacion.jpg";
+
+import {Button} from "@nextui-org/react";
+import CartaPrecios from '../assets/pdf/carta_precios_2022.pdf';
+import {FaDownload, FaEye} from "react-icons/fa";
 const DepilacionPage = () => {
     //referencias depilacion 
     const dep0 = useRef(null);
@@ -129,9 +133,11 @@ const DepilacionPage = () => {
         <>
             <Layout>
                 <div className='tratamientos'>
-                    <header>
-                        <h1>{depilacionState.title}</h1>
-                    </header>
+                    <div className='flex justify-center gap-5'>
+                        <Button href={CartaPrecios} target='_blank' className='material-bubble max-w-sm text-md px-20 py-10 outline-0 rounded border-2 border-transparent relative btn-transitions' >Ver Carta de precios <FaEye/></Button>
+                        
+                        <Button href={CartaPrecios} className='material-bubble max-w-sm text-md px-20 py-10 outline-0 rounded border-2 border-transparent relative btn-transitions' download={CartaPrecios}>Descargar Carta de precios <FaDownload/></Button>
+                    </div>
                     <main>
                         <Lista3 obj={depilacionState}/>
                     </main>

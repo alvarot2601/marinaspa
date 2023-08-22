@@ -2,10 +2,9 @@ import React, { useState, useRef } from 'react';
 import Layout from '../components/Layout';
 import Facial from "../assets/images/tratamiento-facial.JPG";
 import HigieneFacial from "../assets/images/higiene-facial.JPG";
-import CartaPrecios from '../assets/pdf/carta_precios_2022.pdf';
 import Lista from '../components/Lista';
-
-//fontawesome
+import {Button} from "@nextui-org/react";
+import CartaPrecios from '../assets/pdf/carta_precios_2022.pdf';
 import {FaDownload, FaEye} from "react-icons/fa";
 
 const ProgramasFacialesPage = ({title}) => {
@@ -152,12 +151,12 @@ const ProgramasFacialesPage = ({title}) => {
         <>
             <Layout>
                 <div className='tratamientos programas-faciales'>
-                    <div className='tratamientos__btn-container'>
-                        <a href={CartaPrecios} target='_blank' className='button2 material-bubble' >Ver Carta de precios <FaEye/></a>
-                        <a href={CartaPrecios} className='button2 shrink-border' download={CartaPrecios}>Descargar Carta de precios <FaDownload/></a>
+                    <div className='flex justify-center gap-5'>
+                        <Button href={CartaPrecios} target='_blank' className='material-bubble max-w-sm text-md px-20 py-10 outline-0 rounded border-2 border-transparent relative btn-transitions' >Ver Carta de precios <FaEye/></Button>
+                        
+                        <Button href={CartaPrecios} className='material-bubble max-w-sm text-md px-20 py-10 outline-0 rounded border-2 border-transparent relative btn-transitions' download={CartaPrecios}>Descargar Carta de precios <FaDownload/></Button>
                     </div>
                     <main>
-                        
                         <Lista obj={[higieneFacialState, antiAgingState]}/>
                     </main>
                 </div>
@@ -166,6 +165,7 @@ const ProgramasFacialesPage = ({title}) => {
     );
 }
 /*
+//<a href={CartaPrecios} target='_blank' className='button2 material-bubble' >Ver Carta de precios <FaEye/></a>
 <header>
                         <h1>Te ayudamos a encontrar el tratamiento facial ideal para tus necesidades.</h1>
                         <p className='t-center caveat'>Acude a nuestro centro de estética y descubre la última tecnología en programas faciales. <br></br>Revitaliza tu piel con nuestros programas faciales de vanguardia</p>

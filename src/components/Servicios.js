@@ -14,17 +14,16 @@ import Utsukusi from "../assets/images/utsukusy.png";
 import Facial from "../assets/images/facial.jpg";
 const Servicios = (props) => {
     return (
-        <section className={`servicios ${props.classProp}`}>
-        <div className="separator"></div>
-        <h3>Nuestros servicios</h3>
-        <span>¿Qué nos diferencia del resto?</span>
+        <div className={`${props.classProp}`}>
+        <h3 className="text-5xl">Nuestros servicios</h3>
+        <p className="text-3xl mt-5">¿Qué nos diferencia del resto?</p>
 
         <div id="wrapper">
           <div id="content">
             <div className="spacer"></div>
             <div className="accordions">
               <div className="accordion">
-                <p className="title">
+                <p className="title flex gap-3 justify-center items-center">
                   <FaSpa /> Terapias de bienestar holísticas <FaSpa />
                 </p>
                 <p className="text">
@@ -39,7 +38,7 @@ const Servicios = (props) => {
               </div>
 
               <div className="accordion">
-                <p className="title">
+                <p className="title flex gap-3 justify-center items-center">
                   <FaPercent /> Programas de fidelización y ofertas.{" "}
                   <FaPercent />
                 </p>
@@ -58,7 +57,7 @@ const Servicios = (props) => {
                 </p>
               </div>
               <div className="accordion">
-                <p className="title">
+                <p className="title flex gap-3 justify-center items-center">
                   <FaTrophy /> Solo las mejores marcas. <FaTrophy />
                 </p>
 
@@ -94,21 +93,11 @@ const Servicios = (props) => {
                   <img src={Utsukusi} className="utsukusy" />
                 </div>
               </div>
-              <div className="accordion">
-                <p className="title"> Servicios personalizados.</p>
-                <div className="text">
-                  <p>
-                    Ofrecemos ofertas exclusivas y promociones especiales en
-                    distintos servicios Y tratamientos a nuestros clientes más
-                    fieles y recurrentes.
-                  </p>
-                </div>
-              </div>
+              
             </div>
           </div>
         </div>
-        <div className="separator separator--bottom"></div>
-      </section>
+      </div>
     );
 }
 

@@ -44,11 +44,11 @@ const Header = (props) => {
     useEffect(()=>{
         //ScrollReveal().reveal('.header__job', options); 
         //ScrollReveal().reveal('h1', options); 
-        ScrollReveal().reveal('.main__first-text p', options); 
-        ScrollReveal().reveal('.accordion p.text', options);    
-        ScrollReveal().reveal('.diagnostico p', options);
-        ScrollReveal().reveal('.tratamientos__general-info', options);
-        ScrollReveal().reveal('.swiper-slide:nth-of-type(1), .swiper-slide:nth-of-type(2), .swiper-slide:nth-of-type(3)', options); 
+       // ScrollReveal().reveal('.main__first-text p', options); 
+        //ScrollReveal().reveal('.accordion p.text', options);    
+        //ScrollReveal().reveal('.diagnostico p', options);
+        //ScrollReveal().reveal('.tratamientos__general-info', options);
+        //ScrollReveal().reveal('.swiper-slide:nth-of-type(1), .swiper-slide:nth-of-type(2), .swiper-slide:nth-of-type(3)', options); 
     });
     
     return (

@@ -155,7 +155,6 @@
     //background: linear-gradient(0deg, rgba(38,50,56,1) 0%, rgba(50,38,56,1) 20%, rgba(50,38,56,1) 80%, rgba(38,50,56,1) 100%);
     color: $black2;
     text-align: center;
-    padding: 40px 20px;
     &__row{
         display: flex;
         gap: 20px;
@@ -174,14 +173,11 @@
     }
 
     h3{
-        margin-top: 20px;
-        margin-bottom: 20px;
-        font-size: 3.5rem;
-        font-weight: 400;
+        
+        
+        
     }
-    span:nth-of-type(1){
-        font-size: 2.4rem;   
-    }
+    
     #wrapper{
         margin-top: 40px;
     }

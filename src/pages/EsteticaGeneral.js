@@ -5,6 +5,9 @@ import Lista from '../components/Lista';
 //images
 import Maquillaje from '../assets/images/maquillaje.jpg';
 import Manicura from '../assets/images/manicura.jpg';
+import {Button} from "@nextui-org/react";
+import CartaPrecios from '../assets/pdf/carta_precios_2022.pdf';
+import {FaDownload, FaEye} from "react-icons/fa";
 const EsteticaGeneralPage = ({title}) => {
     ///referencias estetica general manicura y pedicura
     const eg0 = useRef(null);
@@ -69,9 +72,10 @@ const EsteticaGeneralPage = ({title}) => {
     return (
             <Layout>
                 <div className='tratamientos'>
-                    <header>
-                        <h1>{title}</h1>
-                    </header>
+                    <div className='flex justify-center gap-5'>
+                        <Button href={CartaPrecios} target='_blank' className='material-bubble max-w-sm text-md px-20 py-10 outline-0 rounded border-2 border-transparent relative btn-transitions' >Ver Carta de precios <FaEye/></Button>
+                        <Button href={CartaPrecios} className='material-bubble max-w-sm text-md px-20 py-10 outline-0 rounded border-2 border-transparent relative btn-transitions' download={CartaPrecios}>Descargar Carta de precios <FaDownload/></Button>
+                    </div>
                     <main>
                         <Lista obj={[esteticaGeneralObj, maquillajeObj]}/>
                     </main>

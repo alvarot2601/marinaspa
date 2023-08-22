@@ -115,11 +115,15 @@
 {
 	box-sizing: border-box;
 }
+.btn-transitions{
+	transition: color 0.5s, transform 0.2s, background-color 0.2s;
+	&:hover
+	{
+		transform: translateY(3px);
+	}
+}
 .button2{
-	margin:auto;
-	position: relative;
-	border: none;
-	
+	position: relative;	
 	transition: color 0.5s, transform 0.2s, background-color 0.2s;
 	outline: none;
 	border-radius: 3px;
@@ -200,7 +204,7 @@
 
 .material-bubble{
 	background-color: transparent;
-  	color: darken($grey2, 10%);
+  	color: darken($slate-7, 10%);
 	border: none;
 	overflow: hidden;
 	box-shadow: none;
@@ -218,7 +222,7 @@
 		left: 0;
 		width: 100%;
 		height: 95%;
-		border: 3px solid darken($grey2, 10%);
+		border: 3px solid darken($slate-7, 10%);
 		transition: opacity 0.3s, border 0.3s;
 	}
 
@@ -235,7 +239,7 @@
 		left: 0;
 		width: 700px;
 		height: 200px;
-		background-color: lighten($grey2, 10%);
+		background-color: lighten($slate-7, 10%);
 		border-color: transparent;
 		border-radius: 50%;
 		transform: translate(-10px, -70px) scale(0.1);
