@@ -69,7 +69,7 @@ const Tratamientos_c = ()=>{
                   una amplia gama de tratamientos faciales, cuidado de la piel,
                   maquillaje y más.
                 </p>
-                <Button as={Link} href="/estetica-general" target='_blank' className='material-bubble max-w-sm text-md px-20 py-8 outline-0 rounded border-2 border-transparent relative mx-auto btn-transitions' >Saber más <AiOutlineArrowDown/> </Button>
+                <Button as={Link} href="/estetica-general" target='_blank' className='material-bubble max-w-sm text-md px-20 py-8 outline-0 rounded  border-transparent relative mx-auto btn-transitions' >Saber más <AiOutlineArrowDown/> </Button>
               </div>
             </div>
           </SwiperSlide>

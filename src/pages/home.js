@@ -79,7 +79,7 @@ const Home = () => {
         console.log('window.innerHeight / 2', window.innerHeight / 2)
         if ((window.innerHeight / 2) < activeSection.current.getBoundingClientRect().y){
           if(activeSection == section_2){
-            window.scrollTo(0,0);
+            //window.scrollTo(0,0);
             setActiveSection(prevSection);
             return null;
           }
@@ -122,19 +122,19 @@ const Home = () => {
         if(e.wheelDelta>0){
           if ((window.innerHeight / 2) >= activeSection.current.getBoundingClientRect().y){
             if(activeSection===section_1){
-              window.scrollTo(0,0);
+              //window.scrollTo(0,0);
               return null;
             }
-            activeSection.current.scrollIntoView({behavior:"smooth"});
+            //activeSection.current.scrollIntoView({behavior:"smooth"});
             return null;
           }
         }else{
           if ((window.innerHeight / 2) <= nextSection.current.getBoundingClientRect().y){
             if(activeSection===section_1){
-              window.scrollTo(0,0);
+              //window.scrollTo(0,0);
               return null;
             }
-            activeSection.current.scrollIntoView({behavior:"smooth"});
+            //activeSection.current.scrollIntoView({behavior:"smooth"});
             return null;
           }
         }
@@ -157,7 +157,7 @@ const Home = () => {
   })
   
   return (
-    <Layout>
+      <Layout>
       <section className="navHeaderWrapper section-1" ref={section_1} >
         <Header classProp = 'active-section section-1' />
       </section>
@@ -165,7 +165,7 @@ const Home = () => {
       <section ref={section_2} className="section-2">
         <Main classProp = 'section-2' />
       </section>
-      <section ref={section_3} className="servicios section-3 py-10">
+      <section ref={section_3} className="servicios section-3">
         <Servicios classProp = 'section-3' />
       </section>
       

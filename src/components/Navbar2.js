@@ -37,7 +37,7 @@ export default function Navbar2() {
     user: <TagUser className="text-danger" fill="currentColor" size={30} />,
   };
   return (
-    <Navbar shouldHideOnScroll isBordered>
+    <Navbar position="static" isBordered>
       <NavbarBrand>
         <p className="font-bold text-2xl">MarinaSpá</p>
       </NavbarBrand>

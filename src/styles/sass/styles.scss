@@ -8,6 +8,7 @@
 @import "programas-faciales";
 @import "footer";
 @import "contacto";
+
 .parallax {
     /* The image used */
     background-image: url("../../assets/images/esteticista_profesional.jpg");
@@ -21,6 +22,9 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
+button.info{
+    background-color: #27272a   ;
+}
 .active{
     color:#4338ca!important;//indigo700;
     text-decoration: underline;

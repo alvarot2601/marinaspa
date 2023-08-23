@@ -149,12 +149,42 @@
 }
 
 .servicios{
+    
     position: relative;
-    background-color: $beige;
+    
     //background: rgb(38,50,56);
     //background: linear-gradient(0deg, rgba(38,50,56,1) 0%, rgba(50,38,56,1) 20%, rgba(50,38,56,1) 80%, rgba(38,50,56,1) 100%);
     color: $black2;
     text-align: center;
+    overflow: hidden;
+    &__wrapper{
+        overscroll-behavior: none;
+    }
+    &__subwrapper{
+        overscroll-behavior: none;
+        width: 300%;
+        display: flex; 
+        height:100vh;  
+    }
+    &__servicio{
+        width: 100%;
+        
+        &--1{
+            background-image: url('../../assets/images/background.jpg');
+            background-position: 0% 0%;       
+        }
+        &--2{
+            background-image: url('../../assets/images/background.jpg');
+            background-position: 33% 0%;
+        }
+        &--3{
+            background-image: url('../../assets/images/background.jpg');
+            background-position: 50% 0%;
+        }
+    }
+    #prueba{
+        //background-image: url('../../assets/images/aromaterapia.jpg');
+    }
     &__row{
         display: flex;
         gap: 20px;
@@ -271,22 +301,20 @@
     p{
         margin:0;
     }
-    .logos-marcas{
-        margin-bottom:30px;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        .utsukusy{
-            width:100%;
-            max-width: 250px;
-        }
-        .massada{
-            width:100%;
-            max-width: 250px;
-        }
-    }
+    
   }
-  
+  .utsukusy{
+        width:100%;
+        max-width: 350px;
+    }
+    .massada{
+        width:100%;
+        max-width: 350px;
+    }
+    .mesoestetic{
+        width:350px;
+        max-width: 350px; 
+    }
   .accordion {
     background: $peach;//linear-gradient(200deg, $light_brown 13.57%, $light_green 98.38%);
     width: 80vw;
