@@ -3,13 +3,18 @@ import {
   FaSpa,
   FaPercent,
   FaTrophy,
+  FaHandshake,
+  FaHeartbeat
 } from "react-icons/fa";
+
+
 import Mesoestetic from "../assets/images/logo-mesoestetic.svg";
 
 import Massada from "../assets/images/massada.avif";
 import Utsukusi from "../assets/images/utsukusy.png";
 import Aromaterapia from "../assets/images/aromaterapia.jpg";
 import ProgramaFidelizacion from "../assets/images/programa-fidelizacion.jpg";
+import ShakeHands from "../assets/images/shake-hands.jpg";
 
 
 import { gsap } from "gsap";
@@ -31,7 +36,7 @@ const Servicios = (props) => {
         ease: "none",
         scrollTrigger: {
           trigger: ".servicios__wrapper",
-          markers: true,
+          markers: false,
           pin: true,
           scrub: 1,
           snap: 1 / (sections.length - 1),
@@ -43,52 +48,32 @@ const Servicios = (props) => {
     return () => ctx.revert();
   });
   return (
-    <div className={`${props.classProp}`}>
-      <h3 className="text-6xl my-5">Nuestros servicios</h3>
+    <div className={`${props.classProp} `}>
+      <h3 className="text-8xl font-bold py-7 bg-gradient-to-tr from-gray-50 from-10% to-amber-600">Nuestros servicios</h3>
       {
         //<p className="text-3xl my-5 ">¿Qué nos diferencia del resto?</p>
       }
 
       <div className="servicios__wrapper h-screen">
+
         <div className="servicios__subwrapper h-full">
 
 
-          <div className="servicios__servicio servicios__servicio--1 h-full">
-            <div className="flex flex-row h-full">
-              <div className="h-full w-5/12">
-                <Image
-                  src={Aromaterapia}
-                  className="object-cover rounded-none"
-                />
-              </div>
-              <div className="w-7/12 flex flex-col items-center justify-center gap-5 p-10">
-                <FaSpa className="text-8xl" />
-                <p className="flex justify-center items-center text-6xl mx-auto font-bold underline underline-offset-8 decoration-2 leading-snug">
-                  Terapias de bienestar holísticas
-                </p>
-                <p className="text-xl font-medium italic">
-                  Te invitamos a experimentar nuestras terapias de bienestar
-                  holísticas para alcanzar una armonía total de cuerpo y mente.
-                  Nos enfocamos en equilibrar tus energías y mejorar tu
-                  bienestar general. Sumérgete en un ambiente tranquilo y
-                  renueva tu ser con nuestras terapias holísticas. ¡Reserva tu
-                  cita ahora y descubre una sensación de paz y vitalidad en
-                  MarinaSpá!
-                </p>
-              </div>
-            </div>
-          </div>
 
-          <div className="servicios__servicio servicios__servicio--2 h-full">
+
+        <div className="servicios__servicio servicios__servicio--1 h-full">
             <div className="flex flex-row h-full">
-              <div className="h-full w-5/12 order-1">
+              <div className="h-full w-5/12 ">
                 <Image
-                  src={ProgramaFidelizacion}
+                  src={ShakeHands}
                   className="object-cover rounded-none"
                 />
               </div>
               <div className="w-7/12 flex flex-col items-center justify-center gap-5  p-10">
-                <FaPercent className="text-8xl" />
+                <div className="flex gap-4 items-center">
+                <FaPercent className="text-6xl" />
+                <FaHandshake className="text-8xl"/>
+                </div>
                 <p className="flex justify-center items-center text-6xl mx-auto font-bold underline underline-offset-8 decoration-2 leading-snug">
                   Programas de fidelización y ofertas.
                 </p>
@@ -109,11 +94,46 @@ const Servicios = (props) => {
             </div>
           </div>
 
+          <div className="servicios__servicio servicios__servicio--2 h-full">
+            <div className="flex flex-row h-full">
+              <div className="h-full w-5/12 order-1">
+                <Image
+                  src={Aromaterapia}
+                  className="object-cover rounded-none"
+                />
+              </div>
+              <div className="w-7/12 flex flex-col items-center justify-center gap-5 p-10">
+              <div className="flex gap-4 items-center">
+              <FaSpa className="text-8xl" />
+                <FaHeartbeat className="text-8xl"/>
+                </div>
+                
+                <p className="flex justify-center items-center text-6xl mx-auto font-bold underline underline-offset-8 decoration-2 leading-snug">
+                  Terapias de bienestar holísticas.
+                </p>
+                <p className="text-xl font-medium italic">
+                  Te invitamos a experimentar nuestras terapias de bienestar
+                  holísticas para alcanzar una armonía total de cuerpo y mente.
+                  Nos enfocamos en equilibrar tus energías y mejorar tu
+                  bienestar general. Sumérgete en un ambiente tranquilo y
+                  renueva tu ser con nuestras terapias holísticas. ¡Reserva tu
+                  cita ahora y descubre una sensación de paz y vitalidad en
+                  MarinaSpá!
+                </p>
+              </div>
+            </div>
+          </div>
+
+          
+
           <div className="servicios__servicio servicios__servicio--3 h-full ">
             <div className="flex flex-row h-full">
-              
               <div className=" flex flex-col items-center justify-center gap-5 p-10">
+                <div className="flex gap-4 items-baseline">
+                <FaTrophy className="text-6xl" />
                 <FaTrophy className="text-8xl" />
+                <FaTrophy className="text-6xl" />
+                </div>
                 <p className="flex justify-center items-center text-6xl mx-auto font-bold underline underline-offset-8 decoration-2 leading-snug">
                   Solo las mejores marcas.
                 </p>

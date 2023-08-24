@@ -13,9 +13,9 @@ import {Button, Link} from "@nextui-org/react";
 
 const Tratamientos_c = ()=>{
     return (
-        <section className="tratamientos">
-        <h2 className="text-5xl text-center">NUESTROS TRATAMIENTOS</h2>
-        <p className="tratamientos__general-info">
+        <section className="tratamientos py-10 px-5 bg-gradient-to-b from-rose-300 to-rose-100 text-rose-950">
+        <h2 className="text-8xl font-bold text-center underline underline-offset-8 decoration-4">NUESTROS TRATAMIENTOS</h2>
+        <p className="text-center text-lg my-2 font-medium italic">
           Tu belleza es el reflejo de tu mejor imagen que proyecta tu cuerpo
           cuando está en pleno equilibrio, nosotros trabajamos para que ese
           reflejo y equilibrio se perpetúen y se mantengan inalterables a pesar
@@ -26,7 +26,7 @@ const Tratamientos_c = ()=>{
           año, para que así puedas lucir siempre la mejor versión de ti a pesar
           del paso del tiempo. Ven a tu Centro de Estética en Sóller
         </p>
-        <a className="button2 shrink-border my-3 mx-auto">
+        <a className="button2 shrink-border my-3 mx-auto bg-transparent">
           NUESTROS SERVICIOS <AiOutlineArrowDown />
         </a>
         <Swiper
@@ -42,7 +42,7 @@ const Tratamientos_c = ()=>{
           <SwiperSlide>
             <div className="tratamientos__item tratamientos__item--1">
               <img src={AntiAgingPicture} alt="" />
-              <div className="flex flex-col p-5 tratamientos__text">
+              <div className="flex flex-col p-5 tratamientos__text bg-gradient-to-b from-rose-200 to-rose-300">
                 <span className="text-xl font-semibold">TRATAMIENTOS FACIALES</span>
                 <p className="mb-3 mt-2">
                   Nuestros tratamientos faciales están diseñados para
@@ -60,7 +60,7 @@ const Tratamientos_c = ()=>{
           <SwiperSlide>
             <div className="tratamientos__item tratamientos__item--2">
               <img src={FacialPicture} alt="" />
-              <div className="flex flex-col p-5 tratamientos__text">
+              <div className="flex flex-col p-5 tratamientos__text bg-gradient-to-b from-rose-200 to-rose-300">
                 <span className="text-xl font-semibold text-slate-800">ESTÉTICA GENERAL</span>
                 <p className="mb-3 mt-2">
                   En MarinaSpá, nos dedicamos a realzar tu belleza y brindarte
@@ -76,7 +76,7 @@ const Tratamientos_c = ()=>{
           <SwiperSlide>
             <div className="tratamientos__item tratamientos__item--3">
               <img src={FacialPicture} alt="" />
-              <div className="flex flex-col p-5 tratamientos__text">
+              <div className="flex flex-col p-5 tratamientos__text bg-gradient-to-b from-rose-200 to-rose-300">
                 <span className="text-xl font-semibold">SILUETA CORPORAL</span>
                 <p className="mb-3 mt-2">
                   En MarinaSpá, te ayudamos a alcanzar la silueta corporal de
@@ -94,7 +94,7 @@ const Tratamientos_c = ()=>{
           <SwiperSlide>
             <div className="tratamientos__item tratamientos__item--4">
               <img src={hidromasajePicture} alt="" />
-              <div className="flex flex-col p-5 tratamientos__text">
+              <div className="flex flex-col p-5 tratamientos__text bg-gradient-to-b from-rose-200 to-rose-300">
                 <span className="text-xl font-semibold">BIENESTAR Y RELAJACIÓN</span>
                 <p className="mb-3 mt-2">
                   En MarinaSpá, te ofrecemos una experiencia de bienestar y
@@ -113,7 +113,7 @@ const Tratamientos_c = ()=>{
           <SwiperSlide>
             <div className="tratamientos__item tratamientos__item--5">
               <img src={fotodepilacionPicture} alt="" />
-              <div className="flex flex-col p-5 tratamientos__text">
+              <div className="flex flex-col p-5 tratamientos__text bg-gradient-to-b from-rose-200 to-rose-300">
                 <span className="text-xl font-semibold">DEPILACIÓN</span>
                 <p className="mb-3 mt-2">
                   Experimenta la suavidad duradera con nuestra depilación

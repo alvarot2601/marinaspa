@@ -15,7 +15,6 @@ const Header = (props) => {
         document.querySelector('.video-container').classList.remove('slide-in-elliptic-left-bck');
         document.querySelector('.video-container').classList.add('slide-out-blurred-top');
         setTimeout(()=>{
-            document.querySelector('.arrow-down-animation').style.display = 'flex';
             document.querySelector('.video-container').style.display = 'none';
             document.querySelector('.header__text-container').style.display = 'flex';
             document.querySelector('.header__text-container').classList.add('slide-in-elliptic-left-bck');
@@ -29,7 +28,6 @@ const Header = (props) => {
         document.querySelector('.header__text-container').classList.add('slide-out-blurred-top');
         
         setTimeout(()=>{
-            document.querySelector('.arrow-down-animation').style.display = 'none';
             document.querySelector('.header__text-container').style.display = 'none';
             document.querySelector('.video-container').style.display = 'flex';
             document.querySelector('.video-container').classList.add('slide-in-elliptic-left-bck');
@@ -71,7 +69,7 @@ const Header = (props) => {
                 </a> */
             }
 
-            <BsArrowDownCircle className='arrow-down-animation'/>
+            <BsArrowDownCircle className='animate-bounce'/>
             {
             //<img className='header__image header__image--0' src={FotoMari} alt="" />
             }

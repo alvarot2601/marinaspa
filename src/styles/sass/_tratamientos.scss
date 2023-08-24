@@ -1,12 +1,6 @@
 @import "variables";
 .tratamientos{
     
-    background-color: $yellow;
-    text-align: left;
-    color: $black2;
-    padding-bottom: 40px;
-    padding-top:10vh;
-    
     &__btn-container{
         display: flex;
         margin: 50px auto 50px auto;
@@ -165,8 +159,6 @@
         }
     }
     &__item{
-        background-color: bisque;
-        color: #000;
         text-align: center;
         border-radius: 10px;
         box-shadow: 0 30px 30px -10px rgba(0, 0, 0, 0.3);
