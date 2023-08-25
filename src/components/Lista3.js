@@ -1,51 +1,57 @@
-import React, { useEffect, useState } from 'react';
-import { AiFillCloseCircle } from 'react-icons/ai';
-import { CiMenuKebab } from 'react-icons/ci';
+import { Divider } from "@nextui-org/react";
+import React from "react";
 
-const Lista3 = ({obj}) => {
-
-   
-    return (
-            obj.category.map((category, index) => {
-                const reverseRowClass = (index % 2 === 0) ? '' : 'tratamientos__row--revert';
-                return (
-                    <div className="tratamientos__subwrapper">
-                    <div className={`${reverseRowClass} tratamientos__row tratamientos__row--text`}>
-                    
-                        {
-                            category !== '' ? <span className="tratamientos__category">{category}</span> : ''  
-                        }
-                        <p>
-                            {
-                                Array.isArray(obj.category_text) ? obj.category_text[index] : obj.category_text
-                            }
-                        </p>
-                        <ul>
-                            {  
-                                obj.treatments[index].map((treatment, index2) => {
-                                    return (
-                                        <li key={`li_${obj.category[index]}_${index}`} >
-                                            <div>
-                                                <span className="tratamientos__treatment">{treatment[0]}</span>
-                                            </div>
-                                        </li>
-                                    )
+const Lista3 = ({ obj }) => {
+    return obj.category.map((category, index) => {
+        const reverseRowClass = index % 2 === 0 ? "" : "order-1";
+        return (
+            <div className="flex gap-5 mt-10 text-gray-900">
+                <div
+                    className={`w-2/4  px-7 py-5 ${reverseRowClass} flex flex-col justify-center`}
+                >
+                    {category !== "" ? (
+                        <span className="text-4xl font-semibold">{category}</span>
+                    ) : (
+                        ""
+                    )}
+                    <p className="text-lg mt-5 mb-3 italic">
+                        {Array.isArray(obj.category_text)
+                            ? obj.category_text[index]
+                            : obj.category_text}
+                    </p>
+                    <ul className="font-semibold text-lg  pl-3">
+                        {obj.treatments[index].map((treatment, index2) => {
+                            return (
+                                <>
                                     
-                                })
-                            }
-                        </ul>
-                    </div>
-                        {
-                            (Array.isArray(obj.images))
-                            ? (obj.images[index] !== '') 
-                            ? <div className="tratamientos__row"><img src={obj.images[index]} alt="" /></div>
-                            : ''
-                            : ''
-                        }
-                    </div>
-                );
-            })
-    );
-}
+                                    <li
+                                        className="py-3"
+                                        key={`li_${obj.category[index]}_${index}`}
+                                    >
+                                        <span>{treatment[0]}</span>
+                                    </li>
+                                    {
+                                        index2 !== obj.treatments[index].length - 1 ? <Divider /> : ''
+                                    }
+                                </>
+                            );
+                        })}
+                    </ul>
+                </div>
+                {Array.isArray(obj.images) ? (
+                    obj.images[index] !== "" ? (
+                        <div className="w-2/4">
+                            <img src={obj.images[index]} alt="" />
+                        </div>
+                    ) : (
+                        ""
+                    )
+                ) : (
+                    ""
+                )}
+            </div>
+        );
+    });
+};
 
 export default Lista3;

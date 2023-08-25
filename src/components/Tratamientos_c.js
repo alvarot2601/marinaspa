@@ -41,7 +41,7 @@ const Tratamientos_c = ()=>{
         >
           <SwiperSlide>
             <div className="tratamientos__item tratamientos__item--1">
-              <img src={AntiAgingPicture} alt="" />
+              <img loading="lazy" src={AntiAgingPicture} alt="" />
               <div className="flex flex-col p-5 tratamientos__text bg-gradient-to-b from-rose-200 to-rose-300">
                 <span className="text-xl font-semibold">TRATAMIENTOS FACIALES</span>
                 <p className="mb-3 mt-2">
@@ -59,7 +59,7 @@ const Tratamientos_c = ()=>{
           </SwiperSlide>
           <SwiperSlide>
             <div className="tratamientos__item tratamientos__item--2">
-              <img src={FacialPicture} alt="" />
+              <img loading="lazy" src={FacialPicture} alt="" />
               <div className="flex flex-col p-5 tratamientos__text bg-gradient-to-b from-rose-200 to-rose-300">
                 <span className="text-xl font-semibold text-slate-800">ESTÉTICA GENERAL</span>
                 <p className="mb-3 mt-2">
@@ -75,7 +75,7 @@ const Tratamientos_c = ()=>{
           </SwiperSlide>
           <SwiperSlide>
             <div className="tratamientos__item tratamientos__item--3">
-              <img src={FacialPicture} alt="" />
+              <img loading="lazy" src={FacialPicture} alt="" />
               <div className="flex flex-col p-5 tratamientos__text bg-gradient-to-b from-rose-200 to-rose-300">
                 <span className="text-xl font-semibold">SILUETA CORPORAL</span>
                 <p className="mb-3 mt-2">
@@ -93,7 +93,7 @@ const Tratamientos_c = ()=>{
           </SwiperSlide>
           <SwiperSlide>
             <div className="tratamientos__item tratamientos__item--4">
-              <img src={hidromasajePicture} alt="" />
+              <img loading="lazy" src={hidromasajePicture} alt="" />
               <div className="flex flex-col p-5 tratamientos__text bg-gradient-to-b from-rose-200 to-rose-300">
                 <span className="text-xl font-semibold">BIENESTAR Y RELAJACIÓN</span>
                 <p className="mb-3 mt-2">
@@ -112,7 +112,7 @@ const Tratamientos_c = ()=>{
           </SwiperSlide>
           <SwiperSlide>
             <div className="tratamientos__item tratamientos__item--5">
-              <img src={fotodepilacionPicture} alt="" />
+              <img loading="lazy" src={fotodepilacionPicture} alt="" />
               <div className="flex flex-col p-5 tratamientos__text bg-gradient-to-b from-rose-200 to-rose-300">
                 <span className="text-xl font-semibold">DEPILACIÓN</span>
                 <p className="mb-3 mt-2">

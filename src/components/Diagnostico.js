@@ -1,5 +1,5 @@
 import React from "react";
-import DiagnosticoImage from "../assets/images/diagnostico.JPG";
+import DiagnosticoImage from "../assets/images/diagnostico.jpg";
 const Diagnostico = () => {
     return (
       <section className="diagnostico bg-gradient-to-b from-indigo-300 to-violet-400 ">

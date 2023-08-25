@@ -1,24 +1,23 @@
 import React from "react";
 
-import Facial from "../assets/images/facial.jpg";
 import { Accordion, AccordionItem } from "@nextui-org/react";
 
 const Lista = ({ obj }) => {
   return obj.map((singleObj, i) => {
-    const reverseRowClass = i % 2 === 0 ? "" : "tratamientos__row--revert";
+    const reverseRowClass = i % 2 === 0 ? "" : "order-1";
     return (
-      <div className="tratamientos__subwrapper">
+      <div className="flex text-gray-900">
         <div
-          className={`tratamientos__row tratamientos__row--1 tratamientos__row--text ${reverseRowClass}`}
+          className={`w-2/4 px-7 py-5 ${reverseRowClass} flex flex-col justify-center`}
         >
           {singleObj.category !== "" ? (
-            <span className="tratamientos__category">{singleObj.category}</span>
+            <span className="text-4xl font-semibold">{singleObj.category}</span>
           ) : (
             ""
           )}
-          <p>{singleObj.category_text}</p>
+          <p className="text-lg mt-5 mb-3 italic">{singleObj.category_text}</p>
           <Accordion
-            className="font-medium"
+            className="font-semibold"
             variant="light"
             motionProps={{
               variants: {
@@ -58,27 +57,23 @@ const Lista = ({ obj }) => {
             }}
           >
             {singleObj.treatments.map((treatment, index) => {
-              let infoClass = "tratamientos__info";
-              typeof treatment[1] === "object"
-                ? (infoClass = "tratamientos__info--column")
-                : (infoClass = "tratamientos__info");
               return (
                 <AccordionItem
-                  className="text-sm bg-dark"
+                 
                   key={`accordion-${index}`}
                   aria-label="Accordion 1"
                   title={treatment[0]}
                 >
                   <div>
-                    <span className="text-sm bg">{treatment[0]}</span>
+                    <span className="text-sm">{treatment[0]}</span>
                   </div>
                 </AccordionItem>
               );
             })}
           </Accordion>
         </div>
-        <div className="tratamientos__row">
-          <img src={singleObj.images[0]} alt="" />
+        <div className="w-2/4">
+          <img className="h-full object-cover" src={singleObj.images[0]} alt="" />
         </div>
       </div>
     );

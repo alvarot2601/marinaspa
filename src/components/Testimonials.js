@@ -101,6 +101,32 @@ const Testimonials = () => {
         <FontAwesomeIcon icon={faStar} className="text-yellow-400" />,
       ],
       url: "https://www.google.com/maps/contrib/109978121357351299597/place/ChIJJ5vuvJpVEQ0R9Zkm8NDy6ss/@38.4215337,-6.4284825,15.29z/data=!4m4!1m3!8m2!1e1!2s109978121357351299597?hl=es&entry=ttu",
+    },
+    {
+      user: "M G",
+      opinion:
+        "¡Hacía mucho tiempo que no conseguía relajarme tanto! Magníficas profesionales, lugar de ensueño y tratamientos magníficos. Para terminar, su bañera hidromasaje te transporta a otros mundos! Volveré sin duda, ¡Gracias por todo 😊 !",
+      punctuation: [
+        <FontAwesomeIcon icon={faStar} className="text-yellow-400" />,
+        <FontAwesomeIcon icon={faStar} className="text-yellow-400" />,
+        <FontAwesomeIcon icon={faStar} className="text-yellow-400" />,
+        <FontAwesomeIcon icon={faStar} className="text-yellow-400" />,
+        <FontAwesomeIcon icon={faStar} className="text-yellow-400" />,
+      ],
+      url: "https://www.google.com/maps/contrib/107280796014450744426/place/ChIJJ5vuvJpVEQ0R9Zkm8NDy6ss/@38.424423,-6.4202196,17.42z/data=!4m4!1m3!8m2!1e1!2s107280796014450744426?hl=es&entry=ttu",
+    },
+    {
+      user: "Raquel González Venegas",
+      opinion:
+        "Sitio precioso, limpio, cuidado cada detalle, muy profesionales, buenos productos y en definitiva muy recomendable. Entrar en vuestro spá es dedicar una hora para ti, saliendo del estrés diario y en mano de las mejores profesionales.",
+      punctuation: [
+        <FontAwesomeIcon icon={faStar} className="text-yellow-400" />,
+        <FontAwesomeIcon icon={faStar} className="text-yellow-400" />,
+        <FontAwesomeIcon icon={faStar} className="text-yellow-400" />,
+        <FontAwesomeIcon icon={faStar} className="text-yellow-400" />,
+        <FontAwesomeIcon icon={faStar} className="text-yellow-400" />,
+      ],
+      url: "https://www.google.com/maps/contrib/118237533843748638751/place/ChIJJ5vuvJpVEQ0R9Zkm8NDy6ss/@38.1739105,-7.0912821,7z/data=!4m6!1m5!8m4!1e1!2s118237533843748638751!3m1!1e1?hl=es&entry=ttu",
     }
   ];
   return (
@@ -165,10 +191,6 @@ const Testimonials = () => {
             </SwiperSlide>
           );
         })}
-
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
       </Swiper>
     </section>
   );
