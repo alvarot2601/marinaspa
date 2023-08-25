@@ -58,11 +58,11 @@ const Contacto = () => {
                     <Skeleton isLoaded={isLoaded} className="rounded-xl">
                       <div className="flex flex-col gap-5 items-center font-medium">
                         <p className="text-4xl underline font-bold">Datos de Contacto</p>
-                        <div className="flex gap-3 items-center justify-evenly w-7/12">
+                        <div className="flex gap-3 items-center justify-evenly ">
                           <FontAwesomeIcon icon={faMobile} shake />
                           <span className="animate-bounce">+34 644 79 90 00</span>
                         </div>
-                        <div className="flex gap-3 items-center justify-evenly w-7/12 ">
+                        <div className="flex gap-3 items-center justify-evenly">
                           <FontAwesomeIcon icon={faMapLocationDot} shake />
                           <span>
                             Calle Reyes Huertas, 8, <br></br>06300 Zafra,

@@ -49,7 +49,7 @@ const Servicios = (props) => {
   });
   return (
     <div className={`${props.classProp} `}>
-      <h3 className="text-8xl font-bold py-7 bg-gradient-to-tr from-gray-50 from-10% to-amber-600">Nuestros servicios</h3>
+      <h3 className="text-8xl font-bold py-7 bg-gradient-to-r from-gray-50 from-10% via-[#e6c290] to-[#c9b2cc] ">Nuestros servicios</h3>
       {
         //<p className="text-3xl my-5 ">¿Qué nos diferencia del resto?</p>
       }

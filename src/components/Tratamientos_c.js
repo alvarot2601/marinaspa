@@ -13,8 +13,8 @@ import {Button, Link} from "@nextui-org/react";
 
 const Tratamientos_c = ()=>{
     return (
-        <section className="tratamientos py-10 px-5 bg-gradient-to-b from-rose-300 to-rose-100 text-rose-950">
-        <h2 className="text-8xl font-bold text-center underline underline-offset-8 decoration-4">NUESTROS TRATAMIENTOS</h2>
+        <section className="tratamientos py-10 px-5 bg-gradient-to-br from-rose-300 to-rose-100 text-rose-950">
+        <h2 className="text-8xl font-bold text-center underline underline-offset-8 decoration-4 bg-clip-text text-transparent bg-gradient-to-t from-rose-400 to-rose-950">NUESTROS TRATAMIENTOS</h2>
         <p className="text-center text-lg my-2 font-medium italic">
           Tu belleza es el reflejo de tu mejor imagen que proyecta tu cuerpo
           cuando está en pleno equilibrio, nosotros trabajamos para que ese

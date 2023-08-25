@@ -8,6 +8,7 @@ import Diagnostico from "../components/Diagnostico";
 import Tratamientos_c from "../components/Tratamientos_c";
 import Layout from "../components/Layout";
 import Servicios from "../components/Servicios";
+import { Divider } from "@nextui-org/react";
 
 const Home = () => {
   const section_1 = useRef(null);
@@ -169,8 +170,9 @@ const Home = () => {
       <section ref={section_4} className="tratamientos section-4">
         <Tratamientos_c />
       </section>
-      
       <Testimonials />
+      <Divider/>
+
       <Diagnostico />
     </Layout>
   );

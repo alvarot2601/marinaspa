@@ -1,11 +1,11 @@
-import React, { useEffect, useRef, useLayoutEffect } from "react";
+import React, { useEffect, useRef, useLayoutEffect, useState } from "react";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import { Card, CardFooter, Image, CardHeader } from "@nextui-org/react";
+import { Card, CardFooter, Image, CardHeader, Tooltip } from "@nextui-org/react";
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -21,7 +21,14 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Main = (props) => {
   const comp = useRef();
-
+  
+  const [isOpen, setIsOpen] = useState(true);
+  useEffect(()=>{
+    setTimeout(()=>{
+      setIsOpen(false);
+      console.log('execute once')
+    }, 3000);
+  }, []);
   /*
     useEffect( () => {
         var el = document.querySelector('.overflowed_paragraph');
@@ -66,10 +73,14 @@ const Main = (props) => {
             </span>
             para asegurarnos de que cada visita sea una experiencia de lujo.
           </p>
-          
-          <Popover placement="right" showArrow={true}>
-            <PopoverTrigger>
-              <Button isIconOnly className="info absolute left-2 bottom-20 text-slate-100 bg-gray-900 ">
+          <Tooltip defaultOpen={isOpen} closeDelay={2000} showArrow={true} placement="right-end" className="w-2/4 p-5 text-lg" content="Nuestras modernas instalaciones en nuestro centro de estética te
+                brindarán un ambiente relajante y acogedor, donde podrás
+                desconectar del ajetreo diario y disfrutar de una experiencia de
+                bienestar total. Ya sea que desees un tratamiento facial
+                revitalizante, un masaje relajante, un tratamiento de depilación
+                láser de última generación o cualquier otro servicio de
+                estética, estamos aquí para atender todas tus necesidades.">
+          <Button isIconOnly className="info absolute left-2 bottom-20 text-slate-100 bg-gray-900 ">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -85,18 +96,8 @@ const Main = (props) => {
                   />
                 </svg>
               </Button>
-            </PopoverTrigger>
-            <PopoverContent className="text-md w-7/12 text-slate-100 bg-gray-900">
-             
-                Nuestras modernas instalaciones en nuestro centro de estética te
-                brindarán un ambiente relajante y acogedor, donde podrás
-                desconectar del ajetreo diario y disfrutar de una experiencia de
-                bienestar total. Ya sea que desees un tratamiento facial
-                revitalizante, un masaje relajante, un tratamiento de depilación
-                láser de última generación o cualquier otro servicio de
-                estética, estamos aquí para atender todas tus necesidades.
-            </PopoverContent>
-          </Popover>
+          </Tooltip>
+          
 
           {/*<div>
          <p>

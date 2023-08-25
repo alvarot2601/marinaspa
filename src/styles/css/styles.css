@@ -946,10 +946,6 @@
   border-radius: 50px;
   object-fit: cover;
 }
-.diagnostico p {
-  max-width: 30vw;
-  margin: 30px 0;
-}
 .diagnostico .button, .diagnostico .button2 {
   margin: 0;
 }
@@ -1020,33 +1016,6 @@
     font-size: 20px;
   }
 }
-.testimonios {
-  position: relative;
-  text-align: center;
-  padding: 50px;
-  padding-top: 70px;
-  background: #F5CBA7;
-  background: linear-gradient(180deg, #302B3C 100%);
-  color: #382C32;
-  font-size: 1.5rem;
-}
-.testimonios * {
-  font-family: "Caveat", cursive;
-}
-.testimonios span:first-child {
-  font-size: 3rem;
-}
-.testimonios__content {
-  max-width: 50%;
-  margin: auto;
-}
-.testimonios span:first-child, .testimonios__content {
-  font-weight: 900;
-}
-.testimonios span {
-  font-size: 2rem;
-  font-style: italic;
-}
 .testimonios .swiper-pagination-bullet {
   background-color: #334155;
 }
@@ -1056,10 +1025,6 @@
 .testimonios .swiper-button-next, .testimonios .swiper-button-prev {
   color: #334155;
 }
-.testimonios .swiper-wrapper {
-  padding-bottom: 15px;
-}
-
 .tratamientos {
   /*
   button{
