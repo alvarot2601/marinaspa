@@ -102,13 +102,13 @@ const Header = (props) => {
   return (
     <header className={`header ${props.classProp} h-[90vh] relative bg-rose-200 text-rose-950`}>
       <div className="flex justify-center items-center h-full" >
-        <div id="header__first-col" className="h-full w-2/4 flex flex-col justify-center py-5 pl-10" >
+        <div id="header__first-col" className="h-full w-2/4 flex flex-col justify-center py-5 px-10" >
           <div>
-          <p className="text-xl font-semibold">
+          <p className="text-2xl font-semibold">
             <span>MARI AGUZA - </span>
             <span>ESTILISTA PERSONAL</span>
           </p>
-          <h1 className="font-bold">
+          <h1 className="font-extrabold leading-tight md:text-4xl lg:text-7xl xl:text-8xl 2xl:text-9xl">
             <span>Centro de estética </span> <br />
             <span>MarinaSpá</span>
           </h1>

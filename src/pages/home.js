@@ -158,22 +158,25 @@ const Home = () => {
   return (
     <Layout>
       <section className="navHeaderWrapper section-1" ref={section_1}>
-        <Header classProp="active-section section-1" />
+        <Header classProp="active-section section-1 text-zinc-700" />
       </section>
 
-      <section ref={section_2} className="section-2">
+      <section ref={section_2} className="section-2 text-zinc-700">
         <Main classProp="section-2" />
       </section>
-      <section ref={section_3} className="servicios section-3">
+      <section ref={section_3} className="servicios section-3 text-zinc-700">
         <Servicios classProp="section-3" />
       </section>
-      <section ref={section_4} className="tratamientos section-4">
+      <section ref={section_4} className="tratamientos section-4 text-zinc-700">
         <Tratamientos_c />
       </section>
+      <section className="text-zinc-700">
       <Testimonials />
+      </section>
       <Divider/>
-
+      <section className="text-zinc-700">
       <Diagnostico />
+      </section>
     </Layout>
   );
 };

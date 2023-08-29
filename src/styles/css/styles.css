@@ -701,11 +701,6 @@
   bottom: 50px;
   animation: arrow_moving 2s ease 2s infinite alternate;
 }
-.header h1 {
-  margin: 0;
-  margin-bottom: 40px;
-  font-size: 7rem;
-}
 .header__image {
   position: absolute;
   width: 100%;
@@ -885,9 +880,6 @@
 
 .servicios {
   position: relative;
-  color: #382C32;
-  text-align: center;
-  overflow: hidden;
 }
 .servicios__wrapper {
   overscroll-behavior: none;

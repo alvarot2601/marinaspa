@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Navbar,
   NavbarBrand,
@@ -10,6 +10,9 @@ import {
   Dropdown,
   DropdownItem,
   DropdownMenu,
+  NavbarMenuToggle,
+  NavbarMenu,
+  NavbarMenuItem,
 } from "@nextui-org/react";
 import { NavLink } from "react-router-dom";
 import {
@@ -23,7 +26,7 @@ import {
 } from "./Icons.js";
 
 export default function Navbar2() {
-  
+  const [isMenuOpen, setMenuIsOpen] = useState(false);
 
   const icons = {
     chevron: <ChevronDown fill="currentColor" size={16} />,
@@ -37,10 +40,18 @@ export default function Navbar2() {
     user: <TagUser className="text-danger" fill="currentColor" size={30} />,
   };
   return (
-    <Navbar position="static" isBordered className="h-[10vh] bg-gray-50">
-      <NavbarBrand>
-        <p className="font-bold text-2xl">MarinaSpá</p>
-      </NavbarBrand>
+    <Navbar
+      position="static"
+      isBordered
+      className="h-[10vh] min-h-[60px] bg-zinc-100"
+    >
+      <NavbarContent>
+        <NavbarMenuToggle aria-label={isMenuOpen ? "Close menu" : "Open Menu"} className="">
+          <NavbarBrand>
+            <p className="font-bold text-2xl">MarinaSpá</p>
+          </NavbarBrand>
+        </NavbarMenuToggle>
+      </NavbarContent>
       <NavbarContent className="sm:flex gap-4 " justify="center">
         <NavbarItem className="underline content-center">
           <NavLink
@@ -87,12 +98,20 @@ export default function Navbar2() {
             }}
           >
             <DropdownItem key="faciales">
-              <NavLink className="text-lg" activeClassName="is-active" to="/programas-faciales">
+              <NavLink
+                className="text-lg"
+                activeClassName="is-active"
+                to="/programas-faciales"
+              >
                 Programas Faciales
               </NavLink>
             </DropdownItem>
             <DropdownItem key="estetica-general">
-              <NavLink className="text-lg" activeClassName="is-active" to="/estetica-general" >
+              <NavLink
+                className="text-lg"
+                activeClassName="is-active"
+                to="/estetica-general"
+              >
                 Estética General
               </NavLink>
             </DropdownItem>
@@ -106,13 +125,17 @@ export default function Navbar2() {
               </NavLink>
             </DropdownItem>
             <DropdownItem key="faciales">
-              <NavLink activeClassName="is-active" to="/bienestar-y-relajacion" className="text-lg">
+              <NavLink
+                activeClassName="is-active"
+                to="/bienestar-y-relajacion"
+                className="text-lg"
+              >
                 Bienestar y Relajación
               </NavLink>
             </DropdownItem>
             <DropdownItem key="faciales">
               <NavLink
-               className="text-lg"
+                className="text-lg"
                 activeClassName="is-active"
                 to="/depilacion-y-fotodepilacion"
               >
@@ -132,6 +155,11 @@ export default function Navbar2() {
           </NavLink>
         </NavbarItem>
       </NavbarContent>
+      <NavbarMenu>
+        <NavbarMenuItem>
+            <Link size="lg" className="w-full" href="#">prueba</Link>
+        </NavbarMenuItem>
+      </NavbarMenu>
     </Navbar>
   );
 }
