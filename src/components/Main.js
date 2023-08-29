@@ -22,11 +22,10 @@ gsap.registerPlugin(ScrollTrigger);
 const Main = (props) => {
   const comp = useRef();
   
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   useEffect(()=>{
     setTimeout(()=>{
       setIsOpen(false);
-      console.log('execute once')
     }, 3000);
   }, []);
   /*

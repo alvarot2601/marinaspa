@@ -23,7 +23,7 @@ import {
 } from "./Icons.js";
 
 export default function Navbar2() {
-  useEffect(() => {});
+  
 
   const icons = {
     chevron: <ChevronDown fill="currentColor" size={16} />,
@@ -37,16 +37,16 @@ export default function Navbar2() {
     user: <TagUser className="text-danger" fill="currentColor" size={30} />,
   };
   return (
-    <Navbar position="static" isBordered>
+    <Navbar position="static" isBordered className="h-[10vh] bg-gray-50">
       <NavbarBrand>
         <p className="font-bold text-2xl">MarinaSpá</p>
       </NavbarBrand>
-      <NavbarContent className="sm:flex gap-4" justify="center">
-        <NavbarItem className="h-full content-center">
+      <NavbarContent className="sm:flex gap-4 " justify="center">
+        <NavbarItem className="underline content-center">
           <NavLink
             exact
             activeClassName="is-active"
-            className="flex items-center h-full text-slate-700 hover:text-slate-500 hover:underline hover:decoration-current hover:underline-offset-[25px]"
+            className=" flex items-center text-slate-900 hover:text-slate-500 hover:underline hover:decoration-current hover:underline-offset-[25px]"
             to="/"
             aria-current="page"
           >
@@ -70,7 +70,7 @@ export default function Navbar2() {
             <DropdownTrigger>
               <Button
                 disableRipple
-                className="p-0 bg-transparent data-[hover=true]:bg-transparent text-md flex items-center h-full text-slate-700 hover:text-slate-500 hover:underline hover:decoration-current hover:underline-offset-[25px]"
+                className="p-0 bg-transparent data-[hover=true]:bg-transparent text-lg flex items-center h-full text-slate-900 hover:text-slate-500 hover:underline hover:decoration-current hover:underline-offset-[25px]"
                 endContent={icons.chevron}
                 radius="sm"
                 variant="light"
@@ -81,37 +81,38 @@ export default function Navbar2() {
           </NavbarItem>
           <DropdownMenu
             aria-label="ACME features"
-            className="w-[340px]"
+            className="max-w-[340px] w-[300px]"
             itemClasses={{
               base: "gap-4",
             }}
           >
             <DropdownItem key="faciales">
-              <NavLink activeClassName="is-active" to="/programas-faciales">
+              <NavLink className="text-lg" activeClassName="is-active" to="/programas-faciales">
                 Programas Faciales
               </NavLink>
             </DropdownItem>
             <DropdownItem key="estetica-general">
-              <NavLink activeClassName="is-active" to="/estetica-general">
+              <NavLink className="text-lg" activeClassName="is-active" to="/estetica-general" >
                 Estética General
               </NavLink>
             </DropdownItem>
             <DropdownItem className="w-full" key="silueta-corporal">
               <NavLink
                 activeClassName="is-active"
-                className="w-full"
+                className="text-lg"
                 to="/silueta-corporal"
               >
                 Silueta Corporal
               </NavLink>
             </DropdownItem>
             <DropdownItem key="faciales">
-              <NavLink activeClassName="is-active" to="/bienestar-y-relajacion">
+              <NavLink activeClassName="is-active" to="/bienestar-y-relajacion" className="text-lg">
                 Bienestar y Relajación
               </NavLink>
             </DropdownItem>
             <DropdownItem key="faciales">
               <NavLink
+               className="text-lg"
                 activeClassName="is-active"
                 to="/depilacion-y-fotodepilacion"
               >
@@ -124,7 +125,7 @@ export default function Navbar2() {
         <NavbarItem>
           <NavLink
             activeClassName="is-active"
-            className="text-slate-700 hover:text-slate-500 hover:underline hover:decoration-current hover:underline-offset-[25px]"
+            className="text-slate-900 hover:text-slate-500 hover:underline hover:decoration-current hover:underline-offset-[25px] text-lg"
             to="/contacto"
           >
             Contacto

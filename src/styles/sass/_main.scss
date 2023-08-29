@@ -226,39 +226,13 @@
     }
 }
 .diagnostico{
-    position: relative;
-    color: $black2;
-    padding: 50px;
-    width: 100%;
-    //background: linear-gradient(0deg, $darker_purple 0%, $grey2 10%);
-    background-color: $yellow;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    text-align: left;
-   &__wrapper{
-    width: 80vw;
-   }
-    &__title{
-        font-size: 3rem;
-        margin: 0;
-    }
-    &__title--2{
-        font-size: 3rem;
-    }
-    div, img{
-        width: 40%;
-        flex-grow: 1;
-    }
-    img{
-        border-radius: 50px;
-        object-fit: cover;
-    }
     
-    .button, .button2{
-        margin: 0;
-    }
+   
+   
+  
+  
+   
+ 
    
 }
 

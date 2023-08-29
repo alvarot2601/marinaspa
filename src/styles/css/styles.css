@@ -272,6 +272,22 @@
     opacity: 1;
   }
 }
+@keyframes reveal {
+  from {
+    clip-path: inset(0 0 0 100%);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+@keyframes reveal2 {
+  from {
+    clip-path: inset(0 0 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 100%);
+  }
+}
 .nav {
   height: 10vh;
   display: flex;
@@ -621,18 +637,28 @@
     opacity: 1;
   }
 }
-.header {
-  position: relative;
-  min-height: 92vh;
-  padding: 0 50px;
-  font-size: 1.5rem;
-  z-index: 0;
-  padding-top: 9vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
+@keyframes reveal {
+  from {
+    clip-path: inset(0 0 0 100%);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+@keyframes reveal2 {
+  from {
+    clip-path: inset(0 0 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 100%);
+  }
+}
+.header #header__second-col {
+  transition: width 2s;
+}
+.header video {
+  animation: reveal 2s forwards;
+  transition: width 2s;
 }
 .header .video-container {
   width: 100%;
@@ -674,10 +700,6 @@
   position: absolute;
   bottom: 50px;
   animation: arrow_moving 2s ease 2s infinite alternate;
-}
-.header * {
-  font-family: "Caveat", cursive;
-  font-weight: 700;
 }
 .header h1 {
   margin: 0;
@@ -916,40 +938,6 @@
 .tratamientos .swiper-button-prev, .tratamientos .swiper-button-next {
   color: #263238;
 }
-.diagnostico {
-  position: relative;
-  color: #382C32;
-  padding: 50px;
-  width: 100%;
-  background-color: #EEF3DC;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: auto;
-  text-align: left;
-}
-.diagnostico__wrapper {
-  width: 80vw;
-}
-.diagnostico__title {
-  font-size: 3rem;
-  margin: 0;
-}
-.diagnostico__title--2 {
-  font-size: 3rem;
-}
-.diagnostico div, .diagnostico img {
-  width: 40%;
-  flex-grow: 1;
-}
-.diagnostico img {
-  border-radius: 50px;
-  object-fit: cover;
-}
-.diagnostico .button, .diagnostico .button2 {
-  margin: 0;
-}
-
 .title, .text {
   color: #382C32;
 }
@@ -1175,8 +1163,7 @@
   padding: 10px !important;
 }
 .tratamientos__text span {
-  font-weight: 700;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
 }
 .tratamientos__text p {
   overflow: hidden;
@@ -1347,15 +1334,6 @@ a, button {
 
 a svg, button svg {
   font-size: 1.4rem;
-}
-
-.navHeaderWrapper {
-  color: #263238;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url("../../assets/images/background.jpg");
 }
 
 .t-center {

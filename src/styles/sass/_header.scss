@@ -1,17 +1,19 @@
 @import "variables";
 @import "animations";
+
+.navHeaderWrapper{
+    
+    //animation: myAnim 1s ease 0s 1 normal forwards; 
+}
 .header{
-    position: relative;
-    min-height: 92vh;
-    padding: 0 50px;
-    font-size: 1.5rem;
-    z-index: 0;
-    padding-top: 9vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+    
+    #header__second-col{
+        transition: width 2s;
+    }
+    video{
+        animation: reveal 2s forwards;
+        transition: width 2s;
+    }
     .video-container{
         width: 100%;
         display: none;
@@ -55,11 +57,8 @@
         bottom:50px;
         animation: arrow_moving 2s ease 2s infinite alternate;
     }  
-   *
-    {
-        font-family: 'Caveat', cursive;
-        font-weight: 700;
-    }
+ 
+   
     
     h1{
         margin: 0;

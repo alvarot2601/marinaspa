@@ -127,28 +127,32 @@ const Testimonials = () => {
         <FontAwesomeIcon icon={faStar} className="text-yellow-400" />,
       ],
       url: "https://www.google.com/maps/contrib/118237533843748638751/place/ChIJJ5vuvJpVEQ0R9Zkm8NDy6ss/@38.1739105,-7.0912821,7z/data=!4m6!1m5!8m4!1e1!2s118237533843748638751!3m1!1e1?hl=es&entry=ttu",
-    }
+    },
   ];
   return (
-    <section className="testimonios text-center px-5 py-10 bg-gradient-to-b from-rose-100 to-indigo-300">
-      <h6 className="text-8xl font-semibold bg-clip-text text-transparent bg-gradient-to-t from-rose-300 to-indigo-900">Testimonios</h6>
+    <section className="testimonios text-center px-5 py-10 bg-zinc-100 text-zinc-700">
+      <h6 className="text-8xl font-semibold ">
+        Testimonios
+      </h6>
       <div className="flex gap-3 items-center justify-center text-4xl my-4">
-        <span>4.9</span>
+        <p className="text-4xl ">
+          Puntuación de 
+        <FontAwesomeIcon icon={faStar} className="text-yellow-400 ml-1" />
         <FontAwesomeIcon icon={faStar} className="text-yellow-400" />
         <FontAwesomeIcon icon={faStar} className="text-yellow-400" />
         <FontAwesomeIcon icon={faStar} className="text-yellow-400" />
-        <FontAwesomeIcon icon={faStar} className="text-yellow-400" />
-        <FontAwesomeIcon icon={faStar} className="text-yellow-400" />
+        <FontAwesomeIcon icon={faStar} className="text-yellow-400 mr-1" />
+        basada en más de{" "}
+          <Link
+            className="text-4xl"
+            isExternal
+            href="https://www.google.com/search?q=opiniones+marinaspa&rlz=1C1UEAD_esES927ES927&oq=opiniones+marinaspa&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgYIARBFGEAyCggCEAAYCBgNGB4yCggDEAAYCBgNGB7SAQgzNjQ3ajBqN6gCALACAA&sourceid=chrome&ie=UTF-8#lrd=0xd11559abcee9b27:0xcbeaf2d0f02699f5,1,,,,"
+          >
+            60 opiniones.
+          </Link>
+        </p>
       </div>
-      <p className="text-lg">
-        Puntuación basada en más de{" "}
-        <Link
-          isExternal
-          href="https://www.google.com/search?q=opiniones+marinaspa&rlz=1C1UEAD_esES927ES927&oq=opiniones+marinaspa&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgYIARBFGEAyCggCEAAYCBgNGB4yCggDEAAYCBgNGB7SAQgzNjQ3ajBqN6gCALACAA&sourceid=chrome&ie=UTF-8#lrd=0xd11559abcee9b27:0xcbeaf2d0f02699f5,1,,,,"
-        >
-          60 opiniones.
-        </Link>
-      </p>
+
       <Swiper
         navigation={true}
         slidesPerView={2}
@@ -166,7 +170,7 @@ const Testimonials = () => {
                     icon={<AvatarIcon />}
                     className="w-20 h-20"
                     classNames={{
-                      base: "bg-gradient-to-br from-indigo-300 to-[#FF705B]",
+                      base: "bg-gradient-to-br from-amber-300 to-rose-300",
                       icon: "text-black/80",
                     }}
                   />
@@ -183,8 +187,8 @@ const Testimonials = () => {
                 </CardBody>
                 <Divider />
                 <CardFooter className="flex justify-center">
-                  <Link isExternal showAnchorIcon href={op.url}>
-                    Leer opinión {op.sitename}.
+                  <Link className="text-lg" isExternal showAnchorIcon href={op.url}>
+                    Leer opinión {op.sitename}
                   </Link>
                 </CardFooter>
               </Card>
