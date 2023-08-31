@@ -1,94 +1,76 @@
-import React, {useEffect } from "react";
-import PosterImage from "../assets/images/poster-video.jpg";
+import React, { useEffect, useState } from "react";
+import PosterImage from "../assets/images/esteticista_profesional.jpg";
 import Video from "../assets/video/corporal.mp4";
 
 //fontawesome
-import {FaVideoSlash } from "react-icons/fa";
+import { FaVideoSlash } from "react-icons/fa";
 import { BsArrowDownCircle } from "react-icons/bs";
-
+import { Tooltip, Button } from "@nextui-org/react";
+import { Chip } from "@nextui-org/react";
 
 const Header = (props) => {
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    const video = document.querySelector('video'); 
-
-    //para quitarle el grayscale y el blur al video
-    setTimeout(()=>{
-        video.classList.remove('grayscale');
-    }, 2000);
-
-    setTimeout(()=>{
-        video.classList.remove('blur-lg');
-    }, 2500);
-
-    //para añadirle los controles al video
-    setTimeout(()=>{
-        video.setAttribute('controls', true);
+    setTimeout(() => {
+      setIsOpen(false);
     }, 3000);
-
-    const stopVideo = (e)=>{
-        //e.preventDefault();
-        //video.pause();
-
-
-        document.querySelector('#header__first-col').classList.add('-translate-x-2/4');
-        
-        //document.querySelector('#header__second-col').classList.add('-translate-x-full');
-        document.querySelector('#header__second-col').classList.add('absolute');
-        document.querySelector('#header__second-col').classList.add('right-0');
-        document.querySelector('#header__second-col').classList.add('top-0');
-        document.querySelector('#header__second-col').classList.replace('w-2/4', 'w-full');
-
-      }
-
-    video.addEventListener('play', stopVideo);
-
-    return () => video.removeEventListener('play', stopVideo);
   }, []);
 
-  const closeVideo = () => {
-    document
-      .querySelector(".header__text-container")
-      .classList.remove("slide-out-blurred-top");
-    document
-      .querySelector(".video-container")
-      .classList.remove("slide-in-elliptic-left-bck");
-    document
-      .querySelector(".video-container")
-      .classList.add("slide-out-blurred-top");
-    setTimeout(() => {
-      document.querySelector(".video-container").style.display = "none";
-      document.querySelector(".header__text-container").style.display = "flex";
-      document
-        .querySelector(".header__text-container")
-        .classList.add("slide-in-elliptic-left-bck");
-    }, 1000);
-  };
+  useEffect(() => {}, []);
 
-  const showVideo = () => {
-    document
-      .querySelector(".video-container")
-      .classList.remove("slide-out-blurred-top");
-    document
-      .querySelector(".header__text-container")
-      .classList.remove("slide-in-elliptic-left-bck");
-    document
-      .querySelector(".header__text-container")
-      .classList.add("slide-out-blurred-top");
+  useEffect(() => {
+    const video = document.querySelector("video");
+
+    //para quitarle el grayscale y el blur al video
+    setTimeout(() => {
+      video.classList.remove("grayscale");
+    }, 2000);
 
     setTimeout(() => {
-      document.querySelector(".header__text-container").style.display = "none";
-      document.querySelector(".video-container").style.display = "flex";
+      video.classList.remove("blur-lg");
+    }, 2500);
+
+    const stopVideo = (e) => {
+      //e.preventDefault();
+      //video.pause();
+
+      document.querySelector("#header__first-col").classList.add("-translate-x-2/4");
+        
+        setTimeout(()=>{
+          document.querySelector("#header__first-col").classList.add("hidden");
+        }, 500);
+      //document.querySelector('#header__second-col').classList.add('-translate-x-full');
+      document.querySelector("#header__second-col").classList.add("absolute");
+      document.querySelector("#header__second-col").classList.add("right-0");
+      document.querySelector("#header__second-col").classList.add("top-0");
       document
-        .querySelector(".video-container")
-        .classList.add("slide-in-elliptic-left-bck");
-    }, 1000);
-  };
-  const options = {
-    delay: 10,
-    distance: "50px",
-    interval: 100,
-  };
+        .querySelector("#header__second-col")
+        .classList.replace("w-2/4", "w-full");
+    };
+    const showControls = (hide) => {
+      const chip = document.querySelector("#chip");
+      //para añadirle los controles al video
+      if (hide === true) {
+        video.setAttribute("controls", true);
+        chip.classList.add("hidden");
+      }
+      else {
+        video.removeAttribute("controls");
+        chip.classList.remove("hidden");
+      }
+    };
+
+    video.addEventListener("play", stopVideo);
+    video.addEventListener("mouseenter", () => showControls(true));
+    video.addEventListener("mouseleave", () => showControls(false));
+    return () => {
+      for (let i = 0; i < 3; i++) {
+        if (i == 0) return video.removeEventListener("play", stopVideo);
+      }
+    };
+  }, []);
+
   useEffect(() => {
     //ScrollReveal().reveal('.header__job', options);
     //ScrollReveal().reveal('h1', options);
@@ -100,46 +82,86 @@ const Header = (props) => {
   });
 
   return (
-    <header className={`header ${props.classProp} h-[90vh] relative bg-rose-200 text-rose-950`}>
-      <div className="flex justify-center items-center h-full" >
-        <div id="header__first-col" className="h-full w-2/4 flex flex-col justify-center py-5 px-10" >
-          <div>
-          <p className="text-2xl font-semibold">
-            <span>MARI AGUZA - </span>
-            <span>ESTILISTA PERSONAL</span>
-          </p>
-          <h1 className="font-extrabold leading-tight md:text-4xl lg:text-7xl xl:text-8xl 2xl:text-9xl">
-            <span>Centro de estética </span> <br />
-            <span>MarinaSpá</span>
-          </h1>
-          </div>
-        </div>
-        <div id="header__second-col" className="w-2/4 h-full" >
-            <video className="w-full h-full object-cover grayscale blur-lg" poster={PosterImage}>
-            <source src={Video} type="video/mp4" />
-            </video>
-        </div>
+    <header
+      className={`header ${props.classProp} h-[90vh] relative bg-rose-200 text-rose-950 flex justify-center items-center`}
+    >
+      <div
+        id="header__first-col"
+        className="h-full w-2/4 flex flex-col justify-center py-5 px-10 text-center"
+      >
+        <p className="animate-charcter text-lg md:text-xl font-semibold">
+          <span>MARI AGUZA - </span>
+          <span>ESTILISTA PERSONAL</span>
+        </p>
+        <h1 className="animate-charcter font-extrabold leading-tight text-5xl md:text-5xl lg:text-7xl xl:text-8xl 2xl:text-9xl">
+          <span>Centro de estética </span> <br />
+          <span>MarinaSpá</span>
+        </h1>
       </div>
+      <div id="header__second-col" className="w-2/4 h-full relative">
+        <Chip id="chip" className="absolute top-2 right-2 z-20 flex flex-row bg-zinc-900 text-rose-100 animate-bounce"  startContent={<svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="w-6 h-6"
+          >
+            <path
+              strokeLinecap="round"
+              d="M15.75 10.5l4.72-4.72a.75.75 0 011.28.53v11.38a.75.75 0 01-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25h-9A2.25 2.25 0 002.25 7.5v9a2.25 2.25 0 002.25 2.25z"
+            />
+          </svg>}>
+          
+          Video
+        </Chip>
+        <video
+          className="w-full h-full object-cover grayscale blur-lg relative z-10 hover:cursor-pointer"
+          poster={PosterImage}
+        >
+          <source src={Video} type="video/mp4" />
+        </video>
+      </div>
+      <Tooltip
+        defaultOpen={isOpen}
+        closeDelay={2000}
+        showArrow={true}
+        placement="right-end"
+        className="w-2/4 p-5 text-lg"
+        content="Nuestras modernas instalaciones en nuestro centro de estética te
+                brindarán un ambiente relajante y acogedor, donde podrás
+                desconectar del ajetreo diario y disfrutar de una experiencia de
+                bienestar total. Ya sea que desees un tratamiento facial
+                revitalizante, un masaje relajante, un tratamiento de depilación
+                láser de última generación o cualquier otro servicio de
+                estética, estamos aquí para atender todas tus necesidades."
+      >
+        <Button
+          isIconOnly
+          className=" absolute left-2 bottom-5 text-rose-200 bg-zinc-700 z-0"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-7 h-7 animate-bounce"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"
+            />
+          </svg>
+        </Button>
+      </Tooltip>
       {/*<a href='/contacto' className='button button--transparent'>
                 Trabaja conmigo
                 </a> */}
-
-      <BsArrowDownCircle className="animate-bounce" />
       {
         //<img className='header__image header__image--0' src={FotoMari} alt="" />
       }
-      <div className="video-container">
-        <video controls autoplay className="">
-          <source src={Video} type="video/mp4" />
-        </video>
-        <button
-          className="button button--round hide-video"
-          onClick={closeVideo}
-          id="hide-video-btn"
-        >
-          <FaVideoSlash />
-        </button>
-      </div>
     </header>
   );
 };

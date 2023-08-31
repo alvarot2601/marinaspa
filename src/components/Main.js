@@ -5,7 +5,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import { Card, CardFooter, Image, CardHeader, Tooltip } from "@nextui-org/react";
+import {Tooltip } from "@nextui-org/react";
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -79,7 +79,7 @@ const Main = (props) => {
                 revitalizante, un masaje relajante, un tratamiento de depilación
                 láser de última generación o cualquier otro servicio de
                 estética, estamos aquí para atender todas tus necesidades.">
-          <Button isIconOnly className="info absolute left-2 bottom-20 text-slate-100 bg-gray-900 ">
+          <Button isIconOnly className="info absolute left-2 bottom-20 text-slate-900 bg-gray-100 ">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"

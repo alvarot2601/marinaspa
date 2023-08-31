@@ -44,35 +44,34 @@ const Servicios = (props) => {
   });
   return (
     <div className={`${props.classProp} text-center overflow-hidden `}>
-      <h3 className="p-5 text-8xl font-bold bg-gradient-to-r from-gray-50 from-10% via-[#e6c290] to-[#c9b2cc] ">
+      <h3 className="p-5 text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold bg-gradient-to-r from-zinc-100 ">
         NUESTROS SERVICIOS
       </h3>
       {
         //<p className="text-3xl my-5 ">¿Qué nos diferencia del resto?</p>
       }
-
       <div className="servicios__wrapper h-screen">
         <div className="servicios__subwrapper h-full">
-          <div className="servicios__servicio servicios__servicio--1 h-full">
-            <div className="flex md:flex-col lg:flex-row h-full ">
-              <div className="md:order-1 md:h-2/6 lg:h-full lg:w-6/12 xl:w-5/12">
+
+          <div className="servicios__servicio bg-gradient-to-r from-zinc-100 h-full text-orange-300 ">
+            <div className="flex flex-col lg:flex-row h-full">
+              <div className="order-1 h-3/6 lg:h-full w-full lg:w-5/12 xl:w-5/12">
                 <img
                   src={ShakeHands}
                   className="object-cover rounded-none h-full w-full "
                 />
               </div>
-              <div className="h-full flex flex-col items-center justify-center gap-2 p-10 md:p-7 md:h-4/6 lg:w-6/12 xl:w-7/12">
-                <div className="flex gap-4 items-center ">
-                  <FaPercent className="text-6xl" />
-                  <FaHandshake className="text-8xl" />
+              <div className="h-3/6 lg:h-full flex flex-col items-center justify-center gap-2 px-5 lg:px-10 pb-4 pt-2 lg:py-5 h-3/6 lg:w-7/12 xl:w-7/12">
+                <div>
+                  <FaHandshake className="text-6xl md:text-7xl lg:text-8xl" />
                 </div>
-                <p className="flex justify-center items-center text-6xl mx-auto font-bold underline underline-offset-8 decoration-2 leading-snug">
+                <p className="animate-charcter animate-charcter--2 mb-3 font-bold underline underline-offset-4 decoration-2 leading-snug text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
                   Programas de fidelización y ofertas.
                 </p>
-                <p className="text-xl font-medium italic">
+                <p className="md:text-lg lg:text-xl font-medium italic">
                   ¡En MarinaSpá, valoramos a nuestros clientes y queremos
-                  recompensar su lealtad! Ofrecemos irresistibles ofertas en
-                  una amplia gama de servicios estéticos. Desde descuentos en
+                  recompensar su lealtad! Ofrecemos irresistibles ofertas en una
+                  amplia gama de servicios estéticos. Desde descuentos en
                   tratamientos faciales hasta promociones en masajes y
                   depilación, siempre encontrarás oportunidades para cuidar de
                   ti a precios increíbles.
@@ -82,47 +81,45 @@ const Servicios = (props) => {
           </div>
 
           <div className="servicios__servicio servicios__servicio--2 h-full">
-            <div className="flex md:flex-col lg:flex-row h-full">
-              <div className=" md:h-2/6 lg:h-full lg:w-6/12 xl:w-5/12">
+            <div className="flex flex-col lg:flex-row h-full">
+              <div className="order-1 h-3/6 lg:h-full lg:w-5/12 xl:w-5/12">
                 <img
                   src={Aromaterapia}
                   className="object-cover rounded-none h-full w-full"
                 />
               </div>
-              <div className="h-full flex flex-col items-center justify-center gap-5 p-10 md:p-7 md:h-4/6 lg:w-6/12 xl:w-7/12">
+              <div className="h-full flex flex-col items-center justify-center gap-2 px-5 lg:px-10 pb-5 pt-4 lg:py-5 h-3/6 lg:w-7/12 xl:w-7/12">
                 <div className="flex gap-4 items-center">
-                  <FaSpa className="text-8xl" />
-                  <FaHeartbeat className="text-8xl" />
+                  <FaSpa className="text-6xl md:text-7xl lg:text-8xl" />
+                  <FaHeartbeat className="text-6xl md:text-7xl lg:text-8xl" />
                 </div>
 
-                <p className="flex justify-center items-center text-6xl mx-auto font-bold underline underline-offset-8 decoration-2 leading-snug">
+                <p className="mb-3 font-bold underline underline-offset-4 decoration-2 leading-snug text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
                   Terapias de bienestar holísticas.
                 </p>
-                <p className="text-xl font-medium italic">
+                <p className="md:text-lg lg:text-xl font-medium italic">
                   Te invitamos a experimentar nuestras terapias de bienestar
                   holísticas para alcanzar una armonía total de cuerpo y mente.
-                  Nos enfocamos en equilibrar tus energías y mejorar tu
-                  bienestar general. Sumérgete en un ambiente tranquilo y
-                  renueva tu ser con nuestras terapias holísticas. ¡Reserva tu
-                  cita ahora y descubre una sensación de paz y vitalidad en
-                  MarinaSpá!
+                  Sumérgete en un ambiente tranquilo y renueva tu ser con
+                  nuestras terapias holísticas. ¡Reserva tu cita ahora y
+                  descubre una sensación de paz y vitalidad en MarinaSpá!
                 </p>
               </div>
             </div>
           </div>
 
           <div className="servicios__servicio servicios__servicio--3 h-full ">
-            <div className="flex flex-row h-full">
+            <div className="flex flex-col lg:flex-row h-full">
               <div className=" flex flex-col items-center justify-center gap-5 p-10">
                 <div className="flex gap-4 items-baseline">
-                  <FaTrophy className="text-6xl" />
-                  <FaTrophy className="text-8xl" />
-                  <FaTrophy className="text-6xl" />
+                  <FaTrophy className="text-6xl md:text-7xl lg:text-8xl" />
+                  <FaTrophy className="text-7xl md:text-8xl lg:text-9xl" />
+                  <FaTrophy className="text-6xl md:text-7xl lg:text-8xl" />
                 </div>
-                <p className="flex justify-center items-center text-6xl mx-auto font-bold underline underline-offset-8 decoration-2 leading-snug">
+                <p className="mb-3 font-bold underline underline-offset-4 decoration-2 leading-snug text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
                   Solo las mejores marcas.
                 </p>
-                <p className="text-xl font-medium italic">
+                <p className="md:text-lg lg:text-xl font-medium italic">
                   Nuestro compromiso con la calidad nos lleva a utilizar
                   exclusivamente las mejores marcas en todos nuestros
                   tratamientos y servicios para garantizar resultados
@@ -134,11 +131,10 @@ const Servicios = (props) => {
                   que respaldan nuestra misión de realzar tu belleza y
                   bienestar.
                 </p>
-                <div className="flex items-center justify-center">
-                  <img src={Mesoestetic} className="mesoestetic" />
-
-                  <img src={Massada} className="massada" />
-                  <img src={Utsukusi} className="utsukusy" />
+                <div className="flex flex-wrap items-center justify-center">
+                  <img src={Mesoestetic} className="mesoestetic w-1/3" />
+                  <img src={Massada} className="massada w-1/3" />
+                  <img src={Utsukusi} className="utsukusy w-1/3" />
                 </div>
               </div>
             </div>

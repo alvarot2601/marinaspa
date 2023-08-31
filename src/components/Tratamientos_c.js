@@ -17,11 +17,11 @@ import { Button, Divider, Link } from "@nextui-org/react";
 
 const Tratamientos_c = () => {
   return (
-    <section className="tratamientos py-10 px-5 bg-gradient-to-b from-rose-200 to-rose-100 text-zinc-700  text-center">
-      <h2 className="text-8xl font-bold">
+    <div className="tratamientos py-7 px-5 bg-gradient-to-b from-rose-200 to-rose-100 text-zinc-700  text-center">
+      <h2 className="text-5xl sm:text-5xl md:text-6xl lg:text-8xl font-bold">
         NUESTROS TRATAMIENTOS
       </h2>
-      <p className="text-center text-lg mt-2 mb-4 mx-10 font-medium italic">
+      <p className="text-center sm:text-md text-lg mt-2 mb-4 mx-10 font-medium italic">
         Tu belleza es el reflejo de tu mejor imagen que proyecta tu cuerpo
         cuando está en pleno equilibrio, nosotros trabajamos para que ese
         reflejo y equilibrio se perpetúen y se mantengan inalterables a pesar de
@@ -173,7 +173,7 @@ const Tratamientos_c = () => {
           </div>
         </SwiperSlide>
       </Swiper>
-    </section>
+    </div>
   );
 };
 export default Tratamientos_c;
