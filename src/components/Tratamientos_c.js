@@ -1,8 +1,7 @@
 import React from "react";
 import { AiOutlineArrowDown } from "react-icons/ai";
 
-import { Pagination } from "swiper";
-import { Navigation, EffectCoverflow } from "swiper";
+import { Navigation, EffectCoverflow, FreeMode, Pagination, Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 //fotos
 import TratamientosFacialesPicture from "../assets/images/tratamientos-faciales.jpg";
@@ -46,8 +45,10 @@ const Tratamientos_c = () => {
           modifier: 1,
           slideShadows: true,
         }}
+        
+        loop={true}
         pagination={true}
-        modules={[EffectCoverflow, Pagination]}
+        modules={[EffectCoverflow, Pagination, Autoplay]}
       >
         <SwiperSlide className="swiper-slide">
           <div className="tratamientos__item tratamientos__item--1">
