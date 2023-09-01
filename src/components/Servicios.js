@@ -18,7 +18,6 @@ import ShakeHands from "../assets/images/shake-hands.jpg";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import { Image } from "@nextui-org/react";
 
 const Servicios = (props) => {
   gsap.registerPlugin(ScrollTrigger);
@@ -44,7 +43,7 @@ const Servicios = (props) => {
   });
   return (
     <div className={`${props.classProp} text-center overflow-hidden `}>
-      <h3 className="p-5 text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold bg-gradient-to-r from-zinc-100 ">
+      <h3 className="p-5 text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold bg-gradient-to-t lg:bg-gradient-to-r  from-zinc-100">
         NUESTROS SERVICIOS
       </h3>
       {
@@ -53,7 +52,7 @@ const Servicios = (props) => {
       <div className="servicios__wrapper h-screen">
         <div className="servicios__subwrapper h-full">
 
-          <div className="servicios__servicio bg-gradient-to-r from-zinc-100 h-full text-orange-300 ">
+          <div className="servicios__servicio bg-gradient-to-b lg:bg-gradient-to-r  from-zinc-100 h-full">
             <div className="flex flex-col lg:flex-row h-full">
               <div className="order-1 h-3/6 lg:h-full w-full lg:w-5/12 xl:w-5/12">
                 <img
@@ -65,7 +64,7 @@ const Servicios = (props) => {
                 <div>
                   <FaHandshake className="text-6xl md:text-7xl lg:text-8xl" />
                 </div>
-                <p className="animate-charcter animate-charcter--2 mb-3 font-bold underline underline-offset-4 decoration-2 leading-snug text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
+                <p className=" mb-3 font-bold underline underline-offset-4 decoration-2 text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight sm:leading-tight md:leading-tight lg:leading-tight">
                   Programas de fidelización y ofertas.
                 </p>
                 <p className="md:text-lg lg:text-xl font-medium italic">
@@ -80,7 +79,7 @@ const Servicios = (props) => {
             </div>
           </div>
 
-          <div className="servicios__servicio servicios__servicio--2 h-full">
+          <div className="servicios__servicio h-full bg-rose-200 ">
             <div className="flex flex-col lg:flex-row h-full">
               <div className="order-1 h-3/6 lg:h-full lg:w-5/12 xl:w-5/12">
                 <img
@@ -94,7 +93,7 @@ const Servicios = (props) => {
                   <FaHeartbeat className="text-6xl md:text-7xl lg:text-8xl" />
                 </div>
 
-                <p className="mb-3 font-bold underline underline-offset-4 decoration-2 leading-snug text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
+                <p className="mb-3 font-bold underline underline-offset-4 decoration-2 text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight sm:leading-tight md:leading-tight lg:leading-tight">
                   Terapias de bienestar holísticas.
                 </p>
                 <p className="md:text-lg lg:text-xl font-medium italic">
@@ -108,15 +107,15 @@ const Servicios = (props) => {
             </div>
           </div>
 
-          <div className="servicios__servicio servicios__servicio--3 h-full ">
-            <div className="flex flex-col lg:flex-row h-full">
+          <div className="servicios__servicio h-full bg-gradient-to-l from-orange-200 to-rose-200">
+            <div className="flex flex-col justify-center lg:flex-row h-full">
               <div className=" flex flex-col items-center justify-center gap-5 p-10">
                 <div className="flex gap-4 items-baseline">
                   <FaTrophy className="text-6xl md:text-7xl lg:text-8xl" />
                   <FaTrophy className="text-7xl md:text-8xl lg:text-9xl" />
                   <FaTrophy className="text-6xl md:text-7xl lg:text-8xl" />
                 </div>
-                <p className="mb-3 font-bold underline underline-offset-4 decoration-2 leading-snug text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
+                <p className="mb-3 font-bold underline underline-offset-4 decoration-2 leading-snug text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight sm:leading-tight md:leading-tight lg:leading-tight">
                   Solo las mejores marcas.
                 </p>
                 <p className="md:text-lg lg:text-xl font-medium italic">

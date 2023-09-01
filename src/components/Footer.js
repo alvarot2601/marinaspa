@@ -3,7 +3,7 @@ import {FaFacebook, FaInstagram, FaCopyright} from 'react-icons/fa';
 
 const Footer = () => {
     return (
-        <footer className='footer'>
+        <footer className='footer bg-zinc-800'>
             <div className="footer__col">
                 <span className='footer__copyright'>
                     <FaCopyright/> Copyright 2023

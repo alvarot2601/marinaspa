@@ -1,6 +1,8 @@
 @import "variables";
 .tratamientos{
-    
+    .swiper-slide{
+        //max-width: 400px;
+    }
     &__btn-container{
         display: flex;
         margin: 50px auto 50px auto;

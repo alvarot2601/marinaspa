@@ -35,15 +35,30 @@ const Tratamientos_c = () => {
 
       <Swiper
         className="tratamientos__slider"
+        breakpoints={
+          {
+            320:{
+              slidesPerView : 1
+            },
+            600:{
+              slidesPerView : 1.3
+            },
+            725:{
+              slidesPerView : 2
+            },
+            1200:{
+              slidesPerView : 3
+            },
+          }
+        }
         spaceBetween={20}
-        slidesPerView={3}
         navigation={true}
         pagination={{
           dynamicBullets: true,
         }}
         modules={[Pagination, Navigation]}
       >
-        <SwiperSlide>
+        <SwiperSlide className="swiper-slide">
           <div className="tratamientos__item tratamientos__item--1">
             <img loading="lazy" src={TratamientosFacialesPicture} alt="" />
             <div className="flex flex-col p-5 tratamientos__text bg-gradient-to-br from-rose-300 via-orange-200 to-rose-300">
@@ -70,7 +85,7 @@ const Tratamientos_c = () => {
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide >
           <div className="tratamientos__item tratamientos__item--2 ">
             <img loading="lazy" src={EsteticaGeneral} alt="" />
             <div className="flex flex-col p-5 tratamientos__text  bg-gradient-to-br from-orange-300 to-rose-300">

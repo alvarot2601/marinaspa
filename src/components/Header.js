@@ -9,15 +9,18 @@ import { Tooltip, Button } from "@nextui-org/react";
 import { Chip } from "@nextui-org/react";
 
 const Header = (props) => {
-  const [isOpen, setIsOpen] = useState(false);
-
+  const [isOpenState, setIsOpenState] = useState(false);
+  const [isOpen, setIsOpen] = React.useState(false);
   useEffect(() => {
-    setTimeout(() => {
+    setTimeout(()=>{
+      setIsOpen(true);
+    }, 2500);
+
+    setTimeout(()=>{
       setIsOpen(false);
-    }, 3000);
+    }, 4500);
   }, []);
 
-  useEffect(() => {}, []);
 
   useEffect(() => {
     const video = document.querySelector("video");
@@ -30,7 +33,8 @@ const Header = (props) => {
     setTimeout(() => {
       video.classList.remove("blur-lg");
     }, 2500);
-
+    //para abrir el toolbox 
+    
     const stopVideo = (e) => {
       //e.preventDefault();
       //video.pause();
@@ -99,7 +103,7 @@ const Header = (props) => {
         </h1>
       </div>
       <div id="header__second-col" className="w-2/4 h-full relative">
-        <Chip id="chip" className="absolute top-2 right-2 z-20 flex flex-row bg-zinc-900 text-rose-100 animate-bounce"  startContent={<svg
+        <Chip id="chip" variant="shadow" className="absolute top-2 right-2 z-20 flex flex-row bg-zinc-900 text-rose-100 animate-bounce"  startContent={<svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
@@ -123,7 +127,8 @@ const Header = (props) => {
         </video>
       </div>
       <Tooltip
-        defaultOpen={isOpen}
+        isOpen={isOpen}
+        onOpenChange={(open)=>setIsOpen(open)}
         closeDelay={2000}
         showArrow={true}
         placement="right-end"
