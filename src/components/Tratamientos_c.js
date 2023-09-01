@@ -2,7 +2,7 @@ import React from "react";
 import { AiOutlineArrowDown } from "react-icons/ai";
 
 import { Pagination } from "swiper";
-import { Navigation } from "swiper";
+import { Navigation, EffectCoverflow } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 //fotos
 import TratamientosFacialesPicture from "../assets/images/tratamientos-faciales.jpg";
@@ -35,28 +35,19 @@ const Tratamientos_c = () => {
 
       <Swiper
         className="tratamientos__slider"
-        breakpoints={
-          {
-            320:{
-              slidesPerView : 1
-            },
-            600:{
-              slidesPerView : 1.3
-            },
-            725:{
-              slidesPerView : 2
-            },
-            1200:{
-              slidesPerView : 3
-            },
-          }
-        }
-        spaceBetween={20}
-        navigation={true}
-        pagination={{
-          dynamicBullets: true,
+        effect={'coverflow'}
+        grabCursor={true}
+        centeredSlides={true}
+        slidesPerView={'auto'}
+        coverflowEffect={{
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
         }}
-        modules={[Pagination, Navigation]}
+        pagination={true}
+        modules={[EffectCoverflow, Pagination]}
       >
         <SwiperSlide className="swiper-slide">
           <div className="tratamientos__item tratamientos__item--1">
