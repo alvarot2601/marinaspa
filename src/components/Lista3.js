@@ -41,7 +41,7 @@ const Lista3 = ({ obj }) => {
                 {Array.isArray(obj.images) ? (
                     obj.images[index] !== "" ? (
                         <div className="w-2/4">
-                            <img src={obj.images[index]} alt="" />
+                            <img className="h-full object-cover" src={obj.images[index]} alt="" />
                         </div>
                     ) : (
                         ""

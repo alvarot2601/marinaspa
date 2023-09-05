@@ -8,7 +8,7 @@ const Lista = ({ obj }) => {
     return (
       <div className="flex text-gray-900">
         <div
-          className={`w-2/4 px-7 py-5 ${reverseRowClass} flex flex-col justify-center`}
+          className={`w-full md:w-7/12 lg:w-1/2 px-7 py-5 ${reverseRowClass} flex flex-col justify-center`}
         >
           {singleObj.category !== "" ? (
             <span className="text-4xl font-semibold">{singleObj.category}</span>
@@ -72,7 +72,7 @@ const Lista = ({ obj }) => {
             })}
           </Accordion>
         </div>
-        <div className="w-2/4">
+        <div className="md:w-5/12 lg:w-1/2 hidden md:block">
           <img className="h-full object-cover" src={singleObj.images[0]} alt="" />
         </div>
       </div>

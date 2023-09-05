@@ -94,7 +94,7 @@ const Header = (props) => {
         className="h-full w-2/4 flex flex-col justify-center py-5 px-10 text-center"
       >
         <p className="animate-charcter text-lg md:text-xl font-semibold">
-          <span>MARI AGUZA - </span>
+          <span>MARI MÉNDEZ - </span>
           <span>ESTILISTA PERSONAL</span>
         </p>
         <h1 className="animate-charcter font-extrabold leading-tight text-5xl md:text-5xl lg:text-7xl xl:text-8xl 2xl:text-9xl">

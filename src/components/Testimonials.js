@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper";
@@ -23,6 +23,11 @@ import { faStar, faStarHalf, faHouse } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMobile, faMapLocationDot } from "@fortawesome/free-solid-svg-icons";
 const Testimonials = () => {
+
+  const [screenWidth, setScreenWidth] = useState(0);
+  useEffect(()=>{
+    setScreenWidth(window.innerWidth);
+  }, []);
   const opinions = [
     {
       user: "Virginia García",
@@ -38,7 +43,7 @@ const Testimonials = () => {
       url: "https://www.google.com/maps/contrib/106740853058942327357/place/ChIJJ5vuvJpVEQ0R9Zkm8NDy6ss/@37.8541735,-7.7390933,6.27z/data=!4m6!1m5!8m4!1e1!2s106740853058942327357!3m1!1e1?hl=es&entry=ttu",
     },
     {
-      user: "Zaida Gonzalez Rey",
+      user: "Zaida Gonzalez",
       opinion:
         "Hoy he disfrutado del beauty menú diciembre, q me regalaron por reyes. Totalmente recomendable. La hidratación corporal es muy agradable, así como el tratamiento facial 360. También me gustó el maquillaje. Muy profesionales y un ambiente muy relajante. Mi enhorabuena. Muchas gracias Laura.",
       punctuation: [
@@ -64,7 +69,7 @@ const Testimonials = () => {
       url: "https://www.google.com/maps/contrib/109386828765142338035/place/ChIJJ5vuvJpVEQ0R9Zkm8NDy6ss/@39.1399156,-5.9577313,8z/data=!4m6!1m5!8m4!1e1!2s109386828765142338035!3m1!1e1?hl=es&entry=ttu",
     },
     {
-      user: "Teresa Corrales García",
+      user: "Teresa Corrales",
       opinion:
         "Lugar inmejorable y muy confortable, atención profesional, con unos tratamientos y maquinaria a la última, sin duda te hacen sentir guapa tanto por dentro como fuera. ¡Gracias por ser mi centro de confianza!",
       punctuation: [
@@ -116,7 +121,7 @@ const Testimonials = () => {
       url: "https://www.google.com/maps/contrib/107280796014450744426/place/ChIJJ5vuvJpVEQ0R9Zkm8NDy6ss/@38.424423,-6.4202196,17.42z/data=!4m4!1m3!8m2!1e1!2s107280796014450744426?hl=es&entry=ttu",
     },
     {
-      user: "Raquel González Venegas",
+      user: "Raquel González",
       opinion:
         "Sitio precioso, limpio, cuidado cada detalle, muy profesionales, buenos productos y en definitiva muy recomendable. Entrar en vuestro spá es dedicar una hora para ti, saliendo del estrés diario y en mano de las mejores profesionales.",
       punctuation: [
@@ -130,12 +135,12 @@ const Testimonials = () => {
     },
   ];
   return (
-    <section className="testimonios text-center px-5 py-10 bg-zinc-100 text-zinc-700">
-      <h6 className="text-8xl font-semibold ">
+    <section className="testimonios text-center py-10 bg-zinc-100 text-zinc-700">
+      <h6 className="text-5xl md:text-6xl lg:text-8xl font-bold">
         Testimonios
       </h6>
       <div className="flex gap-3 items-center justify-center text-4xl my-4">
-        <p className="text-4xl ">
+        <p className="text-2xl md:text-4xl mx-5">
           Puntuación de 
         <FontAwesomeIcon icon={faStar} className="text-yellow-400 ml-1" />
         <FontAwesomeIcon icon={faStar} className="text-yellow-400" />
@@ -155,7 +160,16 @@ const Testimonials = () => {
 
       <Swiper
         navigation={true}
-        slidesPerView={2}
+        breakpoints={{
+          320:{
+            slidesPerView:"auto"
+          },
+          950:{
+            slidesPerView:2
+          },
+      }}
+        loop={true}
+        centeredSlides={window.innerWidth <= 949 ? true : false}
         pagination={{
           dynamicBullets: true,
         }}
@@ -163,12 +177,12 @@ const Testimonials = () => {
       >
         {opinions.map((op) => {
           return (
-            <SwiperSlide>
+            <SwiperSlide className="max-w-[70%]">
               <Card className="w-2/4 mx-auto my-5 bg-gray-200 w-11/12 min-h-[338px]">
                 <CardHeader className="flex items-center justify-center gap-4">
                   <Avatar
                     icon={<AvatarIcon />}
-                    className="w-20 h-20"
+                    className="w-10 h-10 md:w-20 md:h-20"
                     classNames={{
                       base: "bg-gradient-to-br from-amber-300 to-rose-300",
                       icon: "text-black/80",
@@ -183,7 +197,7 @@ const Testimonials = () => {
                 </CardHeader>
                 <Divider />
                 <CardBody className="text-center flex justify-center">
-                  <p className="italic ">{op.opinion}</p>
+                  <p className="italic line-clamp-5">{op.opinion}</p>
                 </CardBody>
                 <Divider />
                 <CardFooter className="flex justify-center">
