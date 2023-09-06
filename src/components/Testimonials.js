@@ -140,7 +140,7 @@ const Testimonials = () => {
         Testimonios
       </h6>
       <div className="flex gap-3 items-center justify-center text-4xl my-4">
-        <p className="text-2xl md:text-4xl mx-5">
+        <p className="text-xl sm:text-2xl md:text-4xl mx-5">
           Puntuación de 
         <FontAwesomeIcon icon={faStar} className="text-yellow-400 ml-1" />
         <FontAwesomeIcon icon={faStar} className="text-yellow-400" />
@@ -149,7 +149,7 @@ const Testimonials = () => {
         <FontAwesomeIcon icon={faStar} className="text-yellow-400 mr-1" />
         basada en más de{" "}
           <Link
-            className="text-4xl"
+            className="text-3xl sm:text-4xl"
             isExternal
             href="https://www.google.com/search?q=opiniones+marinaspa&rlz=1C1UEAD_esES927ES927&oq=opiniones+marinaspa&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgYIARBFGEAyCggCEAAYCBgNGB4yCggDEAAYCBgNGB7SAQgzNjQ3ajBqN6gCALACAA&sourceid=chrome&ie=UTF-8#lrd=0xd11559abcee9b27:0xcbeaf2d0f02699f5,1,,,,"
           >
@@ -177,7 +177,7 @@ const Testimonials = () => {
       >
         {opinions.map((op) => {
           return (
-            <SwiperSlide className="max-w-[70%]">
+            <SwiperSlide className="max-w-[70%] w-full min-w-[410px]">
               <Card className="w-2/4 mx-auto my-5 bg-gray-200 w-11/12 min-h-[338px]">
                 <CardHeader className="flex items-center justify-center gap-4">
                   <Avatar

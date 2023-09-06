@@ -5,6 +5,7 @@ import {FaWhatsapp, FaArrowCircleUp} from 'react-icons/fa';
 import {Button, Link} from "@nextui-org/react";
 
 const Layout = ({ children }) => {
+    
     const showScrollToTop = () => {
         if(window.pageYOffset > 500)
         {

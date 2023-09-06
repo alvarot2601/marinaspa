@@ -15,6 +15,7 @@ import {
   NavbarMenuItem,
 } from "@nextui-org/react";
 import { NavLink } from "react-router-dom";
+
 import {
   ChevronDown,
   Lock,
@@ -24,7 +25,16 @@ import {
   TagUser,
   Scale,
 } from "./Icons.js";
-
+import {
+  faFaceGrinHearts,
+  faHouse,
+  faSpa,
+  faHandHoldingHeart,
+  faPersonDotsFromLine,
+  faHandHoldingDroplet,
+  faPhone,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export default function Navbar2() {
   const [isMenuOpen, setMenuIsOpen] = useState(false);
 
@@ -46,13 +56,15 @@ export default function Navbar2() {
       className="h-[10vh] min-h-[60px] bg-zinc-100"
     >
       <NavbarContent>
-        <NavbarMenuToggle aria-label={isMenuOpen ? "Close menu" : "Open Menu"} className="">
-          <NavbarBrand>
-            <p className="font-bold text-2xl">MarinaSpá</p>
-          </NavbarBrand>
-        </NavbarMenuToggle>
+        <NavbarMenuToggle
+          aria-label={isMenuOpen ? "Close menu" : "Open Menu"}
+          className="block md:hidden"
+        ></NavbarMenuToggle>
+        <NavbarBrand className="md:flex justify-end md:justify-start">
+          <p className="font-bold text-2xl">MarinaSpá</p>
+        </NavbarBrand>
       </NavbarContent>
-      <NavbarContent className="sm:flex gap-4 " justify="center">
+      <NavbarContent className="hidden md:flex" justify="center">
         <NavbarItem className="underline content-center">
           <NavLink
             exact
@@ -157,7 +169,76 @@ export default function Navbar2() {
       </NavbarContent>
       <NavbarMenu>
         <NavbarMenuItem>
-            <Link size="lg" className="w-full" href="#">prueba</Link>
+          <NavLink
+            exact
+            activeClassName="is-active"
+            className=" flex items-center gap-2 text-slate-900 hover:text-slate-500 hover:underline hover:decoration-current hover:underline-offset-[25px]"
+            to="/"
+            aria-current="page"
+          >
+            <FontAwesomeIcon icon={faHouse}></FontAwesomeIcon>
+            Inicio
+          </NavLink>
+        </NavbarMenuItem>
+        <NavbarMenuItem>
+          <NavLink
+            className="flex gap-2"
+            activeClassName="is-active"
+            to="/programas-faciales"
+          >
+            <FontAwesomeIcon icon={faFaceGrinHearts} />
+            Programas Faciales
+          </NavLink>
+        </NavbarMenuItem>
+        <NavbarMenuItem>
+          <NavLink
+            className="flex gap-2"
+            activeClassName="is-active"
+            to="/estetica-general"
+          >
+            <FontAwesomeIcon icon={faHandHoldingHeart}></FontAwesomeIcon>
+            Estética General
+          </NavLink>
+        </NavbarMenuItem>
+        <NavbarMenuItem>
+          <NavLink
+            activeClassName="is-active"
+            className="flex gap-2"
+            to="/silueta-corporal"
+          >
+            <FontAwesomeIcon icon={faPersonDotsFromLine}></FontAwesomeIcon>
+            Silueta Corporal
+          </NavLink>
+        </NavbarMenuItem>
+        <NavbarMenuItem>
+          <NavLink
+            activeClassName="is-active"
+            to="/bienestar-y-relajacion"
+            className="flex gap-2"
+          >
+            <FontAwesomeIcon icon={faSpa}></FontAwesomeIcon>
+            Bienestar y Relajación
+          </NavLink>
+        </NavbarMenuItem>
+        <NavbarMenuItem>
+          <NavLink
+            className="flex gap-2"
+            activeClassName="is-active"
+            to="/depilacion-y-fotodepilacion"
+          >
+            <FontAwesomeIcon icon={faHandHoldingDroplet}></FontAwesomeIcon>
+            Depilación
+          </NavLink>
+        </NavbarMenuItem>
+        <NavbarMenuItem>
+          <NavLink
+            activeClassName="is-active"
+            className="flex gap-2 "
+            to="/contacto"
+          >
+            <FontAwesomeIcon icon={faPhone}></FontAwesomeIcon>
+            Contacto
+          </NavLink>
         </NavbarMenuItem>
       </NavbarMenu>
     </Navbar>

@@ -42,7 +42,7 @@ const Servicios = (props) => {
     return () => ctx.revert();
   });
   return (
-    <div className={`${props.classProp} text-center overflow-hidden `}>
+    <div className={`${props.classProp} text-center overflow-hidden`}>
       <h3 className="p-5 text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold bg-gradient-to-t lg:bg-gradient-to-r  from-zinc-100">
         NUESTROS SERVICIOS
       </h3>

@@ -16,8 +16,8 @@ import { Button, Divider, Link } from "@nextui-org/react";
 
 const Tratamientos_c = () => {
   return (
-    <div className="tratamientos py-7 px-5 bg-gradient-to-b from-rose-200 to-rose-100 text-zinc-700  text-center">
-      <h2 className="text-5xl md:text-6xl lg:text-8xl font-bold">
+    <div className="tratamientos py-10 px-5 bg-gradient-to-b from-rose-200 to-rose-100 text-zinc-700  text-center">
+      <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold">
         NUESTROS TRATAMIENTOS
       </h2>
       <p className="text-center sm:text-md text-lg mt-2 mb-4 mx-10 font-medium italic">

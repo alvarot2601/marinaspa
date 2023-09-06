@@ -8,11 +8,11 @@
 .header{
     
     #header__second-col{
-        transition: width 2s;
+        transition: width, height 2s;
     }
     video{
         animation: reveal 2s forwards;
-        transition: width 2s;
+        animation: reveal2 2s forwards;
     }
     .video-container{
         width: 100%;

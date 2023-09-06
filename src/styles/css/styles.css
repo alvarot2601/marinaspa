@@ -284,10 +284,10 @@
 }
 @keyframes reveal2 {
   from {
-    clip-path: inset(0 0 0 0);
+    clip-path: inset(100% 0 0 0);
   }
   to {
-    clip-path: inset(0 0 0 100%);
+    clip-path: inset(0 0 0 0);
   }
 }
 .animate-charcter {
@@ -672,10 +672,10 @@
 }
 @keyframes reveal2 {
   from {
-    clip-path: inset(0 0 0 0);
+    clip-path: inset(100% 0 0 0);
   }
   to {
-    clip-path: inset(0 0 0 100%);
+    clip-path: inset(0 0 0 0);
   }
 }
 .animate-charcter {
@@ -700,11 +700,11 @@
   }
 }
 .header #header__second-col {
-  transition: width 2s;
+  transition: width, height 2s;
 }
 .header video {
   animation: reveal 2s forwards;
-  transition: width 2s;
+  animation: reveal2 2s forwards;
 }
 .header .video-container {
   width: 100%;
@@ -1347,10 +1347,10 @@ button.info {
 }
 
 .active {
-  color: #4338ca !important;
+  color: #fb7185 !important;
   text-decoration: underline;
-  text-underline-offset: 25px;
-  text-decoration-color: #4338ca;
+  text-underline-offset: 5px;
+  text-decoration-color: #fb7185;
   font-weight: 600;
 }
 

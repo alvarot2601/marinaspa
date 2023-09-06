@@ -3,24 +3,24 @@ import PosterImage from "../assets/images/esteticista_profesional.jpg";
 import Video from "../assets/video/corporal.mp4";
 
 //fontawesome
-import { FaVideoSlash } from "react-icons/fa";
-import { BsArrowDownCircle } from "react-icons/bs";
 import { Tooltip, Button } from "@nextui-org/react";
 import { Chip } from "@nextui-org/react";
 
 const Header = (props) => {
-  const [isOpenState, setIsOpenState] = useState(false);
-  const [isOpen, setIsOpen] = React.useState(false);
+
+  const [isOpen, setIsOpen] = useState(false);
   useEffect(() => {
-    setTimeout(()=>{
-      setIsOpen(true);
-    }, 2500);
+    if (window.innerWidth >= 640) {
+      setTimeout(() => {
+        setIsOpen(true);
+      }, 2500);
 
-    setTimeout(()=>{
-      setIsOpen(false);
-    }, 4500);
+      setTimeout(() => {
+        setIsOpen(false);
+      }, 4500);
+    }
+
   }, []);
-
 
   useEffect(() => {
     const video = document.querySelector("video");
@@ -33,24 +33,36 @@ const Header = (props) => {
     setTimeout(() => {
       video.classList.remove("blur-lg");
     }, 2500);
-    //para abrir el toolbox 
-    
+    //para abrir el toolbox
+
     const stopVideo = (e) => {
       //e.preventDefault();
       //video.pause();
+      const videoWrapper = document.querySelector("#header__second-col");
+     
 
-      document.querySelector("#header__first-col").classList.add("-translate-x-2/4");
+      
+      
+      videoWrapper.classList.replace("relative","absolute");
+     
+      
+      document.querySelector("#tooltip").classList.add("hidden");
+
+      //para que no se mueva el texto del header con la animacion
+      document.querySelector(".header").classList.replace("justify-center","justify-start");
+      if(window.innerWidth>=640){
         
-        setTimeout(()=>{
-          document.querySelector("#header__first-col").classList.add("hidden");
-        }, 500);
-      //document.querySelector('#header__second-col').classList.add('-translate-x-full');
-      document.querySelector("#header__second-col").classList.add("absolute");
-      document.querySelector("#header__second-col").classList.add("right-0");
-      document.querySelector("#header__second-col").classList.add("top-0");
-      document
-        .querySelector("#header__second-col")
-        .classList.replace("w-2/4", "w-full");
+
+        videoWrapper.classList.add("right-0");
+        videoWrapper.classList.add("bottom-0");
+        videoWrapper.classList.toggle("sm:w-2/4");
+      }else{
+        
+        videoWrapper.classList.add("right-0");
+        videoWrapper.classList.add("bottom-0");
+        videoWrapper.classList.replace("h-2/6", "h-full");
+      }
+      //document.querySelector('#header__first-col').classList.add('hidden')
     };
     const showControls = (hide) => {
       const chip = document.querySelector("#chip");
@@ -58,8 +70,7 @@ const Header = (props) => {
       if (hide === true) {
         video.setAttribute("controls", true);
         chip.classList.add("hidden");
-      }
-      else {
+      } else {
         video.removeAttribute("controls");
         chip.classList.remove("hidden");
       }
@@ -71,6 +82,7 @@ const Header = (props) => {
     return () => {
       for (let i = 0; i < 3; i++) {
         if (i == 0) return video.removeEventListener("play", stopVideo);
+
       }
     };
   }, []);
@@ -87,11 +99,11 @@ const Header = (props) => {
 
   return (
     <header
-      className={`header ${props.classProp} h-[90vh] relative bg-rose-200 text-rose-950 flex justify-center items-center`}
+      className={`header ${props.classProp} h-[90vh] relative bg-rose-200 text-rose-950 flex flex-col sm:flex-row justify-center items-center`}
     >
       <div
         id="header__first-col"
-        className="h-full w-2/4 flex flex-col justify-center py-5 px-10 text-center"
+        className="w-full sm:w-2/4 h-4/6 sm:h-full flex flex-col justify-center py-5 px-10 text-center"
       >
         <p className="animate-charcter text-lg md:text-xl font-semibold">
           <span>MARI MÉNDEZ - </span>
@@ -102,33 +114,40 @@ const Header = (props) => {
           <span>MarinaSpá</span>
         </h1>
       </div>
-      <div id="header__second-col" className="w-2/4 h-full relative">
-        <Chip id="chip" variant="shadow" className="absolute top-2 right-2 z-20 flex flex-row bg-zinc-900 text-rose-100 animate-bounce"  startContent={<svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="currentColor"
-            className="w-6 h-6"
-          >
-            <path
-              strokeLinecap="round"
-              d="M15.75 10.5l4.72-4.72a.75.75 0 011.28.53v11.38a.75.75 0 01-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25h-9A2.25 2.25 0 002.25 7.5v9a2.25 2.25 0 002.25 2.25z"
-            />
-          </svg>}>
-          
+      <div id="header__second-col" className="w-full sm:w-2/4 h-2/6 sm:h-full relative">
+        <Chip
+          id="chip"
+          variant="shadow"
+          className="absolute top-2 right-2 z-20 flex flex-row bg-zinc-900 text-rose-100 animate-bounce"
+          startContent={
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                d="M15.75 10.5l4.72-4.72a.75.75 0 011.28.53v11.38a.75.75 0 01-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25h-9A2.25 2.25 0 002.25 7.5v9a2.25 2.25 0 002.25 2.25z"
+              />
+            </svg>
+          }
+        >
           Video
         </Chip>
         <video
-          className="w-full h-full object-cover grayscale blur-lg relative z-10 hover:cursor-pointer"
+          className="w-full h-full object-cover grayscale blur-lg z-10 hover:cursor-pointer"
           poster={PosterImage}
         >
           <source src={Video} type="video/mp4" />
         </video>
       </div>
       <Tooltip
+       
         isOpen={isOpen}
-        onOpenChange={(open)=>setIsOpen(open)}
+        onOpenChange={(open) => setIsOpen(open)}
         closeDelay={2000}
         showArrow={true}
         placement="right-end"
@@ -142,6 +161,7 @@ const Header = (props) => {
                 estética, estamos aquí para atender todas tus necesidades."
       >
         <Button
+          id="tooltip"
           isIconOnly
           className=" absolute left-2 bottom-5 text-rose-200 bg-zinc-700 z-0"
         >
