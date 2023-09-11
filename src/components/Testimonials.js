@@ -135,7 +135,7 @@ const Testimonials = () => {
     },
   ];
   return (
-    <section className="testimonios text-center py-10 bg-zinc-100 text-zinc-700">
+    <section className="testimonios text-center py-10 px-5 bg-zinc-100 text-zinc-700">
       <h6 className="text-5xl md:text-6xl lg:text-8xl font-bold">
         Testimonios
       </h6>
@@ -160,16 +160,10 @@ const Testimonials = () => {
 
       <Swiper
         navigation={true}
-        breakpoints={{
-          320:{
-            slidesPerView:"auto"
-          },
-          950:{
-            slidesPerView:2
-          },
-      }}
+        grabCursor={true}
+        centeredSlides={true}
+        slidesPerView={"auto"}
         loop={true}
-        centeredSlides={window.innerWidth <= 949 ? true : false}
         pagination={{
           dynamicBullets: true,
         }}
@@ -177,12 +171,12 @@ const Testimonials = () => {
       >
         {opinions.map((op) => {
           return (
-            <SwiperSlide className="max-w-[70%] w-full min-w-[410px]">
+            <SwiperSlide className="w-full max-w-[490px]">
               <Card className="w-2/4 mx-auto my-5 bg-gray-200 w-11/12 min-h-[338px]">
                 <CardHeader className="flex items-center justify-center gap-4">
                   <Avatar
                     icon={<AvatarIcon />}
-                    className="w-10 h-10 md:w-20 md:h-20"
+                    className="hidden sm:block w-10 h-10 md:w-20 md:h-20"
                     classNames={{
                       base: "bg-gradient-to-br from-amber-300 to-rose-300",
                       icon: "text-black/80",

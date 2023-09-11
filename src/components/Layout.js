@@ -2,7 +2,7 @@ import {React, useEffect} from 'react';
 import Footer from './Footer';
 import Navbar2 from './Navbar2';
 import {FaWhatsapp, FaArrowCircleUp} from 'react-icons/fa';
-import {Button, Link} from "@nextui-org/react";
+import {Button, Divider, Link} from "@nextui-org/react";
 
 const Layout = ({ children }) => {
     
@@ -29,6 +29,7 @@ const Layout = ({ children }) => {
         <>
             <Navbar2/>
             { children }
+            <Divider/>
             <Footer/>
             <Button isIconOnly className='fixed bottom-20 right-10 rounded-full z-50' color="secondary" variant="light" id="scrollToTop" onClick={scrollToTop}>
                 <FaArrowCircleUp/>

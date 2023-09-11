@@ -1,7 +1,13 @@
 import React from "react";
 import { AiOutlineArrowDown } from "react-icons/ai";
 
-import { Navigation, EffectCoverflow, FreeMode, Pagination, Autoplay } from "swiper";
+import {
+  Navigation,
+  EffectCoverflow,
+  FreeMode,
+  Pagination,
+  Autoplay,
+} from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 //fotos
 import TratamientosFacialesPicture from "../assets/images/tratamientos-faciales.jpg";
@@ -18,9 +24,9 @@ const Tratamientos_c = () => {
   return (
     <div className="tratamientos py-10 px-5 bg-gradient-to-b from-rose-200 to-rose-100 text-zinc-700  text-center">
       <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold">
-        NUESTROS TRATAMIENTOS
+        Nuestros tratamientos
       </h2>
-      <p className="text-center sm:text-md text-lg mt-2 mb-4 mx-10 font-medium italic">
+      <p className="text-center sm:text-md text-lg mt-4 mb-8 mx-10 font-medium italic">
         Tu belleza es el reflejo de tu mejor imagen que proyecta tu cuerpo
         cuando está en pleno equilibrio, nosotros trabajamos para que ese
         reflejo y equilibrio se perpetúen y se mantengan inalterables a pesar de
@@ -34,25 +40,24 @@ const Tratamientos_c = () => {
 
       <Swiper
         className="tratamientos__slider"
-        effect={'coverflow'}
+        effect="coverflow"
         initialSlide={1}
         grabCursor={true}
         centeredSlides={true}
-        slidesPerView={'auto'}
-        coverflowEffect={{
-          rotate: 50,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
-          slideShadows: true,
-        }}
-        
+        slidesPerView={"auto"}
         pagination={true}
         modules={[EffectCoverflow, Pagination, Autoplay]}
       >
-        <SwiperSlide className="swiper-slide">
-          <div className="tratamientos__item tratamientos__item--1">
-            <img loading="lazy" src={TratamientosFacialesPicture} alt="" />
+        <SwiperSlide className="swiper-slide max-w-[400px] lg:max-w-[500px]  2xl:max-w-[600px]">
+          <div className="tratamientos__item tratamientos__item--1 flex flex-col">
+            <div className="flex h-full h-[213px] lg:h-[240px]">
+              <img
+                className="w-full object-cover"
+                loading="lazy"
+                src={TratamientosFacialesPicture}
+                alt=""
+              />
+            </div>
             <div className="flex flex-col p-5 tratamientos__text bg-gradient-to-br from-rose-300 via-orange-200 to-rose-300">
               <span className="text-xl font-semibold">
                 TRATAMIENTOS FACIALES
@@ -68,19 +73,25 @@ const Tratamientos_c = () => {
               <Button
                 as={Link}
                 href="/programas-faciales"
-                size="lg"
                 radius="sm"
-                className="px-10 py-8 w-3/4 mx-auto bg-zinc-700 text-white text-xl font-semibold shadow-xl shadow-zinc-600/50"
+                className="px-5 sm:px-10 py-6 sm:py-8 mx-auto bg-zinc-700 text-white text-xl font-semibold shadow-xl shadow-zinc-600/50"
               >
                 Saber más <AiOutlineArrowDown />
               </Button>
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide >
-          <div className="tratamientos__item tratamientos__item--2 ">
-            <img loading="lazy" src={EsteticaGeneral} alt="" />
-            <div className="flex flex-col p-5 tratamientos__text  bg-gradient-to-br from-orange-300 to-rose-300">
+        <SwiperSlide className=" max-w-[400px] lg:max-w-[500px]  2xl:max-w-[600px]">
+          <div className="tratamientos__item tratamientos__item--2 flex flex-col">
+            <div className="flex h-full h-[213px] lg:h-[240px]">
+              <img
+                className="w-full h-full object-cover"
+                loading="lazy"
+                src={EsteticaGeneral}
+                alt=""
+              />
+            </div>
+            <div className="flex flex-1 flex-col p-5 tratamientos__text  bg-gradient-to-br from-orange-300 to-rose-300">
               <span className="text-xl font-semibold">ESTÉTICA GENERAL</span>
               <p className="mb-3 mt-2 font-semibold">
                 En MarinaSpá, nos dedicamos a realzar tu belleza y brindarte una
@@ -94,16 +105,23 @@ const Tratamientos_c = () => {
                 href="/estetica-general"
                 size="lg"
                 radius="sm"
-                className="px-10 py-8 w-3/4 mx-auto bg-zinc-700 text-white text-xl font-semibold shadow-xl shadow-zinc-600/50"
+                className="px-5 sm:px-10 py-6 sm:py-8 mx-auto bg-zinc-700 text-white text-xl font-semibold shadow-xl shadow-zinc-600/50"
               >
                 Saber más <AiOutlineArrowDown />
               </Button>{" "}
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide>
-          <div className="tratamientos__item tratamientos__item--3">
-            <img loading="lazy" src={SiluetaCorporal} alt="" />
+        <SwiperSlide className=" max-w-[400px] lg:max-w-[500px]  2xl:max-w-[600px]">
+          <div className="tratamientos__item tratamientos__item--3 flex flex-col">
+            <div className="flex h-full h-[213px] lg:h-[240px]">
+              <img
+                className="w-full object-cover"
+                loading="lazy"
+                src={SiluetaCorporal}
+                alt=""
+              />
+            </div>
             <div className="flex flex-col p-5 tratamientos__text  bg-gradient-to-br from-orange-300 to-rose-300">
               <span className="text-xl font-semibold">SILUETA CORPORAL</span>
               <p className="mb-3 mt-2 font-semibold">
@@ -119,16 +137,23 @@ const Tratamientos_c = () => {
                 href="/silueta-corporal"
                 size="lg"
                 radius="sm"
-                className="px-10 py-8 w-3/4 mx-auto bg-zinc-700 text-white text-xl font-semibold shadow-xl shadow-zinc-600/50"
+                className="px-5 sm:px-10 py-6 sm:py-8 mx-auto bg-zinc-700 text-white text-xl font-semibold shadow-xl shadow-zinc-600/50"
               >
                 Saber más <AiOutlineArrowDown />
               </Button>
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide>
-          <div className="tratamientos__item tratamientos__item--4">
-            <img loading="lazy" src={hidromasajePicture} alt="" />
+        <SwiperSlide className=" max-w-[400px] lg:max-w-[500px]  2xl:max-w-[600px]">
+          <div className="tratamientos__item tratamientos__item--4 flex flex-col">
+            <div className="flex h-full h-[213px] lg:h-[240px]">
+              <img
+                className="w-full object-cover"
+                loading="lazy"
+                src={hidromasajePicture}
+                alt=""
+              />
+            </div>
             <div className="flex flex-col p-5 tratamientos__text bg-gradient-to-br from-orange-300 to-rose-300">
               <span className="text-xl font-semibold">
                 BIENESTAR Y RELAJACIÓN
@@ -148,16 +173,23 @@ const Tratamientos_c = () => {
                 href="/bienestar-y-relajacion"
                 size="lg"
                 radius="sm"
-                className="px-10 py-8 w-3/4 mx-auto bg-zinc-700 text-white text-xl font-semibold shadow-xl shadow-zinc-600/50"
+                className="px-5 sm:px-10 py-6 sm:py-8 mx-auto bg-zinc-700 text-white text-xl font-semibold shadow-xl shadow-zinc-600/50"
               >
                 Saber más <AiOutlineArrowDown />
               </Button>
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide>
-          <div className="tratamientos__item tratamientos__item--5">
-            <img loading="lazy" src={fotodepilacionPicture} alt="" />
+        <SwiperSlide className=" max-w-[400px] lg:max-w-[500px]  2xl:max-w-[600px]">
+          <div className="tratamientos__item tratamientos__item--5 flex flex-col">
+            <div className="flex h-full h-[213px] lg:h-[240px]">
+              <img
+                className="w-full object-cover"
+                loading="lazy"
+                src={fotodepilacionPicture}
+                alt=""
+              />
+            </div>
             <div className="flex flex-col p-5 tratamientos__text  bg-gradient-to-br from-orange-300 to-rose-300">
               <span className="text-xl font-semibold">DEPILACIÓN</span>
               <p className="mb-3 mt-2 font-semibold">
@@ -172,7 +204,7 @@ const Tratamientos_c = () => {
                 href="/depilacion"
                 size="lg"
                 radius="sm"
-                className="px-10 py-8 w-3/4 mx-auto bg-zinc-700 text-white text-xl font-semibold shadow-xl shadow-zinc-600/50"
+                className="px-5 sm:px-10 py-6 sm:py-8 mx-auto bg-zinc-700 text-white text-xl font-semibold shadow-xl shadow-zinc-600/50"
               >
                 Saber más <AiOutlineArrowDown />
               </Button>

@@ -53,7 +53,7 @@ export default function Navbar2() {
     <Navbar
       position="static"
       isBordered
-      className="h-[10vh] min-h-[60px] bg-zinc-100"
+      className="h-[10vh] min-h-[60px] bg-zinc-50"
     >
       <NavbarContent>
         <NavbarMenuToggle

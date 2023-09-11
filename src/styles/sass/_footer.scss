@@ -1,15 +1,6 @@
 .footer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10vw;
-    padding: 30px;
-    *{
-        color:#fff;
-    }
-    svg{
-        font-size: 2rem;
-    }
+   
+   
     &__col{
         display: flex;
         flex-direction: column;
