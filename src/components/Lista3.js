@@ -5,9 +5,9 @@ const Lista3 = ({ obj }) => {
     return obj.category.map((category, index) => {
         const reverseRowClass = index % 2 === 0 ? "" : "order-1";
         return (
-            <div className="flex gap-5 mt-10 text-gray-900">
+            <div className="flex gap-5 text-gray-900">
                 <div
-                    className={`w-2/4  px-7 py-5 ${reverseRowClass} flex flex-col justify-center`}
+                    className={`w-full md:w-2/4  px-7 py-5 ${reverseRowClass} flex flex-col justify-center`}
                 >
                     {category !== "" ? (
                         <span className="text-4xl font-semibold">{category}</span>
@@ -40,7 +40,7 @@ const Lista3 = ({ obj }) => {
                 </div>
                 {Array.isArray(obj.images) ? (
                     obj.images[index] !== "" ? (
-                        <div className="w-2/4">
+                        <div className="hidden md:flex w-2/4">
                             <img className="h-full object-cover" src={obj.images[index]} alt="" />
                         </div>
                     ) : (

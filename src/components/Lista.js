@@ -3,6 +3,9 @@ import React from "react";
 import { Accordion, AccordionItem } from "@nextui-org/react";
 
 const Lista = ({ obj }) => {
+  //expresion regular para saber si contiene únicamente digitos o no
+  const onlyNumbersRegEx = /^[0-9]+$/;
+
   return obj.map((singleObj, i) => {
     const reverseRowClass = i % 2 === 0 ? "" : "order-1";
     return (
@@ -59,13 +62,46 @@ const Lista = ({ obj }) => {
             {singleObj.treatments.map((treatment, index) => {
               return (
                 <AccordionItem
-                 
+
                   key={`accordion-${index}`}
                   aria-label="Accordion 1"
                   title={treatment[0]}
                 >
-                  <div>
-                    <span className="text-sm">{treatment[0]}</span>
+                  <div className={`flex ${(Array.isArray(treatment[3])) 
+                      ? 'flex-col ' 
+                      : (treatment[1] !== '') ? 'justify-between items-center gap-10' : 'justify-end'}`
+                    }>
+                    {
+
+                      Array.isArray(treatment[3])
+                        ? (
+                          <div className="flex flex-col w-full order-1">
+                            <p>{treatment[1]}</p>
+                            {
+                              
+                              treatment[3].map((program) => {
+                                return (
+                                  <div className="flex justify-between">
+                                    <span>{program[0]}</span>
+                                    <span>{program[1]}€</span>
+                                  </div>
+                                );
+                              })
+                            }
+                          </div>
+                        )
+                        : (treatment[1] !== ''
+                          ? <span className="text-sm">{treatment[1]}</span>
+                          : '')
+                    }
+                    {
+                      treatment[2] !== 0 
+                      ? <span className="text-right">
+                        {onlyNumbersRegEx.test(treatment[2]) ? treatment[2] + '€' : treatment[2]}
+                      </span>
+                      : ''
+                    }
+                    
                   </div>
                 </AccordionItem>
               );

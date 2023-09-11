@@ -49,11 +49,11 @@ const EsteticaGeneralPage = ({ title }) => {
       "Si buscas resaltar tu belleza natural y expresar tu estilo único, estás en el lugar correcto. Nuestro equipo de expertos en belleza está aquí para ofrecerte los mejores consejos, tutoriales y productos de maquillaje que te ayudarán a lucir radiante en cualquier ocasión.",
     images: [Maquillaje],
     treatments: [
-      ["Maquillaje social (día, tarde o noche)", "", "30€", "close"],
+      ["Maquillaje social (día, tarde o noche)", "", "30", "close"],
       [
         "Maquillaje de novia (Incluye fijación flash de larga duración y prueba de maquillaje)",
         "(no incluye desplazamiento)",
-        "90€",
+        "90",
         "close",
       ],
       ["Lifting de pestañas + Tinte", "", 30, "close"],
