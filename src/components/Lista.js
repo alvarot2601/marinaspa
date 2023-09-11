@@ -22,6 +22,7 @@ const Lista = ({ obj }) => {
           <Accordion
             className="font-semibold"
             variant="light"
+            isCompact
             motionProps={{
               variants: {
                 enter: {
@@ -62,9 +63,8 @@ const Lista = ({ obj }) => {
             {singleObj.treatments.map((treatment, index) => {
               return (
                 <AccordionItem
-
                   key={`accordion-${index}`}
-                  aria-label="Accordion 1"
+                  aria-label={`accordion-${index}`}
                   title={treatment[0]}
                 >
                   <div className={`flex ${(Array.isArray(treatment[3])) 
