@@ -7,7 +7,7 @@ import { FaDownload, FaEye } from "react-icons/fa";
 const Layout_tratamientos = ({ children }) => {
   return (
     <Layout>
-      <div className="py-5 bg-gradient-to-br from-gray-50 to-gray-300">
+      <div className="py-5 bg-zinc-100">
         <div className="flex flex-row flex-wrap justify-center gap-5 mt-5 mb-10 px-5">
           <Button
             as={Link}

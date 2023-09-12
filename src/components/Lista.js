@@ -9,7 +9,7 @@ const Lista = ({ obj }) => {
   return obj.map((singleObj, i) => {
     const reverseRowClass = i % 2 === 0 ? "" : "order-1";
     return (
-      <div className="flex text-gray-900">
+      <div className="flex text-zinc-700">
         <div
           className={`w-full md:w-7/12 lg:w-1/2 px-7 py-5 ${reverseRowClass} flex flex-col justify-center`}
         >

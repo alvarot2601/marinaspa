@@ -1,10 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { AiOutlineArrowDown } from "react-icons/ai";
-
+import { faCircleDown } from "react-icons/fa";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  Navigation,
   EffectCoverflow,
-  FreeMode,
   Pagination,
   Autoplay,
 } from "swiper";
@@ -12,21 +11,28 @@ import { Swiper, SwiperSlide } from "swiper/react";
 //fotos
 import TratamientosFacialesPicture from "../assets/images/tratamientos-faciales.jpg";
 
-import AntiAgingPicture from "../assets/images/anti-aging.jpg";
 import EsteticaGeneral from "../assets/images/estetica-general.jpg";
 
 import SiluetaCorporal from "../assets/images/silueta-corporal.jpg";
 import hidromasajePicture from "../assets/images/hidromasaje.jpg";
 import fotodepilacionPicture from "../assets/images/fotodepilacion.jpg";
-import { Button, Divider, Link } from "@nextui-org/react";
+import { Button, Link } from "@nextui-org/react";
 
 const Tratamientos_c = () => {
+  const [showMore, setShowMore] = useState(false);
+  const [showBtn, setShowBtn] = useState(false);
+  useEffect(()=>{
+    if(window.innerWidth < 1175) setShowBtn(true);
+  }, []);
+  const showMoreText = () => {
+    setShowMore(!showMore);
+  }
   return (
     <div className="tratamientos py-10 px-5 bg-gradient-to-b from-rose-200 to-rose-100 text-zinc-700  text-center">
       <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold">
         Nuestros tratamientos
       </h2>
-      <p className="text-center sm:text-md text-lg mt-4 mb-8 mx-10 font-medium italic">
+      <p className={`text-center sm:text-md text-lg mt-4 mb-2 mx-10 font-medium italic ${showMore ? '' : 'line-clamp-5'} ${showBtn ? '' : 'mb-6'}`}>
         Tu belleza es el reflejo de tu mejor imagen que proyecta tu cuerpo
         cuando está en pleno equilibrio, nosotros trabajamos para que ese
         reflejo y equilibrio se perpetúen y se mantengan inalterables a pesar de
@@ -37,6 +43,7 @@ const Tratamientos_c = () => {
         puedas lucir siempre la mejor versión de ti a pesar del paso del tiempo.
         Ven a tu Centro de Estética en Sóller
       </p>
+      <Button className={`mb-4 border border-zinc-700 ${showBtn ? '' : 'hidden'}`} variant="bordered" onClick={showMoreText} endContent={<AiOutlineArrowDown />}>Leer más</Button>
 
       <Swiper
         className="tratamientos__slider"

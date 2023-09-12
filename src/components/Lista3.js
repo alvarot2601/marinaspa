@@ -3,10 +3,12 @@ import React from "react";
 import { Accordion, AccordionItem } from "@nextui-org/react";
 
 const Lista3 = ({ obj }) => {
+  const onlyNumbersRegEx = /^[0-9]+$/;
+
   return obj.category.map((category, index) => {
     const reverseRowClass = index % 2 === 0 ? "" : "order-1";
     return (
-      <div className="flex gap-5 text-gray-900">
+      <div className="flex gap-5 text-zinc-700">
         <div
           className={`w-full md:w-2/4  px-7 py-5 ${reverseRowClass} flex flex-col justify-center`}
         >
@@ -23,7 +25,7 @@ const Lista3 = ({ obj }) => {
           <Accordion
             isCompact
             variant="light"
-            className="font-semibold pruebaaa"
+            className="font-semibold"
             motionProps={{
               variants: {
                 enter: {
@@ -68,9 +70,13 @@ const Lista3 = ({ obj }) => {
                   aria-label={`accordion-${index2}`}
                   title={treatment[0]}
                 >
-                  <div className="flex justify-between">
-                    <span>{treatment[1]}</span>
-                    <span>{treatment[2]}€</span>
+                  <div className="flex justify-between items-center">
+                    <span className="basis-8/12">{treatment[1]}</span>
+                    <span className="flex justify-end basis-28">
+                    {onlyNumbersRegEx.test(treatment[2])
+                    ? treatment[2] + '€' 
+                    : treatment[2]}
+                    </span>
                   </div>
                 </AccordionItem>
               );
