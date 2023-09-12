@@ -963,9 +963,6 @@
   text-align: center;
   width: 100%;
 }
-.servicios span:nth-of-type(1) {
-  margin-bottom: 40px;
-}
 .servicios #wrapper {
   margin-top: 40px;
 }
@@ -1025,6 +1022,11 @@
   }
   .title {
     font-size: 20px;
+  }
+}
+@media (max-width: 495px) {
+  .servicios__img-container {
+    display: none;
   }
 }
 .testimonios .swiper-pagination-bullet {

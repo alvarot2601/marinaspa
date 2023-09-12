@@ -43,7 +43,7 @@ const Servicios = (props) => {
   });
   return (
     <div className={`${props.classProp} text-center overflow-hidden`}>
-      <h3 className="p-5 text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold bg-gradient-to-t lg:bg-gradient-to-r  from-zinc-100">
+      <h3 className="p-5 text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold bg-zinc-100">
         NUESTROS SERVICIOS
       </h3>
       {
@@ -51,7 +51,7 @@ const Servicios = (props) => {
       }
       <div className="servicios__wrapper h-screen">
         <div className="servicios__subwrapper h-full">
-          <div className="servicios__servicio bg-gradient-to-b lg:bg-gradient-to-r  from-zinc-100 h-full">
+          <div className="servicios__servicio bg-rose-200 h-full order-1">
             <div className="flex flex-col lg:flex-row h-full">
               <div className="hidden sm:block order-1 h-3/6 lg:h-full lg:w-5/12 xl:w-5/12">
                 <img
@@ -61,7 +61,7 @@ const Servicios = (props) => {
               </div>
               <div className="h-full flex flex-col items-center justify-center sm:justify-center  px-5 lg:px-10 pb-5 pt-4 lg:py-5 h-3/6 lg:w-7/12 xl:w-7/12">
                 <div>
-                  <FaHandshake className="text-6xl md:text-7xl lg:text-8xl" />
+                  <FaHandshake className="text-7xl md:text-8xl lg:text-9xl" />
                 </div>
                 <p className=" mb-3 font-bold underline underline-offset-4 decoration-2 text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight sm:leading-tight md:leading-tight lg:leading-tight">
                   Programas de fidelización y ofertas.
@@ -78,7 +78,7 @@ const Servicios = (props) => {
             </div>
           </div>
 
-          <div className="servicios__servicio h-full bg-rose-200 ">
+          <div className="servicios__servicio h-full bg-orange-100 order-2">
             <div className="flex flex-col lg:flex-row h-full">
               <div className="hidden sm:block order-1 h-3/6 lg:h-full lg:w-5/12 xl:w-5/12">
                 <img
@@ -106,13 +106,13 @@ const Servicios = (props) => {
             </div>
           </div>
 
-          <div className="servicios__servicio h-full bg-gradient-to-l from-orange-200 to-rose-200">
+          <div className="servicios__servicio h-full bg-zinc-100 order-0">
             <div className="flex flex-col justify-center lg:flex-row h-full">
               <div className=" flex flex-col items-center justify-center gap-5 p-10">
                 <div className="flex gap-4 items-baseline">
-                  <FaTrophy className="text-5xl md:text-6xl lg:text-7xl" />
-                  <FaTrophy className="text-6xl md:text-7xl lg:text-8xl" />
-                  <FaTrophy className="text-5xl md:text-6xl lg:text-7xl" />
+                  <FaTrophy className="text-7xl lg:text-8xl" />
+                  <FaTrophy className="text-8xl lg:text-9xl" />
+                  <FaTrophy className="text-7xl lg:text-8xl" />
                 </div>
                 <p className="sm:mb-3 font-bold underline underline-offset-4 decoration-2 leading-snug text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight sm:leading-tight md:leading-tight lg:leading-tight">
                   Solo las mejores marcas.
@@ -132,7 +132,7 @@ const Servicios = (props) => {
                   bienestar.
                   </span>
                 </p>
-                <div className="hidden sm:flex flex-wrap items-center justify-center">
+                <div className="flex flex-wrap items-center justify-center servicios__img-container">
                   <img src={Mesoestetic} className="mesoestetic w-1/3" />
                   <img src={Massada} className="massada w-1/3" />
                   <img src={Utsukusi} className="utsukusy w-1/3" />
