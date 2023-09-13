@@ -8,7 +8,7 @@ const Diagnostico = () => {
           <h4 className="text-5xl md:text-6xl lg:text-8xl font-bold">
             Diagnóstico Marina Spá
           </h4>
-          <p className="font-semibold text-xl mb-2 lg:max-w-[40vw] xl:max-w-[35vw]">
+          <p className=" text-xl mb-2 lg:max-w-[40vw] xl:max-w-[35vw]">
             La clave del éxito en cualquier tipo de tratamiento de belleza
             reside en un previo diagnostico exhaustivo y personalizado para cada
             cliente, sin duda ese es el pilar donde se construyen los cimientos

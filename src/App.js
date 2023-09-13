@@ -12,6 +12,7 @@ import SiluetaCorporalPage from './pages/SiluetaCorporal';
 import BienestarRelajacionPage from './pages/BienestarRelajacion';
 import DepilacionPage from './pages/DepilacionFotodepilacion';
 import Contacto from './pages/Contacto';
+import Galeria from './pages/Galeria';
 function App() {
   return (
     <BrowserRouter>
@@ -23,6 +24,7 @@ function App() {
         <Route path="/silueta-corporal" element={<SiluetaCorporalPage/>} ></Route>
         <Route path="/bienestar-y-relajacion" element={<BienestarRelajacionPage/>} ></Route>
         <Route path="/depilacion-y-fotodepilacion" element={<DepilacionPage/>} ></Route>
+        <Route path="/galeria" element={<Galeria/>} ></Route>
         <Route path="/contacto" element={<Contacto/>} ></Route>
       </Routes>
 

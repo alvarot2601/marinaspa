@@ -181,7 +181,7 @@ const Testimonials = () => {
                       icon: "text-black/80",
                     }}
                   />
-                  <span className="text-2xl font-semibold">{op.user}</span>
+                  <span className="text-xl sm:text-2xl font-semibold">{op.user}</span>
                   <div>
                     {op.punctuation.map((star) => {
                       return star;

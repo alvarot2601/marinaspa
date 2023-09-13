@@ -100,7 +100,7 @@ const Tratamientos_c = () => {
             return (
               <SwiperSlide className="swiper-slide max-w-[400px] lg:max-w-[500px]  2xl:max-w-[600px]">
                 <div className="tratamientos__item tratamientos__item--1 flex flex-col">
-                  <div className="flex h-full h-[213px] lg:h-[240px]">
+                  <div className="flex h-[213px] lg:h-[240px]">
                     <img
                       className="w-full object-cover"
                       loading="lazy"
@@ -108,7 +108,7 @@ const Tratamientos_c = () => {
                       alt=""
                     />
                   </div>
-                  <div className="flex flex-col p-5 tratamientos__text bg-rose-200">
+                  <div className="flex flex-col py-5 px-4 sm:px-5 tratamientos__text bg-rose-200">
                     <span className="text-xl font-semibold">
                       {treatment[0]}
                     </span>

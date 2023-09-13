@@ -156,7 +156,15 @@ export default function Navbar2() {
             </DropdownItem>
           </DropdownMenu>
         </Dropdown>
-
+        <NavbarItem>
+          <NavLink
+            activeClassName="is-active"
+            className="text-slate-900 hover:text-slate-500 hover:underline hover:decoration-current hover:underline-offset-[25px] text-lg"
+            to="/galeria"
+          >
+            Galería
+          </NavLink>
+        </NavbarItem>
         <NavbarItem>
           <NavLink
             activeClassName="is-active"
@@ -228,6 +236,16 @@ export default function Navbar2() {
           >
             <FontAwesomeIcon icon={faHandHoldingDroplet}></FontAwesomeIcon>
             Depilación
+          </NavLink>
+        </NavbarMenuItem>
+        <NavbarMenuItem>
+          <NavLink
+            activeClassName="is-active"
+            className="flex gap-2 "
+            to="/galeria"
+          >
+            <FontAwesomeIcon icon={faPhone}></FontAwesomeIcon>
+            Galería
           </NavLink>
         </NavbarMenuItem>
         <NavbarMenuItem>
