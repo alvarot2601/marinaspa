@@ -20,7 +20,7 @@ const Footer = () => {
         </div>
         <div className="flex flex-row md:flex-col order-3 items-center justify-center gap-3 flex-wrap flex-1">
           <a className="text-slate-600" href="/contacto">Contacto</a>
-          <a href="/politica-cookies">Aviso Legal</a>
+          <a href="/aviso-legal">Aviso Legal</a>
           <a href="/politica-privacidad">Política de privacidad</a>
           <a href="/politica-cookies">Política de cookies</a>
         </div>

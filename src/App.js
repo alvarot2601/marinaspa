@@ -14,6 +14,8 @@ import DepilacionPage from './pages/DepilacionFotodepilacion';
 import Contacto from './pages/Contacto';
 import Galeria from './pages/Galeria';
 import PoliticaCookies from './pages/Politica-cookies';
+import PoliticaPrivacidad from './pages/PoliticaPrivacidad';
+import AvisoLegal from './pages/Aviso-legal';
 function App() {
   return (
     <BrowserRouter>
@@ -27,7 +29,9 @@ function App() {
         <Route path="/depilacion-y-fotodepilacion" element={<DepilacionPage/>} ></Route>
         <Route path="/galeria" element={<Galeria/>} ></Route>
         <Route path="/contacto" element={<Contacto/>} ></Route>
-        <Route path="politica-cookies" element={<PoliticaCookies/>}></Route>
+        <Route path="/politica-cookies" element={<PoliticaCookies/>}></Route>
+        <Route path="/politica-privacidad" element={<PoliticaPrivacidad/>}></Route>
+        <Route path="/aviso-legal" element={<AvisoLegal/>}></Route>
       </Routes>
 
     </BrowserRouter>
