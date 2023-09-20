@@ -53,7 +53,7 @@ export default function Navbar2() {
     <Navbar
       position="static"
       isBordered
-      className="h-[10vh] min-h-[60px] bg-zinc-50"
+      className="h-[10vh] min-h-[70px] bg-zinc-50"
     >
       <NavbarContent>
         <NavbarMenuToggle
@@ -69,7 +69,7 @@ export default function Navbar2() {
           <NavLink
             exact
             activeClassName="is-active"
-            className=" flex items-center text-slate-900 hover:text-slate-500 hover:underline hover:decoration-current hover:underline-offset-[25px]"
+            className=" flex items-center text-slate-900 hover:text-slate-500 hover:underline hover:decoration-current hover:underline-offset-[26px]"
             to="/"
             aria-current="page"
           >
@@ -93,7 +93,7 @@ export default function Navbar2() {
             <DropdownTrigger>
               <Button
                 disableRipple
-                className="p-0 bg-transparent data-[hover=true]:bg-transparent text-lg flex items-center h-full text-slate-900 hover:text-slate-500 hover:underline hover:decoration-current hover:underline-offset-[25px]"
+                className="p-0 bg-transparent data-[hover=true]:bg-transparent text-lg flex items-center h-full text-slate-900 hover:text-slate-500 hover:underline hover:decoration-current hover:underline-offset-[26px]"
                 endContent={icons.chevron}
                 radius="sm"
                 variant="light"
@@ -159,7 +159,7 @@ export default function Navbar2() {
         <NavbarItem>
           <NavLink
             activeClassName="is-active"
-            className="text-slate-900 hover:text-slate-500 hover:underline hover:decoration-current hover:underline-offset-[25px] text-lg"
+            className="text-slate-900 hover:text-slate-500 hover:underline hover:decoration-current hover:underline-offset-[27px] text-lg"
             to="/galeria"
           >
             Galería
@@ -168,7 +168,7 @@ export default function Navbar2() {
         <NavbarItem>
           <NavLink
             activeClassName="is-active"
-            className="text-slate-900 hover:text-slate-500 hover:underline hover:decoration-current hover:underline-offset-[25px] text-lg"
+            className="text-slate-900 hover:text-slate-500 hover:underline hover:decoration-current hover:underline-offset-[27px] text-lg"
             to="/contacto"
           >
             Contacto
@@ -180,7 +180,7 @@ export default function Navbar2() {
           <NavLink
             exact
             activeClassName="is-active"
-            className=" flex items-center gap-2 text-slate-900 hover:text-slate-500 hover:underline hover:decoration-current hover:underline-offset-[25px]"
+            className=" flex items-center gap-2 text-slate-900 hover:text-slate-500 hover:underline hover:decoration-current hover:underline-offset-[26px]"
             to="/"
             aria-current="page"
           >

@@ -99,11 +99,11 @@ const Header = (props) => {
 
   return (
     <header
-      className={`header ${props.classProp} h-[90vh] relative bg-rose-200 text-rose-950 flex flex-col sm:flex-row justify-center items-center`}
+      className={`header ${props.classProp} h-[90vh] relative bg-rose-100 text-rose-950 flex flex-col sm:flex-row justify-center items-center`}
     >
       <div
         id="header__first-col"
-        className="w-full sm:w-2/4 h-4/6 sm:h-full flex flex-col justify-center py-5 px-10 text-center"
+        className="w-full sm:w-2/4 h-[50vh] sm:h-full flex  flex-col justify-center  py-5 px-10 text-center"
       >
         <p className="animate-charcter text-lg md:text-xl font-semibold">
           <span>MARI MÉNDEZ - </span>
@@ -114,7 +114,7 @@ const Header = (props) => {
           <span>MarinaSpá</span>
         </h1>
       </div>
-      <div id="header__second-col" className="w-full sm:w-2/4 h-2/6 sm:h-full relative">
+      <div id="header__second-col" className="w-full sm:w-2/4 h-[40vh] sm:h-full relative">
         <Chip
           id="chip"
           variant="shadow"
@@ -138,7 +138,7 @@ const Header = (props) => {
           Video
         </Chip>
         <video
-          className="w-full h-full object-cover grayscale blur-lg z-10 hover:cursor-pointer"
+          className="w-full h-full  object-cover grayscale blur-lg z-10 hover:cursor-pointer"
           poster={PosterImage}
         >
           <source src={Video} type="video/mp4" />

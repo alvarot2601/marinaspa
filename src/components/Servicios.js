@@ -1,4 +1,4 @@
-import { React, useEffect, useRef } from "react";
+import { React, useEffect, useLayoutEffect, useRef } from "react";
 import {
   FaSpa,
   FaPercent,
@@ -21,9 +21,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const Servicios = (props) => {
   gsap.registerPlugin(ScrollTrigger);
-  const ref = useRef(null);
-  let sections = gsap.utils.toArray(".servicios__servicio");
-  useEffect(() => {
+  
+  useLayoutEffect(() => {
+    let sections = gsap.utils.toArray(".servicios__servicio");
     let ctx = gsap.context(() => {
       gsap.to(sections, {
         xPercent: -100 * (sections.length - 1),
@@ -38,12 +38,11 @@ const Servicios = (props) => {
         },
       });
     });
-
     return () => ctx.revert();
-  });
+  }, []);
   return (
-    <div className={`${props.classProp} text-center overflow-hidden`}>
-      <h3 className="p-5 text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold bg-zinc-100">
+    <div className={` ${props.classProp} text-center overflow-hidden`}>
+      <h3 className="p-5 text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold bg-zinc-50 text-zinc-700">
         NUESTROS SERVICIOS
       </h3>
       {
@@ -51,7 +50,7 @@ const Servicios = (props) => {
       }
       <div className="servicios__wrapper h-screen">
         <div className="servicios__subwrapper h-full">
-          <div className="servicios__servicio bg-rose-200 h-full order-1">
+        <div className="servicios__servicio servicios__servicio--2  h-full">
             <div className="flex flex-col lg:flex-row h-full">
               <div className="hidden sm:block order-1 h-3/6 lg:h-full lg:w-5/12 xl:w-5/12">
                 <img
@@ -77,36 +76,7 @@ const Servicios = (props) => {
               </div>
             </div>
           </div>
-
-          <div className="servicios__servicio h-full bg-orange-100 order-2">
-            <div className="flex flex-col lg:flex-row h-full">
-              <div className="hidden sm:block order-1 h-3/6 lg:h-full lg:w-5/12 xl:w-5/12">
-                <img
-                  src={Aromaterapia}
-                  className="object-cover rounded-none h-full w-full"
-                />
-              </div>
-              <div className="h-full flex flex-col items-center justify-center gap-2 px-5 lg:px-10 pb-5 pt-4 lg:py-5 h-3/6 lg:w-7/12 xl:w-7/12">
-                <div className="flex gap-4 items-center">
-                  <FaSpa className="text-6xl md:text-7xl lg:text-8xl" />
-                  <FaHeartbeat className="text-6xl md:text-7xl lg:text-8xl" />
-                </div>
-
-                <p className="mb-3 font-bold underline underline-offset-4 decoration-2 text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight sm:leading-tight md:leading-tight lg:leading-tight">
-                  Terapias de bienestar holísticas.
-                </p>
-                <p className="md:text-lg lg:text-xl font-medium italic">
-                  Te invitamos a experimentar nuestras terapias de bienestar
-                  holísticas para alcanzar una armonía total de cuerpo y mente.
-                  Sumérgete en un ambiente tranquilo y renueva tu ser con
-                  nuestras terapias holísticas. ¡Reserva tu cita ahora y
-                  descubre una sensación de paz y vitalidad en MarinaSpá!
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="servicios__servicio h-full bg-zinc-100 order-0">
+        <div className="mejores-marcas servicios__servicio servicios__servicio--1 h-full">
             <div className="flex flex-col justify-center lg:flex-row h-full">
               <div className=" flex flex-col items-center justify-center gap-5 p-10">
                 <div className="flex gap-4 items-baseline">
@@ -140,6 +110,39 @@ const Servicios = (props) => {
               </div>
             </div>
           </div>
+
+
+         
+
+          <div className="servicios__servicio servicios__servicio--3  h-full bg-orange-100">
+            <div className="flex flex-col lg:flex-row h-full">
+              <div className="hidden sm:block order-1 h-3/6 lg:h-full lg:w-5/12 xl:w-5/12">
+                <img
+                  src={Aromaterapia}
+                  className="object-cover rounded-none h-full w-full"
+                />
+              </div>
+              <div className="h-full flex flex-col items-center justify-center gap-2 px-5 lg:px-10 pb-5 pt-4 lg:py-5 h-3/6 lg:w-7/12 xl:w-7/12">
+                <div className="flex gap-4 items-center">
+                  <FaSpa className="text-6xl md:text-7xl lg:text-8xl" />
+                  <FaHeartbeat className="text-6xl md:text-7xl lg:text-8xl" />
+                </div>
+
+                <p className="mb-3 font-bold underline underline-offset-4 decoration-2 text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight sm:leading-tight md:leading-tight lg:leading-tight">
+                  Terapias de bienestar holísticas.
+                </p>
+                <p className="md:text-lg lg:text-xl font-medium italic">
+                  Te invitamos a experimentar nuestras terapias de bienestar
+                  holísticas para alcanzar una armonía total de cuerpo y mente.
+                  Sumérgete en un ambiente tranquilo y renueva tu ser con
+                  nuestras terapias holísticas. ¡Reserva tu cita ahora y
+                  descubre una sensación de paz y vitalidad en MarinaSpá!
+                </p>
+              </div>
+            </div>
+          </div>
+
+          
         </div>
       </div>
     </div>

@@ -1,4 +1,4 @@
-import {React, useEffect} from "react";
+import { React, useEffect, useState } from "react";
 import Layout from "../components/Layout";
 import antiaging from "../assets/images/anti-aging.jpg";
 import aromaterapia from "../assets/images/aromaterapia.jpg";
@@ -56,6 +56,7 @@ import esteticaGeneral from "../assets/images/estetica-general.jpg";
 import mujerMaquillada from "../assets/images/woman made up.jpg";
 import lipstick from "../assets/images/lipstick.jpg";
 import makeup from "../assets/images/makeup.jpg";
+import spa from "../assets/images/spa.jpg";
 
 //gsap and scrolltrigger
 import { gsap } from "gsap";
@@ -63,64 +64,131 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 //nextui
 import {
-    Modal, 
-    ModalContent, 
-    ModalHeader, 
-    ModalBody, 
-    ModalFooter
-  } from "@nextui-org/react";
+  Modal,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
+  useDisclosure,
+  Button,
+} from "@nextui-org/react";
+
 const Galeria = () => {
-    useEffect( () => {
-        let proxy = { skew: 0 },
-        skewSetter = gsap.quickSetter(".skewElem", "skewY", "deg"), // fast
-        clamp = gsap.utils.clamp(-20, 20); // don't let the skew go beyond 20 degrees. 
-        ScrollTrigger.create({
-            onUpdate: (self) => {
-              let skew = clamp(self.getVelocity() / -300);
-              // only do something if the skew is MORE severe. Remember, we're always tweening back to 0, so if the user slows their scrolling quickly, it's more natural to just let the tween handle that smoothly rather than jumping to the smaller skew.
-              if (Math.abs(skew) > Math.abs(proxy.skew)) {
-                proxy.skew = skew;
-                gsap.to(proxy, {skew: 0, duration: 0.8, ease: "power3", overwrite: true, onUpdate: () => skewSetter(proxy.skew)});
-              }
-            }
+  const galeria_array = [
+    [
+      esteticista_profesional,
+      makeup,
+      img15,
+      img38,
+      img34,
+      esteticaGeneral,
+      img42,
+      diagnostico,
+      img7,
+    ],
+    [lipstick, hidromasaje, img16, img37, img33, img21, img40, img20, img8],
+    [contacto, mujerMaquillada, img36, img32, img31, img41, img19, img9, img10],
+    [spa, img6, img27, img13, img18, img23, img22, fotodepilacion, img29],
+  ];
+  //img24, img26,img25, img30
+
+  const { isOpen, onOpen, onClose, onOpenChange } = useDisclosure();
+
+  const [imgLink, setImgLink] = useState("");
+
+  const [wrapperDirection, setWrapperDirection] = useState('flex-row');
+  const [wrapperWidth, setWrapperWidth] = useState('w-[calc(50%-2.5px)]');
+  const handleClick = (e) => {
+    setImgLink(e.target.src);
+    onOpen();
+  };
+
+  useEffect(()=>{
+    if(window.innerWidth > 460 && window.innerHeight < 700){
+        setWrapperDirection('flex-row');
+    }
+  }, []);
+
+  useEffect(() => {
+    let proxy = { skew: 0 },
+      skewSetter = gsap.quickSetter(".skewElem", "skewY", "deg"), // fast
+      clamp = gsap.utils.clamp(-20, 20); // don't let the skew go beyond 20 degrees.
+    ScrollTrigger.create({
+      onUpdate: (self) => {
+        let skew = clamp(self.getVelocity() / -300);
+        // only do something if the skew is MORE severe. Remember, we're always tweening back to 0, so if the user slows their scrolling quickly, it's more natural to just let the tween handle that smoothly rather than jumping to the smaller skew.
+        if (Math.abs(skew) > Math.abs(proxy.skew)) {
+          proxy.skew = skew;
+          gsap.to(proxy, {
+            skew: 0,
+            duration: 0.8,
+            ease: "power3",
+            overwrite: true,
+            onUpdate: () => skewSetter(proxy.skew),
           });
-          
-          // make the right edge "stick" to the scroll bar. force3D: true improves performance
-          gsap.set(".skewElem", {transformOrigin: "right center", force3D: true});
-          
+        }
+      },
     });
-    const galeria_array = [
-        [
-            esteticista_profesional, makeup, img15, img38, img34,esteticaGeneral, img42, diagnostico, img7, img10, img6,img27  
-        ],
-        [
-            lipstick, hidromasaje, img16, img37, img33, img21, img40,img20,img8, img13, img18,  img23
-        ],
-        [
-            contacto, mujerMaquillada, img36, img32 ,img31, img41, img19, img9, img11, img22, , fotodepilacion, img29
-        ],
-    ];
-    //img24, img26,img25, img30
-    return (
-        <Layout>
-            <main className="text-center">
-                <h1 className="p-5 text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-zinc-700">Nuestra galería</h1>    
-                <section className="flex gap-2 px-2">
-                    {
-                        galeria_array.map((images)=>{
-                            return (
-                                <div className="flex flex-col gap-2 flex-wrap w-1/3">
-                                    {
-                                        images.map((image)=> <img className="w-full  skewElem " src={image} /> )
-                                    }
-                                </div>
-                            );
-                        })
-                    }
-                    
-                </section>
-            </main>
-        </Layout>
-    );
-}
+
+    // make the right edge "stick" to the scroll bar. force3D: true improves performance
+    gsap.set(".skewElem", { transformOrigin: "right center", force3D: true });
+  });
+
+  return (
+    <Layout>
+      <main className="galeria py-5 text-center text-zinc-700 bg-rose-200">
+        <div className="px-3">
+        <h1 className="text-5txl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold">
+          galería
+        </h1>
+        <p className="my-5 text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">Adéntrate en nuestra galería y descubre cómo son nuestras instalaciones.</p>
+        </div>
+        <section className={`flex ${wrapperDirection} flex-wrap sm:flex-row gap-[5px] px-[5px] pt-2 pb-7 `}>
+          {galeria_array.map((images, index) => {
+            let flexDirectionClass = "flex-col";
+            let widthImgClass = "w-full";
+            let widthWrapperClass = "w-[calc(50%-5px)]";
+            if (index >= 2 && window.innerWidth >= 640) {
+              //&& window.innerWidth >= 1000
+              //flexDirectionClass = "flex-row";
+              //widthImgClass = "w-[calc(50%-5px)]";
+              //widthWrapperClass = "w-full";
+            }
+            return (
+              <div
+                className={`flex ${flexDirectionClass} md:${flexDirectionClass} gap-[5px] ${wrapperWidth} sm:${widthWrapperClass} md:w-[calc(25%-3.75px)]`}
+              >
+                {images.map((image) => {
+                  return (
+                    <>
+                      <img
+                        loading="lazy"
+                        src={image}
+                        className={`${widthImgClass} vertical-middle object-cover skewElem cursor-pointer`}
+                        onClick={handleClick}
+                      />
+                    </>
+                  );
+                })}
+              </div>
+            );
+          })}
+          <Modal isOpen={isOpen} onOpenChange={onOpenChange} size="full">
+            <ModalContent>
+              {(onClose) => (
+                <ModalBody className="flex justify-center p-[5px]">
+                  <img
+                    loading="lazy"
+                    src={imgLink}
+                    className="w-auto h-[calc(100vh-10px)] object-contain mx-auto "
+                  />
+                </ModalBody>
+              )}
+            </ModalContent>
+          </Modal>
+        </section>
+      </main>
+    </Layout>
+  );
+};
 export default Galeria;

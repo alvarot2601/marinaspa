@@ -3,7 +3,7 @@ import DiagnosticoImage from "../assets/images/diagnostico.jpg";
 import { Button, Link } from "@nextui-org/react";
 const Diagnostico = () => {
     return (
-      <section className="diagnostico bg-zinc-100 flex flex-col gap-5 lg:flex-row  py-10 px-5 text-center lg:text-left">
+      <section className="diagnostico bg-zinc-50 flex flex-col gap-5 lg:flex-row  py-10 px-5 text-center lg:text-left">
         <div className="w-full lg:w-6/12 flex flex-col gap-5 justify-center items-center lg:items-start">
           <h4 className="text-5xl md:text-6xl lg:text-8xl font-bold">
             Diagnóstico Marina Spá

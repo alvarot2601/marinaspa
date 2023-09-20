@@ -20,9 +20,9 @@ const Footer = () => {
         </div>
         <div className="flex flex-row md:flex-col order-3 items-center justify-center gap-3 flex-wrap flex-1">
           <a className="text-slate-600" href="/contacto">Contacto</a>
-          <a href="">Aviso Legal</a>
-          <a href="">Política de privacidad</a>
-          <a href="">Política de cookies</a>
+          <a href="/politica-cookies">Aviso Legal</a>
+          <a href="/politica-privacidad">Política de privacidad</a>
+          <a href="/politica-cookies">Política de cookies</a>
         </div>
         <Divider className="bg-zinc-400 h-[0.5px] md:h-auto w-full md:w-[0.5px]"></Divider>
         <div className="flex flex-row md:flex-col items-center justify-center gap-3 flex-wrap flex-1">

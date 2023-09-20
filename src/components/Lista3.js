@@ -64,14 +64,18 @@ const Lista3 = ({ obj }) => {
             }}
           >
             {obj.treatments[index].map((treatment, index2) => {
+               let justifyClass =  (treatment[1] !== '' ?  'justify-between' :   'justify-end')
               return (
                 <AccordionItem
                   key={`accordion-${index2}`}
                   aria-label={`accordion-${index2}`}
                   title={treatment[0]}
                 >
-                  <div className="flex justify-between items-center">
-                    <span className="basis-8/12">{treatment[1]}</span>
+                  <div className={`flex ${justifyClass} items-center`}>
+                    {
+                      treatment[1] !== '' ? <span className="basis-10/12">{treatment[1]}</span> : ''
+                    }
+                    
                     <span className="flex justify-end basis-28">
                     {onlyNumbersRegEx.test(treatment[2])
                     ? treatment[2] + '€' 

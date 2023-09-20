@@ -57,12 +57,12 @@ const Tratamientos_c = () => {
     setShowMore(!showMore);
   };
   return (
-    <div className="tratamientos py-10 px-5 bg-zinc-100 text-zinc-700  text-center">
-      <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold">
+    <div className="tratamientos py-10 px-5 bg-zinc-50 text-zinc-700  text-center">
+      <h2 className="text-5xl md:text-6xl lg:text-8xl font-bold">
         Nuestros tratamientos
       </h2>
       <p
-        className={`text-center sm:text-md text-lg mt-4 mb-2 mx-10 font-medium italic ${showMore ? "" : "line-clamp-5"
+        className={`text-center sm:text-md text-lg mt-4 mb-2 mx-5 font-medium italic ${showMore ? "" : "line-clamp-5"
           } ${showBtn ? "" : "mb-6"}`}
       >
         Tu belleza es el reflejo de tu mejor imagen que proyecta tu cuerpo
@@ -112,7 +112,7 @@ const Tratamientos_c = () => {
                     <span className="text-xl font-semibold">
                       {treatment[0]}
                     </span>
-                    <p className="mb-3 mt-2 font-semibold">
+                    <p className="mb-3 mt-2">
                       {treatment[1]}
                     </p>
                     <Button

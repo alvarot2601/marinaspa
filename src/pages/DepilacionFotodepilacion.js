@@ -105,13 +105,13 @@ const DepilacionPage = () => {
   const [depilacionState, setDepilacionState] = useState(fotodepilacionObj);
 
   return (
-    <>
+    <div>
       <Layout_tratamientos>
-        <main>
+        <main >
           <Lista3 obj={depilacionState} />
         </main>
       </Layout_tratamientos>
-    </>
+    </div>
   );
 };
 
