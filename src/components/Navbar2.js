@@ -67,8 +67,8 @@ export default function Navbar2() {
       <NavbarContent className="hidden md:flex" justify="center">
         <NavbarItem className="underline content-center">
           <NavLink
-            exact
-            activeClassName="is-active"
+            exact="true"
+            activeclassname="is-active"
             className=" flex items-center text-slate-900 hover:text-slate-500 hover:underline hover:decoration-current hover:underline-offset-[26px]"
             to="/"
             aria-current="page"
@@ -112,7 +112,7 @@ export default function Navbar2() {
             <DropdownItem key="faciales">
               <NavLink
                 className="text-lg"
-                activeClassName="is-active"
+                activeclassname="is-active"
                 to="/programas-faciales"
               >
                 Programas Faciales
@@ -121,7 +121,7 @@ export default function Navbar2() {
             <DropdownItem key="estetica-general">
               <NavLink
                 className="text-lg"
-                activeClassName="is-active"
+                activeclassname="is-active"
                 to="/estetica-general"
               >
                 Estética General
@@ -129,7 +129,7 @@ export default function Navbar2() {
             </DropdownItem>
             <DropdownItem className="w-full" key="silueta-corporal">
               <NavLink
-                activeClassName="is-active"
+                activeclassname="is-active"
                 className="text-lg"
                 to="/silueta-corporal"
               >
@@ -138,7 +138,7 @@ export default function Navbar2() {
             </DropdownItem>
             <DropdownItem key="faciales">
               <NavLink
-                activeClassName="is-active"
+                activeclassname="is-active"
                 to="/bienestar-y-relajacion"
                 className="text-lg"
               >
@@ -148,7 +148,7 @@ export default function Navbar2() {
             <DropdownItem key="faciales">
               <NavLink
                 className="text-lg"
-                activeClassName="is-active"
+                activeclassname="is-active"
                 to="/depilacion-y-fotodepilacion"
               >
                 Depilación
@@ -158,7 +158,7 @@ export default function Navbar2() {
         </Dropdown>
         <NavbarItem>
           <NavLink
-            activeClassName="is-active"
+            activeclassname="is-active"
             className="text-slate-900 hover:text-slate-500 hover:underline hover:decoration-current hover:underline-offset-[27px] text-lg"
             to="/galeria"
           >
@@ -167,7 +167,7 @@ export default function Navbar2() {
         </NavbarItem>
         <NavbarItem>
           <NavLink
-            activeClassName="is-active"
+            activeclassname="is-active"
             className="text-slate-900 hover:text-slate-500 hover:underline hover:decoration-current hover:underline-offset-[27px] text-lg"
             to="/contacto"
           >
@@ -178,8 +178,8 @@ export default function Navbar2() {
       <NavbarMenu>
         <NavbarMenuItem>
           <NavLink
-            exact
-            activeClassName="is-active"
+            exact = "true"
+            activeclassname="is-active"
             className=" flex items-center gap-2 text-slate-900 hover:text-slate-500 hover:underline hover:decoration-current hover:underline-offset-[26px]"
             to="/"
             aria-current="page"
@@ -191,7 +191,7 @@ export default function Navbar2() {
         <NavbarMenuItem>
           <NavLink
             className="flex gap-2"
-            activeClassName="is-active"
+            activeclassname="is-active"
             to="/programas-faciales"
           >
             <FontAwesomeIcon icon={faFaceGrinHearts} />
@@ -201,7 +201,7 @@ export default function Navbar2() {
         <NavbarMenuItem>
           <NavLink
             className="flex gap-2"
-            activeClassName="is-active"
+            activeclassname="is-active"
             to="/estetica-general"
           >
             <FontAwesomeIcon icon={faHandHoldingHeart}></FontAwesomeIcon>
@@ -210,7 +210,7 @@ export default function Navbar2() {
         </NavbarMenuItem>
         <NavbarMenuItem>
           <NavLink
-            activeClassName="is-active"
+            activeclassname="is-active"
             className="flex gap-2"
             to="/silueta-corporal"
           >
@@ -220,7 +220,7 @@ export default function Navbar2() {
         </NavbarMenuItem>
         <NavbarMenuItem>
           <NavLink
-            activeClassName="is-active"
+            activeclassname="is-active"
             to="/bienestar-y-relajacion"
             className="flex gap-2"
           >
@@ -231,7 +231,7 @@ export default function Navbar2() {
         <NavbarMenuItem>
           <NavLink
             className="flex gap-2"
-            activeClassName="is-active"
+            activeclassname="is-active"
             to="/depilacion-y-fotodepilacion"
           >
             <FontAwesomeIcon icon={faHandHoldingDroplet}></FontAwesomeIcon>
@@ -240,7 +240,7 @@ export default function Navbar2() {
         </NavbarMenuItem>
         <NavbarMenuItem>
           <NavLink
-            activeClassName="is-active"
+            activeclassname="is-active"
             className="flex gap-2 "
             to="/galeria"
           >
@@ -250,7 +250,7 @@ export default function Navbar2() {
         </NavbarMenuItem>
         <NavbarMenuItem>
           <NavLink
-            activeClassName="is-active"
+            activeclassname="is-active"
             className="flex gap-2 "
             to="/contacto"
           >

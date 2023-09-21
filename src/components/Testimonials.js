@@ -168,9 +168,9 @@ const Testimonials = () => {
         }}
         modules={[Pagination, Navigation]}
       >
-        {opinions.map((op) => {
+        {opinions.map((op, index) => {
           return (
-            <SwiperSlide className="w-full max-w-[490px]">
+            <SwiperSlide className="w-full max-w-[490px]" key={`op-${index}`}>
               <Card className="w-2/4 mx-auto my-5 bg-zinc-100 w-11/12 min-h-[338px]">
                 <CardHeader className="flex items-center justify-center gap-4">
                   <Avatar
@@ -183,8 +183,12 @@ const Testimonials = () => {
                   />
                   <span className="text-xl sm:text-2xl font-semibold">{op.user}</span>
                   <div>
-                    {op.punctuation.map((star) => {
-                      return star;
+                    {op.punctuation.map((star, index2) => {
+                      return (
+                        <span key={`start-${index}-${index2}`}>
+                        {star}
+                        </span>
+                      );
                     })}
                   </div>
                 </CardHeader>

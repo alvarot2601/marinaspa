@@ -103,9 +103,9 @@ const Servicios = (props) => {
                   </span>
                 </p>
                 <div className="flex flex-wrap items-center justify-center servicios__img-container">
-                  <img src={Mesoestetic} className="mesoestetic w-1/3" />
-                  <img src={Massada} className="massada w-1/3" />
-                  <img src={Utsukusi} className="utsukusy w-1/3" />
+                  <img loading="lazy" src={Mesoestetic} className="mesoestetic w-1/3" />
+                  <img loading="lazy" src={Massada} className="massada w-1/3" />
+                  <img loading="lazy" src={Utsukusi} className="utsukusy w-1/3" />
                 </div>
               </div>
             </div>

@@ -10,12 +10,12 @@ const Footer = () => {
           <span>Zafra – Calle Reyes Huertas Nº 8</span>
           <span>644 799 000</span>
           <div className="flex gap-1">
-            <a href="">
+            <Link isExternal href="https://www.facebook.com/marinaspabienvenida">
               <FaFacebook className="text-blue-600"/>
-            </a>
-            <a href="">
+            </Link>
+            <Link isExternal href="https://www.instagram.com/marinaspazafra">
               <FaInstagram className="text-pink-600"/>
-            </a>
+            </Link>
           </div>
         </div>
         <div className="flex flex-row md:flex-col order-3 items-center justify-center gap-3 flex-wrap flex-1">

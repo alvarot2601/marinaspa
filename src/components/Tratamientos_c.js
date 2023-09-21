@@ -96,9 +96,9 @@ const Tratamientos_c = () => {
         modules={[EffectCoverflow, Pagination, Autoplay]}
       >
         {
-          tratamientos_array.map((treatment) => {
+          tratamientos_array.map((treatment, index) => {
             return (
-              <SwiperSlide className="swiper-slide max-w-[400px] lg:max-w-[500px]  2xl:max-w-[600px]">
+              <SwiperSlide key={`slide-${index}`} className="swiper-slide max-w-[400px] lg:max-w-[500px]  2xl:max-w-[600px]">
                 <div className="tratamientos__item tratamientos__item--1 flex flex-col">
                   <div className="flex h-[213px] lg:h-[240px]">
                     <img

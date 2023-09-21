@@ -35,7 +35,7 @@ const Layout = ({ children }) => {
                 <FaArrowCircleUp/>
             </Button>
             <Button as={Link} variant="shadow" href="tel:+34684025751" isIconOnly className='fixed bottom-5 right-10 bg-green-500 text-white rounded-full z-50' >
-                <FaWhatsapp classList="text-xl"/>
+                <FaWhatsapp className="text-xl"/>
             </Button>
         </>
         

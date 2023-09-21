@@ -73,8 +73,9 @@ const Contacto = () => {
                       <div className="flex gap-5 justify-center ">
                         <Button
                           isIconOnly
+                          isExternal
                           as={Link}
-                          href=""
+                          href="https://www.facebook.com/marinaspabienvenida"
                           target="_blank"
                           className="border-indigo-700 text-indigo-700 hover:bg-indigo-700 hover:text-white"
                           size="lg"
@@ -85,8 +86,9 @@ const Contacto = () => {
                         </Button>
                         <Button
                           isIconOnly
+                          isExternal
                           as={Link}
-                          href=""
+                          href="https://www.instagram.com/marinaspazafra/"
                           target="_blank"
                           className="border-pink-700 text-pink-700 hover:bg-pink-700 hover:text-white"
                           size="lg"
