@@ -6,7 +6,7 @@ const PoliticaCookies = () => {
         <main className="text-center mx-auto p-10 w-full lg:w-10/12">
       <h1 className="text-6xl font-bold">Política de Cookies</h1>
       <div className="my-5">
-        <p className="text-3xl font-semibold">¿Qué son las cookies?</p>
+        <p className="text-2xl sm:text-3xl font-semibold">¿Qué son las cookies?</p>
         <p>
           Las cookies son pequeños archivos de texto que se almacenan en tu
           dispositivo cuando visitas un sitio web. Estos archivos contienen
@@ -15,7 +15,7 @@ const PoliticaCookies = () => {
         </p>
       </div>
       <div className="my-5">
-        <p className="text-3xl font-semibold">Uso de cookies en este sitio web</p>
+        <p className="text-2xl sm:text-3xl font-semibold">Uso de cookies en este sitio web</p>
         <p>
           En este sitio web no utilizamos cookies para almacenar información
           personal ni para realizar seguimientos de tus actividades en línea. No
@@ -24,7 +24,7 @@ const PoliticaCookies = () => {
         </p>
       </div>
       <div className="my-5">
-        <p className="text-3xl font-semibold">Cookies de terceros</p>
+        <p className="text-2xl sm:text-3xl font-semibold">Cookies de terceros</p>
         <p>
           No permitimos que terceros, como anunciantes o servicios de análisis,
           utilicen cookies en este sitio web para recopilar información sobre
@@ -32,7 +32,7 @@ const PoliticaCookies = () => {
         </p>
       </div>
       <div className="my-5">
-        <p className="text-3xl font-semibold">¿Cómo puedo gestionar las cookies?</p>
+        <p className="text-2xl sm:text-3xl font-semibold">¿Cómo puedo gestionar las cookies?</p>
         <p>
           Puedes configurar tu navegador para que rechace todas las cookies o
           para que te informe cuando se está enviando una cookie. Consulta la
@@ -43,7 +43,7 @@ const PoliticaCookies = () => {
         </p>
       </div>
       <div className="my-5">
-        <p className="text-3xl font-semibold">Contacto</p>
+        <p className="text-2xl sm:text-3xl font-semibold">Contacto</p>
         <p>
           Si tienes alguna pregunta o inquietud sobre nuestra política de
           cookies, no dudes en contactarnos.

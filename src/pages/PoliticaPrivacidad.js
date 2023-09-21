@@ -6,7 +6,7 @@ const PoliticaPrivacidad = () => {
       <main className="text-center mx-auto p-10 w-full lg:w-10/12">
         <h1 className="text-6xl font-bold">Política de Privacidad</h1>
         <div className="my-5">
-          <p className="text-3xl font-semibold">Información que recopilamos</p>
+          <p className="text-2xl sm:text-3xl font-semibold">Información que recopilamos</p>
           <p>
             En este sitio web, no recopilamos información personal identificable
             de los usuarios de forma automática. Solo recopilamos información
@@ -15,7 +15,7 @@ const PoliticaPrivacidad = () => {
           </p>
         </div>
         <div className="my-5">
-          <p className="text-3xl font-semibold">Uso de la información</p>
+          <p className="text-2xl sm:text-3xl font-semibold">Uso de la información</p>
           <p>
             Cualquier información proporcionada por los usuarios será utilizada
             exclusivamente para responder a sus consultas y brindar el servicio
@@ -25,7 +25,7 @@ const PoliticaPrivacidad = () => {
           </p>
         </div>
         <div className="my-5">
-          <p className="text-3xl font-semibold">Enlaces a sitios externos</p>
+          <p className="text-2xl sm:text-3xl font-semibold">Enlaces a sitios externos</p>
           <p>
             Este sitio web puede contener enlaces a sitios web externos. No nos
             hacemos responsables de las prácticas de privacidad de esos sitios.
@@ -34,7 +34,7 @@ const PoliticaPrivacidad = () => {
           </p>
         </div>
         <div className="my-5">
-          <p className="text-3xl font-semibold">Seguridad</p>
+          <p className="text-2xl sm:text-3xl font-semibold">Seguridad</p>
           <p>
             Implementamos medidas de seguridad razonables para proteger la
             información recopilada y almacenada. Sin embargo, no podemos
@@ -43,7 +43,7 @@ const PoliticaPrivacidad = () => {
           </p>
         </div>
         <div className="my-5">
-          <p className="text-3xl font-semibold">
+          <p className="text-2xl sm:text-3xl font-semibold">
             Cambios en la política de privacidad
           </p>
           <p>
@@ -53,7 +53,7 @@ const PoliticaPrivacidad = () => {
           </p>
         </div>
         <div className="my-5">
-          <p className="text-3xl font-semibold">Contacto</p>
+          <p className="text-2xl sm:text-3xl font-semibold">Contacto</p>
           <p>
             Si tienes preguntas o inquietudes sobre nuestra política de
             privacidad, por favor contáctanos.

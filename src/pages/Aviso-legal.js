@@ -6,7 +6,7 @@ const AvisoLegal = () => {
       <main className="text-center mx-auto p-10 w-full lg:w-10/12">
         <h1 className="text-6xl font-bold">Aviso Legal</h1>
         <div className="my-5">
-          <p className="text-3xl font-semibold">Responsable del sitio web</p>
+          <p className="text-2xl sm:text-3xl font-semibold">Responsable del sitio web</p>
           <p>
             Nombre de la empresa o persona responsable del sitio web: [Nombre de
             la empresa o persona]
@@ -16,7 +16,7 @@ const AvisoLegal = () => {
           <p>Teléfono: [Número de teléfono]</p>
         </div>
         <div className="my-5">
-          <p className="text-3xl font-semibold">Condiciones de uso</p>
+          <p className="text-2xl sm:text-3xl font-semibold">Condiciones de uso</p>
           <p>
             El acceso y uso de este sitio web están sujetos a los siguientes
             términos y condiciones:
@@ -64,7 +64,7 @@ const AvisoLegal = () => {
           </ol>
         </div>
         <div className="my-5">
-          <p className="text-3xl font-semibold">Ley aplicable</p>
+          <p className="text-2xl sm:text-3xl font-semibold">Ley aplicable</p>
           <p>
             Este aviso legal se rige por las leyes de [país/región]. Cualquier
             disputa que surja en relación con este aviso legal estará sujeta a
@@ -72,7 +72,7 @@ const AvisoLegal = () => {
           </p>
         </div>
         <div className="my-5">
-          <p className="text-3xl font-semibold">Contacto</p>
+          <p className="text-2xl sm:text-3xl font-semibold">Contacto</p>
           <p>
             Si tienes preguntas o inquietudes sobre este aviso legal, por favor
             contáctanos a través de la información proporcionada.
