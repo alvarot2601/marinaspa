@@ -889,15 +889,14 @@
     display: none;
   }
 }
-.testimonios .swiper-pagination-bullet {
-  background-color: #334155;
-}
 .testimonios .swiper-pagination-bullet-active {
   background: #334155 !important;
 }
-.testimonios .swiper-button-next, .testimonios .swiper-button-prev {
+.testimonios .swiper-button-next,
+.testimonios .swiper-button-prev {
   color: #334155;
 }
+
 .tratamientos {
   /*
   button{
