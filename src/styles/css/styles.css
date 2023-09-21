@@ -1084,6 +1084,7 @@ ul {
 }
 
 .whatsapp-icon {
+  width: 150px !important;
   border: none;
   color: white;
   font-size: 2rem;
