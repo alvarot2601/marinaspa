@@ -14,7 +14,7 @@ const Lista = ({ obj }) => {
           className={`w-full md:w-7/12 lg:w-1/2 px-7 py-5 ${reverseRowClass} flex flex-col justify-center`}
         >
           {singleObj.category !== "" ? (
-            <span className="text-4xl font-semibold">{singleObj.category}</span>
+            <span className="text-4xl font-semibold ">{singleObj.category}</span>
           ) : (
             ""
           )}
@@ -63,6 +63,7 @@ const Lista = ({ obj }) => {
             {singleObj.treatments.map((treatment, index) => {
               return (
                 <AccordionItem
+                  className="accordionItemLista"
                   key={`accordion-${i}-${index}`}
                   aria-label={`accordion-${index}`}
                   title={treatment[0]}
@@ -74,7 +75,7 @@ const Lista = ({ obj }) => {
                     {
                       Array.isArray(treatment[3])
                         ? (
-                          <div className="flex flex-col w-full order-1">
+                          <div className="flex flex-col w-full order-1 ">
                             <p>{treatment[1]}</p>
                             {
                               treatment[3].map((program, index2) => {

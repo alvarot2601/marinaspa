@@ -67,6 +67,7 @@ const Lista3 = ({ obj }) => {
                let justifyClass =  (treatment[1] !== '' ?  'justify-between' :   'justify-end')
               return (
                 <AccordionItem
+                  className="accordionItemLista"
                   key={`accordion-${index}-${index2}`}
                   aria-label={`accordion-${index2}`}
                   title={treatment[0]}
