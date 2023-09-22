@@ -67,6 +67,7 @@ export default function Navbar2() {
       <NavbarContent className="hidden md:flex" justify="center">
         <NavbarItem className="underline content-center">
           <NavLink
+            aria-label="Home link"
             exact="true"
             activeclassname="is-active"
             className=" flex items-center text-slate-900 hover:text-slate-500 hover:underline hover:decoration-current hover:underline-offset-[26px]"

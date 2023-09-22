@@ -18,7 +18,7 @@ const Diagnostico = () => {
           <Button as={Link} href="/contacto" size="lg" radius="sm" variant="shadow" className="w-max px-10 py-8 bg-zinc-700 text-zinc-50 text-xl font-semibold">Solicitar diagnóstico</Button>
         </div>
         <div className="w-ful lg:w-6/12">
-          <img src={DiagnosticoImage} alt="" className="h-full object-cover rounded-xl" />
+          <img src={DiagnosticoImage} alt="" className="h-full w-full object-cover rounded-xl" />
         </div>
       </section>
     );

@@ -102,7 +102,7 @@ const Tratamientos_c = () => {
                 <div className="tratamientos__item tratamientos__item--1 flex flex-col">
                   <div className="flex h-[213px] lg:h-[240px]">
                     <img
-                      className="w-full object-cover"
+                      className="w-full h-full object-cover"
                       loading="lazy"
                       src={treatment[2]}
                       alt=""

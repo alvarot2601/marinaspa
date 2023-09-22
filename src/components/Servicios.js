@@ -54,6 +54,7 @@ const Servicios = (props) => {
             <div className="flex flex-col lg:flex-row h-full">
               <div className="hidden sm:block order-1 h-3/6 lg:h-full lg:w-5/12 xl:w-5/12">
                 <img
+                  loading="lazy"
                   src={ShakeHands}
                   className="object-cover rounded-none h-full w-full "
                 />
@@ -118,6 +119,7 @@ const Servicios = (props) => {
             <div className="flex flex-col lg:flex-row h-full">
               <div className="hidden sm:block order-1 h-3/6 lg:h-full lg:w-5/12 xl:w-5/12">
                 <img
+                  loading="lazy"
                   src={Aromaterapia}
                   className="object-cover rounded-none h-full w-full"
                 />

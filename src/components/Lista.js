@@ -72,13 +72,11 @@ const Lista = ({ obj }) => {
                       : (treatment[1] !== '') ? 'justify-between items-center gap-10' : 'justify-end'}`
                     }>
                     {
-
                       Array.isArray(treatment[3])
                         ? (
                           <div className="flex flex-col w-full order-1">
                             <p>{treatment[1]}</p>
                             {
-                              
                               treatment[3].map((program, index2) => {
                                 return (
                                   <div key={`program-${index2}`} className="flex justify-between">
@@ -101,7 +99,6 @@ const Lista = ({ obj }) => {
                       </span>
                       : ''
                     }
-                    
                   </div>
                 </AccordionItem>
               );

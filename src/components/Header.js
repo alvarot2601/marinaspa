@@ -161,6 +161,7 @@ const Header = (props) => {
                 estética, estamos aquí para atender todas tus necesidades."
       >
         <Button
+          aria-label="tooltip"
           id="tooltip"
           isIconOnly
           className=" absolute left-2 bottom-5 text-rose-200 bg-zinc-700 z-0"

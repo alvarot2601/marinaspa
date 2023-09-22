@@ -156,18 +156,18 @@ const Galeria = () => {
             }
             return (
               <div
+                key={`galeria-${index}`}
                 className={`flex ${flexDirectionClass} md:${flexDirectionClass} gap-[5px] ${wrapperWidth} sm:${widthWrapperClass} md:w-[calc(25%-3.75px)]`}
               >
-                {images.map((image) => {
+                {images.map((image, index2) => {
                   return (
-                    <>
                       <img
+                        key={`imagen-galeria-${index}-${index2}`}
                         loading="lazy"
                         src={image}
                         className={`${widthImgClass} vertical-middle object-cover skewElem cursor-pointer`}
                         onClick={handleClick}
                       />
-                    </>
                   );
                 })}
               </div>
