@@ -44,9 +44,9 @@ const Contacto = () => {
                 <Skeleton isLoaded={isLoaded} className="rounded-xl">
                   <iframe
                     onLoad={handleIframeLoad}
-                    className="w-full m-auto rounded-xl max-h-[400px] lg:max-h-[500px]"
+                    className="w-full m-auto rounded-xl h-full min-h-[300px] lg:min-h-[400px] max-h-[400px] lg:max-h-[500px]"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3125.6839768741593!2d-6.422279524360653!3d38.42566757182862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd11559abd5e2c03%3A0x1ebb75f3df570647!2sC.%20Reyes%20Huertas%2C%208%2C%2006300%20Zafra%2C%20Badajoz!5e0!3m2!1ses!2ses!4v1683385227177!5m2!1ses!2ses"
-                    allowFullScreen="true"
+                    allowFullScreen={true}
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
                   ></iframe>

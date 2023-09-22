@@ -8,7 +8,7 @@ const Lista3 = ({ obj }) => {
   return obj.category.map((category, index) => {
     const reverseRowClass = index % 2 === 0 ? "" : "order-1";
     return (
-      <div className="flex gap-5 text-zinc-700">
+      <div key={`lista-${index}`} className="flex gap-5 text-zinc-700">
         <div
           className={`w-full md:w-2/4  px-7 py-5 ${reverseRowClass} flex flex-col justify-center`}
         >
@@ -67,7 +67,7 @@ const Lista3 = ({ obj }) => {
                let justifyClass =  (treatment[1] !== '' ?  'justify-between' :   'justify-end')
               return (
                 <AccordionItem
-                  key={`accordion-${index2}`}
+                  key={`accordion-${index}-${index2}`}
                   aria-label={`accordion-${index2}`}
                   title={treatment[0]}
                 >

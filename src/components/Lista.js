@@ -63,7 +63,7 @@ const Lista = ({ obj }) => {
             {singleObj.treatments.map((treatment, index) => {
               return (
                 <AccordionItem
-                  key={`accordion-${index}`}
+                  key={`accordion-${i}-${index}`}
                   aria-label={`accordion-${index}`}
                   title={treatment[0]}
                 >
