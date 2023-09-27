@@ -161,7 +161,6 @@ const Home = () => {
         <Header classProp="active-section section-1 text-zinc-700" />
       </section>
 
-      
       <section ref={section_2} className="servicios section-3 text-zinc-700 ">
         <Servicios classProp="section-3" />
       </section>

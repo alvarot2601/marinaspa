@@ -1,93 +1,81 @@
 import React, { useState, useRef } from "react";
 import Layout_tratamientos from "../components/Layout_tratamientos";
-import Facial from "../assets/images/tratamiento-facial.JPG";
-import HigieneFacial from "../assets/images/higiene-facial.JPG";
+import facial from "../assets/images/tratamiento-facial.JPG";
+import Higienefacial from "../assets/images/higiene-facial.JPG";
 import Lista from "../components/Lista";
 
-const ProgramasFacialesPage = ({ title }) => {
+const ProgramasfacialesPage = ({ title }) => {
   const antiAgingObj = {
     title: "BELLEZA - RITUALES Y PROGRAMAS FACIALES",
     category: "ANTI-AGING",
     category_text:
       "Los tratamientos anti-aging se enfocan en la prevención y corrección de los signos del envejecimiento, incluyendo arrugas, manchas, flacidez y otros signos de daño en la piel. Estos tratamientos están diseñados para retrasar el proceso de envejecimiento y promover la regeneración celular. ",
-    images: [HigieneFacial],
+    images: [Higienefacial],
     treatments: [
       [
-        "Ritual Biocelular",
+        "Ritual biocelular",
         "Regenera, estimula y potencia la energía natural de tu piel",
         48,
       ],
-      ["Ritual Ácido Hialurónico", "Efecto lifting natural", 48],
+      ["Ritual ácido hialurónico", "Efecto lifting natural", 48],
       [
-        "Ritual de Perlas",
+        "Ritual de perlas",
         "Envuelve a tu piel en un halo de luminosidad y juventud",
         48,
       ],
       [
-        "Tratamiento Facial Láser Frio Dioderma",
+        "Tratamiento facial láser frío Dioderma",
         " Aplicación de principios activos a gran profundidad rellenando arrugas e iluminando la piel",
         45,
       ],
       ["Ritual de regeneración y Luminosidad", "", 3],
       [
-        "Tratamiento Facial Dermapen",
+        "Tratamiento facial Dermapen",
         "Estimula el colágeno y elastina, reduce las líneas de expresión y el tamaño del poro, disminuye la apariencia de cicatrices, mejora la firmeza de la piel",
         70,
       ],
       [
-        "INDIBA Facial EXPRESS",
+        "INDIBA facial Express",
         "El mejor tratamiento que hay en el mercado para regenerar y revitalizar células de la piel, sin efectos secundarios",
         30,
       ],
       [
-        "INDIBA Facial",
+        "INDIBA facial",
         "El mejor tratamiento que hay en el mercado para regenerar y revitalizar células de la piel, sin efectos secundarios, todo complementado con nuestra mejor cosmética y personalizada según caso",
         50,
       ],
       [
-        "HIFU Facial COMPLETO",
+        "HIFU facial Completo",
         "Ultrasonidos de alta frecuencia que hace efecto lifting sin cirugía",
         200,
       ],
-      ["HIFU por Zona (Facial)", "", 150],
-      ["HIFU por Zona (Cuello)", "", 100],
+      ["HIFU por zona (facial)", "", 150],
+      ["HIFU por zona (Cuello)", "", 100],
       [
         "Masaje ENERGILIFT",
         "Lifting manual, este masaje remodela la estructura natural de la piel, reposiciona los volúmenes y redibuja el contorno del rostro",
         35,
       ],
       ["Programa facial personalizado (6 Sesiones)", "", 280],
-      ["MANTENIMIENTO FACIAL", "", 45],
+      ["Mantenimiento facial", "", 45],
     ],
   };
-  const higieneFacialObj = {
-    title: "BELLEZA - RITUALES Y PROGRAMAS FACIALES",
+  const higienefacialObj = {
+    title: "BELLEZA - RITUALES Y PROGRAMAS facialES",
     category: "HIGIENE FACIAL OXIGENANTE",
     category_text:
       "La higiene facial oxigenante combina la limpieza profunda de la piel con la entrega de oxígeno a las células de la piel para mejorar su apariencia y salud. Además, la higiene facial oxigenante es una técnica no invasiva que puede realizarse en cualquier tipo de piel, desde la piel seca hasta la piel grasa.",
-    images: [Facial],
+    images: [facial],
     treatments: [
-      [
-        "Limpieza en profundidad de la piel con cosmética profesional",
-        "",
-        36,
-      ],
+      ["Limpieza en profundidad de la piel con cosmética profesional", "", 36],
       [
         "Higiene facial profunda con microdermoabrasión con punta de Diamante",
         "tratamiento indoloro que elimina las células muertas de la piel a la vez que reafirma y las líneas de expresión se vuelven menos visibles",
         3,
       ],
-      [
-        "Limpieza en profundidad de la piel con cosmética profesional",
-        "",
-        3,
-      ],
-      [
-        "Hidravacuum – Detox – Limpieza – Exfoliación – Nutrición",
-        "",
-        50,
-      ],
-      ["Ritual de regeneración y Luminosidad", "", 3],
+      ["Limpieza en profundidad de la piel con cosmética profesional", "", 3],
+      ["Hidravacuum – Detox – Limpieza – Exfoliación – Nutrición", "", 50],
+      ["Ritual de regeneración y luminosidad", "", 3],
 
       [
         "Ritual equilibrio y purificador",
@@ -98,8 +86,8 @@ const ProgramasFacialesPage = ({ title }) => {
   };
 
   /////////////ESTADOS
-  const [higieneFacialState, setHigieneFacialState] =
-    useState(higieneFacialObj);
+  const [higienefacialState, setHigienefacialState] =
+    useState(higienefacialObj);
   const [antiAgingState, setAntiAgingState] = useState(antiAgingObj);
   ///referencias higiene facial
   const hf0 = useRef(null);
@@ -129,7 +117,7 @@ const ProgramasFacialesPage = ({ title }) => {
     <>
       <Layout_tratamientos>
         <main>
-          <Lista obj={[higieneFacialState, antiAgingState]}/>
+          <Lista obj={[higienefacialState, antiAgingState]} />
         </main>
       </Layout_tratamientos>
     </>
@@ -143,4 +131,4 @@ const ProgramasFacialesPage = ({ title }) => {
                         <button>Ver precios</button>
                     </header>
  */
-export default ProgramasFacialesPage;
+export default ProgramasfacialesPage;

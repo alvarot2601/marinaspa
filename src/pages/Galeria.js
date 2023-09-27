@@ -96,54 +96,63 @@ const Galeria = () => {
 
   const [imgLink, setImgLink] = useState("");
 
-  const [wrapperDirection, setWrapperDirection] = useState('flex-row');
-  const [wrapperWidth, setWrapperWidth] = useState('w-[calc(50%-2.5px)]');
+  const [wrapperDirection, setWrapperDirection] = useState("flex-row");
+  const [wrapperWidth, setWrapperWidth] = useState("w-[calc(50%-2.5px)]");
   const handleClick = (e) => {
     setImgLink(e.target.src);
     onOpen();
   };
 
-  useEffect(()=>{
-    if(window.innerWidth > 460 && window.innerHeight < 700){
-        setWrapperDirection('flex-row');
+  useEffect(() => {
+    if (window.innerWidth > 460 && window.innerHeight < 700) {
+      setWrapperDirection("flex-row");
     }
   }, []);
 
   useEffect(() => {
-    let proxy = { skew: 0 },
-      skewSetter = gsap.quickSetter(".skewElem", "skewY", "deg"), // fast
-      clamp = gsap.utils.clamp(-20, 20); // don't let the skew go beyond 20 degrees.
-    ScrollTrigger.create({
-      onUpdate: (self) => {
-        let skew = clamp(self.getVelocity() / -300);
-        // only do something if the skew is MORE severe. Remember, we're always tweening back to 0, so if the user slows their scrolling quickly, it's more natural to just let the tween handle that smoothly rather than jumping to the smaller skew.
-        if (Math.abs(skew) > Math.abs(proxy.skew)) {
-          proxy.skew = skew;
-          gsap.to(proxy, {
-            skew: 0,
-            duration: 0.8,
-            ease: "power3",
-            overwrite: true,
-            onUpdate: () => skewSetter(proxy.skew),
-          });
-        }
-      },
-    });
-
-    // make the right edge "stick" to the scroll bar. force3D: true improves performance
-    gsap.set(".skewElem", { transformOrigin: "right center", force3D: true });
+    const imageEffect = () => {
+      let proxy = { skew: 0 },
+        skewSetter = gsap.quickSetter(".skewElem", "skewY", "deg"), // fast
+        clamp = gsap.utils.clamp(-20, 20); // don't let the skew go beyond 20 degrees.
+      ScrollTrigger.create({
+        onUpdate: (self) => {
+          let skew = clamp(self.getVelocity() / -300);
+          // only do something if the skew is MORE severe. Remember, we're always tweening back to 0, so if the user slows their scrolling quickly, it's more natural to just let the tween handle that smoothly rather than jumping to the smaller skew.
+          if (Math.abs(skew) > Math.abs(proxy.skew)) {
+            proxy.skew = skew;
+            gsap.to(proxy, {
+              skew: 0,
+              duration: 0.8,
+              ease: "power3",
+              overwrite: true,
+              onUpdate: () => skewSetter(proxy.skew),
+            });
+          }
+        },
+      });
+      // make the right edge "stick" to the scroll bar. force3D: true improves performance
+      gsap.set(".skewElem", { transformOrigin: "right center", force3D: true });
+    };
+    window.addEventListener("scroll", imageEffect);
+    return ()=> window.removeEventListener("scroll", imageEffect);
+    //return window.removeEventListener("scroll", imageEffect);
   });
 
   return (
     <Layout>
       <main className="galeria py-5 text-center text-zinc-700 bg-rose-200">
         <div className="px-3">
-        <h1 className="text-5txl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold">
-          galería
-        </h1>
-        <p className="my-5 text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">Adéntrate en nuestra galería y descubre cómo son nuestras instalaciones.</p>
+          <h1 className="text-5txl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold">
+            galería
+          </h1>
+          <p className="my-5 text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
+            Adéntrate en nuestra galería y descubre cómo son nuestras
+            instalaciones.
+          </p>
         </div>
-        <section className={`flex ${wrapperDirection} flex-wrap sm:flex-row gap-[5px] px-[5px] pt-2 pb-7 `}>
+        <section
+          className={`flex ${wrapperDirection} flex-wrap sm:flex-row gap-[5px] px-[5px] pt-2 pb-7 `}
+        >
           {galeria_array.map((images, index) => {
             let flexDirectionClass = "flex-col";
             let widthImgClass = "w-full";
@@ -161,13 +170,13 @@ const Galeria = () => {
               >
                 {images.map((image, index2) => {
                   return (
-                      <img
-                        key={`imagen-galeria-${index}-${index2}`}
-                        loading="lazy"
-                        src={image}
-                        className={`${widthImgClass} vertical-middle object-cover skewElem cursor-pointer`}
-                        onClick={handleClick}
-                      />
+                    <img
+                      key={`imagen-galeria-${index}-${index2}`}
+                      loading="lazy"
+                      src={image}
+                      className={`${widthImgClass} vertical-middle object-cover skewElem cursor-pointer`}
+                      onClick={handleClick}
+                    />
                   );
                 })}
               </div>

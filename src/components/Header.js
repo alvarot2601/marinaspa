@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import PosterImage from "../assets/images/esteticista_profesional.jpg";
+import PosterImage from "../assets/images/esteticista_profesional-1.jpg";
 import Video from "../assets/video/corporal.mp4";
 
 //fontawesome
@@ -7,9 +7,16 @@ import { Tooltip, Button } from "@nextui-org/react";
 import { Chip } from "@nextui-org/react";
 
 const Header = (props) => {
-
   const [isOpen, setIsOpen] = useState(false);
   useEffect(() => {
+    //para que la pagina aparezca siempre desde el inicio, para no permitir que se vean secciones inferiores
+    window.addEventListener('load', ()=>{
+      if(window.scrollY !== 0) {
+        setTimeout(() => {
+          window.scrollTo(0,0);
+        }, 25);
+      }
+    })
     if (window.innerWidth >= 640) {
       setTimeout(() => {
         setIsOpen(true);
@@ -19,7 +26,6 @@ const Header = (props) => {
         setIsOpen(false);
       }, 4500);
     }
-
   }, []);
 
   useEffect(() => {
@@ -39,25 +45,20 @@ const Header = (props) => {
       //e.preventDefault();
       //video.pause();
       const videoWrapper = document.querySelector("#header__second-col");
-     
 
-      
-      
-      videoWrapper.classList.replace("relative","absolute");
-     
-      
+      videoWrapper.classList.replace("relative", "absolute");
+
       document.querySelector("#tooltip").classList.add("hidden");
 
       //para que no se mueva el texto del header con la animacion
-      document.querySelector(".header").classList.replace("justify-center","justify-start");
-      if(window.innerWidth>=640){
-        
-
+      document
+        .querySelector(".header")
+        .classList.replace("justify-center", "justify-start");
+      if (window.innerWidth >= 640) {
         videoWrapper.classList.add("right-0");
         videoWrapper.classList.add("bottom-0");
         videoWrapper.classList.toggle("sm:w-2/4");
-      }else{
-        
+      } else {
         videoWrapper.classList.add("right-0");
         videoWrapper.classList.add("bottom-0");
         videoWrapper.classList.replace("h-2/6", "h-full");
@@ -82,7 +83,6 @@ const Header = (props) => {
     return () => {
       for (let i = 0; i < 3; i++) {
         if (i == 0) return video.removeEventListener("play", stopVideo);
-
       }
     };
   }, []);
@@ -114,7 +114,10 @@ const Header = (props) => {
           <span>MarinaSpá</span>
         </h1>
       </div>
-      <div id="header__second-col" className="w-full sm:w-2/4 h-[40vh] sm:h-full relative">
+      <div
+        id="header__second-col"
+        className="w-full sm:w-2/4 h-[40vh] sm:h-full relative"
+      >
         <Chip
           id="chip"
           variant="shadow"
@@ -145,7 +148,6 @@ const Header = (props) => {
         </video>
       </div>
       <Tooltip
-       
         isOpen={isOpen}
         onOpenChange={(open) => setIsOpen(open)}
         closeDelay={2000}

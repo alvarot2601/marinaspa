@@ -17,11 +17,18 @@ const Lista3 = ({ obj }) => {
           ) : (
             ""
           )}
-          <p className="text-lg mt-5 mb-3 italic">
-            {Array.isArray(obj.category_text)
-              ? obj.category_text[index]
-              : obj.category_text}
-          </p>
+          {(!Array.isArray(obj.category_text) && obj.category_text !== "") ||
+          (Array.isArray(obj.category_text) &&
+            obj.category_text[index] !== "") ? (
+            <p className="text-lg mt-5 mb-3 italic">
+              {Array.isArray(obj.category_text)
+                ? obj.category_text[index]
+                : obj.category_text}
+            </p>
+          ) : (
+            ""
+          )}
+
           <Accordion
             isCompact
             variant="light"
@@ -64,7 +71,8 @@ const Lista3 = ({ obj }) => {
             }}
           >
             {obj.treatments[index].map((treatment, index2) => {
-               let justifyClass =  (treatment[1] !== '' ?  'justify-between' :   'justify-end')
+              let justifyClass =
+                treatment[1] !== "" ? "justify-between" : "justify-end";
               return (
                 <AccordionItem
                   className="accordionItemLista"
@@ -73,14 +81,16 @@ const Lista3 = ({ obj }) => {
                   title={treatment[0]}
                 >
                   <div className={`flex ${justifyClass} items-center`}>
-                    {
-                      treatment[1] !== '' ? <span className="basis-10/12">{treatment[1]}</span> : ''
-                    }
-                    
+                    {treatment[1] !== "" ? (
+                      <span className="basis-10/12">{treatment[1]}</span>
+                    ) : (
+                      ""
+                    )}
+
                     <span className="flex justify-end basis-28">
-                    {onlyNumbersRegEx.test(treatment[2])
-                    ? treatment[2] + '€' 
-                    : treatment[2]}
+                      {onlyNumbersRegEx.test(treatment[2])
+                        ? treatment[2] + "€"
+                        : treatment[2]}
                     </span>
                   </div>
                 </AccordionItem>

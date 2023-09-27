@@ -46,30 +46,30 @@ const DepilacionPage = () => {
       [
         ["DEPILACIÓN Y DISEÑO DE CEJAS", "", "5€"],
         [
-          "ZONA XS",
+          "Zona XS",
           "Línea alba superior o inferior, pies, manos, mentón, labio superior, patillas, entrepecho, orejas, pómulos",
          3
         ],
         [
-          "ZONA S",
+          "Zona S",
           "Cuello, axilas, ingles, interglúteos, glúteos, lumbar, nuca",
           5
         ],
         [
-          "ZONA M",
+          "Zona M",
           "Brazos, medias piernas, espalda completa, torso completo, brazos, pubis completo",
           5
         ],
-        ["ZONA L", "Piernas completas", "15€"],
+        ["Zona L", "Piernas completas", "15€"],
         [
-          "ZONA XL",
+          "Zona XL",
           "Cuerpo completo (1 zona L, 2 zonas S, 2 zonas XS)",
           28
         ],
       ],
       [
         [
-          "ZONA XS",
+          "Zona XS",
           "Línea alba superior o inferior, areolas, pies, manos, mentón, labio superior, entrecejo, patillas, entrepecho, orejas, cejas, frente, nariz, manos o pies, pómulos",
           "15€ / Sesión",
         ],

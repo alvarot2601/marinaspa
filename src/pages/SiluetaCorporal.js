@@ -38,23 +38,23 @@ const SiluetaCorporalPage = () => {
         ]
       ],
       [
-        "MADEROTERAPIA",
+        "Maderoterapia",
         '',
         "45€/sesión",
         [
-          ["Programa 8 Sesiones:", 300],
+          ["Programa 8 sesiones:", 300],
         ]
       ],
       [
-        "PRESOTERAPIA",
+        "Presoterapia",
         '',
         "12€/sesión",
         [
-          ["Programa 10 Sesiones", 90],
+          ["Programa 10 sesiones", 90],
         ]
       ],
       [
-        "CRIOLIPÓLISIS + presoterapia", '', 45
+        "Criolipólisis + presoterapia", '', 45
       ],
       ["Remodelante corporal V-SHAPE + Presoterapia", '', 45],
       [
@@ -62,17 +62,17 @@ const SiluetaCorporalPage = () => {
         "",
         "50€/sesión",
         [
-          ["Programa 10 Sesiones: ",400]
+          ["Programa 10 sesiones: ",400]
         ]
       ],
-      ["INDIBA CORPORAL + Presoterapia", "", 50],
+      ["INDIBA corporal + Presoterapia", "", 50],
       [
         "WONDER",
         "",
         "69€/sesión",
         [
-          ["Programa 8 Sesiones:", 400],
-          ["Programa 4 Sesiones:", "236"]
+          ["Programa 8 sesiones:", 400],
+          ["Programa 4 sesiones:", "236"]
         ],
         
       ],
@@ -82,13 +82,13 @@ const SiluetaCorporalPage = () => {
         0,
         [
           ["Abdomen:", 90],
-          ["Abdomen y Flancos:", 150],
+          ["Abdomen y flancos:", 150],
           ["Cartucheras:", 150],
           ["Brazos:", 150]
         ],
       ],
       [
-        "PROGRAMA INTEGRAL",
+        "Programa integral",
         "10 sesiones de acción global sobre grasas profundas y superficiales, remodela la silueta y reduce la celulitis",
         0,
         [

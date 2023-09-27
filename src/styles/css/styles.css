@@ -1083,7 +1083,7 @@ ul {
   border-bottom-right-radius: 100%;
 }
 
-.accordionItemLista span {
+.accordionItemLista span:first-child {
   font-weight: 600;
   color: #3f3f46;
 }

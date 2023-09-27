@@ -59,6 +59,7 @@ const BienestarRelajacionPage = () => {
       "Sumérgete en un oasis de tranquilidad y deja que el poder curativo del agua y los beneficios terapéuticos de las burbujas mejoren tu bienestar físico y emocional. Ya sea que desees disfrutar de un momento de relajación solo, en pareja o con amigos, nuestras bañeras de hidromasajes son perfectas para cualquier ocasión.",
       "Descubre la renovación total de tu piel con nuestros peelings corporales. Nuestros tratamientos de exfoliación profunda eliminan las células muertas y revelan una piel suave y radiante. Utilizamos productos de alta calidad y técnicas especializadas para brindarte resultados excepcionales.Además de mejorar la apariencia de la piel, los peelings corporales también pueden ayudar a reducir la apariencia de cicatrices, estrías y manchas. Permítenos cuidar de tu piel y rejuvenecer todo tu cuerpo.",
       "Disfruta de la máxima relajación y bienestar con nuestros masajes profesionales. Nuestros terapeutas altamente capacitados te brindarán una experiencia única y revitalizante. Con técnicas especializadas y atención personalizada, cada masaje se adaptará a tus necesidades y preferencias individuales. Ya sea que busques aliviar el estrés, reducir la tensión muscular o simplemente relajarte, nuestros masajes te transportarán a un estado de calma y renovación",
+      ""
     ],
     images: [hidromasaje, peeling, masaje, relajacion],
     treatments: [
@@ -75,7 +76,7 @@ const BienestarRelajacionPage = () => {
         ],
       ],
       [
-        ["Peeling Vivificante", "Elimina el estrés (35 min.)", 35],
+        ["Peeling Vivificante", "Elimina el estrés (35 min)", 35],
         [
           "Polinesia",
           "Piel aterciopelada y con una luminosidad natural (35 min)",
@@ -93,10 +94,10 @@ const BienestarRelajacionPage = () => {
           "",
           45,
         ],
-        ["Masaje antiestrés - (30 min.)", "", 25],
+        ["Masaje antiestrés - (30 min)", "", 25],
         [
           "Peeling Hidratante",
-          "Piel más suave y supe hidratada (35 min.)",
+          "Piel más suave y supe hidratada (35 min+)",
           45,
         ],
       ],
@@ -137,9 +138,7 @@ const BienestarRelajacionPage = () => {
   };
 
   /////////////ESTADOS
-  const [bienestarRelajacionState, setBienestarRelajacionState] = useState(
-    bienestarRelajacionObj
-  );
+  const [bienestarRelajacionState, setBienestarRelajacionState] = useState(bienestarRelajacionObj);
 
   return (
     <>
