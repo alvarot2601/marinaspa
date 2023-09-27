@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import PosterImage from "../assets/images/esteticista_profesional-1.jpg";
 import Video from "../assets/video/corporal.mp4";
+import Video2 from "../assets/video/maderoterapia.mp4";
 
 //fontawesome
 import { Tooltip, Button } from "@nextui-org/react";
@@ -9,22 +10,16 @@ import { Chip } from "@nextui-org/react";
 const Header = (props) => {
   const [isOpen, setIsOpen] = useState(false);
   useEffect(() => {
-    //para que la pagina aparezca siempre desde el inicio, para no permitir que se vean secciones inferiores
-    window.addEventListener('load', ()=>{
-      if(window.scrollY !== 0) {
-        setTimeout(() => {
-          window.scrollTo(0,0);
-        }, 25);
-      }
-    })
     if (window.innerWidth >= 640) {
       setTimeout(() => {
-        setIsOpen(true);
-      }, 2500);
+        //para que sea abra el tooltip automaticamente si el usuario no se ha desplazado hacia abajo mucho, mas concretamente se abrira si la coordenada y del boton del tooltip es inferior a la altura de la ventana y mayor o igual a la mitad de la altura de la ventana + 100px 
+        if (document.getElementById("tooltip").getBoundingClientRect().top < window.innerHeight && document.getElementById("tooltip").getBoundingClientRect().top >= ((window.innerHeight / 2) - 100))
+          setIsOpen(true);
+      }, 2000);
 
       setTimeout(() => {
         setIsOpen(false);
-      }, 4500);
+      }, 4000);
     }
   }, []);
 
