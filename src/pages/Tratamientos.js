@@ -4,7 +4,7 @@ import { AiFillCloseCircle } from 'react-icons/ai';
 
 import { CiMenuKebab } from 'react-icons/ci';
 import Footer from "../components/Footer";
-import NavBar from "../components/NavBar";
+import NavBar from "../components/Navbar";
 import Carta from "../assets/pdf/carta_precios_2022.pdf";
 import Layout from "../components/Layout";
 const Tratamientos = () => {
