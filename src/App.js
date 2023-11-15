@@ -2,7 +2,6 @@ import { React, lazy, Suspense } from 'react';
 import logo from './logo.svg';
 import './styles/css/styles.css';
 
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import Tratamientos from './pages/Tratamientos';
 import ProgramasFacialesPage from './pages/ProgramasFaciales';
