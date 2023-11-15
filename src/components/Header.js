@@ -8,8 +8,8 @@ import { Tooltip, Button } from "@nextui-org/react";
 import { Chip } from "@nextui-org/react";
 
 const Header = (props) => {
-  const [isOpen, setIsOpen] = useState(false);
-  useEffect(() => {
+  //const [isOpen, setIsOpen] = useState(false);
+  /*useEffect(() => {
     if (window.innerWidth >= 640) {
       setTimeout(() => {
         //para que sea abra el tooltip automaticamente si el usuario no se ha desplazado hacia abajo mucho, mas concretamente se abrira si la coordenada y del boton del tooltip es inferior a la altura de la ventana y mayor o igual a la mitad de la altura de la ventana + 100px 
@@ -21,7 +21,7 @@ const Header = (props) => {
         setIsOpen(false);
       }, 4000);
     }
-  }, []);
+  }, []);*/
 
   useEffect(() => {
     const video = document.querySelector("video");
@@ -94,7 +94,7 @@ const Header = (props) => {
 
   return (
     <header
-      className={`header ${props.classProp} h-[90vh] relative bg-rose-100 text-rose-950 flex flex-col sm:flex-row justify-center items-center`}
+      className={`header ${props.classProp} h-[90vh] relative bg-[#e9e0dc] text-rose-950 flex flex-col sm:flex-row justify-center items-center`}
     >
       <div
         id="header__first-col"
@@ -102,7 +102,7 @@ const Header = (props) => {
       >
 
         <h1 className="animate-charcter font-extrabold leading-tight text-5xl md:text-5xl lg:text-7xl xl:text-8xl 2xl:text-9xl">
-          <span>Centro de ESTÉTICA </span> <br />
+          <span>Centro de ESTÉTICA</span> <br />
           <span>Marina Spá</span>
         </h1>
       </div>
@@ -139,7 +139,29 @@ const Header = (props) => {
           <source src={Video} type="video/mp4" />
         </video>
       </div>
-      <Tooltip
+      
+      {/*<a href='/contacto' className='button button--transparent'>
+                Trabaja conmigo
+                </a> */}
+      {
+        //<img className='header__image header__image--0' src={FotoMari} alt="" />
+      }
+    </header>
+  );
+};
+export default Header;
+/*<svg className='header__image header__image--1' viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#000000" d="M64.2,-38C76.9,-15.1,76.6,14.5,63.7,38.5C50.8,62.5,25.4,81,-1.7,82C-28.8,83,-57.5,66.4,-71.7,41.6C-85.9,16.8,-85.6,-16.2,-71.2,-40.1C-56.8,-64,-28.4,-78.7,-1.3,-77.9C25.8,-77.2,51.5,-60.9,64.2,-38Z" transform="translate(100 100)" />
+            </svg>
+            <svg className='header__image header__image--2' viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#000000" d="M63.8,-35C77.3,-13.5,79.1,16.6,66.5,37.8C54,58.9,27,71.2,0.9,70.6C-25.1,70.1,-50.3,56.8,-61.6,36.4C-72.9,16,-70.3,-11.5,-57.7,-32.5C-45.1,-53.4,-22.6,-67.8,1.3,-68.5C25.2,-69.3,50.4,-56.4,63.8,-35Z" transform="translate(100 100)" />
+            </svg>
+            <svg className='header__image header__image--3' viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#FFFFFF" d="M64.2,-38C76.9,-15.1,76.6,14.5,63.7,38.5C50.8,62.5,25.4,81,-1.7,82C-28.8,83,-57.5,66.4,-71.7,41.6C-85.9,16.8,-85.6,-16.2,-71.2,-40.1C-56.8,-64,-28.4,-78.7,-1.3,-77.9C25.8,-77.2,51.5,-60.9,64.2,-38Z" transform="translate(100 100)" />
+            </svg>
+            
+            
+            <Tooltip
         isOpen={isOpen}
         onOpenChange={(open) => setIsOpen(open)}
         closeDelay={2000}
@@ -176,22 +198,7 @@ const Header = (props) => {
           </svg>
         </Button>
       </Tooltip>
-      {/*<a href='/contacto' className='button button--transparent'>
-                Trabaja conmigo
-                </a> */}
-      {
-        //<img className='header__image header__image--0' src={FotoMari} alt="" />
-      }
-    </header>
-  );
-};
-export default Header;
-/*<svg className='header__image header__image--1' viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                <path fill="#000000" d="M64.2,-38C76.9,-15.1,76.6,14.5,63.7,38.5C50.8,62.5,25.4,81,-1.7,82C-28.8,83,-57.5,66.4,-71.7,41.6C-85.9,16.8,-85.6,-16.2,-71.2,-40.1C-56.8,-64,-28.4,-78.7,-1.3,-77.9C25.8,-77.2,51.5,-60.9,64.2,-38Z" transform="translate(100 100)" />
-            </svg>
-            <svg className='header__image header__image--2' viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                <path fill="#000000" d="M63.8,-35C77.3,-13.5,79.1,16.6,66.5,37.8C54,58.9,27,71.2,0.9,70.6C-25.1,70.1,-50.3,56.8,-61.6,36.4C-72.9,16,-70.3,-11.5,-57.7,-32.5C-45.1,-53.4,-22.6,-67.8,1.3,-68.5C25.2,-69.3,50.4,-56.4,63.8,-35Z" transform="translate(100 100)" />
-            </svg>
-            <svg className='header__image header__image--3' viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                <path fill="#FFFFFF" d="M64.2,-38C76.9,-15.1,76.6,14.5,63.7,38.5C50.8,62.5,25.4,81,-1.7,82C-28.8,83,-57.5,66.4,-71.7,41.6C-85.9,16.8,-85.6,-16.2,-71.2,-40.1C-56.8,-64,-28.4,-78.7,-1.3,-77.9C25.8,-77.2,51.5,-60.9,64.2,-38Z" transform="translate(100 100)" />
-            </svg> */
+            
+            
+            
+            */
