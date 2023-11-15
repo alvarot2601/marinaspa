@@ -75,6 +75,7 @@ const Header = (props) => {
     video.addEventListener("play", stopVideo);
     video.addEventListener("mouseenter", () => showControls(true));
     video.addEventListener("mouseleave", () => showControls(false));
+    //falta cleanup para todos los addevent listeners
     return () => {
       for (let i = 0; i < 3; i++) {
         if (i == 0) return video.removeEventListener("play", stopVideo);
@@ -102,7 +103,7 @@ const Header = (props) => {
       >
 
         <h1 className="animate-charcter font-extrabold leading-tight text-5xl md:text-5xl lg:text-7xl xl:text-8xl 2xl:text-9xl">
-          <span>Centro de ESTÉTICA</span> <br />
+          <span>Centro de Estética</span> <br />
           <span>Marina Spá</span>
         </h1>
       </div>
