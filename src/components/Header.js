@@ -114,7 +114,7 @@ const Header = (props) => {
         <Chip
           id="chip"
           variant="shadow"
-          className="absolute top-2 right-2 z-20 flex flex-row bg-zinc-900 text-rose-100 animate-bounce"
+          className="absolute top-2 right-2 z-20 flex flex-row bg-zinc-900 text-primary animate-bounce"
           startContent={
             <svg
               xmlns="http://www.w3.org/2000/svg"
