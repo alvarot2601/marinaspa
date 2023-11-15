@@ -140,7 +140,7 @@ const Galeria = () => {
 
   return (
     <Layout>
-      <main className="galeria py-5 text-center text-zinc-700 bg-rose-200">
+      <main className="galeria py-5 text-center text-zinc-700">
         <div className="px-3">
           <h1 className="text-5txl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold">
             galería

@@ -95,7 +95,7 @@ const Header = (props) => {
 
   return (
     <header
-      className={`header ${props.classProp} h-[90vh] relative bg-[#e9e0dc] text-rose-950 flex flex-col sm:flex-row justify-center items-center`}
+      className={`header ${props.classProp} h-[90vh] relative bg-primary text-rose-950 flex flex-col sm:flex-row justify-center items-center`}
     >
       <div
         id="header__first-col"

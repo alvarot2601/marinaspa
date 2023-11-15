@@ -108,7 +108,7 @@ const Tratamientos_c = () => {
                       alt=""
                     />
                   </div>
-                  <div className="flex flex-col py-5 px-4 sm:px-5 tratamientos__text bg-rose-200">
+                  <div className="flex flex-col py-5 px-4 sm:px-5 tratamientos__text bg-primary">
                     <span className="text-xl font-semibold">
                       {treatment[0]}
                     </span>
