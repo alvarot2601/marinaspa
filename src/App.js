@@ -2,7 +2,6 @@ import { React, lazy, Suspense } from 'react';
 import logo from './logo.svg';
 import './styles/css/styles.css';
 
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import Tratamientos from './pages/Tratamientos';
 import ProgramasFacialesPage from './pages/ProgramasFaciales';
@@ -33,24 +32,7 @@ const AvisoLegal = lazy(()=>import("./pages/Aviso-legal"));
 
 function App() {
   return (
-    <BrowserRouter>
-      <Suspense fallback={<div>Loading...</div>}>
-        <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/tratamientos" element={<Tratamientos />}></Route>
-          <Route path="/programas-faciales" element={<ProgramasFacialesPage title="Programas Faciales" />} ></Route>
-          <Route path="/estetica-general" element={<EsteticaGeneralPage title="Estética General" />} ></Route>
-          <Route path="/silueta-corporal" element={<SiluetaCorporalPage />} ></Route>
-          <Route path="/bienestar-y-relajacion" element={<BienestarRelajacionPage />} ></Route>
-          <Route path="/depilacion-y-fotodepilacion" element={<DepilacionPage />} ></Route>
-          <Route path="/galeria" element={<Galeria />} ></Route>
-          <Route path="/contacto" element={<Contacto />} ></Route>
-          <Route path="/politica-cookies" element={<PoliticaCookies />}></Route>
-          <Route path="/politica-privacidad" element={<PoliticaPrivacidad />}></Route>
-          <Route path="/aviso-legal" element={<AvisoLegal />}></Route>
-        </Routes>
-      </Suspense>
-    </BrowserRouter>
+    ''
   );
 }
 
