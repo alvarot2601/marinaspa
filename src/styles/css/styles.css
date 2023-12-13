@@ -943,10 +943,10 @@ button.info {
 }
 
 .active {
-  color: #fb7185 !important;
+  color: #9e8479 !important;
   text-decoration: underline;
   text-underline-offset: 27px;
-  text-decoration-color: #fb7185;
+  text-decoration-color: #9e8479;
   font-weight: 600;
 }
 
