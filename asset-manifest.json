@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/marinaspa/static/css/main.e16a2fd3.css",
-    "main.js": "/marinaspa/static/js/main.5a94ffa4.js",
+    "main.css": "/marinaspa/static/css/main.415dfeef.css",
+    "main.js": "/marinaspa/static/js/main.94b93085.js",
     "static/js/831.72355dad.chunk.js": "/marinaspa/static/js/831.72355dad.chunk.js",
     "static/js/744.740e4f3e.chunk.js": "/marinaspa/static/js/744.740e4f3e.chunk.js",
     "static/js/683.7edd3f19.chunk.js": "/marinaspa/static/js/683.7edd3f19.chunk.js",
@@ -90,8 +90,8 @@
     "static/media/massada.avif": "/marinaspa/static/media/massada.0b9dc947ebedead682a3.avif",
     "static/media/logo.svg": "/marinaspa/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/marinaspa/index.html",
-    "main.e16a2fd3.css.map": "/marinaspa/static/css/main.e16a2fd3.css.map",
-    "main.5a94ffa4.js.map": "/marinaspa/static/js/main.5a94ffa4.js.map",
+    "main.415dfeef.css.map": "/marinaspa/static/css/main.415dfeef.css.map",
+    "main.94b93085.js.map": "/marinaspa/static/js/main.94b93085.js.map",
     "831.72355dad.chunk.js.map": "/marinaspa/static/js/831.72355dad.chunk.js.map",
     "744.740e4f3e.chunk.js.map": "/marinaspa/static/js/744.740e4f3e.chunk.js.map",
     "683.7edd3f19.chunk.js.map": "/marinaspa/static/js/683.7edd3f19.chunk.js.map",
@@ -104,7 +104,7 @@
     "787.fd34356a.chunk.js.map": "/marinaspa/static/js/787.fd34356a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e16a2fd3.css",
-    "static/js/main.5a94ffa4.js"
+    "static/css/main.415dfeef.css",
+    "static/js/main.94b93085.js"
   ]
 }
