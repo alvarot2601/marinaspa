@@ -43,7 +43,7 @@ const Header = (props) => {
 
       videoWrapper.classList.replace("relative", "absolute");
 
-      document.querySelector("#tooltip").classList.add("hidden");
+      //document.querySelector("#tooltip").classList.add("hidden");
 
       //para que no se mueva el texto del header con la animacion
       document
