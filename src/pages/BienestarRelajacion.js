@@ -35,18 +35,18 @@ const BienestarRelajacionPage = () => {
       "Tus uñas merecen la mejor atención y cuidado, y en nuestra web encontrarás todo lo que necesitas para lucir unas manos y pies impecables. Nuestro equipo de expertos en belleza y estilistas profesionales se dedica a ofrecerte los tratamientos más innovadores y las últimas tendencias en el mundo de la manicura y pedicura.",
     images: [''],
     treatments: [
-      ["Manicura normal", "", 12],
-      ["Manicura con esmaltado semipermanente", "", 18],
+      ["Manicura normal", "", 14],
+      ["Manicura con esmaltado semipermanente", "", 20],
       [
         "Manicura Spa-Tratamiento completo de belleza en tus manos",
         "",
-        25
+        29
       ],
-      ["Pedicura con esmaltado semipermanente", "", 18],
+      ["Pedicura con esmaltado semipermanente", "", 20],
       [
         "Pedicura Spa-Tratamiento completo de belleza en tus pies",
         "",
-        25
+        29
       ],
     ],
   };
@@ -131,7 +131,7 @@ const BienestarRelajacionPage = () => {
         [
           "BEAUTY PARTY (mínimo 4 personas/máximo 10 personas)",
           "Cocktail de bienvenida, 30´ de masaje corporal, belleza iluminadora facial y maquillaje)",
-          50,
+          55,
         ],
       ],
     ],

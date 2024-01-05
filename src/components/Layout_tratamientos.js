@@ -1,14 +1,22 @@
 import React from "react";
 import Layout from "./Layout";
-import { Button, Link } from "@nextui-org/react";
-import CartaPrecios from "../assets/pdf/carta_precios_2022.pdf";
+import {Link } from "@nextui-org/react";
+import CartaPrecios from "../assets/pdf/carta_precios_2023.pdf";
 import { FaDownload, FaEye } from "react-icons/fa";
 
+
+import Button from '@mui/material/Button';
+import { styled } from '@mui/material/styles';
+import { hover } from "@testing-library/user-event/dist/hover";
+
 const Layout_tratamientos = ({ children }) => {
+  
   return (
     <Layout>
       <div className="py-5 bg-zinc-100">
         <div className="flex flex-row flex-wrap justify-center gap-5 mt-5 mb-10 px-5">
+        <Button variant="elevated" size="large" target="_blank" href={CartaPrecios} endIcon={<FaEye />} className="bg-slate-100">Ver Carta</Button>;
+        <Button variant="contained" sx={{backgroundColor:'#9e8479',':hover':{backgroundColor:'red'}}}>Descargar Carta</Button>;
           <Button
             as={Link}
             target="_blank"

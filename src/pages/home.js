@@ -8,6 +8,12 @@ import Servicios from "../components/Servicios";
 import { Divider } from "@nextui-org/react";
 
 const Home = () => {
+
+  const theme = createTheme({
+    palette: {
+      primaryGold: '#9e8479',
+    },
+  });
   const section_1 = useRef(null);
   const section_2 = useRef(null);
   const section_3 = useRef(null);

@@ -61,11 +61,11 @@ const Contacto = () => {
                         Datos de Contacto
                       </p>
                       <div className="flex gap-3 items-center justify-evenly ">
-                        <FontAwesomeIcon icon={faMobile} shake />
+                        <FontAwesomeIcon icon={faMobile} />
                         <span className="animate-bounce">+34 644 79 90 00</span>
                       </div>
                       <div className="flex gap-3 items-center justify-evenly">
-                        <FontAwesomeIcon icon={faMapLocationDot} shake />
+                        <FontAwesomeIcon icon={faMapLocationDot}  />
                         <span>
                           Calle Reyes Huertas, 8, <br></br>06300 Zafra, Badajoz
                         </span>

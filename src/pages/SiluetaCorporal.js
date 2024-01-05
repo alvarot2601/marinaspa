@@ -30,7 +30,7 @@ const SiluetaCorporalPage = () => {
       ],
       [
         "Tratamiento BODY-SCULPT",
-        "Favorece la pérdida de grasa, remodela y tonifica: su diferencia la tecnología Body Pall (sin aparatología)",
+        "Favorece la pérdida de grasa, remodela y tonifica: su diferencia la tecnología Body Palp (sin aparatología)",
         0,
         [
          [ "Programa 6 Curas: ", 150],
@@ -40,7 +40,7 @@ const SiluetaCorporalPage = () => {
       [
         "Maderoterapia",
         '',
-        "45€/sesión",
+        "52€/sesión",
         [
           ["Programa 8 sesiones:", 300],
         ]
@@ -48,31 +48,31 @@ const SiluetaCorporalPage = () => {
       [
         "Presoterapia",
         '',
-        "12€/sesión",
+        "15€/sesión",
         [
-          ["Programa 10 sesiones", 90],
+          ["Programa 10 sesiones", 100],
         ]
       ],
       [
-        "Criolipólisis + presoterapia", '', 45
+        "Criolipólisis + presoterapia", '', 52
       ],
-      ["Remodelante corporal V-SHAPE + Presoterapia", '', 45],
+      ["Remodelante corporal V-SHAPE + Presoterapia", '', 52],
       [
         "Programa IWRAP. Sistema Integral de adelgazamiento (Criofrecuencia)",
         "",
-        "50€/sesión",
+        "52€/sesión",
         [
-          ["Programa 10 sesiones: ",400]
+          ["Programa 10 sesiones: ",420]
         ]
       ],
-      ["INDIBA corporal + Presoterapia", "", 50],
+      ["INDIBA corporal + Presoterapia", "", 52],
       [
         "WONDER",
         "",
         "69€/sesión",
         [
           ["Programa 8 sesiones:", 400],
-          ["Programa 4 sesiones:", "236"]
+          ["Programa 4 sesiones:", 236]
         ],
         
       ],
@@ -92,11 +92,11 @@ const SiluetaCorporalPage = () => {
         "10 sesiones de acción global sobre grasas profundas y superficiales, remodela la silueta y reduce la celulitis",
         0,
         [
-          ["Programa 1 zona: ",380],
-          ["Programa 2 zonas: ", 580]
+          ["Programa 1 zona: ",420],
+          ["Programa 2 zonas: ", 650]
         ],
       ],
-      ["MATENIMIENTO CORPORAL", "", 45,],
+      ["MATENIMIENTO CORPORAL", "", 52,],
     ],
     images: [SiluetaCorporal],
   };

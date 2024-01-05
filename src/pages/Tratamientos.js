@@ -1,11 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
-import Facial from "../assets/images/facial.jpg";
-import { AiFillCloseCircle } from 'react-icons/ai';
 
-import { CiMenuKebab } from 'react-icons/ci';
-import Footer from "../components/Footer";
-import NavBar from "../components/Navbar";
-import Carta from "../assets/pdf/carta_precios_2022.pdf";
+import Carta from "../assets/pdf/carta_precios_2023.pdf";
 import Layout from "../components/Layout";
 const Tratamientos = () => {
 
