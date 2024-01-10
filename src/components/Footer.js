@@ -4,7 +4,7 @@ import { FaFacebook, FaInstagram, FaCopyright } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="footer px-5 py-10 bg-zinc-100 text-zinc-600 flex flex-col gap-8">
+    <footer className="footer px-5 py-10 bg-primary text-zinc-900 flex flex-col gap-8">
       <div className="flex gap-5 flex-col md:flex-row justify-evenly">
         <div className="flex flex-row md:flex-col items-center justify-center gap-5 flex-wrap flex-1">
           <span>Zafra – Calle Reyes Huertas Nº 8</span>
@@ -19,7 +19,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="flex flex-row md:flex-col order-3 items-center justify-center gap-3 flex-wrap flex-1">
-          <a className="text-slate-600" href="/contacto">Contacto</a>
+          <a href="/contacto">Contacto</a>
           <a href="/aviso-legal">Aviso Legal</a>
           <a href="/politica-privacidad">Política de privacidad</a>
           <a href="/politica-cookies">Política de cookies</a>
