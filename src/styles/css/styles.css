@@ -941,19 +941,6 @@ button.info {
   background-color: #27272a;
 }
 
-.active {
-  color: #9e8479 !important;
-  text-decoration: underline;
-  text-underline-offset: 27px;
-  text-decoration-color: #9e8479;
-  font-weight: 600;
-}
-
-@media (max-width: 767px) {
-  .active {
-    text-underline-offset: 5px;
-  }
-}
 a, button {
   cursor: pointer;
 }

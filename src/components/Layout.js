@@ -1,6 +1,7 @@
 import { React, useEffect } from "react";
 import Footer from "./Footer";
 import Navbar2 from "./Navbar2";
+import Navbar from "./Navbar";
 import { FaWhatsapp, FaArrowCircleUp } from "react-icons/fa";
 import { Button, Divider, Link } from "@nextui-org/react";
 
@@ -37,7 +38,7 @@ const Layout = ({ children }) => {
   }, []);
   return (
     <>
-      <Navbar2 />
+      <Navbar />
       {children}
       <Divider />
       <Footer />

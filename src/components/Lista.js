@@ -7,7 +7,7 @@ const Lista = ({ obj }) => {
   const onlyNumbersRegEx = /^[0-9]+$/;
 
   return obj.map((singleObj, i) => {
-    const reverseRowClass = i % 2 === 0 ? "" : "order-1";
+    const reverseRowClass = i % 2 === 0 ? "" : "";//"order-1";
     return (
       <div key={`lista-${i}`} className="flex text-zinc-700">
         <div
@@ -107,7 +107,7 @@ const Lista = ({ obj }) => {
           </Accordion>
         </div>
         <div className="md:w-5/12 lg:w-1/2 hidden md:block">
-          <img className="h-full object-cover" src={singleObj.images[0]} alt="" />
+          <img className="w-full h-full object-cover max-h-[600px]" src={singleObj.images[0]} alt="" />
         </div>
       </div>
     );

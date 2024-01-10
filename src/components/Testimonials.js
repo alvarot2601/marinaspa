@@ -136,7 +136,7 @@ const Testimonials = () => {
   return (
     <section className="testimonios text-center py-10 px-5 bg-primary text-zinc-700">
       <h6 className="text-5xl md:text-6xl lg:text-8xl font-bold">
-        Testimonios
+        Qué opina la gente
       </h6>
       <div className="flex gap-3 items-center justify-center text-4xl my-4">
         <p className="text-xl sm:text-2xl md:text-4xl mx-5">

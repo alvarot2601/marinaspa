@@ -1,26 +1,34 @@
 import { Divider } from "@nextui-org/react";
-import React from "react";
-import { Accordion, AccordionItem } from "@nextui-org/react";
-
+import React, { useState } from "react";
+import {  AccordionItem } from "@nextui-org/react";
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import {Box} from "@mui/material";
+import { FaArrowUp } from "react-icons/fa";
 const Lista3 = ({ obj }) => {
   const onlyNumbersRegEx = /^[0-9]+$/;
-
+  const [expanded, setExpanded] = useState(false);
+  const handleChange = (panel) => (event, isExpanded)=> {
+    setExpanded(isExpanded ? panel : false);
+  }
+  const isVideo =['.mpg', '.mp2', '.mpeg', '.mpe', '.mpv', '.mp4']
   return obj.category.map((category, index) => {
-    const reverseRowClass = index % 2 === 0 ? "" : "order-1";
+    const reverseRowClass = 0//index % 2 === 0 ? "" : "order-1";
     return (
-      <div key={`lista-${index}`} className="flex gap-5 text-zinc-700">
+      <Box key={`lista-${index}`} className="flex gap-5">
         <div
           className={`w-full md:w-2/4  px-7 py-5 ${reverseRowClass} flex flex-col justify-center`}
         >
           {category !== "" ? (
-            <span className="text-4xl font-semibold">{category}</span>
+            <span className="animate-charcter text-6xl font-semibold">{category}</span>
           ) : (
             ""
           )}
           {(!Array.isArray(obj.category_text) && obj.category_text !== "") ||
           (Array.isArray(obj.category_text) &&
             obj.category_text[index] !== "") ? (
-            <p className="text-lg mt-5 mb-3 italic">
+            <p className="text-xl mt-5 mb-3 italic">
               {Array.isArray(obj.category_text)
                 ? obj.category_text[index]
                 : obj.category_text}
@@ -29,7 +37,75 @@ const Lista3 = ({ obj }) => {
             ""
           )}
 
-          <Accordion
+          <div>
+            {obj.treatments[index].map((treatment, index2) => {
+              let justifyClass =
+                treatment[1] !== "" ? "justify-between" : "justify-end";
+              return (
+                <Accordion sx={{backgroundColor:"#e9e0dc"}} expanded={expanded===treatment[treatment.length-1]} key={`accordion_${index}_${index2}`} onChange={handleChange(treatment[treatment.length-1])}>
+                <AccordionSummary
+                expandIcon={<FaArrowUp className=""/>}
+                aria-controls={`panel_${index}-${index2}a-header`}
+                id={`panel_${index}-${index2}a-header`}
+                >
+                <span className="font-bold">{treatment[0]}</span>
+                </AccordionSummary>
+                <AccordionDetails>
+                <div className={`flex ${justifyClass} items-center`}>
+                    {treatment[1] !== "" ? (
+                      <span className="basis-10/12">{treatment[1]}</span>
+                    ) : (
+                      ""
+                    )}
+
+                    <span className="flex justify-end basis-28 text-2xl ">
+                      {onlyNumbersRegEx.test(treatment[2])
+                        ? treatment[2] + "€"
+                        : treatment[2]}
+                    </span>
+                  </div>
+                </AccordionDetails>
+                </Accordion>
+              );
+            })}
+          </div>
+        </div>
+        {Array.isArray(obj.images) ? (
+          obj.images[index] !== "" ? (
+            <div className="hidden md:flex w-2/4">
+              {
+                obj.images[index].includes('.mp4')
+                ?
+                (
+                <video className="w-full max-h-[600px]" controls={true} autoPlay={true} muted={true}>
+                  <source src={obj.images[index]} type="video/mp4" ></source>
+                  Your browser does not support the video tag.
+                </video>
+                )
+                :
+                <img
+                className="h-full object-cover"
+                src={obj.images[index]}
+                alt=""
+              />
+
+              }
+              
+            </div>
+          ) : (
+            ""
+          )
+        ) : (
+          ""
+        )}
+      </Box>
+    );
+  });
+};
+
+export default Lista3;
+/*
+<Accordion
             isCompact
             variant="light"
             className="font-semibold"
@@ -70,52 +146,11 @@ const Lista3 = ({ obj }) => {
               },
             }}
           >
-            {obj.treatments[index].map((treatment, index2) => {
-              let justifyClass =
-                treatment[1] !== "" ? "justify-between" : "justify-end";
-              return (
-                <AccordionItem
+          
+          
+          <AccordionItem
                   className="accordionItemLista"
                   key={`accordion-${index}-${index2}`}
                   aria-label={`accordion-${index2}`}
                   title={treatment[0]}
-                >
-                  <div className={`flex ${justifyClass} items-center`}>
-                    {treatment[1] !== "" ? (
-                      <span className="basis-10/12">{treatment[1]}</span>
-                    ) : (
-                      ""
-                    )}
-
-                    <span className="flex justify-end basis-28">
-                      {onlyNumbersRegEx.test(treatment[2])
-                        ? treatment[2] + "€"
-                        : treatment[2]}
-                    </span>
-                  </div>
-                </AccordionItem>
-              );
-            })}
-          </Accordion>
-        </div>
-        {Array.isArray(obj.images) ? (
-          obj.images[index] !== "" ? (
-            <div className="hidden md:flex w-2/4">
-              <img
-                className="h-full object-cover"
-                src={obj.images[index]}
-                alt=""
-              />
-            </div>
-          ) : (
-            ""
-          )
-        ) : (
-          ""
-        )}
-      </div>
-    );
-  });
-};
-
-export default Lista3;
+                >*/

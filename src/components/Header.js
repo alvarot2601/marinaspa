@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import PosterImage from "../assets/images/esteticista_profesional-1.jpg";
 import Video from "../assets/video/corporal.mp4";
-import Video2 from "../assets/video/maderoterapia.mp4";
+import Video2 from "../assets/video/marinaspa.mp4";
 
 //fontawesome
 import { Tooltip, Button } from "@nextui-org/react";
@@ -137,7 +137,7 @@ const Header = (props) => {
           className="w-full h-full  object-cover grayscale blur-lg z-10 hover:cursor-pointer"
           poster={PosterImage}
         >
-          <source src={Video} type="video/mp4" />
+          <source src={Video2} type="video/mp4" />
         </video>
       </div>
       
