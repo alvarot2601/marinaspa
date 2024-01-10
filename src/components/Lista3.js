@@ -6,6 +6,8 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import {Box} from "@mui/material";
 import { FaArrowUp } from "react-icons/fa";
+import { theme } from "../theme";
+import { ThemeProvider } from "@emotion/react";
 const Lista3 = ({ obj }) => {
   const onlyNumbersRegEx = /^[0-9]+$/;
   const [expanded, setExpanded] = useState(false);
@@ -16,19 +18,20 @@ const Lista3 = ({ obj }) => {
   return obj.category.map((category, index) => {
     const reverseRowClass = 0//index % 2 === 0 ? "" : "order-1";
     return (
+      <ThemeProvider theme={theme}>
       <Box key={`lista-${index}`} className="flex gap-5">
         <div
           className={`w-full md:w-2/4  px-7 py-5 ${reverseRowClass} flex flex-col justify-center`}
         >
           {category !== "" ? (
-            <span className="animate-charcter text-6xl font-semibold">{category}</span>
+            <span className="animate-charcter text-6xl font-semibold" >{category}</span>
           ) : (
             ""
           )}
           {(!Array.isArray(obj.category_text) && obj.category_text !== "") ||
           (Array.isArray(obj.category_text) &&
             obj.category_text[index] !== "") ? (
-            <p className="text-xl mt-5 mb-3 italic">
+            <p className="text-xl mt-5 mb-3 italic text-primaryDark" >
               {Array.isArray(obj.category_text)
                 ? obj.category_text[index]
                 : obj.category_text}
@@ -42,13 +45,13 @@ const Lista3 = ({ obj }) => {
               let justifyClass =
                 treatment[1] !== "" ? "justify-between" : "justify-end";
               return (
-                <Accordion sx={{backgroundColor:"#e9e0dc"}} expanded={expanded===treatment[treatment.length-1]} key={`accordion_${index}_${index2}`} onChange={handleChange(treatment[treatment.length-1])}>
+                <Accordion sx={{backgroundColor:"#fff", color:theme.palette.primary.main}} expanded={expanded===treatment[treatment.length-1]} key={`accordion_${index}_${index2}`} onChange={handleChange(treatment[treatment.length-1])}>
                 <AccordionSummary
-                expandIcon={<FaArrowUp className=""/>}
+                expandIcon={<FaArrowUp/>}
                 aria-controls={`panel_${index}-${index2}a-header`}
                 id={`panel_${index}-${index2}a-header`}
                 >
-                <span className="font-bold">{treatment[0]}</span>
+                <span>{treatment[0]}</span>
                 </AccordionSummary>
                 <AccordionDetails>
                 <div className={`flex ${justifyClass} items-center`}>
@@ -99,6 +102,7 @@ const Lista3 = ({ obj }) => {
           ""
         )}
       </Box>
+      </ThemeProvider>
     );
   });
 };

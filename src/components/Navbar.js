@@ -220,15 +220,12 @@ const NavBar = (props) => {
               component="nav"
               aria-labelledby="nested-list-subheader"
             >
-
-
               <div style={{ width: "100%" }}>
                 {pages.map((page) => {
                   if (page[0].toLowerCase() === 'tratamientos') {
                     return (
                       <>
                         <ListItemButton onClick={handleClickTreatments}>
-
                           <span
                             key={page}
                             onClick={handleCloseNavMenu}
@@ -237,7 +234,6 @@ const NavBar = (props) => {
                             {page[0]}
                           </span>
                           {openTreatments ? <ExpandLess /> : <ExpandMore />}
-
                         </ListItemButton>
                         <Collapse in={openTreatments} timeout="auto" unmountOnExit>
                           <List component="div" disablePadding>
