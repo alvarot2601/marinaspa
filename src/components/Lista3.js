@@ -47,7 +47,7 @@ const Lista3 = ({ obj }) => {
               return (
                 <Accordion sx={{backgroundColor:theme.palette.primary.main, color:"#fff"}} expanded={expanded===treatment[treatment.length-1]} key={`accordion_${index}_${index2}`} onChange={handleChange(treatment[treatment.length-1])}>
                 <AccordionSummary
-                expandIcon={<FaArrowUp/>}
+                expandIcon={<FaArrowUp style={{color:'#fff'}}/>}
                 aria-controls={`panel_${index}-${index2}a-header`}
                 id={`panel_${index}-${index2}a-header`}
                 >
