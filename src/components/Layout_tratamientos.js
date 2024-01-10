@@ -15,8 +15,8 @@ const Layout_tratamientos = ({ children }) => {
     <Layout>
       <div className="py-5">
         <div className="flex flex-row flex-wrap justify-center gap-5 mt-5 mb-10 px-5">
-        <Button style={{backgroundColor:theme.palette.primary}} backgroundcolor={theme.palette.secondary} variant="contained" size="large" target="_blank" href={CartaPrecios} endIcon={<FaEye />} sx={{minWidth:230}}>Ver Carta</Button>
-        <Button variant="contained" size="large" target="_blank" href={CartaPrecios} endIcon={<FaDownload/>}  sx={{minWidth:230}}>Descargar Carta</Button>          
+        <Button style={{backgroundColor:theme.palette.primary, color:"#fff", minWidth:230}} variant="contained" size="large" target="_blank" href={CartaPrecios} endIcon={<FaEye />}>Ver Carta</Button>
+        <Button style={{backgroundColor:theme.palette.primary, color:"#fff", minWidth:230}} variant="contained" size="large" target="_blank" href={CartaPrecios} endIcon={<FaDownload/>}  sx={{minWidth:230}}>Descargar Carta</Button>          
         </div>
         {children}
       </div>

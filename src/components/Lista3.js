@@ -45,7 +45,7 @@ const Lista3 = ({ obj }) => {
               let justifyClass =
                 treatment[1] !== "" ? "justify-between" : "justify-end";
               return (
-                <Accordion sx={{backgroundColor:"#fff", color:theme.palette.primary.main}} expanded={expanded===treatment[treatment.length-1]} key={`accordion_${index}_${index2}`} onChange={handleChange(treatment[treatment.length-1])}>
+                <Accordion sx={{backgroundColor:theme.palette.primary.main, color:"#fff"}} expanded={expanded===treatment[treatment.length-1]} key={`accordion_${index}_${index2}`} onChange={handleChange(treatment[treatment.length-1])}>
                 <AccordionSummary
                 expandIcon={<FaArrowUp/>}
                 aria-controls={`panel_${index}-${index2}a-header`}
