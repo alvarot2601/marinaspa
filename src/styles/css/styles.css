@@ -895,11 +895,11 @@
   }
 }
 .testimonios .swiper-pagination-bullet-active {
-  background: #334155 !important;
+  background: #9e8479 !important;
 }
 .testimonios .swiper-button-next,
 .testimonios .swiper-button-prev {
-  color: #334155;
+  color: #9e8479;
 }
 
 .tratamientos .swiper-wrapper {
