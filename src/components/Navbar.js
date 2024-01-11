@@ -7,7 +7,7 @@ import AdbIcon from '@mui/icons-material/Adb';
 import MenuItem from '@mui/material/MenuItem';
 import IconButton from '@mui/material/IconButton';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import Logo from "../assets/images/logo-marinaspa-c2.jpg";
+import Logo from "../assets/images/logo-marinaspa-no-background.png";
 import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
 import ListItemButton from '@mui/material/ListItemButton';

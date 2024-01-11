@@ -134,7 +134,7 @@ const Testimonials = () => {
     },
   ];
   return (
-    <section className="testimonios text-center py-10 px-5 bg-white text-zinc-700">
+    <section className="testimonios text-center py-10 px-5 bg-white text-primaryDark">
       <h6 className="text-5xl md:text-6xl lg:text-8xl font-bold">
         ¿Qué opina la gente?
       </h6>
