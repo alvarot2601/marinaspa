@@ -48,7 +48,7 @@ const Servicios = (props) => {
       {
         //<p className="text-3xl my-5 ">¿Qué nos diferencia del resto?</p>
       }
-      <div className="servicios__wrapper h-screen">
+      <div className="servicios__wrapper h-screen text-primaryDarker">
         <div className="servicios__subwrapper h-full">
         <div className="servicios__servicio servicios__servicio--2  h-full">
             <div className="flex flex-col lg:flex-row h-full">
@@ -111,10 +111,6 @@ const Servicios = (props) => {
               </div>
             </div>
           </div>
-
-
-         
-
           <div className="servicios__servicio servicios__servicio--3  h-full">
             <div className="flex flex-col lg:flex-row h-full">
               <div className="hidden sm:block order-0 h-3/6 lg:h-full lg:w-5/12 xl:w-5/12">

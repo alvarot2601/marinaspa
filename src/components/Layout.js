@@ -3,7 +3,9 @@ import Footer from "./Footer";
 import Navbar2 from "./Navbar2";
 import Navbar from "./Navbar";
 import { FaWhatsapp, FaArrowCircleUp } from "react-icons/fa";
-import { Button, Divider, Link } from "@nextui-org/react";
+import {Divider,  } from "@nextui-org/react";
+import {IconButton} from "@mui/material";
+import { Link } from 'react-router-dom';
 
 const Layout = ({ children }) => {
   const showScrollToTop = () => {
@@ -42,26 +44,36 @@ const Layout = ({ children }) => {
       {children}
       <Divider />
       <Footer />
-      <Button
-        aria-aria-label="Scroll to top Button"
-        isIconOnly
-        className="fixed bottom-20 right-10 rounded-full z-50 bg-slate-600 text-white"
-        variant="shadow"
+      
+      <IconButton
+        variant="outlined"
+        sx={{position:"fixed", bottom:"70px", right:"20px", borderRadius:"100%", zIndex:50, bgcolor:"#9e8479",transition: 'all 0.3s ease-in-out, box-shadow 0.3s ease-in-out',
+        boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)', // Sombra base
+        ':hover': {
+          backgroundColor: '#f5ede8',
+          boxShadow: '0px 8px 16px rgba(0, 0, 0, 0.2)', // Sombra en hover
+          scale:'1.1'
+        },}}
         id="scrollToTop"
         onClick={scrollToTop}
       >
-        <FaArrowCircleUp />
-      </Button>
-      <Button
-        as={Link}
-        aria-label="whatsapp Button"
-        variant="shadow"
-        href="tel:+34684025751"
-        isIconOnly
-        className="fixed bottom-5 right-10 bg-green-600 text-white rounded-full z-50"
+        <FaArrowCircleUp className="text-xl"/>
+      </IconButton>
+      <IconButton
+        component={Link}        
+        variant="outlined"
+        to="https://api.whatsapp.com/send?phone=34684025751"
+        sx={{position:"fixed", bottom:"20px", right:"20px", borderRadius:"100%", zIndex:50, bgcolor:"#25D366",
+        transition: 'all 0.3s ease-in-out, box-shadow 0.3s ease-in-out',
+        boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)', // Sombra base
+        ':hover': {
+          backgroundColor: 'hsl(134, 70%, 75%)',
+          boxShadow: '0px 8px 16px rgba(0, 0, 0, 0.2)', // Sombra en hover
+          scale:'1.1'
+        },}}
       >
-        <FaWhatsapp className="text-xl" />
-      </Button>
+        <FaWhatsapp className="text-xl"/>
+      </IconButton>
     </>
   );
 };
