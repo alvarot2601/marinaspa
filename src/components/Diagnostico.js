@@ -1,24 +1,30 @@
 import React from "react";
-import DiagnosticoImage from "../assets/images/diagnostico.jpg";
-import { Button, Link } from "@nextui-org/react";
+import VideoDiagnostico from "../assets/video/diagnostico.mp4";
+import { Button } from "@mui/material";
+import { NavLink } from "react-router-dom";
+import EventAvailableIcon from '@mui/icons-material/EventAvailable';
+import { theme } from "../theme";
 const Diagnostico = () => {
     return (
-      <section className="diagnostico bg-zinc-50 flex flex-col gap-5 lg:flex-row  py-10 px-5 text-center lg:text-left">
-        <div className="w-full lg:w-6/12 flex flex-col gap-5 justify-center items-center lg:items-start">
+      <section className="diagnostico flex flex-col gap-5 lg:flex-row  px-5 lg:text-left text-primaryDarker">
+        <div className="w-full lg:w-7/12 flex flex-col gap-5 justify-center items-center text-center">
           <h4 className="text-5xl md:text-6xl lg:text-8xl font-bold">
             Diagnóstico Marina Spá
           </h4>
-          <p className=" text-xl mb-2 px-5 lg:max-w-[40vw] xl:max-w-[35vw]">
+          <p className=" text-xl mb-2 px-5">
             La clave del éxito en cualquier tipo de tratamiento de belleza
             reside en un previo diagnostico exhaustivo y personalizado para cada
             cliente, sin duda ese es el pilar donde se construyen los cimientos
             del éxito. por eso antes de pasar al tratamiento nos gustaría
             conocer un poco mas de ti y que es lo que te hace única.
           </p>
-          <Button as={Link} href="/contacto" size="lg" radius="sm" variant="shadow" className="w-max px-10 py-8 bg-zinc-700 text-zinc-50 text-xl font-semibold">Solicitar diagnóstico</Button>
+          <Button component={NavLink} to="/contacto" className="text-primaryDarker" variant="outlined" endIcon={<EventAvailableIcon/>} size="large">Solicitar Diagnóstico</Button>
         </div>
-        <div className="w-ful lg:w-6/12">
-          <img src={DiagnosticoImage} alt="" className="h-full w-full object-cover rounded-xl" />
+        <div className="w-full lg:w-5/12 flex justify-center">
+          <video controls muted autoPlay className="rounded-[5%] max-h-[700px]">
+            <source src={VideoDiagnostico} type="video/mp4"/>
+            Tu navegador no soporta videos.
+          </video>
         </div>
       </section>
     );
