@@ -62,7 +62,7 @@ export default function Navbar2() {
           className="block md:hidden"
         ></NavbarMenuToggle>
         <NavbarBrand className="md:flex justify-end md:justify-start">
-          <img src={Logo} className="max-h-[4px]"/>
+          <img src={Logo} className="max-h-[75px]"/>
         </NavbarBrand>
       </NavbarContent>
       <NavbarContent className="hidden md:flex" justify="center">
