@@ -2,11 +2,11 @@ import React, { useState, useRef } from "react";
 import Layout_tratamientos from "../components/Layout_tratamientos";
 import Lista3 from "../components/Lista3";
 //import List3 from '../components/List3';
-import hidromasaje from "../assets/images/hidromasaje.jpg";
-import peeling from "../assets/images/peeling.jpg";
+import videoHidromasaje from "../assets/video/hidromasaje.mp4";
+import VideoPeeling from "../assets/video/peelings.mp4";
 import masaje from "../assets/images/masaje.jpg";
 import relajacion from "../assets/images/relajacion.jpg";
-
+import VideoMasajes from "../assets/video/masajes.mp4";
 const BienestarRelajacionPage = () => {
   //referencias bienestar y relajación
   const br0 = useRef(null);
@@ -61,7 +61,7 @@ const BienestarRelajacionPage = () => {
       "Disfruta de la máxima relajación y bienestar con nuestros masajes profesionales. Nuestros terapeutas altamente capacitados te brindarán una experiencia única y revitalizante. Con técnicas especializadas y atención personalizada, cada masaje se adaptará a tus necesidades y preferencias individuales. Ya sea que busques aliviar el estrés, reducir la tensión muscular o simplemente relajarte, nuestros masajes te transportarán a un estado de calma y renovación",
       ""
     ],
-    images: [hidromasaje, peeling, masaje, relajacion],
+    images: [videoHidromasaje, VideoPeeling, VideoMasajes, ''],
     treatments: [
       [
         [
@@ -100,8 +100,6 @@ const BienestarRelajacionPage = () => {
           "Piel más suave y supe hidratada (35 min+)",
           45,
         ],
-      ],
-      [
         [
           "POLINESIA - Aromas tropicales y experiencia de relajación",
           "(Bañera, exfoliación y masaje)- Aprox. 100 min",
@@ -133,6 +131,9 @@ const BienestarRelajacionPage = () => {
           "Cocktail de bienvenida, 30´ de masaje corporal, belleza iluminadora facial y maquillaje)",
           55,
         ],
+      ],
+      [
+        
       ],
     ],
   };

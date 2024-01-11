@@ -21,7 +21,7 @@ const Lista3 = ({ obj }) => {
       <ThemeProvider theme={theme}>
       <Box key={`lista-${index}`} className="flex gap-5">
         <div
-          className={`w-full md:w-2/4  px-7 py-5 ${reverseRowClass} flex flex-col justify-center`}
+          className={`w-full md:w-4/6  px-7 py-5 ${reverseRowClass} flex flex-col justify-center`}
         >
           {category !== "" ? (
             <span className="animate-charcter text-6xl font-semibold" >{category}</span>
@@ -75,7 +75,7 @@ const Lista3 = ({ obj }) => {
         </div>
         {Array.isArray(obj.images) ? (
           obj.images[index] !== "" ? (
-            <div className="hidden md:flex w-2/4">
+            <div className="hidden md:flex md:items-center w-2/6 ">
               {
                 obj.images[index].includes('.mp4')
                 ?

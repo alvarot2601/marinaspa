@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import Layout_tratamientos from "../components/Layout_tratamientos";
 import Lista3 from "../components/Lista3";
 import cera from "../assets/images/depilacion-cera.jpg";
-import VideoDepilacion from "../assets/video/depilacion.mp4";
+import VideoDepilacion from "../assets/images/fotodepilacion.jpg";//"../assets/video/depilacion.mp4";
 import fotodepilacion from "../assets/images/fotodepilacion.jpg";
 
 const DepilacionPage = () => {
