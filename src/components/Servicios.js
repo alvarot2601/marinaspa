@@ -41,8 +41,8 @@ const Servicios = (props) => {
     return () => ctx.revert();
   }, []);
   return (
-    <div className={` ${props.classProp} text-center overflow-hidden`}>
-      <h3 className="p-5 text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold bg-zinc-50 text-zinc-700">
+    <div id="servicios-1" className={` ${props.classProp} text-center overflow-hidden`}>
+      <h3 className="p-5 text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold bg-white text-primaryDarker">
         NUESTROS SERVICIOS
       </h3>
       {
@@ -115,9 +115,9 @@ const Servicios = (props) => {
 
          
 
-          <div className="servicios__servicio servicios__servicio--3  h-full bg-orange-100">
+          <div className="servicios__servicio servicios__servicio--3  h-full">
             <div className="flex flex-col lg:flex-row h-full">
-              <div className="hidden sm:block order-1 h-3/6 lg:h-full lg:w-5/12 xl:w-5/12">
+              <div className="hidden sm:block order-0 h-3/6 lg:h-full lg:w-5/12 xl:w-5/12">
                 <img
                   loading="lazy"
                   src={Aromaterapia}

@@ -91,9 +91,7 @@ const Lista3 = ({ obj }) => {
                 src={obj.images[index]}
                 alt=""
               />
-
               }
-              
             </div>
           ) : (
             ""

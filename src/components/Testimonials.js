@@ -134,9 +134,9 @@ const Testimonials = () => {
     },
   ];
   return (
-    <section className="testimonios text-center py-10 px-5 bg-primary text-zinc-700">
+    <section className="testimonios text-center py-10 px-5 bg-white text-zinc-700">
       <h6 className="text-5xl md:text-6xl lg:text-8xl font-bold">
-        Qué opina la gente
+        ¿Qué opina la gente?
       </h6>
       <div className="flex gap-3 items-center justify-center text-4xl my-4">
         <p className="text-xl sm:text-2xl md:text-4xl mx-5">
@@ -171,7 +171,7 @@ const Testimonials = () => {
         {opinions.map((op, index) => {
           return (
             <SwiperSlide className="w-full max-w-[490px]" key={`op-${index}`}>
-              <Card className="w-2/4 mx-auto my-5 bg-zinc-100 w-11/12 min-h-[338px]">
+              <Card className="w-2/4 mx-auto my-5 bg-primary w-11/12 min-h-[338px]">
                 <CardHeader className="flex items-center justify-center gap-4">
                   <Avatar
                     icon={<AvatarIcon />}

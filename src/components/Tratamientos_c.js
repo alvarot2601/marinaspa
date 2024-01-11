@@ -12,8 +12,8 @@ import EsteticaGeneral from "../assets/images/estetica-general.jpg";
 import SiluetaCorporal from "../assets/images/silueta-corporal.jpg";
 import hidromasajePicture from "../assets/images/hidromasaje.jpg";
 import fotodepilacionPicture from "../assets/images/fotodepilacion.jpg";
-import { Button, Link } from "@nextui-org/react";
-
+import { NavLink } from "react-router-dom";
+import { Button } from "@mui/material";
 const Tratamientos_c = () => {
   const tratamientos_array = [
     [
@@ -51,15 +51,18 @@ const Tratamientos_c = () => {
   const [showMore, setShowMore] = useState(false);
   const [showBtn, setShowBtn] = useState(false);
   useEffect(() => {
-    if (window.innerWidth < 1175) setShowBtn(true);
+    if (window.innerWidth < 1105){
+      setShowBtn(true);
+    } 
   }, []);
   const showMoreText = () => {
     setShowMore(!showMore);
+    setShowBtn(false);
   };
   return (
-    <div className="tratamientos py-10 px-5 bg-zinc-50 text-zinc-700  text-center">
+    <div className="tratamientos py-10 px-5 bg-zinc-50 text-primaryDarker text-center">
       <h2 className="text-5xl md:text-6xl lg:text-8xl font-bold">
-        Nuestros tratamientos
+        NUESTROS TRATAMIENTOS
       </h2>
       <p
         className={`text-center sm:text-md text-lg mt-4 mb-2 mx-5 font-medium italic ${showMore ? "" : "line-clamp-5"
@@ -76,15 +79,14 @@ const Tratamientos_c = () => {
         Ven a tu Centro de Estética en Sóller
       </p>
       <Button
-        size="lg"
-        className={`mb-4 border border-zinc-700 ${showBtn ? "" : "hidden"}`}
-        variant="bordered"
+        size="large"
+        variant="outlined"
         onClick={showMoreText}
-        endContent={<AiOutlineArrowDown />}
+        endIcon={<AiOutlineArrowDown />}
+        sx={{display:`${showBtn ? "" : "none"}`}}
       >
         Leer más
       </Button>
-
       <Swiper
         className="tratamientos__slider"
         effect="coverflow"
@@ -108,7 +110,7 @@ const Tratamientos_c = () => {
                       alt=""
                     />
                   </div>
-                  <div className="flex flex-col py-5 px-4 sm:px-5 tratamientos__text bg-primary">
+                  <div className="flex flex-col items-center py-5 px-4 sm:px-5 tratamientos__text bg-primary">
                     <span className="text-xl font-semibold">
                       {treatment[0]}
                     </span>
@@ -116,13 +118,15 @@ const Tratamientos_c = () => {
                       {treatment[1]}
                     </p>
                     <Button
-                      as={Link}
-                      href={treatment[3]}
-                      radius="sm"
-                      variant="shadow"
-                      className="px-5 sm:px-10 py-6 sm:py-8 mx-auto bg-zinc-600 text-zinc-50 text-xl font-semibold shadow-xl shadow-zinc-600/50"
+                      component={NavLink}
+                      to={treatment[3]}
+                      variant="contained"
+                      size="large"
+                      endIcon={<AiOutlineArrowDown />}
+                      className="max-w-[200px]"
+                      sx={{color:'#fff'}}
                     >
-                      Saber más <AiOutlineArrowDown />
+                      Saber más
                     </Button>
                   </div>
                 </div>

@@ -6,7 +6,7 @@
   import { theme } from "../theme";
   const Diagnostico = () => {
       return (
-        <section className="diagnostico flex flex-col gap-5 lg:flex-row  px-5 lg:text-left text-primaryDark">
+        <section className="diagnostico flex flex-col gap-5 lg:flex-row py-5  px-5 lg:text-left text-primaryDark">
           <div className="w-full lg:w-7/12 flex flex-col gap-5 justify-center items-center text-center">
             <h4 className="text-5xl md:text-6xl lg:text-8xl font-bold">
               Diagnóstico Marina Spá
@@ -20,8 +20,8 @@
             </p>
             <Button component={NavLink} to="/contacto" className="text-primaryDarker" variant="outlined" endIcon={<EventAvailableIcon/>} size="large">Solicitar Diagnóstico</Button>
           </div>
-          <div className="w-full lg:w-5/12 flex justify-center">
-            <video controls muted autoPlay className="rounded-[5%] max-h-[700px]">
+          <div className="w-full mt-3 lg:mt-0 lg:w-5/12 flex justify-center">
+            <video controls muted autoPlay className="rounded-[5%] max-h-[650px] w-full lg:w-fit">
               <source src={VideoDiagnostico} type="video/mp4"/>
               Tu navegador no soporta videos.
             </video>

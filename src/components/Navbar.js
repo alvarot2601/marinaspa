@@ -105,10 +105,10 @@ const NavBar = (props) => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   return (
-    <AppBar position="static" sx={{ backgroundColor: "white" }}>
+    <AppBar position="static" sx={{ backgroundColor: "white",padding:'5px' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters className="flex justify-between md:justify-center gap-6">
-          <img src={Logo} className="max-h-[90px] hidden md:flex" />
+          <img src={Logo} className="max-h-[70px] hidden md:flex" />
 
           <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
             <IconButton
