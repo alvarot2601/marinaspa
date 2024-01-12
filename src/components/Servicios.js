@@ -59,8 +59,8 @@ const Servicios = (props) => {
                   className="object-cover rounded-none h-full w-full "
                 />
               </div>
-              <div className="h-full flex items-center p-5 h-3/6 lg:w-7/12 xl:w-7/12">
-                <Box className="bg-white shadow-2xl rounded-2xl px-3 pb-5 h-fit flex flex-col items-center justify-center sm:justify-center gap-5">
+              <div className="h-full flex items-center px-10 py-5 h-3/6 lg:w-7/12 xl:w-7/12">
+                <Box className="bg-white shadow-2xl rounded-2xl px-3 pb-5 h-fit flex flex-col items-center justify-center sm:justify-center gap-3">
                 <div>
                   <FaHandshake className="text-6xl md:text-7xl lg:text-8xl" />
                 </div>
@@ -81,8 +81,8 @@ const Servicios = (props) => {
           </div>
         <div className="mejores-marcas servicios__servicio servicios__servicio--1 h-full">
             <div className="flex flex-col justify-center lg:flex-row h-full">
-              <div className=" flex items-center p-5">
-                <Box className="bg-white shadow-2xl rounded-2xl px-3 py-5 h-fit flex flex-col items-center justify-center sm:justify-center gap-5">
+              <div className=" flex items-center px-10 py-5">
+                <Box className="bg-white shadow-2xl rounded-2xl px-3 py-5 h-fit flex flex-col items-center justify-center sm:justify-center gap-3">
                 <div className="flex gap-4 items-baseline">
                   <FaTrophy className="text-7xl lg:text-8xl" />
                   <FaTrophy className="text-8xl lg:text-9xl" />
@@ -122,11 +122,11 @@ const Servicios = (props) => {
                 <img
                   loading="lazy"
                   src={Aromaterapia}
-                  className="object-cover rounded-none h-full w-full"
+                  className="object-cover rounded-[100%] h-full w-full"
                 />
               </div>
-              <div className="h-full flex flex-col items-center justify-center gap-2 p-5 h-3/6 lg:w-7/12 xl:w-7/12">
-              <Box className="bg-white shadow-2xl rounded-2xl px-3 py-5 h-fit flex flex-col items-center justify-center sm:justify-center gap-5">
+              <div className="h-full flex flex-col items-center justify-center gap-2 px-10 py-5 h-3/6 lg:w-7/12 xl:w-7/12">
+              <Box className="bg-white shadow-2xl rounded-2xl px-3 py-5 h-fit flex flex-col items-center justify-center sm:justify-center gap-3">
                 <div className="flex gap-4 items-center">
                   <FaSpa className="text-6xl md:text-7xl lg:text-8xl" />
                   <FaHeartbeat className="text-6xl md:text-7xl lg:text-8xl" />

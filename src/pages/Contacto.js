@@ -26,7 +26,7 @@ const Contacto = () => {
       <section className="contacto text-center text-xl p-5">
         <Card
           isBlurred
-          className="border-none bg-background/60 dark:bg-default-100/50 w-full md:w-10/12 mx-auto mt-5 text-slate-700"
+          className="border-none bg-background/60 dark:bg-default-100/50 w-full md:w-10/12 mx-auto mt-5 text-primaryDark"
           shadow="md"
         >
           <CardHeader className="flex flex-col px-5">
