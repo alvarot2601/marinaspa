@@ -17,7 +17,7 @@ import ShakeHands from "../assets/images/shake-hands.jpg";
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
+import { Box } from "@mui/material";
 
 const Servicios = (props) => {
   gsap.registerPlugin(ScrollTrigger);
@@ -59,11 +59,12 @@ const Servicios = (props) => {
                   className="object-cover rounded-none h-full w-full "
                 />
               </div>
-              <div className="h-full flex flex-col items-center justify-center sm:justify-center  px-5 lg:px-10 pb-5 pt-4 lg:py-5 h-3/6 lg:w-7/12 xl:w-7/12">
+              <div className="h-full flex items-center p-5 h-3/6 lg:w-7/12 xl:w-7/12">
+                <Box className="bg-white shadow-2xl rounded-2xl px-3 pb-5 h-fit flex flex-col items-center justify-center sm:justify-center gap-5">
                 <div>
-                  <FaHandshake className="text-7xl md:text-8xl lg:text-9xl" />
+                  <FaHandshake className="text-6xl md:text-7xl lg:text-8xl" />
                 </div>
-                <p className=" mb-3 font-bold underline underline-offset-4 decoration-2 text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight sm:leading-tight md:leading-tight lg:leading-tight">
+                <p className="mb-3 font-bold text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight sm:leading-tight md:leading-tight lg:leading-tight">
                   Programas de fidelización y ofertas.
                 </p>
                 <p className="md:text-lg lg:text-xl font-medium italic">
@@ -74,18 +75,20 @@ const Servicios = (props) => {
                   depilación, siempre encontrarás oportunidades para cuidar de
                   ti a precios increíbles.
                 </p>
+                </Box>
               </div>
             </div>
           </div>
         <div className="mejores-marcas servicios__servicio servicios__servicio--1 h-full">
             <div className="flex flex-col justify-center lg:flex-row h-full">
-              <div className=" flex flex-col items-center justify-center gap-5 p-10">
+              <div className=" flex items-center p-5">
+                <Box className="bg-white shadow-2xl rounded-2xl px-3 py-5 h-fit flex flex-col items-center justify-center sm:justify-center gap-5">
                 <div className="flex gap-4 items-baseline">
                   <FaTrophy className="text-7xl lg:text-8xl" />
                   <FaTrophy className="text-8xl lg:text-9xl" />
                   <FaTrophy className="text-7xl lg:text-8xl" />
                 </div>
-                <p className="sm:mb-3 font-bold underline underline-offset-4 decoration-2 leading-snug text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight sm:leading-tight md:leading-tight lg:leading-tight">
+                <p className="sm:mb-3 font-bold leading-snug text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight sm:leading-tight md:leading-tight lg:leading-tight">
                   Solo las mejores marcas.
                 </p>
                 <p className="md:text-lg lg:text-xl font-medium italic">
@@ -104,10 +107,12 @@ const Servicios = (props) => {
                   </span>
                 </p>
                 <div className="flex flex-wrap items-center justify-center servicios__img-container">
-                  <img loading="lazy" src={Mesoestetic} className="mesoestetic w-1/3" />
-                  <img loading="lazy" src={Massada} className="massada w-1/3" />
-                  <img loading="lazy" src={Utsukusi} className="utsukusy w-1/3" />
+                  <img loading="lazy" src={Mesoestetic} className="mesoestetic w-1/3 max-w-[200px]" />
+                  <img loading="lazy" src={Massada} className="massada w-1/3 max-w-[200px]" />
+                  <img loading="lazy" src={Utsukusi} className="utsukusy w-1/3 max-w-[200px]" />
                 </div>
+                </Box>
+                
               </div>
             </div>
           </div>
@@ -120,13 +125,14 @@ const Servicios = (props) => {
                   className="object-cover rounded-none h-full w-full"
                 />
               </div>
-              <div className="h-full flex flex-col items-center justify-center gap-2 px-5 lg:px-10 pb-5 pt-4 lg:py-5 h-3/6 lg:w-7/12 xl:w-7/12">
+              <div className="h-full flex flex-col items-center justify-center gap-2 p-5 h-3/6 lg:w-7/12 xl:w-7/12">
+              <Box className="bg-white shadow-2xl rounded-2xl px-3 py-5 h-fit flex flex-col items-center justify-center sm:justify-center gap-5">
                 <div className="flex gap-4 items-center">
                   <FaSpa className="text-6xl md:text-7xl lg:text-8xl" />
                   <FaHeartbeat className="text-6xl md:text-7xl lg:text-8xl" />
                 </div>
 
-                <p className="mb-3 font-bold underline underline-offset-4 decoration-2 text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight sm:leading-tight md:leading-tight lg:leading-tight">
+                <p className="mb-3 font-bold text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight sm:leading-tight md:leading-tight lg:leading-tight">
                   Terapias de bienestar holísticas.
                 </p>
                 <p className="md:text-lg lg:text-xl font-medium italic">
@@ -136,6 +142,7 @@ const Servicios = (props) => {
                   nuestras terapias holísticas. ¡Reserva tu cita ahora y
                   descubre una sensación de paz y vitalidad en MarinaSpá!
                 </p>
+                </Box>
               </div>
             </div>
           </div>

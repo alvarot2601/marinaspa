@@ -63,6 +63,7 @@ const Layout = ({ children }) => {
         component={Link}        
         variant="outlined"
         to="https://api.whatsapp.com/send?phone=34684025751"
+        target="_blank"
         sx={{position:"fixed", bottom:"20px", right:"20px", borderRadius:"100%", zIndex:50, bgcolor:"#25D366",
         transition: 'all 0.3s ease-in-out, box-shadow 0.3s ease-in-out',
         boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)', // Sombra base
