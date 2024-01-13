@@ -148,7 +148,7 @@ const Testimonials = () => {
           <FontAwesomeIcon icon={faStar} className="text-yellow-400 mr-1" />
           basada en más de{" "}
           <Link
-            className="text-3xl sm:text-4xl text-primaryDark"
+            className="text-3xl sm:text-4xl text-[#5288b8]"
             isExternal
             href="https://www.google.com/search?q=opiniones+marinaspa&rlz=1C1UEAD_esES927ES927&oq=opiniones+marinaspa&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgYIARBFGEAyCggCEAAYCBgNGB4yCggDEAAYCBgNGB7SAQgzNjQ3ajBqN6gCALACAA&sourceid=chrome&ie=UTF-8#lrd=0xd11559abcee9b27:0xcbeaf2d0f02699f5,1,,,,"
           >
@@ -171,7 +171,7 @@ const Testimonials = () => {
         {opinions.map((op, index) => {
           return (
             <SwiperSlide className="w-full max-w-[490px]" key={`op-${index}`}>
-              <Card className="w-2/4 mx-auto my-5 bg-primary w-11/12 min-h-[338px]">
+              <Card className="w-2/4 mx-auto my-5 bg-primary shadow-xl w-11/12 min-h-[338px]">
                 <CardHeader className="flex items-center justify-center gap-4">
                   <Avatar
                     icon={<AvatarIcon />}
@@ -199,7 +199,7 @@ const Testimonials = () => {
                 <Divider />
                 <CardFooter className="flex justify-center">
                   <Link
-                    className="text-lg text-primaryDark"
+                    className="text-lg text-[#5288b8]"
                     isExternal
                     showAnchorIcon
                     href={op.url}

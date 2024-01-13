@@ -1,11 +1,17 @@
-import React from "react";
+import {React, useState} from "react";
 
-import { Accordion, AccordionItem } from "@nextui-org/react";
-
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import { theme } from "../theme";
+import { ThemeProvider } from "@emotion/react";
 const Lista = ({ obj }) => {
   //expresion regular para saber si contiene únicamente digitos o no
   const onlyNumbersRegEx = /^[0-9]+$/;
-
+  const [expanded, setExpanded] = useState(false);
+  const handleChange = (panel) => (event, isExpanded)=> {
+    setExpanded(isExpanded ? panel : false);
+  }
   return obj.map((singleObj, i) => {
     const reverseRowClass = i % 2 === 0 ? "" : "";//"order-1";
     return (
@@ -19,55 +25,20 @@ const Lista = ({ obj }) => {
             ""
           )}
           <p className="text-lg mt-5 mb-3 italic">{singleObj.category_text}</p>
-          <Accordion
-            className="font-semibold"
-            variant="light"
-            isCompact
-            motionProps={{
-              variants: {
-                enter: {
-                  y: 0,
-                  opacity: 1,
-                  height: "auto",
-                  transition: {
-                    height: {
-                      type: "spring",
-                      stiffness: 500,
-                      damping: 30,
-                      duration: 1,
-                    },
-                    opacity: {
-                      easings: "ease",
-                      duration: 1,
-                    },
-                  },
-                },
-                exit: {
-                  y: -10,
-                  opacity: 0,
-                  height: 0,
-                  transition: {
-                    height: {
-                      easings: "ease",
-                      duration: 0.25,
-                    },
-                    opacity: {
-                      easings: "ease",
-                      duration: 0.3,
-                    },
-                  },
-                },
-              },
-            }}
-          >
             {singleObj.treatments.map((treatment, index) => {
               return (
-                <AccordionItem
-                  className="accordionItemLista"
-                  key={`accordion-${i}-${index}`}
-                  aria-label={`accordion-${index}`}
-                  title={treatment[0]}
+                <Accordion sx={{backgroundColor:theme.palette.primary.main, color:"#fff"}} expanded={expanded===treatment[treatment.length-1]} key={`accordion_${i}_${index}`} onChange={handleChange(treatment[treatment.length-1])}>
+                <AccordionSummary
+                aria-controls={`panel_${i}-${index}a-header`}
+                id={`panel_${i}-${index}a-header`}
                 >
+                <span>{treatment[0]}</span>
+
+
+                
+                  
+                </AccordionSummary>
+                <AccordionDetails>
                   <div className={`flex ${(Array.isArray(treatment[3])) 
                       ? 'flex-col ' 
                       : (treatment[1] !== '') ? 'justify-between items-center gap-10' : 'justify-end'}`
@@ -101,10 +72,10 @@ const Lista = ({ obj }) => {
                       : ''
                     }
                   </div>
-                </AccordionItem>
+                </AccordionDetails>
+                </Accordion>
               );
             })}
-          </Accordion>
         </div>
         <div className="md:w-5/12 lg:w-1/2 hidden md:block">
           <img className="w-full h-full object-cover max-h-[600px]" src={singleObj.images[0]} alt="" />

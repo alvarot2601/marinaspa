@@ -84,9 +84,9 @@ const Servicios = (props) => {
               <div className=" flex items-center px-10 py-5">
                 <Box className="bg-white shadow-2xl rounded-2xl px-3 py-5 h-fit flex flex-col items-center justify-center sm:justify-center gap-3">
                 <div className="flex gap-4 items-baseline">
+                  <FaTrophy className="text-6xl lg:text-7xl" />
                   <FaTrophy className="text-7xl lg:text-8xl" />
-                  <FaTrophy className="text-8xl lg:text-9xl" />
-                  <FaTrophy className="text-7xl lg:text-8xl" />
+                  <FaTrophy className="text-6xl lg:text-7xl" />
                 </div>
                 <p className="sm:mb-3 font-bold leading-snug text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight sm:leading-tight md:leading-tight lg:leading-tight">
                   Solo las mejores marcas.

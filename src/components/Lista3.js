@@ -14,6 +14,11 @@ const Lista3 = ({ obj }) => {
   const handleChange = (panel) => (event, isExpanded)=> {
     setExpanded(isExpanded ? panel : false);
   }
+
+  
+  const setAutoplay = () =>{
+
+  }
   const isVideo =['.mpg', '.mp2', '.mpeg', '.mpe', '.mpv', '.mp4']
   return obj.category.map((category, index) => {
     const reverseRowClass = 0//index % 2 === 0 ? "" : "order-1";
@@ -80,7 +85,7 @@ const Lista3 = ({ obj }) => {
                 obj.images[index].includes('.mp4')
                 ?
                 (
-                <video className="w-full max-h-[600px]" controls={true} autoPlay={true} muted={true}>
+                <video className="w-full max-h-[600px]" controls autoPlay muted>
                   <source src={obj.images[index]} type="video/mp4" ></source>
                   Your browser does not support the video tag.
                 </video>
