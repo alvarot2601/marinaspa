@@ -60,12 +60,12 @@ const Lista = ({ obj }) => {
                           </div>
                         )
                         : (treatment[1] !== ''
-                          ? <span className="text-sm font-medium text-slate-600 italic">{treatment[1]}</span>
+                          ? <span className="basis-10/12">{treatment[1]}</span>
                           : '')
                     }
                     {
                       treatment[2] !== 0 
-                      ? <span className="text-right text-slate-600">
+                      ? <span className="flex justify-end basis-28 text-2xl ">
                         {onlyNumbersRegEx.test(treatment[2]) ? treatment[2] + '€' : treatment[2]}
                       </span>
                       : ''
