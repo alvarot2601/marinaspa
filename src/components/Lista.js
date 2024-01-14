@@ -5,6 +5,7 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import { theme } from "../theme";
 import { ThemeProvider } from "@emotion/react";
+import { FaArrowUp } from "react-icons/fa";
 const Lista = ({ obj }) => {
   //expresion regular para saber si contiene únicamente digitos o no
   const onlyNumbersRegEx = /^[0-9]+$/;
@@ -31,6 +32,7 @@ const Lista = ({ obj }) => {
                 <AccordionSummary
                 aria-controls={`panel_${i}-${index}a-header`}
                 id={`panel_${i}-${index}a-header`}
+                expandIcon={<FaArrowUp style={{color:'#fff'}}/>}
                 >
                 <span>{treatment[0]}</span>
 

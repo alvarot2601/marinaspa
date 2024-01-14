@@ -35,18 +35,20 @@ const BienestarRelajacionPage = () => {
       "Tus uñas merecen la mejor atención y cuidado, y en nuestra web encontrarás todo lo que necesitas para lucir unas manos y pies impecables. Nuestro equipo de expertos en belleza y estilistas profesionales se dedica a ofrecerte los tratamientos más innovadores y las últimas tendencias en el mundo de la manicura y pedicura.",
     images: [''],
     treatments: [
-      ["Manicura normal", "", 14],
-      ["Manicura con esmaltado semipermanente", "", 20],
+      ["Manicura normal", "", 14, "s_1"],
+      ["Manicura con esmaltado semipermanente", "", 20, "s_2"],
       [
         "Manicura Spa-Tratamiento completo de belleza en tus manos",
         "",
         29
+        , "s_3"
       ],
-      ["Pedicura con esmaltado semipermanente", "", 20],
+      ["Pedicura con esmaltado semipermanente", "", 20, "s_4"],
       [
         "Pedicura Spa-Tratamiento completo de belleza en tus pies",
         "",
         29
+        , "s_5"
       ],
     ],
   };
@@ -68,24 +70,28 @@ const BienestarRelajacionPage = () => {
           "Baño Sensación Océano",
           "Sumérgete en un mar de relax absoluto (20 min)",
           15,
+          , "s_6"
         ],
         [
           "Baño Aromaceane",
           "Drenante, ayuda a eliminar líquidos (20 min)",
           15,
+          , "s_7"
         ],
       ],
       [
-        ["Peeling Vivificante", "Elimina el estrés (35 min)", 35],
+        ["Peeling Vivificante", "Elimina el estrés (35 min)", 35, "s_8"],
         [
           "Polinesia",
           "Piel aterciopelada y con una luminosidad natural (35 min)",
           35,
+          , "s_9"
         ],
         [
           "Peeling Hidratante",
           "Piel más suave y súper hidratada (35 min)",
           35,
+          , "s_10"
         ],
       ],
       [
@@ -93,43 +99,51 @@ const BienestarRelajacionPage = () => {
           "Masajes piernas cansadas + Presoterapia (50 min)",
           "",
           45,
+          , "s_11"
         ],
-        ["Masaje antiestrés - (30 min)", "", 25],
+        ["Masaje antiestrés - (30 min)", "", 25, "s_12"],
         [
           "Peeling Hidratante",
           "Piel más suave y supe hidratada (35 min+)",
           45,
+          , "s_13"
         ],
         [
           "POLINESIA - Aromas tropicales y experiencia de relajación",
           "(Bañera, exfoliación y masaje)- Aprox. 100 min",
           80,
+          , "s_14"
         ],
         [
           "ÁRTICO - Experiencia estimulante nacida de la fusión del calor y el frío",
           "(Para una profunda relajación)- Aprox. 100 min",
           80,
+          , "s_15"
         ],
         [
           "RITUAL THERMAL",
           "Exfoliante + Envoltura de algas + bañera + masaje corporal + mascarilla facial – 100 min",
           90,
+          , "s_16"
         ],
         [
           "RITUAL DE LA ALEGRÍA CON CÍTRICOS BY ALQUIMIA ",
           "Tratamiento vitalizante y energético (100 min)",
           90,
+          , "s_17"
         ],
-        ["ENVOLTURA DE ALGAS", "", 45],
+        ["ENVOLTURA DE ALGAS", "", 45, "s_18"],
         [
           "ENVOLTURA INDOCEANE + 30 MINUTOS DE MASAJE",
           "(enriquecida en activos nutritivos que subliman la piel dejándola suave y aterciopelada)",
           50,
+          , "s_19"
         ],
         [
           "BEAUTY PARTY (mínimo 4 personas/máximo 10 personas)",
           "Cocktail de bienvenida, 30´ de masaje corporal, belleza iluminadora facial y maquillaje)",
           55,
+          , "s_20"
         ],
       ],
       [
