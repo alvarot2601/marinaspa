@@ -1,6 +1,5 @@
 import { Divider } from "@nextui-org/react";
 import React, { useState } from "react";
-import {  AccordionItem } from "@nextui-org/react";
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';

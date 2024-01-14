@@ -20,11 +20,11 @@ const Lista = ({ obj }) => {
           className={`w-full md:w-7/12 lg:w-1/2 px-7 py-5 ${reverseRowClass} flex flex-col justify-center`}
         >
           {singleObj.category !== "" ? (
-            <span className="text-4xl font-semibold ">{singleObj.category}</span>
+            <span className="animate-charcter text-6xl font-semibold">{singleObj.category}</span>
           ) : (
             ""
           )}
-          <p className="text-lg mt-5 mb-3 italic">{singleObj.category_text}</p>
+          <p className="text-xl mt-5 mb-3 italic text-primaryDark">{singleObj.category_text}</p>
             {singleObj.treatments.map((treatment, index) => {
               return (
                 <Accordion sx={{backgroundColor:theme.palette.primary.main, color:"#fff"}} expanded={expanded===treatment[treatment.length-1]} key={`accordion_${i}_${index}`} onChange={handleChange(treatment[treatment.length-1])}>
@@ -74,7 +74,7 @@ const Lista = ({ obj }) => {
               );
             })}
         </div>
-        <div className="md:w-5/12 lg:w-1/2 hidden md:block">
+        <div className="md:w-5/12 lg:w-1/2 hidden md:flex md:items-center">
           <img className="w-full h-full object-cover max-h-[600px]" src={singleObj.images[0]} alt="" />
         </div>
       </div>
