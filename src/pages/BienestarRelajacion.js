@@ -140,7 +140,7 @@ const BienestarRelajacionPage = () => {
 
   /////////////ESTADOS
   const [bienestarRelajacionState, setBienestarRelajacionState] = useState(bienestarRelajacionObj);
-
+  
   return (
     <>
       <Layout_tratamientos>

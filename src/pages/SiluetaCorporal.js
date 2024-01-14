@@ -27,11 +27,13 @@ const SiluetaCorporalPage = () => {
         "Envoltura de Algas “CURA DETOX”",
         "Sumérjase en una experiencia relajante, donde la riqueza mineral, el alto poder de penetración de las algas le permitirán drenar y desintoxicar el organismo, dejándolo libre de deshechos + Bañera Hidromasaje",
         45
+        , "s_1"
       ],
       [
         "Tratamiento BODY-SCULPT",
         "Favorece la pérdida de grasa, remodela y tonifica: su diferencia la tecnología Body Palp (sin aparatología)",
         0,
+        , "s_2"
         [
          [ "Programa 6 Curas: ", 150],
          ["Programa 12 Curas: ", 290]
@@ -44,6 +46,7 @@ const SiluetaCorporalPage = () => {
         [
           ["Programa 8 sesiones:", 300],
         ]
+        , "s_3"
       ],
       [
         "Presoterapia",
@@ -51,12 +54,13 @@ const SiluetaCorporalPage = () => {
         "15€/sesión",
         [
           ["Programa 10 sesiones", 100],
-        ]
+        ],
+        , "s_4"
       ],
       [
-        "Criolipólisis + presoterapia", '', 52
+        "Criolipólisis + presoterapia", '', 52, "s_5"
       ],
-      ["Remodelante corporal V-SHAPE + Presoterapia", '', 52],
+      ["Remodelante corporal V-SHAPE + Presoterapia", '', 52, "s_6"],
       [
         "Programa IWRAP. Sistema Integral de adelgazamiento (Criofrecuencia)",
         "",
@@ -64,6 +68,7 @@ const SiluetaCorporalPage = () => {
         [
           ["Programa 10 sesiones: ",420]
         ]
+        , "s_7"
       ],
       ["INDIBA corporal + Presoterapia", "", 52],
       [
@@ -74,7 +79,7 @@ const SiluetaCorporalPage = () => {
           ["Programa 8 sesiones:", 400],
           ["Programa 4 sesiones:", 236]
         ],
-        
+        , "s_8"
       ],
       [
         "LIPOSONIX",
@@ -86,6 +91,7 @@ const SiluetaCorporalPage = () => {
           ["Cartucheras:", 150],
           ["Brazos:", 150]
         ],
+        "s_9"
       ],
       [
         "Programa integral",
@@ -95,8 +101,9 @@ const SiluetaCorporalPage = () => {
           ["Programa 1 zona: ",420],
           ["Programa 2 zonas: ", 650]
         ],
+        "s_10"
       ],
-      ["MATENIMIENTO CORPORAL", "", 52,],
+      ["MATENIMIENTO CORPORAL", "", 52, "s_11"],
     ],
     images: [SiluetaCorporal],
   };

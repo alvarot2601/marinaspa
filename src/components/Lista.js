@@ -34,9 +34,6 @@ const Lista = ({ obj }) => {
                 >
                 <span>{treatment[0]}</span>
 
-
-                
-                  
                 </AccordionSummary>
                 <AccordionDetails>
                   <div className={`flex ${(Array.isArray(treatment[3])) 
@@ -51,7 +48,7 @@ const Lista = ({ obj }) => {
                             {
                               treatment[3].map((program, index2) => {
                                 return (
-                                  <div key={`program-${index2}`} className="flex justify-between">
+                                  <div key={`program-${index}-${index2}`} className="flex justify-between">
                                     <span>{program[0]}</span>
                                     <span>{program[1]}€</span>
                                   </div>
