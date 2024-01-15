@@ -65,7 +65,7 @@ const Lista3 = ({ obj }) => {
                       ""
                     )}
 
-                    <span className="flex justify-end basis-28 text-2xl ">
+                    <span className="flex justify-end basis-auto text-2xl ">
                       {onlyNumbersRegEx.test(treatment[2])
                         ? treatment[2] + "€"
                         : treatment[2]}

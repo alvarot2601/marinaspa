@@ -33,11 +33,11 @@ const SiluetaCorporalPage = () => {
         "Tratamiento BODY-SCULPT",
         "Favorece la pérdida de grasa, remodela y tonifica: su diferencia la tecnología Body Palp (sin aparatología)",
         0,
-        , "s_2"
         [
          [ "Programa 6 Curas: ", 150],
          ["Programa 12 Curas: ", 290]
-        ]
+        ],
+        "s_2"
       ],
       [
         "Maderoterapia",

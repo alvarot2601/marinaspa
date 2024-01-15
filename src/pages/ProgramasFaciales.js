@@ -77,7 +77,7 @@ const ProgramasfacialesPage = ({ title }) => {
       ["Limpieza en profundidad de la piel con cosmética profesional", "", 39, "s_13"],
       [
         "Higiene facial profunda con microdermoabrasión con punta de Diamante",
-        "tratamiento indoloro que elimina las células muertas de la piel a la vez que reafirma y las líneas de expresión se vuelven menos visibles",
+        "Tratamiento indoloro que elimina las células muertas de la piel a la vez que reafirma y las líneas de expresión se vuelven menos visibles",
         45,
         , "s_14"
       ],
