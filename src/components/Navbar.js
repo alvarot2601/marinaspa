@@ -197,7 +197,7 @@ const NavBar = (props) => {
                 return (
 
                   <NavLink
-                    className='MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeLarge MuiButton-textSizeLarge css-8htxp0-MuiButtonBase-root-MuiButton-root'
+                    className="flex items-center text-primaryDark"
                     to={`/${page[1]}`}
                     key={page}
                     onClick={handleCloseNavMenu}
