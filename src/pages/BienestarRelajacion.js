@@ -2,11 +2,11 @@ import React, { useState, useRef } from "react";
 import Layout_tratamientos from "../components/Layout_tratamientos";
 import Lista3 from "../components/Lista3";
 //import List3 from '../components/List3';
-import hidromasaje from "../assets/images/hidromasaje.jpg";
-import peeling from "../assets/images/peeling.jpg";
+import videoHidromasaje from "../assets/video/hidromasaje.mp4";
+import VideoPeeling from "../assets/video/peelings.mp4";
 import masaje from "../assets/images/masaje.jpg";
 import relajacion from "../assets/images/relajacion.jpg";
-
+import VideoMasajes from "../assets/video/masajes.mp4";
 const BienestarRelajacionPage = () => {
   //referencias bienestar y relajación
   const br0 = useRef(null);
@@ -35,18 +35,20 @@ const BienestarRelajacionPage = () => {
       "Tus uñas merecen la mejor atención y cuidado, y en nuestra web encontrarás todo lo que necesitas para lucir unas manos y pies impecables. Nuestro equipo de expertos en belleza y estilistas profesionales se dedica a ofrecerte los tratamientos más innovadores y las últimas tendencias en el mundo de la manicura y pedicura.",
     images: [''],
     treatments: [
-      ["Manicura normal", "", 12],
-      ["Manicura con esmaltado semipermanente", "", 18],
+      ["Manicura normal", "", 14, "s_1"],
+      ["Manicura con esmaltado semipermanente", "", 20, "s_2"],
       [
         "Manicura Spa-Tratamiento completo de belleza en tus manos",
         "",
-        25
+        29
+        , "s_3"
       ],
-      ["Pedicura con esmaltado semipermanente", "", 18],
+      ["Pedicura con esmaltado semipermanente", "", 20, "s_4"],
       [
         "Pedicura Spa-Tratamiento completo de belleza en tus pies",
         "",
-        25
+        29
+        , "s_5"
       ],
     ],
   };
@@ -61,31 +63,35 @@ const BienestarRelajacionPage = () => {
       "Disfruta de la máxima relajación y bienestar con nuestros masajes profesionales. Nuestros terapeutas altamente capacitados te brindarán una experiencia única y revitalizante. Con técnicas especializadas y atención personalizada, cada masaje se adaptará a tus necesidades y preferencias individuales. Ya sea que busques aliviar el estrés, reducir la tensión muscular o simplemente relajarte, nuestros masajes te transportarán a un estado de calma y renovación",
       ""
     ],
-    images: [hidromasaje, peeling, masaje, relajacion],
+    images: [videoHidromasaje, VideoPeeling, VideoMasajes, ''],
     treatments: [
       [
         [
           "Baño Sensación Océano",
           "Sumérgete en un mar de relax absoluto (20 min)",
           15,
+          , "s_6"
         ],
         [
           "Baño Aromaceane",
           "Drenante, ayuda a eliminar líquidos (20 min)",
           15,
+          , "s_7"
         ],
       ],
       [
-        ["Peeling Vivificante", "Elimina el estrés (35 min)", 35],
+        ["Peeling Vivificante", "Elimina el estrés (35 min)", 35, "s_8"],
         [
           "Polinesia",
           "Piel aterciopelada y con una luminosidad natural (35 min)",
           35,
+          , "s_9"
         ],
         [
           "Peeling Hidratante",
           "Piel más suave y súper hidratada (35 min)",
           35,
+          , "s_10"
         ],
       ],
       [
@@ -93,53 +99,62 @@ const BienestarRelajacionPage = () => {
           "Masajes piernas cansadas + Presoterapia (50 min)",
           "",
           45,
+          , "s_11"
         ],
-        ["Masaje antiestrés - (30 min)", "", 25],
+        ["Masaje antiestrés - (30 min)", "", 25, "s_12"],
         [
           "Peeling Hidratante",
           "Piel más suave y supe hidratada (35 min+)",
           45,
+          , "s_13"
         ],
-      ],
-      [
         [
           "POLINESIA - Aromas tropicales y experiencia de relajación",
           "(Bañera, exfoliación y masaje)- Aprox. 100 min",
           80,
+          , "s_14"
         ],
         [
           "ÁRTICO - Experiencia estimulante nacida de la fusión del calor y el frío",
           "(Para una profunda relajación)- Aprox. 100 min",
           80,
+          , "s_15"
         ],
         [
           "RITUAL THERMAL",
           "Exfoliante + Envoltura de algas + bañera + masaje corporal + mascarilla facial – 100 min",
           90,
+          , "s_16"
         ],
         [
           "RITUAL DE LA ALEGRÍA CON CÍTRICOS BY ALQUIMIA ",
           "Tratamiento vitalizante y energético (100 min)",
           90,
+          , "s_17"
         ],
-        ["ENVOLTURA DE ALGAS", "", 45],
+        ["ENVOLTURA DE ALGAS", "", 45, "s_18"],
         [
           "ENVOLTURA INDOCEANE + 30 MINUTOS DE MASAJE",
           "(enriquecida en activos nutritivos que subliman la piel dejándola suave y aterciopelada)",
           50,
+          , "s_19"
         ],
         [
           "BEAUTY PARTY (mínimo 4 personas/máximo 10 personas)",
           "Cocktail de bienvenida, 30´ de masaje corporal, belleza iluminadora facial y maquillaje)",
-          50,
+          55,
+          , "s_20"
         ],
+      ],
+      [
+        
       ],
     ],
   };
 
   /////////////ESTADOS
   const [bienestarRelajacionState, setBienestarRelajacionState] = useState(bienestarRelajacionObj);
-
+  
   return (
     <>
       <Layout_tratamientos>

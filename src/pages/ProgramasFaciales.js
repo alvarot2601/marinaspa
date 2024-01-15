@@ -16,48 +16,55 @@ const ProgramasfacialesPage = ({ title }) => {
         "Ritual biocelular",
         "Regenera, estimula y potencia la energía natural de tu piel",
         48,
+        "s_1"
       ],
       ["Ritual ácido hialurónico", "Efecto lifting natural", 48],
       [
         "Ritual de perlas",
         "Envuelve a tu piel en un halo de luminosidad y juventud",
         48,
+        "s_2"
       ],
       [
         "Tratamiento facial láser frío Dioderma",
         " Aplicación de principios activos a gran profundidad rellenando arrugas e iluminando la piel",
         45,
+        "s_3"
       ],
-      ["Ritual de regeneración y Luminosidad", "", 3],
       [
         "Tratamiento facial Dermapen",
         "Estimula el colágeno y elastina, reduce las líneas de expresión y el tamaño del poro, disminuye la apariencia de cicatrices, mejora la firmeza de la piel",
         70,
+        "s_4"
       ],
       [
         "INDIBA facial Express",
         "El mejor tratamiento que hay en el mercado para regenerar y revitalizar células de la piel, sin efectos secundarios",
         30,
+        "s_5"
       ],
       [
         "INDIBA facial",
         "El mejor tratamiento que hay en el mercado para regenerar y revitalizar células de la piel, sin efectos secundarios, todo complementado con nuestra mejor cosmética y personalizada según caso",
         50,
+        "s_6"
       ],
       [
         "HIFU facial Completo",
         "Ultrasonidos de alta frecuencia que hace efecto lifting sin cirugía",
         200,
+        "s_7"
       ],
-      ["HIFU por zona (facial)", "", 150],
-      ["HIFU por zona (Cuello)", "", 100],
+      ["HIFU por zona (facial)", "", 150, "s_8"],
+      ["HIFU por zona (Cuello)", "", 100, "s_9"],
       [
         "Masaje ENERGILIFT",
         "Lifting manual, este masaje remodela la estructura natural de la piel, reposiciona los volúmenes y redibuja el contorno del rostro",
         35,
+        "s_10"
       ],
-      ["Programa facial personalizado (6 Sesiones)", "", 280],
-      ["Mantenimiento facial", "", 45],
+      ["Programa facial personalizado (6 Sesiones)", "", 299,"s_11"],
+      ["Mantenimiento facial", "", 52, "s_12"],
     ],
   };
   const higienefacialObj = {
@@ -67,20 +74,21 @@ const ProgramasfacialesPage = ({ title }) => {
       "La higiene facial oxigenante combina la limpieza profunda de la piel con la entrega de oxígeno a las células de la piel para mejorar su apariencia y salud. Además, la higiene facial oxigenante es una técnica no invasiva que puede realizarse en cualquier tipo de piel, desde la piel seca hasta la piel grasa.",
     images: [facial],
     treatments: [
-      ["Limpieza en profundidad de la piel con cosmética profesional", "", 36],
+      ["Limpieza en profundidad de la piel con cosmética profesional", "", 39, "s_13"],
       [
         "Higiene facial profunda con microdermoabrasión con punta de Diamante",
-        "tratamiento indoloro que elimina las células muertas de la piel a la vez que reafirma y las líneas de expresión se vuelven menos visibles",
-        3,
+        "Tratamiento indoloro que elimina las células muertas de la piel a la vez que reafirma y las líneas de expresión se vuelven menos visibles",
+        45,
+        , "s_14"
       ],
-      ["Limpieza en profundidad de la piel con cosmética profesional", "", 3],
-      ["Hidravacuum – Detox – Limpieza – Exfoliación – Nutrición", "", 50],
-      ["Ritual de regeneración y luminosidad", "", 3],
+      ["Hidravacuum – Detox – Limpieza – Exfoliación – Nutrición", "", 50, "s_15"],
+      ["Ritual de regeneración y luminosidad", "", 48, "s_16"],
 
       [
         "Ritual equilibrio y purificador",
         " Restablece el equilibrio de las pieles mixtas y grasas, eliminando las imperfecciones y brillos de la piel",
-        3,
+        45,
+        , "s_17"
       ],
     ],
   };
@@ -123,12 +131,5 @@ const ProgramasfacialesPage = ({ title }) => {
     </>
   );
 };
-/*
-//<a href={CartaPrecios} target='_blank' className='button2 material-bubble' >Ver Carta de precios <FaEye/></a>
-<header>
-                        <h1>Te ayudamos a encontrar el tratamiento facial ideal para tus necesidades.</h1>
-                        <p className='t-center caveat'>Acude a nuestro centro de estética y descubre la última tecnología en programas faciales. <br></br>Revitaliza tu piel con nuestros programas faciales de vanguardia</p>
-                        <button>Ver precios</button>
-                    </header>
- */
+
 export default ProgramasfacialesPage;

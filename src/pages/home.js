@@ -6,8 +6,9 @@ import Tratamientos_c from "../components/Tratamientos_c";
 import Layout from "../components/Layout";
 import Servicios from "../components/Servicios";
 import { Divider } from "@nextui-org/react";
-
 const Home = () => {
+
+  
   const section_1 = useRef(null);
   const section_2 = useRef(null);
   const section_3 = useRef(null);
@@ -157,13 +158,13 @@ const Home = () => {
       <section className="navHeaderWrapper section-1" ref={section_1}>
         <Header classProp="active-section section-1 text-zinc-700" />
       </section>
-
-      <section ref={section_2} className="servicios section-3 text-zinc-700 ">
-        <Servicios classProp="section-3" />
-      </section>
       <section ref={section_3} className="tratamientos section-4 text-zinc-700">
         <Tratamientos_c />
       </section>
+      <section ref={section_2} className="servicios section-3 text-zinc-700 ">
+        <Servicios classProp="section-3" />
+      </section>
+      
       <section className="text-zinc-700">
       <Testimonials />
       </section>

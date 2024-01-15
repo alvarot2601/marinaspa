@@ -27,15 +27,15 @@ button.info{
     background-color: #27272a   ;
 }
 .active{
-    color:$primaryDarker!important;//indigo700;
-    text-decoration: underline;
-    text-underline-offset: 27px;
-    text-decoration-color: $primaryDarker;
-    font-weight: 600;
+    //color:$primaryDarker!important;//indigo700;
+    //text-decoration: underline;
+    ///text-underline-offset: 27px;
+    //text-decoration-color: $primaryDarker;
+    //font-weight: 600;
 }
 @media (max-width:767px){
     .active{
-        text-underline-offset: 5px;
+    //    text-underline-offset: 5px;
     }  
 }
 a, span, h1,h2,h3,h4,h5,h6, p{

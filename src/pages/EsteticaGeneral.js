@@ -3,8 +3,8 @@ import Layout_tratamientos from "../components/Layout_tratamientos";
 
 import Lista from "../components/Lista";
 //images
-import Maquillaje from "../assets/images/maquillaje.jpg";
-import Manicura from "../assets/images/manicura.jpg";
+import Maquillaje from "../assets/images/maquillaje-2.jpg";
+import Manicura from "../assets/images/manicura-2.jpg";
 const EsteticaGeneralPage = ({ title }) => {
   ///referencias estetica general manicura y pedicura
   const eg0 = useRef(null);
@@ -25,18 +25,20 @@ const EsteticaGeneralPage = ({ title }) => {
       "Tus uñas merecen la mejor atención y cuidado, y en nuestra web encontrarás todo lo que necesitas para lucir unas manos y pies impecables. Nuestro equipo de expertos en belleza y estilistas profesionales se dedica a ofrecerte los tratamientos más innovadores y las últimas tendencias en el mundo de la manicura y pedicura.",
     images: [Manicura],
     treatments: [
-      ["Manicura normal", "", 12],
-      ["Manicura con esmaltado semipermanente", "", 18],
+      ["Manicura normal", "", 14, "s_1"],
+      ["Manicura con esmaltado semipermanente", "", 20, "s_2"],
       [
         "Manicura Spa-Tratamiento completo de belleza en tus manos",
         "",
-        25,
+        29,
+        , "s_3"
       ],
-      ["Pedicura con esmaltado semipermanente", "", 18],
+      ["Pedicura con esmaltado semipermanente", "", 20, "s_4"],
       [
         "Pedicura Spa-Tratamiento completo de belleza en tus pies",
         "",
-        25,
+        29,
+        , "s_5"
       ],
     ],
   };
@@ -47,13 +49,14 @@ const EsteticaGeneralPage = ({ title }) => {
       "Si buscas resaltar tu belleza natural y expresar tu estilo único, estás en el lugar correcto. Nuestro equipo de expertos en belleza está aquí para ofrecerte los mejores consejos, tutoriales y productos de maquillaje que te ayudarán a lucir radiante en cualquier ocasión.",
     images: [Maquillaje],
     treatments: [
-      ["Maquillaje social (día, tarde o noche)", "", "30"],
+      ["Maquillaje social (día, tarde o noche)", "", 30, "s_6"],
       [
         "Maquillaje de novia (Incluye fijación flash de larga duración y prueba de maquillaje)",
         "(no incluye desplazamiento)",
-        "90",
+        110,
+        , "s_7"
       ],
-      ["Lifting de pestañas + Tinte", "", 30],
+      ["Lifting de pestañas + Tinte", "", 35, "s_8"],
     ],
   };
 

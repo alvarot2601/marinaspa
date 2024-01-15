@@ -26,7 +26,7 @@ const Contacto = () => {
       <section className="contacto text-center text-xl p-5">
         <Card
           isBlurred
-          className="border-none bg-background/60 dark:bg-default-100/50 w-full md:w-10/12 mx-auto mt-5 text-slate-700"
+          className="border-none bg-background/60 dark:bg-default-100/50 w-full md:w-10/12 mx-auto mt-5 text-primaryDark"
           shadow="md"
         >
           <CardHeader className="flex flex-col px-5">
@@ -61,11 +61,11 @@ const Contacto = () => {
                         Datos de Contacto
                       </p>
                       <div className="flex gap-3 items-center justify-evenly ">
-                        <FontAwesomeIcon icon={faMobile} shake />
+                        <FontAwesomeIcon icon={faMobile} />
                         <span className="animate-bounce">+34 644 79 90 00</span>
                       </div>
                       <div className="flex gap-3 items-center justify-evenly">
-                        <FontAwesomeIcon icon={faMapLocationDot} shake />
+                        <FontAwesomeIcon icon={faMapLocationDot}  />
                         <span>
                           Calle Reyes Huertas, 8, <br></br>06300 Zafra, Badajoz
                         </span>

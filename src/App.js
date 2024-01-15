@@ -6,8 +6,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import Tratamientos from './pages/Tratamientos';
 import ProgramasFacialesPage from './pages/ProgramasFaciales';
-
-
+import { theme } from './theme';
+import { ThemeProvider } from '@mui/material';
 
 
 
@@ -35,6 +35,7 @@ function App() {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Suspense fallback={<div>Loading...</div>}>
+        <ThemeProvider theme={theme}>
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/tratamientos" element={<Tratamientos />}></Route>
@@ -49,6 +50,7 @@ function App() {
           <Route path="/politica-privacidad" element={<PoliticaPrivacidad />}></Route>
           <Route path="/aviso-legal" element={<AvisoLegal />}></Route>
         </Routes>
+        </ThemeProvider>
       </Suspense>
     </BrowserRouter>
   );

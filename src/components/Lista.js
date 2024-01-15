@@ -1,73 +1,43 @@
-import React from "react";
+import {React, useState} from "react";
 
-import { Accordion, AccordionItem } from "@nextui-org/react";
-
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import { theme } from "../theme";
+import { ThemeProvider } from "@emotion/react";
+import { FaArrowUp } from "react-icons/fa";
 const Lista = ({ obj }) => {
   //expresion regular para saber si contiene únicamente digitos o no
   const onlyNumbersRegEx = /^[0-9]+$/;
-
+  const [expanded, setExpanded] = useState(false);
+  const handleChange = (panel) => (event, isExpanded)=> {
+    setExpanded(isExpanded ? panel : false);
+  }
   return obj.map((singleObj, i) => {
-    const reverseRowClass = i % 2 === 0 ? "" : "order-1";
+    const reverseRowClass = i % 2 === 0 ? "" : "";//"order-1";
     return (
       <div key={`lista-${i}`} className="flex text-zinc-700">
         <div
           className={`w-full md:w-7/12 lg:w-1/2 px-7 py-5 ${reverseRowClass} flex flex-col justify-center`}
         >
           {singleObj.category !== "" ? (
-            <span className="text-4xl font-semibold ">{singleObj.category}</span>
+            <span className="animate-charcter text-6xl font-semibold">{singleObj.category}</span>
           ) : (
             ""
           )}
-          <p className="text-lg mt-5 mb-3 italic">{singleObj.category_text}</p>
-          <Accordion
-            className="font-semibold"
-            variant="light"
-            isCompact
-            motionProps={{
-              variants: {
-                enter: {
-                  y: 0,
-                  opacity: 1,
-                  height: "auto",
-                  transition: {
-                    height: {
-                      type: "spring",
-                      stiffness: 500,
-                      damping: 30,
-                      duration: 1,
-                    },
-                    opacity: {
-                      easings: "ease",
-                      duration: 1,
-                    },
-                  },
-                },
-                exit: {
-                  y: -10,
-                  opacity: 0,
-                  height: 0,
-                  transition: {
-                    height: {
-                      easings: "ease",
-                      duration: 0.25,
-                    },
-                    opacity: {
-                      easings: "ease",
-                      duration: 0.3,
-                    },
-                  },
-                },
-              },
-            }}
-          >
+          <p className="text-xl mt-5 mb-3 italic text-primaryDark">{singleObj.category_text}</p>
             {singleObj.treatments.map((treatment, index) => {
               return (
-                <AccordionItem
-                  className="accordionItemLista"
-                  key={`accordion-${i}-${index}`}
-                  aria-label={`accordion-${index}`}
-                  title={treatment[0]}
+                <Accordion sx={{backgroundColor:theme.palette.primary.main, color:"#fff"}} expanded={expanded===treatment[treatment.length-1]} key={`accordion_${i}_${index}`} onChange={handleChange(treatment[treatment.length-1])}>
+                <AccordionSummary
+                aria-controls={`panel_${i}-${index}a-header`}
+                id={`panel_${i}-${index}a-header`}
+                expandIcon={<FaArrowUp style={{color:'#fff'}}/>}
                 >
+                <span>{treatment[0]}</span>
+
+                </AccordionSummary>
+                <AccordionDetails>
                   <div className={`flex ${(Array.isArray(treatment[3])) 
                       ? 'flex-col ' 
                       : (treatment[1] !== '') ? 'justify-between items-center gap-10' : 'justify-end'}`
@@ -80,7 +50,7 @@ const Lista = ({ obj }) => {
                             {
                               treatment[3].map((program, index2) => {
                                 return (
-                                  <div key={`program-${index2}`} className="flex justify-between">
+                                  <div key={`program-${index}-${index2}`} className="flex justify-between">
                                     <span>{program[0]}</span>
                                     <span>{program[1]}€</span>
                                   </div>
@@ -90,24 +60,24 @@ const Lista = ({ obj }) => {
                           </div>
                         )
                         : (treatment[1] !== ''
-                          ? <span className="text-sm font-medium text-slate-600 italic">{treatment[1]}</span>
+                          ? <span className="basis-10/12">{treatment[1]}</span>
                           : '')
                     }
                     {
                       treatment[2] !== 0 
-                      ? <span className="text-right text-slate-600">
+                      ? <span className="flex justify-end basis-auto text-2xl ">
                         {onlyNumbersRegEx.test(treatment[2]) ? treatment[2] + '€' : treatment[2]}
                       </span>
                       : ''
                     }
                   </div>
-                </AccordionItem>
+                </AccordionDetails>
+                </Accordion>
               );
             })}
-          </Accordion>
         </div>
-        <div className="md:w-5/12 lg:w-1/2 hidden md:block">
-          <img className="h-full object-cover" src={singleObj.images[0]} alt="" />
+        <div className="md:w-5/12 lg:w-1/2 hidden md:flex md:items-center">
+          <img className="w-full h-full object-cover max-h-[600px]" src={singleObj.images[0]} alt="" />
         </div>
       </div>
     );

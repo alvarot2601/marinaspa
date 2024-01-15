@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Logo from "../assets/images/logo-marinaspa-c.jpg"
 import {
   Navbar,
   NavbarBrand,
@@ -53,7 +54,7 @@ export default function Navbar2() {
     <Navbar
       position="static"
       isBordered
-      className="h-[10vh] min-h-[70px] bg-zinc-50"
+      className="h-[10vh] min-h-[85px] bg-[white]"
     >
       <NavbarContent>
         <NavbarMenuToggle
@@ -61,7 +62,7 @@ export default function Navbar2() {
           className="block md:hidden"
         ></NavbarMenuToggle>
         <NavbarBrand className="md:flex justify-end md:justify-start">
-          <p className="font-bold text-2xl">MarinaSpá</p>
+          <img src={Logo} className="max-h-[75px]"/>
         </NavbarBrand>
       </NavbarContent>
       <NavbarContent className="hidden md:flex" justify="center">
