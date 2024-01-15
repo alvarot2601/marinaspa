@@ -196,15 +196,15 @@ const NavBar = (props) => {
               } else {
                 return (
 
-                  <NavLink
-                    className="flex items-center text-primaryDark"
+                  <Button
+                    component={NavLink}
                     to={`/${page[1]}`}
                     key={page}
                     onClick={handleCloseNavMenu}
                     sx={{ my: 2, display: 'flex' }}
                   >
                     {page[0]}
-                  </NavLink>
+                  </Button>
                 )
               }
             })}
