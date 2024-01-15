@@ -22,7 +22,7 @@ import ExpandMore from '@mui/icons-material/ExpandMore';
 const NavBar = (props) => {
   const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
   const subpages = [['Programas Faciales', 'programas-faciales'], ['Estética General', 'estetica-general'], ['Silueta Corporal', 'silueta-corporal'], ['Bienestar y relajación', 'bienestar-y-relajacion'], ['Depilación y Fotodepilación', 'depilacion-y-fotodepilacion']];
-  const pages = [['INICIO', ''], ['TRATAMIENTOS', ''], ['CONTACTO', 'contacto']];
+  const pages = [['INICIO', ''], ['TRATAMIENTOS', ''],['GALERÍA', 'galeria'], ['CONTACTO', 'contacto']];
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [anchorElUser, setAnchorElUser] = useState(null);
   const [anchorEl, setAnchorEl] = useState(null);
@@ -197,6 +197,7 @@ const NavBar = (props) => {
                 return (
 
                   <Button
+                    size="large"
                     component={NavLink}
                     to={`/${page[1]}`}
                     key={page}
@@ -220,7 +221,7 @@ const NavBar = (props) => {
               component="nav"
               aria-labelledby="nested-list-subheader"
             >
-              <div style={{ width: "100%" }}>
+              <div className="text-primaryDark" style={{ width: "100%" }}>
                 {pages.map((page) => {
                   if (page[0].toLowerCase() === 'tratamientos') {
                     return (
@@ -229,6 +230,7 @@ const NavBar = (props) => {
                           <span
                             key={page}
                             onClick={handleCloseNavMenu}
+                            
                             sx={{ my: 2, display: 'flex' }}
                           >
                             {page[0]}
