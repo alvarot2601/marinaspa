@@ -7,11 +7,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 //fotos
 import TratamientosFacialesPicture from "../assets/images/tratamientos-faciales.jpg";
 
-import EsteticaGeneral from "../assets/images/estetica-general.jpg";
+import EsteticaGeneral from "../assets/images/manicura-2.jpg";
 
 import SiluetaCorporal from "../assets/images/silueta-corporal.jpg";
 import hidromasajePicture from "../assets/images/hidromasaje.jpg";
 import fotodepilacionPicture from "../assets/images/fotodepilacion.jpg";
+import Antiaging from "../assets/images/anti-aging.jpg";
 import { NavLink } from "react-router-dom";
 import { Button } from "@mui/material";
 const Tratamientos_c = () => {
@@ -104,7 +105,7 @@ const Tratamientos_c = () => {
                 <div className="tratamientos__item tratamientos__item--1 flex flex-col">
                   <div className="flex h-[213px] lg:h-[240px]">
                     <img
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover object-[0%,15%]"
                       loading="lazy"
                       src={treatment[2]}
                       alt=""
