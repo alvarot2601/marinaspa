@@ -10,7 +10,6 @@ import TratamientosFacialesPicture from "../assets/images/tratamientos-faciales.
 import EsteticaGeneral from "../assets/images/manicura-2.jpg";
 
 import SiluetaCorporal from "../assets/images/silueta-corporal.jpg";
-import hidromasajePicture from "../assets/images/hidromasaje.jpg";
 import fotodepilacionPicture from "../assets/images/fotodepilacion.jpg";
 import Antiaging from "../assets/images/anti-aging.jpg";
 import { NavLink } from "react-router-dom";
@@ -38,7 +37,7 @@ const Tratamientos_c = () => {
     [
       'BIENESTAR Y RELAJACIÓN',
       'En MarinaSpá, te ayudamos a alcanzar la silueta corporal de tus sueños. Nuestros tratamientos avanzados, como la criolipólisis y la radiofrecuencia, te permiten esculpir tu cuerpo de manera segura y efectiva. Nuestro equipo de expertos estará contigo en cada paso del camino para lograr resultados visibles. ¡Reserva tu consulta hoy mismo y comienza a transformar tu figura!',
-      hidromasajePicture,
+      SiluetaCorporal,
       '/bienestar-y-relajacion'
     ],
     [

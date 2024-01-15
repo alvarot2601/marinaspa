@@ -184,7 +184,7 @@ const NavBar = (props) => {
                       {
                         subpages.map(subpage => (
                           <MenuItem onClick={handleClose}>
-                            <NavLink to={`/${subpage[1]}`}>
+                            <NavLink to={`/${subpage[1]}`} className="text-primaryDark">
                               {subpage[0]}
                             </NavLink>
                           </MenuItem>

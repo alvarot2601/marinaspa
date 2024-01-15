@@ -4,8 +4,6 @@ import Lista3 from "../components/Lista3";
 //import List3 from '../components/List3';
 import videoHidromasaje from "../assets/video/hidromasaje.mp4";
 import VideoPeeling from "../assets/video/peelings.mp4";
-import masaje from "../assets/images/masaje.jpg";
-import relajacion from "../assets/images/relajacion.jpg";
 import VideoMasajes from "../assets/video/masajes.mp4";
 const BienestarRelajacionPage = () => {
   //referencias bienestar y relajación

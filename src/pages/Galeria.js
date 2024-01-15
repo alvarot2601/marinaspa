@@ -39,7 +39,6 @@ import img34 from "../assets/images/galeria (34).JPG";
 import img35 from "../assets/images/galeria (35).JPG";
 import img36 from "../assets/images/galeria (36).JPG";
 import img37 from "../assets/images/galeria (37).JPG";
-import img38 from "../assets/images/galeria (38).JPG";
 import img39 from "../assets/images/galeria (39).JPG";
 import img40 from "../assets/images/galeria (40).JPG";
 import img41 from "../assets/images/galeria (41).JPG";
@@ -50,7 +49,6 @@ import depilacion from "../assets/images/depilacion-cera.jpg";
 import diagnostico from "../assets/images/diagnostico.jpg";
 import esteticista_profesional from "../assets/images/esteticista_profesional.jpg";
 import fotodepilacion from "../assets/images/fotodepilacion.jpg";
-import hidromasaje from "../assets/images/hidromasaje.jpg";
 import maquillaje from "../assets/images/maquillaje.jpg";
 import esteticaGeneral from "../assets/images/estetica-general.jpg";
 import mujerMaquillada from "../assets/images/woman made up.jpg";
@@ -79,14 +77,13 @@ const Galeria = () => {
       esteticista_profesional,
       makeup,
       img15,
-      img38,
       img34,
       esteticaGeneral,
       img42,
       diagnostico,
       img7,
     ],
-    [lipstick, hidromasaje, img16, img37, img33, img21, img40, img20, img8],
+    [lipstick, img16, img37, img33, img21, img40, img20, img8],
     [contacto, mujerMaquillada, img36, img32, img31, img41, img19, img9, img10],
     [spa, img6, img27, img13, img18, img23, img22, fotodepilacion, img29],
   ];
