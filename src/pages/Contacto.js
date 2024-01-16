@@ -36,12 +36,32 @@ const Contacto = () => {
           shadow="md"
         >
           <CardHeader className="flex flex-col px-5">
-            <h1 className="text-5xl md:text-6xl lg:text-8xl font-bold">Contacta con nosotros</h1>
-            <p className="my-5 text-xl md:text-2xl font-medium">
-              Reserva cita con nuestro equipo de profesionales que te realizará
-              un análisis completo para ayudarte a elegir el tratamiento facial
-              o corporal más adecuado.
-            </p>
+            {
+              isLoaded ? (
+                <>
+                  <h1 className="text-5xl md:text-6xl lg:text-8xl font-bold">Contacta con nosotros</h1>
+                  <p className="my-5 text-xl md:text-2xl font-medium">
+                    Reserva cita con nuestro equipo de profesionales que te realizará
+                    un análisis completo para ayudarte a elegir el tratamiento facial
+                    o corporal más adecuado.
+                  </p>
+                </>
+              ) : (
+                <>
+                <Skeleton variant="text" animation="wave">
+                  <h1 className="text-5xl md:text-6xl lg:text-8xl font-bold">Contacta con nosotros</h1>
+                </Skeleton>
+                <Skeleton variant="text" animation="wave">
+                <p className="my-5 text-xl md:text-2xl font-medium">
+                    Reserva cita con nuestro equipo de profesionales que te realizará
+                    un análisis completo para ayudarte a elegir el tratamiento facial
+                    o corporal más adecuado.
+                  </p>
+                </Skeleton>
+                </>
+              )
+            }
+            
           </CardHeader>
           <Divider />
           <CardBody className="p-1">
@@ -131,44 +151,44 @@ const Contacto = () => {
                         </div></>
                     ) : (
                       <>
-                        
-                          <div className="flex flex-col gap-5 items-center font-medium">
+
+                        <div className="flex flex-col gap-5 items-center font-medium">
                           <Skeleton variant="text" animation="wave">
                             <p className="text-4xl font-bold">
                               Datos de Contacto
                             </p>
-                            </Skeleton>
-                            <div className="flex gap-3 items-center justify-evenly ">
+                          </Skeleton>
+                          <div className="flex gap-3 items-center justify-evenly ">
                             <Skeleton variant="text" animation="wave">
                               <FontAwesomeIcon icon={faMobile} />
                               <span className="animate-bounce">+34 644 79 90 00</span>
-                              </Skeleton>
-                            </div>
-                            <div className="flex gap-3 items-center justify-evenly">
+                            </Skeleton>
+                          </div>
+                          <div className="flex gap-3 items-center justify-evenly">
                             <Skeleton variant="text" animation="wave">
                               <FontAwesomeIcon icon={faMapLocationDot} />
                               <span>
                                 Calle Reyes Huertas, 8, <br></br>06300 Zafra, Badajoz
                               </span>
-                              </Skeleton>
-                            </div>
-                            <div className="flex gap-5 justify-center ">
-                              <Skeleton variant="circular">
-                                <Button
-                                  isIconOnly
-                                  isExternal
-                                  as={Link}
-                                  href="https://www.facebook.com/marinaspabienvenida"
-                                  target="_blank"
-                                  className="border-indigo-700 text-indigo-700 hover:bg-indigo-700 hover:text-white"
-                                  size="lg"
-                                  radius="full"
-                                  variant="bordered"
-                                >
-                                  <FaFacebook className="text-4xl" />
-                                </Button>
-                              </Skeleton>
-                              <Skeleton variant="circular">
+                            </Skeleton>
+                          </div>
+                          <div className="flex gap-5 justify-center ">
+                            <Skeleton variant="circular">
+                              <Button
+                                isIconOnly
+                                isExternal
+                                as={Link}
+                                href="https://www.facebook.com/marinaspabienvenida"
+                                target="_blank"
+                                className="border-indigo-700 text-indigo-700 hover:bg-indigo-700 hover:text-white"
+                                size="lg"
+                                radius="full"
+                                variant="bordered"
+                              >
+                                <FaFacebook className="text-4xl" />
+                              </Button>
+                            </Skeleton>
+                            <Skeleton variant="circular">
                               <Button
                                 isIconOnly
                                 isExternal
@@ -182,31 +202,30 @@ const Contacto = () => {
                               >
                                 <FaInstagram className="text-4xl" />
                               </Button>
-                              </Skeleton>
-                            </div>
+                            </Skeleton>
                           </div>
-                        
-                          <div className="flex flex-col gap-5 items-center font-medium">
+                        </div>
+
+                        <div className="flex flex-col gap-5 items-center font-medium">
                           <Skeleton variant="text">
                             <p className="text-4xl font-bold">Horarios</p>
-                            </Skeleton>
-                            <div className="flex flex-col items-center">
-                              <Skeleton variant="text" sx={{fontSize:'1rem'}}>
+                          </Skeleton>
+                          <div className="flex flex-col items-center">
+                            <Skeleton variant="text" sx={{ fontSize: '1rem' }}>
                               <span>Martes a Viernes</span>
                               <span>09:30 - 20:30</span>
-                              </Skeleton>
-                            </div>
-                            <div className="flex flex-col items-center" >
-                              <Skeleton variant="text" sx={{fontSize:'1rem'}}>
+                            </Skeleton>
+                          </div>
+                          <div className="flex flex-col items-center" >
+                            <Skeleton variant="text" sx={{ fontSize: '1rem' }}>
                               <span>Sábado</span>
                               <span>10:00 - 14:00</span>
-                              </Skeleton>
-                            </div>
+                            </Skeleton>
                           </div>
-                        </>
+                        </div>
+                      </>
                     )
                   }
-
                 </div>
               </div>
             </div>

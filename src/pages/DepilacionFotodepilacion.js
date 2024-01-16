@@ -45,7 +45,7 @@ const DepilacionPage = () => {
     ],
     treatments: [
       [
-        ["DEPILACIÓN Y DISEÑO DE CEJAS", "", 5, "section_0"],
+        ["Depilación y diseño de cejas", "", 5, "section_0"],
         [
           "Zona XS",
           "Línea alba superior o inferior, pies, manos, mentón, labio superior, patillas, entrepecho, orejas, pómulos",
