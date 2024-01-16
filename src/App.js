@@ -8,7 +8,7 @@ import Tratamientos from './pages/Tratamientos';
 import ProgramasFacialesPage from './pages/ProgramasFaciales';
 import { theme } from './theme';
 import { ThemeProvider } from '@mui/material';
-
+import {Skeleton} from '@mui/material';
 
 
 //import SiluetaCorporalPage from './pages/SiluetaCorporal';
@@ -34,7 +34,7 @@ const AvisoLegal = lazy(()=>import("./pages/Aviso-legal"));
 function App() {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<Skeleton variant='rectangular' height='10vh'/>}>
         <ThemeProvider theme={theme}>
         <Routes>
           <Route path="/" element={<Home />}></Route>

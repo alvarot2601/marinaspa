@@ -7,6 +7,7 @@ import {Box} from "@mui/material";
 import { FaArrowUp } from "react-icons/fa";
 import { theme } from "../theme";
 import { ThemeProvider } from "@emotion/react";
+import Skeleton from "@mui/material";
 const Lista3 = ({ obj }) => {
   const onlyNumbersRegEx = /^[0-9]+$/;
   const [expanded, setExpanded] = useState(false);
